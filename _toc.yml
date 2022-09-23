@@ -4,15 +4,23 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
 - file: syllabus
 - file: labs
   sections:
-    - file: lab1
-    - file: lab2
-    - file: lab3
-    - file: lab4
-    - file: lab5
+    - file: labs/lab1
+    - file: labs/lab2
+    - file: labs/lab3
+    - file: labs/lab4
+    - file: labs/lab5
+    - file: labs/lab6
 - file: project
+  sections:
+    - file: project/data_report
+    - file: project/interim_report
+    - file: project/presentation
+    - file: project/final_report
+- file: lectures
+  sections:
+    - file: lectures/lec01
+    - file: lectures/lec02
+

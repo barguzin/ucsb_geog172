@@ -1,11 +1,10 @@
-# Welcome to your Jupyter Book
+# Welcome to GEOG 172
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Hello and let me welcome you to GEOG 172: Intermediate Geographical Data Analysis! My name is Evgeny Noi and I will be your instructor for the following 10 weeks. Together we will discover what makes the SPATIAL data SPECIAL and why we require specialized methods of analysis to assess patterns found in geo-referenced information. 
 
-Check out the content pages bundled with this sample book to see more.
+We will start by reviewing basic statistical concepts and extending them to spatial setting. Next, some important geographic concepts, such as *distance, adjacency and contiguity* will be defined. Finally, we will see how these can be used to help assess patterns in our data through spatial autocorrelation, clustering and point pattern analysis.  
+
+Feel free to browse this electronic book that was put together for this course. Start by looking through [Syllabus](syllabus.md) and corresponding sections below. You may also use navigation on the left to assess different parts of this course. 
 
 ```{tableofcontents}
 ```

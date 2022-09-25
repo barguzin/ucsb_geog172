@@ -104,7 +104,7 @@ The labs will teach you practical skills on how to process and analyze spatial a
 
 The labs are held once a week on Monday and Tuesday. The attendance is taken and is counted towards your participation grades. 
 
-The labs from the previous week must be submitted before the start of the lab section the following week. The labs must be submitted as exported *.html* Colab notebook via GauchoSpace dropboxes. For labs conducted in non-Python environment, the format will be detailed in the corresponding lab instructions. 
+The labs from the previous week must be submitted before the start of the lab section the following week. The labs must be submitted as exported *.ipynb* Colab notebook via GauchoSpace dropboxes. For labs conducted in non-Python environment, the format will be detailed in the corresponding lab instructions. 
 
 ````{warning}
 **1% of your total grade** will be deducted for each hour late. For instance, for the lab that was submitted 1 day (24 hours) late, 24% will be deducted. Please make sure to contact your TA well in advance if you need an extension on your lab assignments. 

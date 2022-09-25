@@ -119,14 +119,14 @@ Next, work with you TAs through tutorials on [FOR loops in Python](https://pytho
 
 ## Lab 1 - Questions 
 
-> Please submit answers to these questions to Gauchospace prior to your lab section next week. 
+> Please submit answers to these questions to GauchoSpace prior to your lab section next week. 
 
 1. Create Google Colab notebook 
-2. Part 1 (50 points): Markdown. Use markdown to write a formatted paragraph of text about yourself. Consider including the following info
+2. Part 1 (50 points): Markdown. Use markdown to write a formatted paragraph of text about yourself. Make sure to utilize the following markdown elements: lists, headings, bold/italic fonts, links and images. Consider including the following info:
    1. Your major and intended graduation year 
    2. What made you choose the major you are currently pursuing and how this course fits into your major? 
    3. What do you intend to get out of these course? 
    4. Select one spatial problem and pose three questions that can be answered using geographical analysis? 
 3. Part 2 (50 points): write a Python program that loops through the letters of alphabet and prints out every even letter. 
 
-Please submit your lab assignment 
+Please submit your lab assignment as exported notebook following the outlined name convention: **geog172_firstlastname_lab01.ipynb**. 

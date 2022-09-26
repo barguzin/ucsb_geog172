@@ -5,6 +5,9 @@ format: jb-book
 root: intro
 chapters:
 - file: syllabus
+- file: example_notebooks
+  sections: 
+    - file: notebooks/00-python-basics
 - file: labs
   sections:
     - file: labs/lab1
@@ -22,5 +25,4 @@ chapters:
 - file: lectures
   sections:
     - file: lectures/lec01
-    - file: lectures/lec02
 

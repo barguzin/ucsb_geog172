@@ -26,7 +26,7 @@ presented techniques;
 |---|:-:|
 ||<img src="yoda.jpg" width="300"/>|
 ||Evgeny Noi|
-|Email|noi@ucsb.edu|
+|Email|noi[at]ucsb.edu|
 |Lectures|**MW**: 9.30-10.45AM (Ellison 3621)|
 |Office Hours|**M**: 3.00-5.00PM (Ellison 4829) or by appointment|
 
@@ -38,8 +38,9 @@ presented techniques;
 |---|:-:|:-:|
 ||<img src="prat.jpeg" width="200"/>|<img src="feifei_zhao.jpg" width="200"/>|
 ||Pratyush Tripathy|Feifei Zhao|
-|Email|ptripathy@ucsb.edu|xiafeizhao@ucsb.edu|
+|Email|ptripathy[at]ucsb.edu|xiafeizhao[at]ucsb.edu|
 |Labs|**M**: 4.00-5.50PM|**T**: 6.00-7.50PM|
+|Lab rooms|Ellison 3620|Ellison 2616|
 |Office hours|**M**: 12.00-1.00PM <br/> **T**: 9.45AM-10.45AM|**F**: 1.00-3.00PM <br/> |
 |Office|Ellison 5803|Ellison 4809|
 
@@ -54,13 +55,26 @@ O'Sullivan, D. and D. Unwin (2010). Geographic Information Analysis, 2nd edition
 
 #### Supplementray Textbooks 
 
+##### Python 
+
 Rey, S. J., Arribas-Bel, D., & Wolfe, L. J. (2020). Geographic Data Science with Python.
 Jupyter Book. https://geographicdata.science/book/intro.html
 
 Tenkanen, H., Heikinheimo, V. V., & Whipp, D. (2021). Introduction to Python for Geographic Data Analysis. Jupyter Book. https://pythongis.org/ 
 
+##### GeoDa and ESDA 
+
 Anselin, L. (2020). GeoDa: An Introduction to Spatial Data Science.
 https://geodacenter.github.io/
+
+##### Statistics
+
+````{tip} Most O'Reilly books are available through UCBS Library. 
+````
+
+Bruce, P., Bruce, A., & Gedeck, P. (2020). Practical statistics for data scientists: 50+ essential concepts using R and Python. O'Reilly Media. [PDF](https://raw.githubusercontent.com/ghoshark/E_Books/master/Practical%20Statistics%20for%20Data%20Scientists.pdf) 
+
+Downey, A. (2014). Think stats: exploratory data analysis. " O'Reilly Media, Inc.". [PDF](https://greenteapress.com/thinkstats2/thinkstats2.pdf)
 
 #### Online Courses and Resources
 
@@ -104,7 +118,7 @@ The labs will teach you practical skills on how to process and analyze spatial a
 
 The labs are held once a week on Monday and Tuesday. The attendance is taken and is counted towards your participation grades. 
 
-The labs from the previous week must be submitted before the start of the lab section the following week. The labs must be submitted as exported *.html* Colab notebook via GauchoSpace dropboxes. For labs conducted in non-Python environment, the format will be detailed in the corresponding lab instructions. 
+The labs from the previous week must be submitted before the start of the lab section the following week. The labs must be submitted as exported *.ipynb* Colab notebook via GauchoSpace dropboxes. For labs conducted in non-Python environment, the format will be detailed in the corresponding lab instructions. 
 
 ````{warning}
 **1% of your total grade** will be deducted for each hour late. For instance, for the lab that was submitted 1 day (24 hours) late, 24% will be deducted. Please make sure to contact your TA well in advance if you need an extension on your lab assignments. 
@@ -122,6 +136,10 @@ The labs from the previous week must be submitted before the start of the lab se
 |8|Spatial Clustering and Regionalization|
 |9|Interpolation. Project Q&A|
 |10|Project Presentations|
+
+````{tip}
+If you would like to access lab rooms outside of your lab hours, please contact [Patty Murray](mailto:pmurray@ucsb.edu) and fill out Lab Access form, so that your student card is activated to open the lab room. 
+````
 
 ---
 

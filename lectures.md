@@ -6,4 +6,4 @@ This page will contain notes from lectures that were used to prepare the slides.
 
 ||||||
 |---|---|---|---|---|
-|1|Lecture 01|Course Intro|[HTML](lectures/lecture01.html)|[PDF](lectures/lec01_slides.pdf)|
+|1|Lecture 01|Course Intro|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture01.html)|[PDF](https://github.com/barguzin/ucsb_geog172/blob/main/lectures/lec01_slides.pdf)|

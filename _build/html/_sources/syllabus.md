@@ -39,8 +39,8 @@ presented techniques;
 ||<img src="prat.jpeg" width="200"/>|<img src="feifei_zhao.jpg" width="200"/>|
 ||Pratyush Tripathy|Feifei Zhao|
 |Email|ptripathy[at]ucsb.edu|xiafeizhao[at]ucsb.edu|
-|Labs|**M**: 4.00-5.50PM|**T**: 6.00-7.50PM|
-|Lab rooms|Ellison 3620|Ellison 2616|
+|Labs|**M**: 5.00-6.50PM|**T**: 6.00-7.50PM|
+|Lab rooms|Ellison 3620|Ellison 3620|
 |Office hours|**M**: 12.00-1.00PM <br/> **T**: 9.45AM-10.45AM|**F**: 1.00-3.00PM <br/> |
 |Office|Ellison 5803|Ellison 4809|
 

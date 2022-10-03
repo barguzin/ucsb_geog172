@@ -1,0 +1,2915 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Data &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3 - Geoviz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks/geo172_Lab02.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/geo172_Lab02.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/geo172_Lab02.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Getting Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fire-perimeters">
+     Fire Perimeters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#california-counties">
+     California Counties
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#projections">
+     Projections!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-location-and-variation">
+   Measures of Location and Variation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-data">
+   Visualizing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     Histograms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-interesting-questions-about-data">
+   Asking interesting questions about data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grouping-variables-and-summarizing">
+     Grouping variables and summarizing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#there-is-a-problem-with-index-alignment-we-need-to-merge-dataframes">
+       There is a problem with index alignment, we need to merge dataframes!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-join-and-some-summary-statistics">
+   Spatial join and some summary statistics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-plot-number-of-fires-in-top-10-counties-in-california-over-time">
+     Optional: plot number of fires in top 10 counties in California over time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Getting Data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Getting Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fire-perimeters">
+     Fire Perimeters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#california-counties">
+     California Counties
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#projections">
+     Projections!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-location-and-variation">
+   Measures of Location and Variation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-data">
+   Visualizing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     Histograms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-interesting-questions-about-data">
+   Asking interesting questions about data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grouping-variables-and-summarizing">
+     Grouping variables and summarizing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#there-is-a-problem-with-index-alignment-we-need-to-merge-dataframes">
+       There is a problem with index alignment, we need to merge dataframes!
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-join-and-some-summary-statistics">
+   Spatial join and some summary statistics
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-plot-number-of-fires-in-top-10-counties-in-california-over-time">
+     Optional: plot number of fires in top 10 counties in California over time
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install geopandas shapely fiona pyproj rtree
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: geopandas in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (0.11.1)
+Requirement already satisfied: shapely in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.8.4)
+Requirement already satisfied: fiona in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.8.21)
+Requirement already satisfied: pyproj in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (3.4.0)
+Requirement already satisfied: rtree in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.0.0)
+Requirement already satisfied: packaging in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from geopandas) (21.3)
+Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from geopandas) (1.5.0)
+Requirement already satisfied: attrs&gt;=17 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (21.4.0)
+Requirement already satisfied: certifi in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (2022.9.24)
+Requirement already satisfied: click&gt;=4.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (8.1.3)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (0.7.2)
+Requirement already satisfied: click-plugins&gt;=1.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (1.1.1)
+Requirement already satisfied: six&gt;=1.7 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (1.16.0)
+Requirement already satisfied: munch in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (2.5.0)
+Requirement already satisfied: setuptools in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (65.4.0)
+Requirement already satisfied: colorama in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from click&gt;=4.0-&gt;fiona) (0.4.5)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2022.2.1)
+Requirement already satisfied: numpy&gt;=1.21.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (1.23.3)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from packaging-&gt;geopandas) (3.0.9)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fiona</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="getting-data">
+<h1>Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">#</a></h1>
+<section id="fire-perimeters">
+<h2>Fire Perimeters<a class="headerlink" href="#fire-perimeters" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> wget https://frap.fire.ca.gov/media/3ufh3ajg/fire21_1.zip -O fire_perims.zip -nc 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File ‘fire_perims.zip’ already there; not retrieving.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> unzip -n fire_perims.zip 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  fire_perims.zip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fire21_1.gdb  fire_perims.zip  sample_data
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdb_file</span> <span class="o">=</span> <span class="s1">&#39;fire21_1.gdb&#39;</span>
+
+<span class="c1"># Get all the layers from the .gdb file </span>
+<span class="n">layers</span> <span class="o">=</span> <span class="n">fiona</span><span class="o">.</span><span class="n">listlayers</span><span class="p">(</span><span class="n">gdb_file</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;firep21_1&#39;</span><span class="p">:</span> <span class="c1"># there are 3 files in gdb, we only need one</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;found file: </span><span class="si">{</span><span class="n">layer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">fires</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gdb_file</span><span class="p">,</span><span class="n">layer</span><span class="o">=</span><span class="n">layer</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found file: firep21_1
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:fiona._env:organizePolygons() received a polygon with more than 100 parts.  The processing may be really slow.  You can skip the processing by setting METHOD=SKIP.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(21686, 18)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># there are 20k fires in the data set, lets randomly plot 1000 of them</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe92bd0c410&gt;
+</pre></div>
+</div>
+<img alt="../_images/geo172_Lab02_9_1.png" src="../_images/geo172_Lab02_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-51ed155b-43d7-4a22-960e-c44486eeab4a">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR_</th>
+      <th>STATE</th>
+      <th>AGENCY</th>
+      <th>UNIT_ID</th>
+      <th>FIRE_NAME</th>
+      <th>INC_NUM</th>
+      <th>ALARM_DATE</th>
+      <th>CONT_DATE</th>
+      <th>CAUSE</th>
+      <th>COMMENTS</th>
+      <th>REPORT_AC</th>
+      <th>GIS_ACRES</th>
+      <th>C_METHOD</th>
+      <th>OBJECTIVE</th>
+      <th>FIRE_NUM</th>
+      <th>Shape_Length</th>
+      <th>Shape_Area</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>CA</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>NELSON</td>
+      <td>00013212</td>
+      <td>2020-06-18T00:00:00+00:00</td>
+      <td>2020-06-23T00:00:00+00:00</td>
+      <td>11.0</td>
+      <td></td>
+      <td>110.0</td>
+      <td>109.602280</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>None</td>
+      <td>3252.523280</td>
+      <td>4.435447e+05</td>
+      <td>MULTIPOLYGON (((-116841.251 97942.565, -116836...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>CA</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>AMORUSO</td>
+      <td>00011799</td>
+      <td>2020-06-01T00:00:00+00:00</td>
+      <td>2020-06-04T00:00:00+00:00</td>
+      <td>2.0</td>
+      <td></td>
+      <td>670.0</td>
+      <td>685.585022</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>None</td>
+      <td>9653.760308</td>
+      <td>2.774464e+06</td>
+      <td>MULTIPOLYGON (((-117328.400 90212.407, -117321...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020</td>
+      <td>CA</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>ATHENS</td>
+      <td>00018493</td>
+      <td>2020-08-10T00:00:00+00:00</td>
+      <td>2020-03-01T00:00:00+00:00</td>
+      <td>14.0</td>
+      <td></td>
+      <td>26.0</td>
+      <td>27.300480</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>None</td>
+      <td>1649.643235</td>
+      <td>1.104811e+05</td>
+      <td>MULTIPOLYGON (((-115605.059 92988.787, -115585...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>CA</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>FLEMING</td>
+      <td>00007619</td>
+      <td>2020-03-31T00:00:00+00:00</td>
+      <td>2020-04-01T00:00:00+00:00</td>
+      <td>9.0</td>
+      <td></td>
+      <td>13.0</td>
+      <td>12.931545</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>None</td>
+      <td>1577.155857</td>
+      <td>5.233211e+04</td>
+      <td>MULTIPOLYGON (((-110213.270 105975.579, -11020...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>CA</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>MELANESE</td>
+      <td>00008471</td>
+      <td>2020-04-14T00:00:00+00:00</td>
+      <td>2020-04-19T00:00:00+00:00</td>
+      <td>18.0</td>
+      <td></td>
+      <td>10.3</td>
+      <td>10.315964</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>None</td>
+      <td>1035.787625</td>
+      <td>4.174722e+04</td>
+      <td>MULTIPOLYGON (((-111793.600 164243.615, -11177...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-51ed155b-43d7-4a22-960e-c44486eeab4a')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-51ed155b-43d7-4a22-960e-c44486eeab4a button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-51ed155b-43d7-4a22-960e-c44486eeab4a');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>YEAR_             object
+STATE             object
+AGENCY            object
+UNIT_ID           object
+FIRE_NAME         object
+INC_NUM           object
+ALARM_DATE        object
+CONT_DATE         object
+CAUSE            float64
+COMMENTS          object
+REPORT_AC        float64
+GIS_ACRES        float64
+C_METHOD         float64
+OBJECTIVE        float64
+FIRE_NUM          object
+Shape_Length     float64
+Shape_Area       float64
+geometry        geometry
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lets drop some variables that we will not be using </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;STATE&#39;</span><span class="p">,</span> <span class="s1">&#39;COMMENTS&#39;</span><span class="p">,</span> <span class="s1">&#39;C_METHOD&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECTIVE&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># some mumbo jumbo with the dates </span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;ALARM_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;CONT_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fires</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-0d8f10c4-5121-496f-a255-b0c9d8fcf7d1">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR_</th>
+      <th>AGENCY</th>
+      <th>UNIT_ID</th>
+      <th>FIRE_NAME</th>
+      <th>INC_NUM</th>
+      <th>ALARM_DATE</th>
+      <th>CONT_DATE</th>
+      <th>CAUSE</th>
+      <th>REPORT_AC</th>
+      <th>GIS_ACRES</th>
+      <th>FIRE_NUM</th>
+      <th>Shape_Length</th>
+      <th>Shape_Area</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>NELSON</td>
+      <td>00013212</td>
+      <td>2020-06-18</td>
+      <td>2020-06-23</td>
+      <td>11.0</td>
+      <td>110.0</td>
+      <td>109.602280</td>
+      <td>None</td>
+      <td>3.252523e+03</td>
+      <td>4.435447e+05</td>
+      <td>MULTIPOLYGON (((-116841.251 97942.565, -116836...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>AMORUSO</td>
+      <td>00011799</td>
+      <td>2020-06-01</td>
+      <td>2020-06-04</td>
+      <td>2.0</td>
+      <td>670.0</td>
+      <td>685.585022</td>
+      <td>None</td>
+      <td>9.653760e+03</td>
+      <td>2.774464e+06</td>
+      <td>MULTIPOLYGON (((-117328.400 90212.407, -117321...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>ATHENS</td>
+      <td>00018493</td>
+      <td>2020-08-10</td>
+      <td>2020-03-01</td>
+      <td>14.0</td>
+      <td>26.0</td>
+      <td>27.300480</td>
+      <td>None</td>
+      <td>1.649643e+03</td>
+      <td>1.104811e+05</td>
+      <td>MULTIPOLYGON (((-115605.059 92988.787, -115585...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>FLEMING</td>
+      <td>00007619</td>
+      <td>2020-03-31</td>
+      <td>2020-04-01</td>
+      <td>9.0</td>
+      <td>13.0</td>
+      <td>12.931545</td>
+      <td>None</td>
+      <td>1.577156e+03</td>
+      <td>5.233211e+04</td>
+      <td>MULTIPOLYGON (((-110213.270 105975.579, -11020...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>MELANESE</td>
+      <td>00008471</td>
+      <td>2020-04-14</td>
+      <td>2020-04-19</td>
+      <td>18.0</td>
+      <td>10.3</td>
+      <td>10.315964</td>
+      <td>None</td>
+      <td>1.035788e+03</td>
+      <td>4.174722e+04</td>
+      <td>MULTIPOLYGON (((-111793.600 164243.615, -11177...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>21681</th>
+      <td>2021</td>
+      <td>USF</td>
+      <td>SQF</td>
+      <td>BOYDEN 1</td>
+      <td>00000401</td>
+      <td>2021-03-03</td>
+      <td>2021-03-18</td>
+      <td>5.0</td>
+      <td>15.0</td>
+      <td>14.573442</td>
+      <td>None</td>
+      <td>9.276290e+02</td>
+      <td>5.897663e+04</td>
+      <td>MULTIPOLYGON (((105451.745 -132832.621, 105410...</td>
+    </tr>
+    <tr>
+      <th>21682</th>
+      <td>2021</td>
+      <td>USF</td>
+      <td>INF</td>
+      <td>GLACIER NORTH</td>
+      <td>00001732</td>
+      <td>2021-07-15</td>
+      <td>2021-08-20</td>
+      <td>1.0</td>
+      <td>37.0</td>
+      <td>37.255802</td>
+      <td>None</td>
+      <td>2.334983e+03</td>
+      <td>1.507689e+05</td>
+      <td>MULTIPOLYGON (((139955.910 -95054.743, 139970....</td>
+    </tr>
+    <tr>
+      <th>21683</th>
+      <td>2021</td>
+      <td>CCO</td>
+      <td>KRN</td>
+      <td>Backus 2</td>
+      <td>02118345</td>
+      <td>2021-04-25</td>
+      <td>2021-04-25</td>
+      <td>14.0</td>
+      <td>4.0</td>
+      <td>2.897352</td>
+      <td>None</td>
+      <td>6.368478e+02</td>
+      <td>1.172517e+04</td>
+      <td>MULTIPOLYGON (((164896.149 -338556.435, 164893...</td>
+    </tr>
+    <tr>
+      <th>21684</th>
+      <td>2021</td>
+      <td>CDF</td>
+      <td>BTU</td>
+      <td>DIXIE</td>
+      <td>00009205</td>
+      <td>2021-07-14</td>
+      <td>2021-10-25</td>
+      <td>11.0</td>
+      <td>963309.0</td>
+      <td>963405.437500</td>
+      <td>None</td>
+      <td>1.533820e+06</td>
+      <td>3.898763e+09</td>
+      <td>MULTIPOLYGON (((-92538.590 256767.148, -92537....</td>
+    </tr>
+    <tr>
+      <th>21685</th>
+      <td>2021</td>
+      <td>USF</td>
+      <td>KNF</td>
+      <td>RIVER COMPLEX</td>
+      <td>00006385</td>
+      <td>2021-07-31</td>
+      <td>2021-10-25</td>
+      <td>1.0</td>
+      <td>155752.0</td>
+      <td>199354.093750</td>
+      <td>None</td>
+      <td>1.216645e+06</td>
+      <td>8.067574e+08</td>
+      <td>MULTIPOLYGON (((-259575.040 330786.059, -25957...</td>
+    </tr>
+  </tbody>
+</table>
+<p>21686 rows × 14 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0d8f10c4-5121-496f-a255-b0c9d8fcf7d1')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-0d8f10c4-5121-496f-a255-b0c9d8fcf7d1 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-0d8f10c4-5121-496f-a255-b0c9d8fcf7d1');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the number of where date is missing</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of missing records for alarm date:&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of missing records for containment date:&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>number of missing records for alarm date: 5357
+number of missing records for containment date: 12666
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert variables to datetime</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;ALARM_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;CONT_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate new variable duration </span>
+<span class="c1">#fires[&#39;dur_days&#39;] = (fires.CONT_DATE - fires.ALARM_DATE).dt.days</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;dur_days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span> <span class="o">-</span> <span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;timedelta64[D]&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Values where alarm date is before containment date:&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Values where alarm date is before containment date: 32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12678
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop where we have missing duration</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(21686, 15)
+(5250, 15)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="california-counties">
+<h2>California Counties<a class="headerlink" href="#california-counties" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ca_counties</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/california-counties.geojson&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ca_counties</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">ca_counties</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(58, 5)
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-ecdaf2a8-a149-479a-9212-94505c2485dd">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>cartodb_id</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alameda</td>
+      <td>1</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>MULTIPOLYGON (((-122.31293 37.89733, -122.2884...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alpine</td>
+      <td>2</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>POLYGON ((-120.07239 38.70277, -119.96495 38.7...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amador</td>
+      <td>3</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>POLYGON ((-121.02726 38.48925, -121.02741 38.5...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Butte</td>
+      <td>4</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>POLYGON ((-121.87925 39.30361, -121.90831 39.3...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Calaveras</td>
+      <td>5</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>POLYGON ((-120.87605 38.02889, -120.91875 38.0...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ecdaf2a8-a149-479a-9212-94505c2485dd')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ecdaf2a8-a149-479a-9212-94505c2485dd button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ecdaf2a8-a149-479a-9212-94505c2485dd');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="projections">
+<h2>Projections!<a class="headerlink" href="#projections" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ca_counties</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>epsg:3310
+epsg:4326
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s convert both of those to epsg:3857</span>
+<span class="c1"># this will take a while - lots of calculations</span>
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;epsg:3857&#39;</span><span class="p">)</span>
+<span class="n">ca_counties</span> <span class="o">=</span> <span class="n">ca_counties</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;epsg:3857&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot fires on CA</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ca_counties</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;1000 fires in CA&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_24_0.png" src="../_images/geo172_Lab02_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># THIS PART OF CODE IS OPENING A FILE VIA OGR - SKIP</span>
+<span class="c1"># SOME LABELS ARE NOT READ BY GEOPANDAS </span>
+<span class="c1"># from osgeo import ogr</span>
+
+<span class="c1"># driver = ogr.GetDriverByName(&quot;OpenFileGDB&quot;)</span>
+<span class="c1"># ds = driver.Open(&quot;fire21_1.gdb&quot;, 0)</span>
+<span class="c1"># f = ds.GetLayer(&quot;firep21_1&quot;)</span>
+<span class="c1"># print(type(f))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="measures-of-location-and-variation">
+<h1>Measures of Location and Variation<a class="headerlink" href="#measures-of-location-and-variation" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">GIS_ACRES</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">GIS_ACRES</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="n">fires</span><span class="o">.</span><span class="n">GIS_ACRES</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean 4342.1049991099635
+median 135.8330841064453
+std 28498.104881528623
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-data">
+<h1>Visualizing Data<a class="headerlink" href="#visualizing-data" title="Permalink to this headline">#</a></h1>
+<section id="histograms">
+<h2>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">fires</span><span class="o">.</span><span class="n">GIS_ACRES</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+
+<span class="c1"># changing title and labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;GIS acreage&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;log(density)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_30_0.png" src="../_images/geo172_Lab02_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create histograms for all numeric variables </span>
+<span class="n">num_vars</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">num_vars</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;CAUSE&#39;, &#39;REPORT_AC&#39;, &#39;GIS_ACRES&#39;, &#39;Shape_Length&#39;, &#39;Shape_Area&#39;, &#39;dur_days&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="p">[</span><span class="n">num_vars</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_32_0.png" src="../_images/geo172_Lab02_32_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can also call histogram from matplotlib interface </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">GIS_ACRES</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_33_0.png" src="../_images/geo172_Lab02_33_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="asking-interesting-questions-about-data">
+<h1>Asking interesting questions about data<a class="headerlink" href="#asking-interesting-questions-about-data" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>What is the average size of wildfires in CA</p></li>
+<li><p>Does average size of fires increase over time?</p></li>
+<li><p>How many fires do we have per year?</p></li>
+<li><p>Does the number of fires increase over time?</p></li>
+<li><p>How does average fire duration change?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculating average size of fires in CA </span>
+<span class="n">fires</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># this is in square meters: 28,624,990</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28624990.462906368
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert YEAR_ to int </span>
+<span class="n">fires</span><span class="o">.</span><span class="n">YEAR_</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">YEAR_</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>YEAR_                    int64
+AGENCY                  object
+UNIT_ID                 object
+FIRE_NAME               object
+INC_NUM                 object
+ALARM_DATE      datetime64[ns]
+CONT_DATE       datetime64[ns]
+CAUSE                  float64
+REPORT_AC              float64
+GIS_ACRES              float64
+FIRE_NUM                object
+Shape_Length           float64
+Shape_Area             float64
+geometry              geometry
+dur_days               float64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<section id="grouping-variables-and-summarizing">
+<h2>Grouping variables and summarizing<a class="headerlink" href="#grouping-variables-and-summarizing" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># only use variables that you will be calculating on </span>
+<span class="n">avg_acres_by_year</span> <span class="o">=</span> <span class="n">fires</span><span class="p">[[</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="s1">&#39;GIS_ACRES&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">)[</span><span class="s2">&quot;GIS_ACRES&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">avg_acres_by_year</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">avg_acres_by_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Average area of wildfires</span><span class="se">\n</span><span class="s1"> in California&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_38_0.png" src="../_images/geo172_Lab02_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># only use variables that you will be calculating on </span>
+<span class="n">total_acres_by_year</span> <span class="o">=</span> <span class="n">fires</span><span class="p">[[</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="s1">&#39;GIS_ACRES&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">)[</span><span class="s2">&quot;GIS_ACRES&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">total_acres_by_year</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">total_acres_by_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total area of wildfires</span><span class="se">\n</span><span class="s1"> in California&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_39_0.png" src="../_images/geo172_Lab02_39_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># number of records</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">INC_NUM</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="c1"># number of fire_id </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5250
+5083
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate number of fires per year </span>
+<span class="n">fires_per_year</span> <span class="o">=</span> <span class="n">fires</span><span class="p">[[</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="s1">&#39;INC_NUM&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">)[</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">fires_per_year</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">fires_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total number of wildfires</span><span class="se">\n</span><span class="s1"> in California&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_41_0.png" src="../_images/geo172_Lab02_41_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zoom into specific years and change range on y-axis, remove legend label, change linestyle and marker style</span>
+<span class="n">fires_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total number of wildfires</span><span class="se">\n</span><span class="s1"> in California (1990-2020)&#39;</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">),</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">1989</span><span class="p">,</span><span class="mi">2022</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_42_0.png" src="../_images/geo172_Lab02_42_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># total duration of fires per year</span>
+<span class="n">dur_per_year</span> <span class="o">=</span> <span class="n">fires</span><span class="p">[[</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="s1">&#39;dur_days&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">)[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">dur_per_year</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">dur_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Total duration of wildfires in days</span><span class="se">\n</span><span class="s1"> in California&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/geo172_Lab02_43_0.png" src="../_images/geo172_Lab02_43_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get temperature </span>
+<span class="n">ca_temps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://www.ncei.noaa.gov/cag/statewide/time-series/4-tavg-12-12-1910-2022.csv?base_prd=true&amp;begbaseyear=1901&amp;endbaseyear=2000&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;str&#39;</span><span class="p">},</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># use this line if following lab instructions</span>
+<span class="c1">#ca_temps = pd.read_csv(&#39;https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/data/ca_avg_temps.csv&#39;, skiprows=5, header=None, dtype={0:&#39;str&#39;}, nrows=100)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ca_temps</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 3)
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-214d744e-6209-4a3b-91d6-ee21078bcb54">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>191012</td>
+      <td>57.7</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>191112</td>
+      <td>55.4</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>191212</td>
+      <td>55.5</td>
+      <td>-1.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>191312</td>
+      <td>56.4</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>191412</td>
+      <td>57.4</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-214d744e-6209-4a3b-91d6-ee21078bcb54')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-214d744e-6209-4a3b-91d6-ee21078bcb54 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-214d744e-6209-4a3b-91d6-ee21078bcb54');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ca_temps</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date_year&#39;</span><span class="p">,</span> <span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="s1">&#39;anomaly&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prep year </span>
+<span class="c1"># convert to </span>
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span> <span class="o">=</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span> <span class="o">=</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date_year&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-4e54e050-0742-4478-8444-6e1b62a84349">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp</th>
+      <th>anomaly</th>
+    </tr>
+    <tr>
+      <th>date_year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2005</th>
+      <td>58.6</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>58.6</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>58.9</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>58.9</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <td>58.8</td>
+      <td>1.4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4e54e050-0742-4478-8444-6e1b62a84349')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-4e54e050-0742-4478-8444-6e1b62a84349 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-4e54e050-0742-4478-8444-6e1b62a84349');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ca_temps</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dur_per_year</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int64
+int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot total duration of wildfires and average temps on two subplots </span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ca_temps</span><span class="o">.</span><span class="n">temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Average Temperature in CA&#39;</span><span class="p">)</span>
+
+<span class="n">dur_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Total duration of wildfires in CA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total duration of wildfires in CA&#39;)
+</pre></div>
+</div>
+<img alt="../_images/geo172_Lab02_48_1.png" src="../_images/geo172_Lab02_48_1.png" />
+</div>
+</div>
+<section id="there-is-a-problem-with-index-alignment-we-need-to-merge-dataframes">
+<h3>There is a problem with index alignment, we need to merge dataframes!<a class="headerlink" href="#there-is-a-problem-with-index-alignment-we-need-to-merge-dataframes" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged</span> <span class="o">=</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dur_per_year</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">merged</span><span class="o">.</span><span class="n">temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Average Temperature in CA&#39;</span><span class="p">)</span>
+
+<span class="n">merged</span><span class="o">.</span><span class="n">dur_days</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Total duration of wildfires in CA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total duration of wildfires in CA&#39;)
+</pre></div>
+</div>
+<img alt="../_images/geo172_Lab02_50_1.png" src="../_images/geo172_Lab02_50_1.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="spatial-join-and-some-summary-statistics">
+<h1>Spatial join and some summary statistics<a class="headerlink" href="#spatial-join-and-some-summary-statistics" title="Permalink to this headline">#</a></h1>
+<p>Let’s imagine you work at the county GIS Department. You are tasked to describe the wildfire situation in that county. We need to be able to subset our data set by county. For that we need to run spatial join.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># join fires to counties </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># total number of fires before join </span>
+<span class="n">sj</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">ca_counties</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span> <span class="c1"># only keep name and geometry other variables are not required</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sj</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># total number of fires after join - notice some were duplicated because some fires stretch several couinties! </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5250, 15)
+(5626, 17)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sj</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-c9a2d474-b33d-4843-a762-8540c54e25a8">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR_</th>
+      <th>AGENCY</th>
+      <th>UNIT_ID</th>
+      <th>FIRE_NAME</th>
+      <th>INC_NUM</th>
+      <th>ALARM_DATE</th>
+      <th>CONT_DATE</th>
+      <th>CAUSE</th>
+      <th>REPORT_AC</th>
+      <th>GIS_ACRES</th>
+      <th>FIRE_NUM</th>
+      <th>Shape_Length</th>
+      <th>Shape_Area</th>
+      <th>geometry</th>
+      <th>dur_days</th>
+      <th>index_right</th>
+      <th>name</th>
+      <th>cartodb_id</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>NELSON</td>
+      <td>00013212</td>
+      <td>2020-06-18</td>
+      <td>2020-06-23</td>
+      <td>11.0</td>
+      <td>110.0</td>
+      <td>109.602280</td>
+      <td>None</td>
+      <td>3252.523280</td>
+      <td>4.435447e+05</td>
+      <td>MULTIPOLYGON (((-13508442.409 4705925.209, -13...</td>
+      <td>5.0</td>
+      <td>50.0</td>
+      <td>Placer</td>
+      <td>31.0</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>AMORUSO</td>
+      <td>00011799</td>
+      <td>2020-06-01</td>
+      <td>2020-06-04</td>
+      <td>2.0</td>
+      <td>670.0</td>
+      <td>685.585022</td>
+      <td>None</td>
+      <td>9653.760308</td>
+      <td>2.774464e+06</td>
+      <td>MULTIPOLYGON (((-13508926.470 4695975.605, -13...</td>
+      <td>3.0</td>
+      <td>50.0</td>
+      <td>Placer</td>
+      <td>31.0</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>FLEMING</td>
+      <td>00007619</td>
+      <td>2020-03-31</td>
+      <td>2020-04-01</td>
+      <td>9.0</td>
+      <td>13.0</td>
+      <td>12.931545</td>
+      <td>None</td>
+      <td>1577.155857</td>
+      <td>5.233211e+04</td>
+      <td>MULTIPOLYGON (((-13500067.208 4716383.997, -13...</td>
+      <td>1.0</td>
+      <td>50.0</td>
+      <td>Placer</td>
+      <td>31.0</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>CDF</td>
+      <td>NEU</td>
+      <td>MELANESE</td>
+      <td>00008471</td>
+      <td>2020-04-14</td>
+      <td>2020-04-19</td>
+      <td>18.0</td>
+      <td>10.3</td>
+      <td>10.315964</td>
+      <td>None</td>
+      <td>1035.787625</td>
+      <td>4.174722e+04</td>
+      <td>MULTIPOLYGON (((-13503127.052 4791691.861, -13...</td>
+      <td>5.0</td>
+      <td>42.0</td>
+      <td>Yuba</td>
+      <td>58.0</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2020</td>
+      <td>DOD</td>
+      <td>BEA</td>
+      <td>VALLEY</td>
+      <td>00015865</td>
+      <td>2020-07-15</td>
+      <td>2020-07-16</td>
+      <td>14.0</td>
+      <td>377.0</td>
+      <td>376.910400</td>
+      <td>None</td>
+      <td>7596.639583</td>
+      <td>1.525302e+06</td>
+      <td>MULTIPOLYGON (((-13511624.004 4738027.149, -13...</td>
+      <td>1.0</td>
+      <td>42.0</td>
+      <td>Yuba</td>
+      <td>58.0</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+      <td>2015-07-04T21:04:58+00:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c9a2d474-b33d-4843-a762-8540c54e25a8')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-c9a2d474-b33d-4843-a762-8540c54e25a8 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-c9a2d474-b33d-4843-a762-8540c54e25a8');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires_by_county</span> <span class="o">=</span> <span class="n">sj</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">])[</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fires_by_county</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">fires_by_county</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;top 10 counties with most fires&#39;</span><span class="p">)</span>
+<span class="n">fires_by_county</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(57, 2)
+top 10 counties with most fires
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>INC_NUM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>52</th>
+      <td>Tulare</td>
+      <td>360</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Siskiyou</td>
+      <td>307</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Tuolumne</td>
+      <td>276</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Kern</td>
+      <td>274</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Modoc</td>
+      <td>254</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Fresno</td>
+      <td>251</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Trinity</td>
+      <td>250</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>San Diego</td>
+      <td>246</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>San Bernardino</td>
+      <td>235</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Riverside</td>
+      <td>216</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bottom 10 counties with most fires&#39;</span><span class="p">)</span>
+<span class="n">fires_by_county</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bottom 10 counties with most fires
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-090a000b-f41e-4127-9302-dbb9fbb6cded">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>INC_NUM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>33</th>
+      <td>Sacramento</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>San Mateo</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Sutter</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Kings</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Marin</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alameda</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>San Joaquin</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Merced</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Contra Costa</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Imperial</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-090a000b-f41e-4127-9302-dbb9fbb6cded')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-090a000b-f41e-4127-9302-dbb9fbb6cded button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-090a000b-f41e-4127-9302-dbb9fbb6cded');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<section id="optional-plot-number-of-fires-in-top-10-counties-in-california-over-time">
+<h2>Optional: plot number of fires in top 10 counties in California over time<a class="headerlink" href="#optional-plot-number-of-fires-in-top-10-counties-in-california-over-time" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># if you want to save file to your google drive </span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content
+Mounted at /content/drive/
+/content
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save to Drive</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/geog172/fires.geojson&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can also save it to the content of the GC session and then right click and download to local computer </span>
+<span class="n">fires</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;fires.geojson&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

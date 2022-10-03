@@ -1,4 +1,4 @@
-# Lab 2 
+# Lab 2 - Summarizing Data and Basic Python Plotting
 
 ````{warning}
 Please make sure to submit the lab by **October 10/11, 2022**, depending on your section. 
@@ -239,3 +239,5 @@ Describe and characterize wildfires in the county of your choosing. Please sign-
 11. Submit via GauchoSpace as *geog172_firstlastname_lab02.ipynb*. 
 12. Optional 1: recode variable 'CAUSE' using a dictionary above and generate a bar chart with the most common cause of fires in CA. 
 13. Optional 2: Plot the number of fires by cause over time. 
+
+---

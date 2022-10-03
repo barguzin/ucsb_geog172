@@ -223,14 +223,15 @@ gdf.plot('my_variable')
 
 ## Lab Instructions
 
-Describe and characterize wildfires in the county of your choosing. Please sign-up [here] for a county. 
+Describe and characterize wildfires in the assigned CA county. The assignment is available in the [Google Doc](https://docs.google.com/spreadsheets/d/1p2N6L2RgSAaXoJzuCG_Sb7gZIFuGuoED_3LGkzcxeKI/edit?usp=sharing). Find your assignment by a perm number. There are two students per county. It is up to you if you want to collaborate on your lab, but each of you should submit individual lab. Your code and plots should have different styling. There are still some counties that have not been assigned to anyone. If you want to work on some other county, feel free to put your PERM for any other county on the sign-up sheet.  
 
+0. Create a geographic map of the county and fires
 1. Calculate total number of fires in the county
 2. Calculate average acreage within the county
 3. Calculate average duration of wildfires in the county 
 4. Plot the histogram of wildfire duration in the county 
 5. Create a bar plot or a line plot with the average number of wildfires in each month 
-6. Createa a time line of the total number of fires in the county (1950-2021) 
+6. Createa a time line of the total number of fires in the county (1910-2021) 
 7. Plot average acreage of fires over time 
 8. Download the average annual temperature for your data from NOAA
     1. Go to the [website](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series)

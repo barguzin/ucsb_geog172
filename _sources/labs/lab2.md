@@ -10,13 +10,9 @@ Please make sure to submit the lab by **October 10/11, 2022**, depending on your
 
 This lab will teach you how to work import, export and analyze data in Python, and specifically cover the following concepts: 
 
-1. Working with data
-    1. Importing and saving data with Pandas 
-    2. Importing and saving data with GeoPandas 
-    3. Converting between Pandas and Geopandas 
+1. Working with data (Importing and saving data with GeoPandas from Google Drive and from URL)
 2. Calculating measures of location and variation 
-3. Creating basic plots and charts in Matplotlib and Seaborn
-4. Getting data from OSM and from CenPy 
+3. Creating basic plots and charts in Matplotlib 
 
 ---
 

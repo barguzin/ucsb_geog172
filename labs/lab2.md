@@ -1,4 +1,8 @@
-# Lab 2 
+# Lab 2 - Summarizing Data and Basic Python Plotting
+
+````{caution}
+Please use this webpage as a set of general recommendations. The lab itself is located in [Google Colab](https://colab.research.google.com/drive/1Ggm6WsRVj95zx8AemRPu49Qk5Ecm503d?usp=sharing). Make sure to copy the notebook as you work through it. 
+````
 
 ````{warning}
 Please make sure to submit the lab by **October 10/11, 2022**, depending on your section. 
@@ -24,7 +28,6 @@ Optional useful tutorials on lab topics:
 4. [Intro to **Seaborn**](https://seaborn.pydata.org/tutorial/introduction.html)
 5. [PythonGIS Intro to data analysis](https://pythongis.org/part1/chapter-03/index.html)
 6. [PythonGIS Intro to data visualization](https://pythongis.org/part1/chapter-04/index.html)
-
 
 --- 
 
@@ -142,6 +145,19 @@ rec_vars = {
 }
 ```
 
+## Modifying variables 
+
+### Working with datetime 
+
+Some variables denote date and time. These should normally be processed as 'datetime' variable, thus we convert them 
+
+```python
+
+df['my_date_variable'] = pd.to_datetime(df.my_date_variable)
+
+```
+
+
 ## Calculating Measures of Location and Variation of Variables
 
 Normally we are interested in assessing specific variables. In Pandas and GeoPandas the variables can be called using either square brackets or dot. See pseudo code below used to calculate averages for variables.  
@@ -214,13 +230,17 @@ Describe and characterize wildfires in the county of your choosing. Please sign-
 3. Calculate average duration of wildfires in the county 
 4. Plot the histogram of wildfire duration in the county 
 5. Create a bar plot or a line plot with the average number of wildfires in each month 
-6. Createa a time line of the total number of fires in the county (1950-2021) 
+6. Createa a time line of the total number of fires in the county (1910-2021) 
 7. Plot average acreage of fires over time 
 8. Download the average annual temperature for your data from NOAA
     1. Go to the [website](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series)
     2. Input the following: Parameter - Average Temperature, Time Scale - Annual, Start Year - 1950, End Year - 2021, State - California, County - County_Of_Your_Assignment
     3. Click 'Plot', scroll down and download data in csv format. 
-    4. Upload the file to your Google drive and continue working 
+    4. Upload the file to your Google drive and continue working. Alternatively right click on the excel logo above the rendered table to the right of the word 'Download' and click 'Copy link address'.  
 9. Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total annual acreage of fires, c) average temperature (that you just downloaded). 
 10. Edit your report with markdown headings and text where necessary. **MAKE SURE TO COMMENT AND INTERPRET EVERY PLOT**. 
 11. Submit via GauchoSpace as *geog172_firstlastname_lab02.ipynb*. 
+12. Optional 1: recode variable 'CAUSE' using a dictionary above and generate a bar chart with the most common cause of fires in CA. 
+13. Optional 2: Plot the number of fires by cause over time. 
+
+---

@@ -388,7 +388,7 @@ ax.plot(bins2, 1/(sigma2 * np.sqrt(2 * np.pi)) *
 # 3. Calculate variance (sum deviations over sample size)
 # 4. Take square root of variance 
 
-# In[30]:
+# In[35]:
 
 
 np.std([1,9,7,4,2,3])
@@ -410,7 +410,7 @@ np.std([1,9,7,4,2,3])
 # * If we randomly draw samples of size 10 with replacement and take the mean of those samples, the distribution of means will also have a normal distribution. 
 # * This also works for sampling from non-normal distributions
 
-# In[31]:
+# In[43]:
 
 
 wh = pd.read_csv('weight-height.xls')
@@ -418,7 +418,7 @@ print(wh.shape)
 wh.head()
 
 
-# In[32]:
+# In[70]:
 
 
 i = 100

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lab 2 &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    <title>Lab 2 - Summarizing Data and Basic Python Plotting &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lab 3 - Geoviz" href="lab3.html" />
-    <link rel="prev" title="Lab 1 - Intro to Analysis" href="lab1.html" />
+    <link rel="prev" title="Lab 1 - Google Colab, Markdown and Python" href="lab1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,24 +119,46 @@ const thebe_selector_output = ".output, .cell_output"
    Syllabus
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../labs.html">
    Labs
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="lab1.html">
-     Lab 1 - Intro to Analysis
+     Lab 1 - Google Colab, Markdown and Python
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Lab 2
+     Lab 2 - Summarizing Data and Basic Python Plotting
     </a>
    </li>
    <li class="toctree-l2">
@@ -165,8 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../project.html">
    Geographical Analysis Project
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -197,8 +219,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lectures.html">
    Lectures
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -365,23 +387,192 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-data">
+   Working with data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-the-data">
+     Reading the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-variables">
+     Calling Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering-and-subsetting-the-data">
+     Filtering and subsetting the data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducing-data-for-the-lab">
+   Introducing Data for the Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-variables">
+   Modifying variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-datetime">
+     Working with datetime
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-measures-of-location-and-variation-of-variables">
+   Calculating Measures of Location and Variation of Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualzing-data">
+   Visualzing Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-canvas-for-plotting">
+     Setting up canvas for plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     Histograms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartographic-mapping-in-geopandas">
+     Cartographic Mapping in GeoPandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lab 2</h1>
+                <h1>Lab 2 - Summarizing Data and Basic Python Plotting</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-data">
+   Working with data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-the-data">
+     Reading the data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-variables">
+     Calling Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering-and-subsetting-the-data">
+     Filtering and subsetting the data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducing-data-for-the-lab">
+   Introducing Data for the Lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-variables">
+   Modifying variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-datetime">
+     Working with datetime
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-measures-of-location-and-variation-of-variables">
+   Calculating Measures of Location and Variation of Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualzing-data">
+   Visualzing Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-canvas-for-plotting">
+     Setting up canvas for plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     Histograms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartographic-mapping-in-geopandas">
+     Cartographic Mapping in GeoPandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -389,8 +580,232 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lab-2">
-<h1>Lab 2<a class="headerlink" href="#lab-2" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-2-summarizing-data-and-basic-python-plotting">
+<h1>Lab 2 - Summarizing Data and Basic Python Plotting<a class="headerlink" href="#lab-2-summarizing-data-and-basic-python-plotting" title="Permalink to this headline">#</a></h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Please use this webpage as a set of general recommendations. The lab itself is located in <a class="reference external" href="https://colab.research.google.com/drive/1Ggm6WsRVj95zx8AemRPu49Qk5Ecm503d?usp=sharing">Google Colab</a>. Make sure to copy the notebook as you work through it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please make sure to submit the lab by <strong>October 10/11, 2022</strong>, depending on your section.</p>
+</div>
+<p>This lab will teach you how to work import, export and analyze data in Python, and specifically cover the following concepts:</p>
+<ol class="simple">
+<li><p>Working with data</p>
+<ol class="simple">
+<li><p>Importing and saving data with Pandas</p></li>
+<li><p>Importing and saving data with GeoPandas</p></li>
+<li><p>Converting between Pandas and Geopandas</p></li>
+</ol>
+</li>
+<li><p>Calculating measures of location and variation</p></li>
+<li><p>Creating basic plots and charts in Matplotlib and Seaborn</p></li>
+<li><p>Getting data from OSM and from CenPy</p></li>
+</ol>
+<hr class="docutils" />
+<p>Optional useful tutorials on lab topics:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://geopandas.org/en/stable/getting_started/introduction.html"><strong>GeoPandas</strong> Getting Started</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/10min.html">10 minutes to <strong>Pandas</strong></a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html"><strong>Matplotlib</strong> Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/tutorial/introduction.html">Intro to <strong>Seaborn</strong></a></p></li>
+<li><p><a class="reference external" href="https://pythongis.org/part1/chapter-03/index.html">PythonGIS Intro to data analysis</a></p></li>
+<li><p><a class="reference external" href="https://pythongis.org/part1/chapter-04/index.html">PythonGIS Intro to data visualization</a></p></li>
+</ol>
+<hr class="docutils" />
+<section id="working-with-data">
+<h2>Working with data<a class="headerlink" href="#working-with-data" title="Permalink to this headline">#</a></h2>
+<section id="reading-the-data">
+<h3>Reading the data<a class="headerlink" href="#reading-the-data" title="Permalink to this headline">#</a></h3>
+<p>Rectangular data in Python is typically handled via Pandas. This includes files with the following extensions: .csv, .xls and .xlsx (Excel), .tab (tab delimited), .txt (text format), and many more.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>In Pandas, the data is typically stored in two-dimensional DataFrame objects with (un)labeled rows and columns. Another way to think about Pandas DataFrames is by analogy with programmable spreadsheets. A one-dimensional array (any one variable) is called Pandas Series.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When working with data in languages other than English, consider using <em>Unicode Transformation Format - 8 bit</em> or <strong>UTF-8</strong> for short. Most <em>read</em> functions in both Python and R packages provide interface to set encoding when reading/writing information onto disk.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import data specifying the encoding </span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;path_fo_file&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Computers store information in binary system as sequence of 0 and 1. Because text is made of individual characters it is represented by a string of bits. For example, letter ‘A’ is represented as ‘01000001’ and letter ‘a’ is represented as ‘01100001’. Normally, a standardized encoding system is used to translate from byte code to characters. One early example of such system is American Standard Code for Information Interchange (ASCII), but it only works for latin alphabet, assigning a three digit code to each character. For instance, ‘A’ is ‘065’ and ‘a’ is ‘097’. The problem with ASCII is that it can only store 256 unique bytes (characters), which was not enough to encode characters from other languages. Thus, the <strong>UTF-8</strong> came into being. <strong>UTF-8</strong> is capable of encoding 1,112,064 symbols (yes, that includes emojii). For example, letter ‘A’ is encoded as ‘U+0041’.</p>
+</div>
+<p>Normally, the first thing to check after importing the data is whether the data was imported correctly. This typically implies 1) checking the total number of intended variables (if we how many features/variables the original file had); 2) checking for correct type of variables. To check the number of records and variables in the dataset we can use the command <strong>shape</strong>, which returns a tuple (110,22), where the first number denotes the number of records and the second number denotes the number of variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>You can check out the types of data after reading the data file using a <strong>dtypes</strong> command on the data frame.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</section>
+<section id="calling-variables">
+<h3>Calling Variables<a class="headerlink" href="#calling-variables" title="Permalink to this headline">#</a></h3>
+<p>Variables (features) can be called using the following conventions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">df</span><span class="o">.</span><span class="n">variable_name</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;variable_name&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="filtering-and-subsetting-the-data">
+<h3>Filtering and subsetting the data<a class="headerlink" href="#filtering-and-subsetting-the-data" title="Permalink to this headline">#</a></h3>
+<p>We can subset the data either by label or index.</p>
+<p>Label-based filtering.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># select only records for California</span>
+<span class="n">ca_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">state</span><span class="o">==</span><span class="s2">&quot;CA&quot;</span><span class="p">,]</span> 
+
+<span class="c1"># select only records for CA and FL</span>
+<span class="n">ca_fl_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">state</span><span class="o">==</span><span class="s2">&quot;CA&quot;</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">state</span><span class="o">==</span><span class="s2">&quot;FL&quot;</span><span class="p">),]</span>
+
+<span class="c1"># if we only needed specific variables in the previous selections</span>
+<span class="n">ca_df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">state</span><span class="o">==</span><span class="s2">&quot;CA&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;first_var&#39;</span><span class="p">,</span> <span class="s1">&#39;second_var&#39;</span><span class="p">,</span> <span class="s1">&#39;third_var&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Index-based filtering</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># select first 100 rows </span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">,]</span>
+
+<span class="c1"># select first 100 rows and variables 2,3,4,5</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To select all records for specific variables use double square brackets like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">other_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;first_var&#39;</span><span class="p">,</span> <span class="s1">&#39;second_var&#39;</span><span class="p">,</span> <span class="s1">&#39;third_var&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="introducing-data-for-the-lab">
+<h2>Introducing Data for the Lab<a class="headerlink" href="#introducing-data-for-the-lab" title="Permalink to this headline">#</a></h2>
+<p>There are many wonderful resources online containing different types of data: <strong>Kaggle, Google, Data.gov, Census, OpenStreetMap</strong> and many more. Also, check out this wonderiful <a class="reference external" href="https://github.com/awesomedata/awesome-public-datasets">Github repo</a>. For this lab, we will be working with <strong>fire perimeter data</strong> from CalFire. The geodatabase dump can be donwloaded from this <a class="reference external" href="https://frap.fire.ca.gov/mapping/gis-data/">page</a>. Here is the description of the data from the CalFire website:</p>
+<blockquote>
+<div><p>This is a multi-agency statewide database of fire history. For CAL FIRE, timber fires 10 acres or greater, brush fires 30 acres and greater, and grass fires 300 acres or greater are included. For the USFS, there is a 10 acre minimum for fires since 1950.</p>
+</div></blockquote>
+<blockquote>
+<div><p>This dataset contains wildfire history, prescribed burns and other fuel modification projects.</p>
+</div></blockquote>
+<p>This data can also be viewed interactively on a <a class="reference external" href="https://gis.data.ca.gov/datasets/CALFIRE-Forestry::california-fire-perimeters-all-1/explore?location=37.442493%2C-118.992700%2C7.54">CA.gov</a>.</p>
+<p>The file is available as a ArcGIS personal geodatabase (file extension .gdb). Since we are reading it in GeoPandas some labels are not available, we will have to recode a variable ‘CAUSE’ manually, using the following values:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rec_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Lightning&#39;</span><span class="p">,</span> 
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Equipment Use&#39;</span><span class="p">,</span> 
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Smoking&#39;</span><span class="p">,</span> 
+    <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;Campfire&#39;</span><span class="p">,</span> 
+    <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Debris&#39;</span><span class="p">,</span> 
+    <span class="mi">6</span><span class="p">:</span> <span class="s1">&#39;Railroad&#39;</span><span class="p">,</span> 
+    <span class="mi">7</span><span class="p">:</span> <span class="s1">&#39;Arson&#39;</span><span class="p">,</span> 
+    <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;Playing with fire&#39;</span><span class="p">,</span> 
+    <span class="mi">9</span><span class="p">:</span> <span class="s1">&#39;Miscellaneous&#39;</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Vehicle&#39;</span><span class="p">,</span> 
+    <span class="mi">11</span><span class="p">:</span> <span class="s1">&#39;Powerline&#39;</span><span class="p">,</span> 
+    <span class="mi">12</span><span class="p">:</span> <span class="s1">&#39;Firefighter Trainig&#39;</span><span class="p">,</span> 
+    <span class="mi">13</span><span class="p">:</span> <span class="s1">&#39;Non-Firefighter Training&#39;</span><span class="p">,</span> 
+    <span class="mi">14</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="modifying-variables">
+<h2>Modifying variables<a class="headerlink" href="#modifying-variables" title="Permalink to this headline">#</a></h2>
+<section id="working-with-datetime">
+<h3>Working with datetime<a class="headerlink" href="#working-with-datetime" title="Permalink to this headline">#</a></h3>
+<p>Some variables denote date and time. These should normally be processed as ‘datetime’ variable, thus we convert them</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;my_date_variable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">my_date_variable</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+<section id="calculating-measures-of-location-and-variation-of-variables">
+<h2>Calculating Measures of Location and Variation of Variables<a class="headerlink" href="#calculating-measures-of-location-and-variation-of-variables" title="Permalink to this headline">#</a></h2>
+<p>Normally we are interested in assessing specific variables. In Pandas and GeoPandas the variables can be called using either square brackets or dot. See pseudo code below used to calculate averages for variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">variable_name</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;variable_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Pandas implements convenience functions such as <em>mean(), median(), mode(), std()</em> to name a few.</p>
+</section>
+<section id="visualzing-data">
+<h2>Visualzing Data<a class="headerlink" href="#visualzing-data" title="Permalink to this headline">#</a></h2>
+<section id="setting-up-canvas-for-plotting">
+<h3>Setting up canvas for plotting<a class="headerlink" href="#setting-up-canvas-for-plotting" title="Permalink to this headline">#</a></h3>
+<p>Matplotlib remains a default backend for many utilitity functions in Pandas. Therefore, it is important to know how to change figure attributes. Here is a typical workflow for modifying canvas size, axis labels and a title.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="c1">#figure size in inches </span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">variable_name</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span> <span class="c1"># set axis to be axis we modified above</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;My Title&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_</span>
+
+</pre></div>
+</div>
+</section>
+<section id="histograms">
+<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">#</a></h3>
+<p>We discussed in class that data distributions can be visualized via histograms. Pandas makes this process extremely easy:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">variable_name</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For cases when the distributions are exponential, we could use the log-scale and density on y-axis to see more variation in our data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">variable_name</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="cartographic-mapping-in-geopandas">
+<h3>Cartographic Mapping in GeoPandas<a class="headerlink" href="#cartographic-mapping-in-geopandas" title="Permalink to this headline">#</a></h3>
+<p>Geometric information is typically stored as well-known text (WKT) format in GeoPandas dataframes.</p>
+<p>There are three basic types of GIS data: [multi]point, [multi]line and [multi]polygon.</p>
+<p>Creating maps in GeoPandas is easy and straight-forward.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;path_to_file&#39;</span><span class="p">)</span>
+
+<span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>For polygons, we can use GeoPandas to generate choropleth map, by passing the name of a variable we want to use for thematic mapping, like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;my_variable&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="lab-instructions">
+<h2>Lab Instructions<a class="headerlink" href="#lab-instructions" title="Permalink to this headline">#</a></h2>
+<p>Describe and characterize wildfires in the county of your choosing. Please sign-up [here] for a county.</p>
+<ol class="simple">
+<li><p>Calculate total number of fires in the county</p></li>
+<li><p>Calculate average acreage within the county</p></li>
+<li><p>Calculate average duration of wildfires in the county</p></li>
+<li><p>Plot the histogram of wildfire duration in the county</p></li>
+<li><p>Create a bar plot or a line plot with the average number of wildfires in each month</p></li>
+<li><p>Createa a time line of the total number of fires in the county (1950-2021)</p></li>
+<li><p>Plot average acreage of fires over time</p></li>
+<li><p>Download the average annual temperature for your data from NOAA</p>
+<ol class="simple">
+<li><p>Go to the <a class="reference external" href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series">website</a></p></li>
+<li><p>Input the following: Parameter - Average Temperature, Time Scale - Annual, Start Year - 1950, End Year - 2021, State - California, County - County_Of_Your_Assignment</p></li>
+<li><p>Click ‘Plot’, scroll down and download data in csv format.</p></li>
+<li><p>Upload the file to your Google drive and continue working. Alternatively right click on the excel logo above the rendered table to the right of the word ‘Download’ and click ‘Copy link address’.</p></li>
+</ol>
+</li>
+<li><p>Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total annual acreage of fires, c) average temperature (that you just downloaded).</p></li>
+<li><p>Edit your report with markdown headings and text where necessary. <strong>MAKE SURE TO COMMENT AND INTERPRET EVERY PLOT</strong>.</p></li>
+<li><p>Submit via GauchoSpace as <em>geog172_firstlastname_lab02.ipynb</em>.</p></li>
+<li><p>Optional 1: recode variable ‘CAUSE’ using a dictionary above and generate a bar chart with the most common cause of fires in CA.</p></li>
+<li><p>Optional 2: Plot the number of fires by cause over time.</p></li>
+</ol>
+<hr class="docutils" />
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -424,7 +839,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lab 1 - Intro to Analysis</p>
+            <p class="prev-next-title">Lab 1 - Google Colab, Markdown and Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="lab3.html" title="next page">

@@ -1,5 +1,9 @@
 # Lab 2 - Summarizing Data and Basic Python Plotting
 
+````{caution}
+Please use this webpage as a set of general recommendations. The lab itself is located in [Google Colab](https://colab.research.google.com/drive/1Ggm6WsRVj95zx8AemRPu49Qk5Ecm503d?usp=sharing). Make sure to copy the notebook as you work through it. 
+````
+
 ````{warning}
 Please make sure to submit the lab by **October 10/11, 2022**, depending on your section. 
 ````
@@ -24,7 +28,6 @@ Optional useful tutorials on lab topics:
 4. [Intro to **Seaborn**](https://seaborn.pydata.org/tutorial/introduction.html)
 5. [PythonGIS Intro to data analysis](https://pythongis.org/part1/chapter-03/index.html)
 6. [PythonGIS Intro to data visualization](https://pythongis.org/part1/chapter-04/index.html)
-
 
 --- 
 

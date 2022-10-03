@@ -272,7 +272,7 @@ gdf.plot(column='butter_per_capita', legend=True,
 
 # layer for better visuals
 
-fig, ax = plt.subplots(figsize=(7,7))
+fig, ax = plt.subplots(figsize=(5,5))
 
 gdf.plot(column='butter_per_capita', legend=True,
          cmap='OrRd',
@@ -288,7 +288,7 @@ fig.savefig('butter.png', dpi=150) # save file
 
 
 # plot centroids of counties 
-fig, ax = plt.subplots(figsize=(7,7))
+fig, ax = plt.subplots(figsize=(5,5))
 
 gdf.plot(ax=ax, fc='None', ec='k'); # adds county boundaries
 gdf.centroid.plot(ax=ax, marker='*', color='red');
@@ -300,10 +300,8 @@ ax.set_title('California Counties and Centroids', fontsize=16)
 
 
 import matplotlib.patches as mpatches
-
 # plot specific areas 
 socal_counties = ['Imperial', 'Kern', 'Los Angeles', 'Orange', 'Riverside', 'San Bernardino', 'San Diego', 'San Luis Obispo', 'Santa Barbara', 'Ventura']
-
 socal = gdf.loc[gdf.name.isin(socal_counties),]
 
 fig, ax = plt.subplots()
@@ -311,7 +309,6 @@ fig, ax = plt.subplots()
 gdf.plot(ax=ax, fc='None', ec='k'); # adds county boundaries
 socal.plot(ax=ax, fc='red', ec='r', lw=0, alpha=.5); # plot socal
 socal.dissolve().plot(ax=ax, fc='None', ec='r', lw=2) # demo dissolve
-
 # add legend 
 red_patch = mpatches.Patch(color='red', label='SoCal', alpha=.5)
 ax.legend(handles=[red_patch])

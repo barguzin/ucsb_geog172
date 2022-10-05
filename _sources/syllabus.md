@@ -76,10 +76,11 @@ Bruce, P., Bruce, A., & Gedeck, P. (2020). Practical statistics for data scienti
 
 Downey, A. (2014). Think stats: exploratory data analysis. " O'Reilly Media, Inc.". [PDF](https://greenteapress.com/thinkstats2/thinkstats2.pdf)
 
-#### Online Courses and Resources
+#### Online Courses and Various Python Resources
 
 * [Introduction to Python Course - 2018](https://automating-gis-processes.github.io/CSC18/index.html)
 * [Open Source Spatial Programming and Remote Sensing](https://pygis.io/docs/a_intro.html)
+* [Spatial Data Programming with Python](https://geobgu.xyz/py/index.html)
 * [Spatial Data Science for Sustainable Development](https://sustainability-gis.readthedocs.io/en/latest/index.html)
 * [GeoPython](https://geo-python-site.readthedocs.io/en/latest/)
 * [Automating GIS Processes](https://autogis-site.readthedocs.io/en/latest/)

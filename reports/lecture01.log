@@ -31,13 +31,13 @@ ox.settings.use_cache = True
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [1], line 4[0m
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mosmnx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mox[39;00m
-[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[1;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mcontextily[39;00m [38;5;28;01mas[39;00m [38;5;21;01mcx[39;00m
+Cell [1;32mIn [1], line 6[0m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mcontextily[39;00m [38;5;28;01mas[39;00m [38;5;21;01mcx[39;00m
 [0;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m Image
-[0;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpointpats[39;00m [38;5;28;01mimport[39;00m centrography
+[1;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpointpats[39;00m [38;5;28;01mimport[39;00m centrography
+[0;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpatches[39;00m [38;5;28;01mimport[39;00m Ellipse
+[0;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
 
-[1;31mModuleNotFoundError[0m: No module named 'contextily'
-ModuleNotFoundError: No module named 'contextily'
+[1;31mModuleNotFoundError[0m: No module named 'pointpats'
+ModuleNotFoundError: No module named 'pointpats'
 

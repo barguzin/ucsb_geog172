@@ -17,20 +17,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from google.colab import drive
-import os
+import cenpy 
+dectest = cenpy.products.Decennial2010()
+gol_data = dectest.from_place('Goleta,CA', level='block', variables=['^P004', 'P001001'])
 
-# if you want to save file to your google drive 
-drive.mount('/content/drive/')
+fig, ax = plt.subplots(figsize=(12,4))
+
+gol_data.plot(column='P004003', cmap='Reds', ax=ax, fc='w', ec='k');
+gol_data.plot(ax=ax, fc='None', ec='k');
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [46], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mgoogle[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolab[39;00m [38;5;28;01mimport[39;00m drive
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
-[0;32m      4[0m [38;5;66;03m# if you want to save file to your google drive [39;00m
+Cell [1;32mIn [16], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mcenpy[39;00m 
+[0;32m      2[0m dectest [38;5;241m=[39m cenpy[38;5;241m.[39mproducts[38;5;241m.[39mDecennial2010()
+[0;32m      3[0m gol_data [38;5;241m=[39m dectest[38;5;241m.[39mfrom_place([38;5;124m'[39m[38;5;124mGoleta,CA[39m[38;5;124m'[39m, level[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblock[39m[38;5;124m'[39m, variables[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m^P004[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mP001001[39m[38;5;124m'[39m])
 
-[1;31mModuleNotFoundError[0m: No module named 'google'
-ModuleNotFoundError: No module named 'google'
+[1;31mModuleNotFoundError[0m: No module named 'cenpy'
+ModuleNotFoundError: No module named 'cenpy'
 

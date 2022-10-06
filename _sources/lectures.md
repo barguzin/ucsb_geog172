@@ -1,6 +1,7 @@
 # Lectures
 
 This page will contain notes from lectures that were used to prepare the slides. Feel free to use this in conjunction with slides and demo notebooks as you prepare for your weekly quizzes and work through the labs. 
+To view the HTML version of the lecture please open the link, save it to your computer as 'lecture.html' and open from the file explorer with the browser of your choice. 
 
 ## List of lectures 
 

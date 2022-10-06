@@ -775,15 +775,30 @@ title="Print to PDF"
 <section id="lab-instructions">
 <h2>Lab Instructions<a class="headerlink" href="#lab-instructions" title="Permalink to this headline">#</a></h2>
 <p>Describe and characterize wildfires in the assigned CA county. The assignment is available in the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1p2N6L2RgSAaXoJzuCG_Sb7gZIFuGuoED_3LGkzcxeKI/edit?usp=sharing">Google Doc</a>. Find your assignment by a perm number. There are two students per county. It is up to you if you want to collaborate on your lab, but each of you should submit individual lab. Your code and plots should have different styling. There are still some counties that have not been assigned to anyone. If you want to work on some other county, feel free to put your PERM for any other county on the sign-up sheet.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please pay attention to what the question asks you. A few things to note:</p>
+<ul class="simple">
+<li><p>Identify if the questions ask asking to provide one number (summary statistic) or a series of numbers?</p></li>
+<li><p>For questions that require a series of numbers or a time plot identify:</p>
+<ul>
+<li><p>what variable needs to appear in the <em>groupby()</em>-statement and which variable needs to follow the <em>groupby()</em> statement.</p></li>
+</ul>
+</li>
+<li><p>For questions asking for ‘number’ use <strong>count()</strong> function (see examples in Lab 2 Google Colab notebook)</p></li>
+<li><p>For questions asking for ‘average’ use <strong>mean()</strong> function (see examples in Lab 2 Google Colab notebook)</p></li>
+<li><p>For questions asking for a ‘sum’ or ‘total’ use <strong>sum()</strong> function (see examples in Lab 2 Google Colab notebook)</p></li>
+<li><p>‘Annual’ means that you need to aggregate your data (~ group your data) for every year.</p></li>
+</ul>
+</div>
 <ol class="simple">
 <li><p>Create a geographic map of the county and fires</p></li>
-<li><p>Calculate total number of fires in the county</p></li>
-<li><p>Calculate average acreage within the county</p></li>
-<li><p>Calculate average duration of wildfires in the county</p></li>
-<li><p>Plot the histogram of wildfire duration in the county</p></li>
-<li><p>Create a bar plot or a line plot with the average number of wildfires in each month</p></li>
-<li><p>Createa a time line of the total number of fires in the county (1910-2021)</p></li>
-<li><p>Plot average acreage of fires over time</p></li>
+<li><p>Calculate the total number of fires in your assigned county.</p></li>
+<li><p>Calculate average acreage (use variable ‘GIS_ACRES’) within the assigned county.</p></li>
+<li><p>Calculate average duration of wildfires in the county. The variable for duration was calculated in Lab 2 Google Colab notebook, you just need to use.</p></li>
+<li><p>Plot the histogram of wildfire durations in the county.</p></li>
+<li><p>Create a a timeseries plot of the total number of fires for each year in the assigned county.</p></li>
+<li><p>Calculate and plot average acreage (use variable ‘GIS_ACRES’) of fires over years.</p></li>
 <li><p>Download the average annual temperature for your data from NOAA</p>
 <ol class="simple">
 <li><p>Go to the <a class="reference external" href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series">website</a></p></li>
@@ -792,11 +807,12 @@ title="Print to PDF"
 <li><p>Upload the file to your Google drive and continue working. Alternatively right click on the excel logo above the rendered table to the right of the word ‘Download’ and click ‘Copy link address’.</p></li>
 </ol>
 </li>
-<li><p>Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total annual acreage of fires, c) average temperature (that you just downloaded).</p></li>
+<li><p>Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total sum of annual acreage of fires, c) average temperature (that you just downloaded).</p></li>
 <li><p>Edit your report with markdown headings and text where necessary. <strong>MAKE SURE TO COMMENT AND INTERPRET EVERY PLOT</strong>.</p></li>
 <li><p>Submit via GauchoSpace as <em>geog172_firstlastname_lab02.ipynb</em>.</p></li>
 <li><p>Optional 1: recode variable ‘CAUSE’ using a dictionary above and generate a bar chart with the most common cause of fires in CA.</p></li>
 <li><p>Optional 2: Plot the number of fires by cause over time.</p></li>
+<li><p>Optional 3: Create a bar plot or a line plot with the average number of wildfires in each month.</p></li>
 </ol>
 <hr class="docutils" />
 </section>

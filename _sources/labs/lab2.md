@@ -221,23 +221,37 @@ gdf.plot('my_variable')
 
 Describe and characterize wildfires in the assigned CA county. The assignment is available in the [Google Doc](https://docs.google.com/spreadsheets/d/1p2N6L2RgSAaXoJzuCG_Sb7gZIFuGuoED_3LGkzcxeKI/edit?usp=sharing). Find your assignment by a perm number. There are two students per county. It is up to you if you want to collaborate on your lab, but each of you should submit individual lab. Your code and plots should have different styling. There are still some counties that have not been assigned to anyone. If you want to work on some other county, feel free to put your PERM for any other county on the sign-up sheet.  
 
+````{tip}
+
+Please pay attention to what the question asks you. A few things to note: 
+
+* Identify if the questions ask asking to provide one number (summary statistic) or a series of numbers? 
+* For questions that require a series of numbers or a time plot identify:
+    * what variable needs to appear in the *groupby()*-statement and which variable needs to follow the *groupby()* statement. 
+* For questions asking for 'number' use **count()** function (see examples in Lab 2 Google Colab notebook)
+* For questions asking for 'average' use **mean()** function (see examples in Lab 2 Google Colab notebook)
+* For questions asking for a 'sum' or 'total' use **sum()** function (see examples in Lab 2 Google Colab notebook)
+* 'Annual' means that you need to aggregate your data (~ group your data) for every year. 
+
+````
+
 0. Create a geographic map of the county and fires
-1. Calculate total number of fires in the county
-2. Calculate average acreage within the county
-3. Calculate average duration of wildfires in the county 
-4. Plot the histogram of wildfire duration in the county 
-5. Create a bar plot or a line plot with the average number of wildfires in each month 
-6. Createa a time line of the total number of fires in the county (1910-2021) 
-7. Plot average acreage of fires over time 
+1. Calculate the total number of fires in your assigned county.
+2. Calculate average acreage (use variable 'GIS_ACRES') within the assigned county.
+3. Calculate average duration of wildfires in the county. The variable for duration was calculated in Lab 2 Google Colab notebook, you just need to use.  
+4. Plot the histogram of wildfire durations in the county. 
+6. Create a a timeseries plot of the total number of fires for each year in the assigned county. 
+7. Calculate and plot average acreage (use variable 'GIS_ACRES') of fires over years. 
 8. Download the average annual temperature for your data from NOAA
     1. Go to the [website](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series)
     2. Input the following: Parameter - Average Temperature, Time Scale - Annual, Start Year - 1950, End Year - 2021, State - California, County - County_Of_Your_Assignment
     3. Click 'Plot', scroll down and download data in csv format. 
     4. Upload the file to your Google drive and continue working. Alternatively right click on the excel logo above the rendered table to the right of the word 'Download' and click 'Copy link address'.  
-9. Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total annual acreage of fires, c) average temperature (that you just downloaded). 
+9. Plot three subfigures (use any orientation you find useful): a) annual number of fires, b) total sum of annual acreage of fires, c) average temperature (that you just downloaded). 
 10. Edit your report with markdown headings and text where necessary. **MAKE SURE TO COMMENT AND INTERPRET EVERY PLOT**. 
 11. Submit via GauchoSpace as *geog172_firstlastname_lab02.ipynb*. 
 12. Optional 1: recode variable 'CAUSE' using a dictionary above and generate a bar chart with the most common cause of fires in CA. 
 13. Optional 2: Plot the number of fires by cause over time. 
+13. Optional 3: Create a bar plot or a line plot with the average number of wildfires in each month. 
 
 ---

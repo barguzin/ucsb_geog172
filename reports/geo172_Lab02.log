@@ -1,36 +1,140 @@
 Traceback (most recent call last):
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 1204, in execute
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 84, in wrapped
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 62, in just_run
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\asyncio\base_events.py", line 646, in run_until_complete
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\asyncio\base_events.py", line 646, in run_until_complete
     return future.result()
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 663, in async_execute
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+  File "C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from google.colab import drive
-import os
+gdb_file = 'fire21_1.gdb'
 
-# if you want to save file to your google drive 
-drive.mount('/content/drive/')
+# Get all the layers from the .gdb file 
+layers = fiona.listlayers(gdb_file)
+
+for layer in layers:
+  if layer == 'firep21_1': # there are 3 files in gdb, we only need one
+    print(f'found file: {layer}')
+    fires = gpd.read_file(gdb_file,layer=layer)
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [46], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mgoogle[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolab[39;00m [38;5;28;01mimport[39;00m drive
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
-[0;32m      4[0m [38;5;66;03m# if you want to save file to your google drive [39;00m
+[1;31mTypeError[0m                                 Traceback (most recent call last)
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\arrays\datetimes.py:2236[0m, in [0;36mobjects_to_datetime64ns[1;34m(data, dayfirst, yearfirst, utc, errors, require_iso8601, allow_object, allow_mixed)[0m
+[0;32m   2235[0m [38;5;28;01mtry[39;00m:
+[1;32m-> 2236[0m     values, tz_parsed [38;5;241m=[39m [43mconversion[49m[38;5;241;43m.[39;49m[43mdatetime_to_datetime64[49m[43m([49m[43mdata[49m[38;5;241;43m.[39;49m[43mravel[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mK[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m)[49m
+[0;32m   2237[0m     [38;5;66;03m# If tzaware, these values represent unix timestamps, so we[39;00m
+[0;32m   2238[0m     [38;5;66;03m#  return them as i8 to distinguish from wall times[39;00m
 
-[1;31mModuleNotFoundError[0m: No module named 'google'
-ModuleNotFoundError: No module named 'google'
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslibs\conversion.pyx:360[0m, in [0;36mpandas._libs.tslibs.conversion.datetime_to_datetime64[1;34m()[0m
+
+[1;31mTypeError[0m: Unrecognized value type: <class 'str'>
+
+During handling of the above exception, another exception occurred:
+
+[1;31mOutOfBoundsDatetime[0m                       Traceback (most recent call last)
+Input [1;32mIn [6][0m, in [0;36m<cell line: 6>[1;34m()[0m
+[0;32m      7[0m [38;5;28;01mif[39;00m layer [38;5;241m==[39m [38;5;124m'[39m[38;5;124mfirep21_1[39m[38;5;124m'[39m: [38;5;66;03m# there are 3 files in gdb, we only need one[39;00m
+[0;32m      8[0m   [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m'[39m[38;5;124mfound file: [39m[38;5;132;01m{[39;00mlayer[38;5;132;01m}[39;00m[38;5;124m'[39m)
+[1;32m----> 9[0m   fires [38;5;241m=[39m [43mgpd[49m[38;5;241;43m.[39;49m[43mread_file[49m[43m([49m[43mgdb_file[49m[43m,[49m[43mlayer[49m[38;5;241;43m=[39;49m[43mlayer[49m[43m)[49m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\geopandas\io\file.py:253[0m, in [0;36m_read_file[1;34m(filename, bbox, mask, rows, engine, **kwargs)[0m
+[0;32m    250[0m     path_or_bytes [38;5;241m=[39m filename
+[0;32m    252[0m [38;5;28;01mif[39;00m engine [38;5;241m==[39m [38;5;124m"[39m[38;5;124mfiona[39m[38;5;124m"[39m:
+[1;32m--> 253[0m     [38;5;28;01mreturn[39;00m _read_file_fiona(
+[0;32m    254[0m         path_or_bytes, from_bytes, bbox[38;5;241m=[39mbbox, mask[38;5;241m=[39mmask, rows[38;5;241m=[39mrows, [38;5;241m*[39m[38;5;241m*[39mkwargs
+[0;32m    255[0m     )
+[0;32m    256[0m [38;5;28;01melif[39;00m engine [38;5;241m==[39m [38;5;124m"[39m[38;5;124mpyogrio[39m[38;5;124m"[39m:
+[0;32m    257[0m     [38;5;28;01mreturn[39;00m _read_file_pyogrio(
+[0;32m    258[0m         path_or_bytes, bbox[38;5;241m=[39mbbox, mask[38;5;241m=[39mmask, rows[38;5;241m=[39mrows, [38;5;241m*[39m[38;5;241m*[39mkwargs
+[0;32m    259[0m     )
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\geopandas\io\file.py:346[0m, in [0;36m_read_file_fiona[1;34m(path_or_bytes, from_bytes, bbox, mask, rows, **kwargs)[0m
+[0;32m    340[0m     df [38;5;241m=[39m GeoDataFrame[38;5;241m.[39mfrom_features(
+[0;32m    341[0m         f_filt, crs[38;5;241m=[39mcrs, columns[38;5;241m=[39mcolumns [38;5;241m+[39m [[38;5;124m"[39m[38;5;124mgeometry[39m[38;5;124m"[39m]
+[0;32m    342[0m     )
+[0;32m    343[0m [38;5;28;01mfor[39;00m k [38;5;129;01min[39;00m datetime_fields:
+[0;32m    344[0m     [38;5;66;03m# fiona only supports up to ms precision, any microseconds are[39;00m
+[0;32m    345[0m     [38;5;66;03m# floating point rounding error[39;00m
+[1;32m--> 346[0m     df[k] [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mto_datetime[49m[43m([49m[43mdf[49m[43m[[49m[43mk[49m[43m][49m[43m)[49m[38;5;241m.[39mdt[38;5;241m.[39mround(freq[38;5;241m=[39m[38;5;124m"[39m[38;5;124mms[39m[38;5;124m"[39m)
+[0;32m    347[0m [38;5;28;01mreturn[39;00m df
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\tools\datetimes.py:1047[0m, in [0;36mto_datetime[1;34m(arg, errors, dayfirst, yearfirst, utc, format, exact, unit, infer_datetime_format, origin, cache)[0m
+[0;32m   1045[0m             result [38;5;241m=[39m arg[38;5;241m.[39mtz_localize(tz)
+[0;32m   1046[0m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(arg, ABCSeries):
+[1;32m-> 1047[0m     cache_array [38;5;241m=[39m [43m_maybe_cache[49m[43m([49m[43marg[49m[43m,[49m[43m [49m[38;5;28;43mformat[39;49m[43m,[49m[43m [49m[43mcache[49m[43m,[49m[43m [49m[43mconvert_listlike[49m[43m)[49m
+[0;32m   1048[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m cache_array[38;5;241m.[39mempty:
+[0;32m   1049[0m         result [38;5;241m=[39m arg[38;5;241m.[39mmap(cache_array)
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\tools\datetimes.py:197[0m, in [0;36m_maybe_cache[1;34m(arg, format, cache, convert_listlike)[0m
+[0;32m    195[0m unique_dates [38;5;241m=[39m unique(arg)
+[0;32m    196[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(unique_dates) [38;5;241m<[39m [38;5;28mlen[39m(arg):
+[1;32m--> 197[0m     cache_dates [38;5;241m=[39m [43mconvert_listlike[49m[43m([49m[43munique_dates[49m[43m,[49m[43m [49m[38;5;28;43mformat[39;49m[43m)[49m
+[0;32m    198[0m     cache_array [38;5;241m=[39m Series(cache_dates, index[38;5;241m=[39munique_dates)
+[0;32m    199[0m     [38;5;66;03m# GH#39882 and GH#35888 in case of None and NaT we get duplicates[39;00m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\tools\datetimes.py:402[0m, in [0;36m_convert_listlike_datetimes[1;34m(arg, format, name, tz, unit, errors, infer_datetime_format, dayfirst, yearfirst, exact)[0m
+[0;32m    400[0m [38;5;28;01massert[39;00m [38;5;28mformat[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m infer_datetime_format
+[0;32m    401[0m utc [38;5;241m=[39m tz [38;5;241m==[39m [38;5;124m"[39m[38;5;124mutc[39m[38;5;124m"[39m
+[1;32m--> 402[0m result, tz_parsed [38;5;241m=[39m [43mobjects_to_datetime64ns[49m[43m([49m
+[0;32m    403[0m [43m    [49m[43marg[49m[43m,[49m
+[0;32m    404[0m [43m    [49m[43mdayfirst[49m[38;5;241;43m=[39;49m[43mdayfirst[49m[43m,[49m
+[0;32m    405[0m [43m    [49m[43myearfirst[49m[38;5;241;43m=[39;49m[43myearfirst[49m[43m,[49m
+[0;32m    406[0m [43m    [49m[43mutc[49m[38;5;241;43m=[39;49m[43mutc[49m[43m,[49m
+[0;32m    407[0m [43m    [49m[43merrors[49m[38;5;241;43m=[39;49m[43merrors[49m[43m,[49m
+[0;32m    408[0m [43m    [49m[43mrequire_iso8601[49m[38;5;241;43m=[39;49m[43mrequire_iso8601[49m[43m,[49m
+[0;32m    409[0m [43m    [49m[43mallow_object[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[0;32m    410[0m [43m[49m[43m)[49m
+[0;32m    412[0m [38;5;28;01mif[39;00m tz_parsed [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m    413[0m     [38;5;66;03m# We can take a shortcut since the datetime64 numpy array[39;00m
+[0;32m    414[0m     [38;5;66;03m# is in UTC[39;00m
+[0;32m    415[0m     dta [38;5;241m=[39m DatetimeArray(result, dtype[38;5;241m=[39mtz_to_dtype(tz_parsed))
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\arrays\datetimes.py:2242[0m, in [0;36mobjects_to_datetime64ns[1;34m(data, dayfirst, yearfirst, utc, errors, require_iso8601, allow_object, allow_mixed)[0m
+[0;32m   2240[0m         [38;5;28;01mreturn[39;00m values[38;5;241m.[39mview([38;5;124m"[39m[38;5;124mi8[39m[38;5;124m"[39m), tz_parsed
+[0;32m   2241[0m     [38;5;28;01mexcept[39;00m ([38;5;167;01mValueError[39;00m, [38;5;167;01mTypeError[39;00m):
+[1;32m-> 2242[0m         [38;5;28;01mraise[39;00m err
+[0;32m   2244[0m [38;5;28;01mif[39;00m tz_parsed [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;32m   2245[0m     [38;5;66;03m# We can take a shortcut since the datetime64 numpy array[39;00m
+[0;32m   2246[0m     [38;5;66;03m#  is in UTC[39;00m
+[0;32m   2247[0m     [38;5;66;03m# Return i8 values to denote unix timestamps[39;00m
+[0;32m   2248[0m     [38;5;28;01mreturn[39;00m result[38;5;241m.[39mview([38;5;124m"[39m[38;5;124mi8[39m[38;5;124m"[39m), tz_parsed
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\core\arrays\datetimes.py:2224[0m, in [0;36mobjects_to_datetime64ns[1;34m(data, dayfirst, yearfirst, utc, errors, require_iso8601, allow_object, allow_mixed)[0m
+[0;32m   2222[0m order: Literal[[38;5;124m"[39m[38;5;124mF[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mC[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;124m"[39m[38;5;124mF[39m[38;5;124m"[39m [38;5;28;01mif[39;00m flags[38;5;241m.[39mf_contiguous [38;5;28;01melse[39;00m [38;5;124m"[39m[38;5;124mC[39m[38;5;124m"[39m
+[0;32m   2223[0m [38;5;28;01mtry[39;00m:
+[1;32m-> 2224[0m     result, tz_parsed [38;5;241m=[39m [43mtslib[49m[38;5;241;43m.[39;49m[43marray_to_datetime[49m[43m([49m
+[0;32m   2225[0m [43m        [49m[43mdata[49m[38;5;241;43m.[39;49m[43mravel[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mK[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m
+[0;32m   2226[0m [43m        [49m[43merrors[49m[38;5;241;43m=[39;49m[43merrors[49m[43m,[49m
+[0;32m   2227[0m [43m        [49m[43mutc[49m[38;5;241;43m=[39;49m[43mutc[49m[43m,[49m
+[0;32m   2228[0m [43m        [49m[43mdayfirst[49m[38;5;241;43m=[39;49m[43mdayfirst[49m[43m,[49m
+[0;32m   2229[0m [43m        [49m[43myearfirst[49m[38;5;241;43m=[39;49m[43myearfirst[49m[43m,[49m
+[0;32m   2230[0m [43m        [49m[43mrequire_iso8601[49m[38;5;241;43m=[39;49m[43mrequire_iso8601[49m[43m,[49m
+[0;32m   2231[0m [43m        [49m[43mallow_mixed[49m[38;5;241;43m=[39;49m[43mallow_mixed[49m[43m,[49m
+[0;32m   2232[0m [43m    [49m[43m)[49m
+[0;32m   2233[0m     result [38;5;241m=[39m result[38;5;241m.[39mreshape(data[38;5;241m.[39mshape, order[38;5;241m=[39morder)
+[0;32m   2234[0m [38;5;28;01mexcept[39;00m [38;5;167;01mValueError[39;00m [38;5;28;01mas[39;00m err:
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslib.pyx:381[0m, in [0;36mpandas._libs.tslib.array_to_datetime[1;34m()[0m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslib.pyx:608[0m, in [0;36mpandas._libs.tslib.array_to_datetime[1;34m()[0m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslib.pyx:604[0m, in [0;36mpandas._libs.tslib.array_to_datetime[1;34m()[0m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslib.pyx:580[0m, in [0;36mpandas._libs.tslib.array_to_datetime[1;34m()[0m
+
+File [1;32m~\anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\tslibs\np_datetime.pyx:120[0m, in [0;36mpandas._libs.tslibs.np_datetime.check_dts_bounds[1;34m()[0m
+
+[1;31mOutOfBoundsDatetime[0m: Out of bounds nanosecond timestamp: 219-05-29 00:00:00
+OutOfBoundsDatetime: Out of bounds nanosecond timestamp: 219-05-29 00:00:00
 

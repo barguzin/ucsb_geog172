@@ -997,20 +997,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">cx</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">pointpats</span> <span class="kn">import</span> <span class="n">centrography</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pointpats&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1201,8 +1187,8 @@ secondary                   644
 unclassified                249
 cycleway                    150
 track                        84
-[footway, service]           60
 [footway, residential]       60
+[footway, service]           60
 motorway_link                44
 [footway, path]              30
 motorway                     27
@@ -1276,18 +1262,6 @@ Name: highway, dtype: int64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-13341454.75696344   4086141.85634311]
 [-13342101.87019569   4085474.32197616]
 2964.6474778578227
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:22: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  spatial.qhull.ConvexHull,
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:42: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:85: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:132: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull, x: float, y: float):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:174: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
 </pre></div>
 </div>
 </div>

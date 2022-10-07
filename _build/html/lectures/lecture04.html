@@ -1328,14 +1328,16 @@ $$</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matched: Goleta,CA to Goleta city within layer Incorporated Places
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">cenpy</span> 
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">dectest</span> <span class="o">=</span> <span class="n">cenpy</span><span class="o">.</span><span class="n">products</span><span class="o">.</span><span class="n">Decennial2010</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">gol_data</span> <span class="o">=</span> <span class="n">dectest</span><span class="o">.</span><span class="n">from_place</span><span class="p">(</span><span class="s1">&#39;Goleta,CA&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;block&#39;</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;^P004&#39;</span><span class="p">,</span> <span class="s1">&#39;P001001&#39;</span><span class="p">])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cenpy&#39;
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\AppData\Local\Temp\ipykernel_15212\2738113903.py:3: FutureWarning: The `op` parameter is deprecated and will be removed in a future release. Please use the `predicate` parameter instead.
-  gol_data = dectest.from_place(&#39;Goleta,CA&#39;, level=&#39;block&#39;, variables=[&#39;^P004&#39;, &#39;P001001&#39;])
-</pre></div>
-</div>
-<img alt="../_images/lecture04_27_2.png" src="../_images/lecture04_27_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1354,9 +1356,7 @@ $$</p></li>
  There are 11 disconnected components.
  There are 7 islands with ids: 86, 134, 144, 190, 232, 264, 276.
   warnings.warn(message)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\libpysal\weights\weights.py:172: UserWarning: The weights matrix is not fully connected: 
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\libpysal\weights\weights.py:172: UserWarning: The weights matrix is not fully connected: 
  There are 12 disconnected components.
  There are 7 islands with ids: 86, 134, 144, 190, 232, 264, 276.
   warnings.warn(message)
@@ -1395,7 +1395,7 @@ $$</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1d3f16f7100&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x20eebef53f0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture04_30_1.png" src="../_images/lecture04_30_1.png" />
@@ -1445,7 +1445,7 @@ $$</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x1d3f6b57820&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x20eeeff3be0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture04_32_1.png" src="../_images/lecture04_32_1.png" />

@@ -11,7 +11,7 @@ To view the HTML version of the lecture please open the link, save it to your co
 |2|Lecture 02|Review of Basic Stats|[]()|[PDF](https://drive.google.com/file/d/1F6uLoAcV1iwa6OxxQeu8XRPOwoFInv4r/view?usp=sharing)
 |3|Lecture 03|Geographic Data|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture03.html)|[PDF](https://drive.google.com/file/d/1Xx6vnoGQHHSJ9CZXkzx8Yw4nX3Bp8Ujb/view?usp=sharing)|
 |4|Lecture 04|Distance & Adjacency|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture04.html)|[PDF](https://drive.google.com/file/d/1uJ1izhhoB2fQPYqwbJm6Fd-VChVyfqei/view?usp=sharing)|
-|5|Lecture 05|Geovisualization|||
+|5|Lecture 05|Geovisualization|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture05.html)|[PDF](https://drive.google.com/file/d/1h5TiQn0Ly07pCuRzaaJEj0wSkklhb4HD/view?usp=sharing)|
 |6|Lecture 06||||
 |7|Lecture 07||||
 |8|Lecture 08||||

@@ -178,7 +178,7 @@ Participation in both lectures and labs is crucial for learning new concepts and
 |1|09/28|Review of Basic Statistics|TBD|
 |2|10/3|Geographic Data|[SD](https://geographicdata.science/book/notebooks/03_spatial_data.html)|
 |2|10/5|Distance, adjacency and MAUP|GIA Ch2, [SD](https://geographicdata.science/book/notebooks/04_spatial_weights.html)|
-|3|10/10|Geovisualization|GIA Ch3|
+|3|10/10|Geovisualization|GIA Ch3, [GDS Choropleth](https://geographicdata.science/book/notebooks/05_choropleth.html)|
 |3|10/12|Point Pattern Analysis|GIA Ch5,6|
 |3|10/16|**Data Report Due**|⚠️|
 |4|10/17|Correlation and Covariance||

@@ -1,0 +1,2103 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plan for Lecture &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2 - Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3 - Geoviz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture05.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture05.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture05.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Plan for Lecture
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geovisualization">
+   GeoVisualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-does-geoviz-look-like-in-practice">
+   What does geoviz look like in practice?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skills-for-geovisualization">
+   Skills for GeoVisualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-geovisualization-workflow">
+   Typical Geovisualization Workflow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-data-analysis-lab-workflow">
+   Typical Data Analysis (Lab) Workflow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analysis-example-california-wildfires">
+   Data Analysis Example - California Wildfires
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brainstorm-exercise">
+   Brainstorm Exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Data Analysis Example - California Wildfires
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note-on-naming-conventions-in-python">
+   Note on naming conventions in Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-a-spatial-component-to-our-analysis">
+   Add a spatial component to our analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#because-this-is-an-intermediate-geographic-analysis-course">
+     Because this is an Intermediate Geographic Analysis Course
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       🙃
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-join-101">
+   Spatial Join 101
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer">
+   Disclaimer
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-we-do-spatial-join-on-the-data-with-two-polygon-layers-that-are-not-aligned-i-e-we-have-fires-geometries-that-are-not-contained-within-just-one-county-we-will-end-up-with-duplicated-records">
+     When we do spatial join on the data with two polygon layers that are not aligned (i.e. we have fires geometries that are not contained within just one county), we will end up with duplicated records!
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thus-we-will-be-overestimating-totals-and-calculations-will-be-imprecise">
+     Thus, we will be overestimating totals and calculations will be imprecise!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-choropleth-map-with-aggregate-statistic">
+   Creating Choropleth Map with Aggregate Statistic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choropleth-maps">
+   Choropleth Maps
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing-choropleth-maps">
+   Drawing Choropleth Maps
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantitative-data-classification">
+   Quantitative Data Classification
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantitative-data-classifications">
+   Quantitative Data Classifications
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equal-intervals">
+   Equal Intervals
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qunatile">
+   Qunatile
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     Problems:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-standard-deviation">
+   Mean Standard Deviation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximum-breaks">
+   Maximum breaks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fisher-jenks">
+   Fisher Jenks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-classifications">
+   More classifications
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color-in-choropleth-mapping">
+   Color in Choropleth Mapping
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Plan for Lecture</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Plan for Lecture
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geovisualization">
+   GeoVisualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-does-geoviz-look-like-in-practice">
+   What does geoviz look like in practice?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skills-for-geovisualization">
+   Skills for GeoVisualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-geovisualization-workflow">
+   Typical Geovisualization Workflow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typical-data-analysis-lab-workflow">
+   Typical Data Analysis (Lab) Workflow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-analysis-example-california-wildfires">
+   Data Analysis Example - California Wildfires
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brainstorm-exercise">
+   Brainstorm Exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Data Analysis Example - California Wildfires
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note-on-naming-conventions-in-python">
+   Note on naming conventions in Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-a-spatial-component-to-our-analysis">
+   Add a spatial component to our analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#because-this-is-an-intermediate-geographic-analysis-course">
+     Because this is an Intermediate Geographic Analysis Course
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       🙃
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-join-101">
+   Spatial Join 101
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#disclaimer">
+   Disclaimer
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-we-do-spatial-join-on-the-data-with-two-polygon-layers-that-are-not-aligned-i-e-we-have-fires-geometries-that-are-not-contained-within-just-one-county-we-will-end-up-with-duplicated-records">
+     When we do spatial join on the data with two polygon layers that are not aligned (i.e. we have fires geometries that are not contained within just one county), we will end up with duplicated records!
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thus-we-will-be-overestimating-totals-and-calculations-will-be-imprecise">
+     Thus, we will be overestimating totals and calculations will be imprecise!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-choropleth-map-with-aggregate-statistic">
+   Creating Choropleth Map with Aggregate Statistic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choropleth-maps">
+   Choropleth Maps
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing-choropleth-maps">
+   Drawing Choropleth Maps
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantitative-data-classification">
+   Quantitative Data Classification
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantitative-data-classifications">
+   Quantitative Data Classifications
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equal-intervals">
+   Equal Intervals
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qunatile">
+   Qunatile
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     Problems:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-standard-deviation">
+   Mean Standard Deviation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximum-breaks">
+   Maximum breaks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fisher-jenks">
+   Fisher Jenks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-classifications">
+   More classifications
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color-in-choropleth-mapping">
+   Color in Choropleth Mapping
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 05: GeoVisualization </h3><section class="tex2jax_ignore mathjax_ignore" id="plan-for-lecture">
+<h1>Plan for Lecture<a class="headerlink" href="#plan-for-lecture" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Announcements</p></li>
+<li><p>Geovisulization</p></li>
+<li><p>Geographical Analysis Workflow</p></li>
+<li><p>Choropleth mapping</p></li>
+<li><p>Classification Types</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="geovisualization">
+<h1>GeoVisualization<a class="headerlink" href="#geovisualization" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Process of interactively visualizing geographic information in any of the steps in spatial analyses,</p></li>
+<li><p>Originated in cartography, geovis was pioneered under the ledership of Alan MacEachren (Penn State), who developed tools and methods for interactive exploratory data analysis.</p></li>
+<li><p>A core argument for geovisualization is that visual thinking using maps is integral to the scientific process and hypothesis generation, and the role of maps grew beyond communicating the end results of an analysis or documentation process.</p></li>
+<li><p>Geovis interacts with cartography, visual analytics, information visualization, scientific visualization, statistics, computer science, art-and-design, and cognitive science.</p></li>
+</ul>
+<p><em>Source: https://gistbok.ucgis.org/bok-topics/geovisualization</em></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="https://gistbok.ucgis.org/sites/default/files/CV35-Fig1b_350.png" src="https://gistbok.ucgis.org/sites/default/files/CV35-Fig1b_350.png" /></p></td>
+<td><p><img alt="https://gistbok.ucgis.org/sites/default/files/CV35-Fig1a-350v.png" src="https://gistbok.ucgis.org/sites/default/files/CV35-Fig1a-350v.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Cartography Cube</p></td>
+<td><p>Swoopy Framework</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-does-geoviz-look-like-in-practice">
+<h1>What does geoviz look like in practice?<a class="headerlink" href="#what-does-geoviz-look-like-in-practice" title="Permalink to this headline">#</a></h1>
+<img alt="https://gistbok.ucgis.org/sites/default/files/CV35-Fig3_0.png" src="https://gistbok.ucgis.org/sites/default/files/CV35-Fig3_0.png" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="skills-for-geovisualization">
+<h1>Skills for GeoVisualization<a class="headerlink" href="#skills-for-geovisualization" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>GUI-based tools and scripting languages (Processing, Python, D3JS)</p></li>
+<li><p>Data processing skills</p></li>
+<li><p>Analytical skills (statistics)</p></li>
+<li><p>Visualization skills</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="typical-geovisualization-workflow">
+<h1>Typical Geovisualization Workflow<a class="headerlink" href="#typical-geovisualization-workflow" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Raw data contains more information than we can visualize effectively</p></li>
+<li><p>Thus, good understanding of visulization techniques is required</p>
+<ul>
+<li><p>cluttered displays, overplotting</p></li>
+<li><p>–&gt; aggregate data, highlighting interesting aspects of data</p></li>
+<li><p>if visualization is interative a <strong>user</strong> can explore the data and find <strong>interesting</strong></p></li>
+</ul>
+</li>
+<li><p>visual displays</p></li>
+<li><p>visual variables (Bertin)</p></li>
+<li><p>UI and UX design</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="typical-data-analysis-lab-workflow">
+<h1>Typical Data Analysis (Lab) Workflow<a class="headerlink" href="#typical-data-analysis-lab-workflow" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><strong>Find the data (Cal Fire)</strong></p></li>
+<li><p><strong>Pre-process the data: import, inspect visually, look at missing values, filter, drop.</strong></p></li>
+<li><p><strong>Exploratory Data Analysis (GEOVIZ). Generate visual and pose interesting questions about data (descriptive statistics)</strong></p></li>
+<li><p>Data Analysis (inferential statistics)</p></li>
+<li><p>Present Findings</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-analysis-example-california-wildfires">
+<h1>Data Analysis Example - California Wildfires<a class="headerlink" href="#data-analysis-example-california-wildfires" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Finding data</p>
+<ol class="simple">
+<li><p>Calfire publishes data in .gdb format, which is not straight-forward to analyze in Python (What software can we use to analyze it?)</p></li>
+<li><p>Use terminal command ‘wget’ to download the data via URL from the internet</p></li>
+<li><p>Find and download mannually (<a class="reference external" href="https://gis.data.ca.gov/maps/CALFIRE-Forestry::california-fire-perimeters-all-1">try it now</a>)</p></li>
+<li><p>Host on web services that provide readable url links and read via Pandas ‘read_csv’ function</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="brainstorm-exercise">
+<h1>Brainstorm Exercise<a class="headerlink" href="#brainstorm-exercise" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Working with your table, illicit interesting questions about wildfires in CA</p>
+</div></blockquote>
+<blockquote>
+<div><p>Think about variables that are already in the data set</p>
+</div></blockquote>
+<blockquote>
+<div><p>What new variables can we generate that will help us answer the questions</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copied form the lab </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Data Analysis Example - California Wildfires<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Pre-process the data</p>
+<ol class="simple">
+<li><p>remove variables that you will not be using (if necessary)</p></li>
+<li><p>subset the data to your study area</p></li>
+<li><p>convert variables for calculation (float –&gt; int; string –&gt; datetime; etc.)</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="note-on-naming-conventions-in-python">
+<h1>Note on naming conventions in Python<a class="headerlink" href="#note-on-naming-conventions-in-python" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Never use the characters ‘l’ (lowercase letter el), ‘O’ (uppercase letter oh), or ‘I’ (uppercase letter eye) as single character variable names. In some fonts, these characters are indistinguishable from the numerals one and zero. When tempted to use ‘l’, use ‘L’ instead.</p></li>
+<li><p>Class names should normally use the CapWords convention. But we do not use classes in this class!</p></li>
+<li><p>Function names should be lowercase, with words separated by underscores as necessary to improve readability. Variable names follow the same convention as function names.</p></li>
+</ul>
+<p>More info in official <a class="reference external" href="https://peps.python.org/pep-0008/#prescriptive-naming-conventions">Python docs</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://github.com/barguzin/geo_data/raw/main/fires.zip&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">fires</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5250, 8)
+&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR_</th>
+      <th>INC_NUM</th>
+      <th>UNIT_ID</th>
+      <th>ALARM_DATE</th>
+      <th>CONT_DATE</th>
+      <th>CAUSE</th>
+      <th>GIS_ACRES</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>00013212</td>
+      <td>NEU</td>
+      <td>2020-06-18</td>
+      <td>2020-06-23</td>
+      <td>11.0</td>
+      <td>109.602280</td>
+      <td>POLYGON ((-116841.251 97942.565, -116286.032 9...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>00011799</td>
+      <td>NEU</td>
+      <td>2020-06-01</td>
+      <td>2020-06-04</td>
+      <td>2.0</td>
+      <td>685.585022</td>
+      <td>POLYGON ((-117328.400 90212.407, -117226.732 8...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020</td>
+      <td>00007619</td>
+      <td>NEU</td>
+      <td>2020-03-31</td>
+      <td>2020-04-01</td>
+      <td>9.0</td>
+      <td>12.931545</td>
+      <td>POLYGON ((-110213.270 105975.579, -110066.641 ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>00008471</td>
+      <td>NEU</td>
+      <td>2020-04-14</td>
+      <td>2020-04-19</td>
+      <td>18.0</td>
+      <td>10.315964</td>
+      <td>POLYGON ((-111793.600 164243.615, -111624.716 ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>00015865</td>
+      <td>BEA</td>
+      <td>2020-07-15</td>
+      <td>2020-07-16</td>
+      <td>14.0</td>
+      <td>376.910400</td>
+      <td>POLYGON ((-118955.900 122883.508, -118926.056 ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert data types </span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;ALARM_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">)</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;CONT_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span><span class="p">)</span>
+
+<span class="c1"># calculate duration</span>
+<span class="n">fires</span><span class="p">[</span><span class="s1">&#39;dur_days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">CONT_DATE</span> <span class="o">-</span> <span class="n">fires</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop super long fires </span>
+
+<span class="n">fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="o">&lt;</span><span class="mi">365</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires_per_year</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;YEAR_&quot;</span><span class="p">)[</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">fires_per_year</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fires_per_year</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;YEAR_&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture05_18_1.png" src="../_images/lecture05_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># subset the data to only include one year </span>
+<span class="n">fires2021</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fires</span><span class="p">[</span><span class="s1">&#39;YEAR_&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;2021&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+
+<span class="c1"># drop a variable </span>
+<span class="n">fires2021</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;UNIT_ID&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+
+<span class="c1"># convert data types </span>
+<span class="n">fires2021</span><span class="p">[</span><span class="s1">&#39;ALARM_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">)</span>
+<span class="n">fires2021</span><span class="p">[</span><span class="s1">&#39;CONT_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">CONT_DATE</span><span class="p">)</span>
+
+<span class="c1"># calculate duration</span>
+<span class="n">fires2021</span><span class="p">[</span><span class="s1">&#39;dur_days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">CONT_DATE</span> <span class="o">-</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+
+<span class="c1"># get the month start of fires </span>
+<span class="n">fires2021</span><span class="p">[</span><span class="s1">&#39;month_started&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 9)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\AppData\Local\Temp\ipykernel_11564\270685699.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  fires2021.drop(&#39;UNIT_ID&#39;, inplace=True, axis=1)
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  super().__setitem__(key, value)
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  super().__setitem__(key, value)
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  super().__setitem__(key, value)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># EXERCISE</span>
+
+<span class="n">fires2021</span><span class="p">[</span><span class="s1">&#39;dow&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">ALARM_DATE</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span> <span class="c1"># 0-Monday, 6-Sunday</span>
+<span class="n">fires2021</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  super().__setitem__(key, value)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR_</th>
+      <th>INC_NUM</th>
+      <th>ALARM_DATE</th>
+      <th>CONT_DATE</th>
+      <th>CAUSE</th>
+      <th>GIS_ACRES</th>
+      <th>geometry</th>
+      <th>dur_days</th>
+      <th>month_started</th>
+      <th>dow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5038</th>
+      <td>2021</td>
+      <td>00002246</td>
+      <td>2021-03-27</td>
+      <td>2021-03-29</td>
+      <td>18.0</td>
+      <td>873.391724</td>
+      <td>POLYGON ((-134941.882 436471.047, -135837.750 ...</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5039</th>
+      <td>2021</td>
+      <td>00000468</td>
+      <td>2021-01-19</td>
+      <td>2021-01-22</td>
+      <td>9.0</td>
+      <td>20.307356</td>
+      <td>MULTIPOLYGON (((-189428.399 -101523.942, -1894...</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5040</th>
+      <td>2021</td>
+      <td>00000489</td>
+      <td>2021-01-19</td>
+      <td>2021-01-22</td>
+      <td>11.0</td>
+      <td>33.259224</td>
+      <td>MULTIPOLYGON (((-163472.149 -114234.730, -1633...</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5041</th>
+      <td>2021</td>
+      <td>00000490</td>
+      <td>2021-01-19</td>
+      <td>2021-01-22</td>
+      <td>11.0</td>
+      <td>19.725822</td>
+      <td>POLYGON ((-189028.449 -89148.863, -189013.258 ...</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5042</th>
+      <td>2021</td>
+      <td>00000508</td>
+      <td>2021-01-19</td>
+      <td>2021-01-21</td>
+      <td>9.0</td>
+      <td>21.936876</td>
+      <td>MULTIPOLYGON (((-192632.039 -90258.236, -19255...</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires2021</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>YEAR_                    object
+INC_NUM                  object
+ALARM_DATE       datetime64[ns]
+CONT_DATE        datetime64[ns]
+CAUSE                   float64
+GIS_ACRES               float64
+geometry               geometry
+dur_days                  int64
+month_started             int64
+dow                       int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
+<h1>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Think about how numbers (statistics), non-spatial plots and geographic maps can help answer the questions you posed in the previous exercise?</p></li>
+</ol>
+<blockquote>
+<div><p>useful Python functions: groupby(), reset_index(), set_index(); mean(), median(), sum(); plot();</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find average dur of fires </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;average duration of fires in 2021:&#39;</span><span class="p">,</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">dur_days</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="c1"># add labels </span>
+<span class="n">labs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun&#39;</span><span class="p">,</span> <span class="s1">&#39;Jul&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sep&#39;</span><span class="p">,</span> <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">]</span>
+
+<span class="c1"># get unique values and tally them </span>
+<span class="c1"># this works well for count() function </span>
+<span class="c1"># when you need to calculate total number of something</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">month_started</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labs</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>average duration of fires in 2021: 17.01951219512195
+</pre></div>
+</div>
+<img alt="../_images/lecture05_23_1.png" src="../_images/lecture05_23_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">FormatStrFormatter</span>
+<span class="c1"># another way to aggregate data </span>
+<span class="c1"># when you need mean() or sum()</span>
+<span class="c1"># total acreage by day of week for start of the fire </span>
+<span class="n">fires_per_dow</span> <span class="o">=</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dow&#39;</span><span class="p">)[</span><span class="s1">&#39;GIS_ACRES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">fires_per_dow</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;dow&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># add labels </span>
+<span class="n">labs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mon&#39;</span><span class="p">,</span> <span class="s1">&#39;Tue&#39;</span><span class="p">,</span> <span class="s1">&#39;Wed&#39;</span><span class="p">,</span> <span class="s1">&#39;Thu&#39;</span><span class="p">,</span> <span class="s1">&#39;Fri&#39;</span><span class="p">,</span> <span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fires_per_dow</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labs</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span> <span class="c1"># remove &#39;dow&#39; label </span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.0f</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_24_0.png" src="../_images/lecture05_24_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="add-a-spatial-component-to-our-analysis">
+<h1>Add a spatial component to our analysis<a class="headerlink" href="#add-a-spatial-component-to-our-analysis" title="Permalink to this headline">#</a></h1>
+<section id="because-this-is-an-intermediate-geographic-analysis-course">
+<h2>Because this is an Intermediate Geographic Analysis Course<a class="headerlink" href="#because-this-is-an-intermediate-geographic-analysis-course" title="Permalink to this headline">#</a></h2>
+<section id="id2">
+<h3>🙃<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read CA counties </span>
+<span class="n">ca_counties</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/california-counties.geojson&#39;</span><span class="p">)</span>
+<span class="n">ca_counties</span> <span class="o">=</span> <span class="n">ca_counties</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span>
+<span class="n">ca_counties</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;county_name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]</span>
+
+<span class="c1"># reproject </span>
+<span class="n">ca_counties</span> <span class="o">=</span> <span class="n">ca_counties</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ca_counties</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ca_counties</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">fires2021</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="n">ca_counties</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(58, 2)
+epsg:3310 epsg:3310
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>county_name</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alameda</td>
+      <td>MULTIPOLYGON (((-203097.930 -10755.124, -20094...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alpine</td>
+      <td>POLYGON ((-6288.628 76303.334, 3042.528 84440....</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amador</td>
+      <td>POLYGON ((-89497.637 53052.537, -89492.962 546...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Butte</td>
+      <td>POLYGON ((-161923.480 144686.420, -164426.638 ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Calaveras</td>
+      <td>POLYGON ((-76796.914 1747.218, -80494.997 6443...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-join-101">
+<h1>Spatial Join 101<a class="headerlink" href="#spatial-join-101" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>A spatial join uses binary predicates (basic geometric operations) such as intersects and crosses to combine two GeoDataFrames based on the spatial relationship between their geometries.</p></li>
+<li><p>A common use case might be a spatial join between a point layer and a polygon layer where you want to retain the point geometries (<strong>target features</strong>) and grab the attributes of the intersecting polygons (<strong>join features</strong>).</p></li>
+</ul>
+<img alt="https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_1/about_gis/Image23.gif" src="https://web.natur.cuni.cz/~langhamr/lectures/vtfg1/mapinfo_1/about_gis/Image23.gif" />
+<ul class="simple">
+<li><p>A one-to-one operation will join a single feature from the join features into the target features.
+<img alt="https://gisgeography.com/wp-content/uploads/2019/04/one-to-one-relationship-425x124.png" src="https://gisgeography.com/wp-content/uploads/2019/04/one-to-one-relationship-425x124.png" /></p></li>
+<li><p>One-to-many operation will join all the features by creating multiple overlapping records. Each duplicate record contains the records from the joining features.
+<img alt="https://gisgeography.com/wp-content/uploads/2019/04/one-to-many-relationship-425x124.png" src="https://gisgeography.com/wp-content/uploads/2019/04/one-to-many-relationship-425x124.png" /></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fires2021</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="n">fires2021_with_counties</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">fires2021</span><span class="p">,</span> <span class="n">ca_counties</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires2021_with_counties</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 10)
+(226, 12)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="disclaimer">
+<h1>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">#</a></h1>
+<section id="when-we-do-spatial-join-on-the-data-with-two-polygon-layers-that-are-not-aligned-i-e-we-have-fires-geometries-that-are-not-contained-within-just-one-county-we-will-end-up-with-duplicated-records">
+<h2>When we do spatial join on the data with two polygon layers that are not aligned (i.e. we have fires geometries that are not contained within just one county), we will end up with duplicated records!<a class="headerlink" href="#when-we-do-spatial-join-on-the-data-with-two-polygon-layers-that-are-not-aligned-i-e-we-have-fires-geometries-that-are-not-contained-within-just-one-county-we-will-end-up-with-duplicated-records" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="thus-we-will-be-overestimating-totals-and-calculations-will-be-imprecise">
+<h2>Thus, we will be overestimating totals and calculations will be imprecise!<a class="headerlink" href="#thus-we-will-be-overestimating-totals-and-calculations-will-be-imprecise" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ca_counties</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">.2</span><span class="p">);</span>
+<span class="n">fires2021_with_counties</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Fires in CA in 2021&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_31_0.png" src="../_images/lecture05_31_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="creating-choropleth-map-with-aggregate-statistic">
+<h1>Creating Choropleth Map with Aggregate Statistic<a class="headerlink" href="#creating-choropleth-map-with-aggregate-statistic" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Group data and calculate statistic</p></li>
+<li><p>Join aggregate to geometry</p></li>
+<li><p>Plot using GeoPandas</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calc total area of fires in CA counties in 2021 </span>
+<span class="c1"># use &#39;dropna=False&#39;  to keep all counties (even those that had zero fires)</span>
+<span class="n">tot_by_county21</span> <span class="o">=</span> <span class="n">fires2021_with_counties</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;county_name&#39;</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># use non-spatial join to add geometries to the calculated dataframe </span>
+<span class="c1"># please note that we join to the left dataframe by default </span>
+<span class="c1"># thus if our left dataframe is geopandas the resulting dataframe </span>
+<span class="c1"># will also be geopandas</span>
+<span class="n">tot_by_county_geom21</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ca_counties</span><span class="p">,</span> <span class="n">tot_by_county21</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;county_name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span> 
+
+<span class="c1"># fill in missing with zeroes </span>
+<span class="n">tot_by_county_geom21</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># count of fires is stored in column &#39;INC_NUM&#39;</span>
+<span class="n">tot_by_county_geom21</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_33_0.png" src="../_images/lecture05_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># do the same for entire California </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="n">fires_with_counties</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">fires</span><span class="p">,</span> <span class="n">ca_counties</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fires_with_counties</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5243, 9)
+(5598, 11)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calc total area of fires in CA counties in 2021 </span>
+<span class="c1"># use &#39;dropna=False&#39;  to keep all counties (even those that had zero fires)</span>
+<span class="n">tot_by_county</span> <span class="o">=</span> <span class="n">fires_with_counties</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;county_name&#39;</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># use non-spatial join to add geometries to the calculated dataframe </span>
+<span class="c1"># please note that we join to the left dataframe by default </span>
+<span class="c1"># thus if our left dataframe is geopandas the resulting dataframe </span>
+<span class="c1"># will also be geopandas</span>
+<span class="n">tot_by_county_geom</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ca_counties</span><span class="p">,</span> <span class="n">tot_by_county</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;county_name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span> 
+
+<span class="c1"># fill in missing with zeroes </span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># count of fires is stored in column &#39;INC_NUM&#39;</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_35_0.png" src="../_images/lecture05_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">tot_by_county_geom21</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Total Number of Fires in CA</span><span class="se">\n</span><span class="s1"> in 2021&#39;</span><span class="p">);</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Total Number of Fires in CA</span><span class="se">\n</span><span class="s1"> in 1910-2021&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_36_0.png" src="../_images/lecture05_36_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="choropleth-maps">
+<h1>Choropleth Maps<a class="headerlink" href="#choropleth-maps" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Geographic maps that display statistical information encoded in a color palette.</p></li>
+<li><p>Display non-geographic attributes or variables on a geographic map.</p></li>
+<li><p>The word choropleth stems from the root “choro”, meaning “region”. As such choropleth maps represent data at the regional level, and are appropriate for areal unit data where each observation combines a value of an attribute and a geometric figure, usually a polygon.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="drawing-choropleth-maps">
+<h1>Drawing Choropleth Maps<a class="headerlink" href="#drawing-choropleth-maps" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Select a number of groups smaller than into which all values in our dataset will be mapped to;</p></li>
+<li><p>Identify a classification algorithm that executes mapping;</p></li>
+<li><p>Reduce all values in our data into corresponding number of groups,</p></li>
+<li><p>Assign color to each group.</p></li>
+</ol>
+<blockquote>
+<div><p>In broad terms, the classification scheme defines the number of classes as well as the rules for assignment; while a good symbolization conveys information about the value differentiation across classes. Source: Geographic Data Science</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quantitative-data-classification">
+<h1>Quantitative Data Classification<a class="headerlink" href="#quantitative-data-classification" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Partition the attribute values into mutually exclusive and exhaustive groups</p>
+</div></blockquote>
+<p>$$
+c_j &lt; y_i \le  c_{j+1} \ \forall y_i \in C_{j}
+$$</p>
+<p>where $c_j$ and $c_{j+1}$ are lower and upper boundaryfor each of the $C_j$ groups and $y_i$ are observations.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quantitative-data-classifications">
+<h1>Quantitative Data Classifications<a class="headerlink" href="#quantitative-data-classifications" title="Permalink to this headline">#</a></h1>
+<img alt="https://uploads-ssl.webflow.com/5f6a4786fa53db61032919f9/5fa44acd9fd5f0dd50b07af2_histogram_examples.png" src="https://uploads-ssl.webflow.com/5f6a4786fa53db61032919f9/5fa44acd9fd5f0dd50b07af2_histogram_examples.png" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+
+<span class="c1"># Plot histogram</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># Add rug on horizontal axis</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">rugplot</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_41_0.png" src="../_images/lecture05_41_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    5243.00000
+mean       15.27427
+std        29.13632
+min         1.00000
+25%         1.00000
+50%         4.00000
+75%        11.00000
+max       222.00000
+Name: dur_days, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># The counts object captures how many observations each category in the classification has</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts:&#39;</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+
+<span class="c1"># The bin object stores these break points we are interested in when considering classification schemes </span>
+<span class="c1"># (the patches object can be ignored in this context, as it stores the geometries of the histogram plot)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bins:&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts: [4698.  293.  182.   60.   10.]
+bins: [  1.   45.2  89.4 133.6 177.8 222. ]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="equal-intervals">
+<h1>Equal Intervals<a class="headerlink" href="#equal-intervals" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>For a given value of $k$, <em>equal intervals classification</em> splits the range of the attribute space into equal length intervals, with each interval having a width $w-\frac{x_0 - x_{n-1}}{k}$.</p></li>
+<li><p>Equal intervals have the dual advantages of simplicity and ease of interpretation.</p></li>
+<li><p>Because this rule only considers the extreme values of the distribution this can result in one or more classes being sparse.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mapclassify</span> 
+
+<span class="n">ei5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">EqualInterval</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ei5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EqualInterval           
+
+    Interval       Count
+------------------------
+[  1.00,  45.20] |  4698
+( 45.20,  89.40] |   293
+( 89.40, 133.60] |   182
+(133.60, 177.80] |    60
+(177.80, 222.00] |    10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="qunatile">
+<h1>Qunatile<a class="headerlink" href="#qunatile" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>To avoid the potential problem of sparse classes, the quantiles of the distribution can be used to identify the class boundaries.</p></li>
+<li><p>Each class will have approximately observations using the quantile classifier.</p></li>
+</ul>
+<section id="problems">
+<h2>Problems:<a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>The varying widths of the intervals can be markedly different which can lead to problems of interpretation.</p></li>
+<li><p>There are a large number of duplicate values in the distribution such that the limits for one or more classes become ambiguous.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">Quantiles</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">q5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quantiles               
+
+    Interval       Count
+------------------------
+[  1.00,   1.00] |  1455
+(  1.00,   2.00] |   669
+(  2.00,   5.00] |  1081
+(  5.00,  16.60] |   989
+( 16.60, 222.00] |  1049
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mean-standard-deviation">
+<h1>Mean Standard Deviation<a class="headerlink" href="#mean-standard-deviation" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Use sample mean and sample standard deviation to define class boundaries as some distance from the sample mean, with the distance being a multiple of the standard deviation (i.e. +/-1std, +/-2std, +/-3std)</p></li>
+<li><p>This classifier is best used when data is normally distributed or, at least, when the sample mean is a meaningful measure to anchor the classification around.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msd5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">StdMean</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">dur_days</span><span class="p">)</span>
+<span class="n">msd5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>StdMean                 
+
+    Interval       Count
+------------------------
+(  -inf, -43.00] |     0
+(-43.00, -13.86] |     0
+(-13.86,  44.41] |  4690
+( 44.41,  73.55] |   210
+( 73.55, 222.00] |   343
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="maximum-breaks">
+<h1>Maximum breaks<a class="headerlink" href="#maximum-breaks" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Considering the difference between sorted values. That is, rather than considering a value of the dataset in itself, it looks at how apart each value is from the next one in the sorted sequence.</p></li>
+<li><p>The classifier then places the the break points in between the pairs of values most stretched apart from each other in the entire sequence, proceeding in descending order relative to the size of the breaks</p></li>
+<li><p>Maximum breaks is an appropriate approach when we are interested in making sure observations in each class are separated from those in neighboring classes. As such, it works well in cases where the distribution of values is not unimodal.</p></li>
+<li><p>The algorithm is relatively fast to compute.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mb5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">MaximumBreaks</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">mb5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MaximumBreaks           
+
+    Interval       Count
+------------------------
+[  1.00, 173.00] |  5233
+(173.00, 186.50] |     4
+(186.50, 199.50] |     4
+(199.50, 212.00] |     1
+(212.00, 222.00] |     1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fisher-jenks">
+<h1>Fisher Jenks<a class="headerlink" href="#fisher-jenks" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Dynamic programming approach to minimize the sum of the absolute deviations around class medians</p></li>
+<li><p>Fisher-Jenks is guaranteed to produce an optimal classification for a prespecified number of classes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fj5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">FisherJenks</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">fj5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FisherJenks             
+
+    Interval       Count
+------------------------
+[  1.00,  14.00] |  4109
+( 14.00,  43.00] |   575
+( 43.00,  80.00] |   249
+( 80.00, 124.00] |   225
+(124.00, 222.00] |    85
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="more-classifications">
+<h1>More classifications<a class="headerlink" href="#more-classifications" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Box-Plot</p></li>
+<li><p>Head-Tail Breaks</p></li>
+<li><p>Jenks Caspall</p></li>
+<li><p>Max-P</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1">##################</span>
+<span class="c1"># Equal Interval #</span>
+<span class="c1">##################</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">,</span>  <span class="c1"># Data to plot</span>
+     <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;equal_interval&quot;</span><span class="p">,</span>  <span class="c1"># Classification scheme</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>  <span class="c1"># Color palette</span>
+     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Add legend</span>
+     <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fmt&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.0f}</span><span class="s2">&quot;</span><span class="p">},</span>  <span class="c1"># Remove decimals in legend</span>
+     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Equal Interval Classification&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1">#############</span>
+<span class="c1"># Quantiles #</span>
+<span class="c1">#############</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">,</span>  <span class="c1"># Data to plot</span>
+     <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;quantiles&quot;</span><span class="p">,</span>  <span class="c1"># Classification scheme</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>  <span class="c1"># Color palette</span>
+     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Add legend</span>
+     <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fmt&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.0f}</span><span class="s2">&quot;</span><span class="p">},</span>  <span class="c1"># Remove decimals in legend</span>
+     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Quantiles Classification&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1">##############</span>
+<span class="c1"># Mean StDev #</span>
+<span class="c1">##############</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">,</span>  <span class="c1"># Data to plot</span>
+     <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;StdMean&quot;</span><span class="p">,</span>  <span class="c1"># Classification scheme</span>
+     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>  <span class="c1"># Color palette</span>
+     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Add legend</span>
+     <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fmt&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.0f}</span><span class="s2">&quot;</span><span class="p">},</span>  <span class="c1"># Remove decimals in legend</span>
+     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Mean StDev Classification&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1">##########</span>
+<span class="c1"># FISHER #</span>
+<span class="c1">##########</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">,</span>  <span class="c1"># Data to plot</span>
+     <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;FisherJenks&quot;</span><span class="p">,</span>  <span class="c1"># Classification scheme</span>
+     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>  <span class="c1"># Color palette</span>
+     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Add legend</span>
+     <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fmt&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.0f}</span><span class="s2">&quot;</span><span class="p">},</span>  <span class="c1"># Remove decimals in legend</span>
+     <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Fisher Jenks Classification&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;classif_compare.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;classif_compare.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture05_56_0.png" src="../_images/lecture05_56_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="color-in-choropleth-mapping">
+<h1>Color in Choropleth Mapping<a class="headerlink" href="#color-in-choropleth-mapping" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Classification scheme, symbolization and color scheme will determine the overall effectiveness of the choropleth map</p></li>
+<li><p>The choice of a color scheme for a choropleth map should be based on the type of variable under consideration</p></li>
+<li><p>Three types of numerical attributes:</p>
+<ul>
+<li><p>sequential - continuous data</p></li>
+<li><p>diverging - continuous data (equal weight on different parts of the spectrum)</p></li>
+<li><p>qualitative - categorical data</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;INC_NUM&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture05_58_1.png" src="../_images/lecture05_58_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">INC_NUM</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture05_59_1.png" src="../_images/lecture05_59_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot_by_county_geom</span><span class="p">[</span><span class="s2">&quot;class_cnt&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">tot_by_county_geom</span><span class="p">[</span><span class="s2">&quot;INC_NUM&quot;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">350</span><span class="p">])</span>
+
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;class_cnt&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdYlGn&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture05_60_1.png" src="../_images/lecture05_60_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot_by_county_geom</span><span class="p">[</span><span class="s1">&#39;county_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">county_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>county_name</th>
+      <th>geometry</th>
+      <th>INC_NUM</th>
+      <th>class_cnt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>alameda</td>
+      <td>MULTIPOLYGON (((-203097.930 -10755.124, -20094...</td>
+      <td>10.0</td>
+      <td>(-inf, 50.0]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>alpine</td>
+      <td>POLYGON ((-6288.628 76303.334, 3042.528 84440....</td>
+      <td>18.0</td>
+      <td>(-inf, 50.0]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>amador</td>
+      <td>POLYGON ((-89497.637 53052.537, -89492.962 546...</td>
+      <td>23.0</td>
+      <td>(-inf, 50.0]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>butte</td>
+      <td>POLYGON ((-161923.480 144686.420, -164426.638 ...</td>
+      <td>95.0</td>
+      <td>(50.0, 100.0]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>calaveras</td>
+      <td>POLYGON ((-76796.914 1747.218, -80494.997 6443...</td>
+      <td>62.0</td>
+      <td>(50.0, 100.0]</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">socal</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Imperial&#39;</span><span class="p">,</span> <span class="s1">&#39;Kern&#39;</span><span class="p">,</span> <span class="s1">&#39;Los Angeles&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Riverside&#39;</span><span class="p">,</span><span class="s1">&#39;San Bernardino&#39;</span><span class="p">,</span> <span class="s1">&#39;San Diego&#39;</span><span class="p">,</span> <span class="s1">&#39;San Luis Obispo&#39;</span><span class="p">,</span> <span class="s1">&#39;Santa Barbara&#39;</span><span class="p">,</span> <span class="s1">&#39;Ventura&#39;</span><span class="p">]</span>
+<span class="n">socal</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">socal</span><span class="p">]</span>
+
+<span class="n">norcal</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alameda&#39;</span><span class="p">,</span><span class="s1">&#39;Alpine&#39;</span><span class="p">,</span><span class="s1">&#39;Amador&#39;</span><span class="p">,</span><span class="s1">&#39;Butte&#39;</span><span class="p">,</span><span class="s1">&#39;Calaveras&#39;</span><span class="p">,</span><span class="s1">&#39;Colusa&#39;</span><span class="p">,</span><span class="s1">&#39;Contra Costa&#39;</span><span class="p">,</span><span class="s1">&#39;Del Norte&#39;</span><span class="p">,</span><span class="s1">&#39;El Dorado&#39;</span><span class="p">,</span><span class="s1">&#39;Fresno&#39;</span><span class="p">,</span><span class="s1">&#39;Glenn&#39;</span><span class="p">,</span><span class="s1">&#39;Humboldt&#39;</span><span class="p">,</span> <span class="s1">&#39;Inyo&#39;</span><span class="p">,</span><span class="s1">&#39;Kings&#39;</span><span class="p">,</span><span class="s1">&#39;Lake&#39;</span><span class="p">,</span><span class="s1">&#39;Lassen&#39;</span><span class="p">,</span><span class="s1">&#39;Madera&#39;</span><span class="p">,</span><span class="s1">&#39;Marin&#39;</span><span class="p">,</span><span class="s1">&#39;Mariposa&#39;</span><span class="p">,</span><span class="s1">&#39;Mendocino&#39;</span><span class="p">,</span><span class="s1">&#39;Merced&#39;</span><span class="p">,</span><span class="s1">&#39;Modoc&#39;</span><span class="p">,</span><span class="s1">&#39;Mono&#39;</span><span class="p">,</span><span class="s1">&#39;Monterey&#39;</span><span class="p">,</span><span class="s1">&#39;Napa&#39;</span><span class="p">,</span><span class="s1">&#39;Nevada&#39;</span><span class="p">,</span><span class="s1">&#39;Placer&#39;</span><span class="p">,</span><span class="s1">&#39;Plumas&#39;</span><span class="p">,</span><span class="s1">&#39;Sacramento&#39;</span><span class="p">,</span><span class="s1">&#39;San Benito&#39;</span><span class="p">,</span><span class="s1">&#39;San Francisco&#39;</span><span class="p">,</span><span class="s1">&#39;San Joaquin&#39;</span><span class="p">,</span><span class="s1">&#39;San Mateo&#39;</span><span class="p">,</span><span class="s1">&#39;Santa Clara&#39;</span><span class="p">,</span><span class="s1">&#39;Santa Cruz&#39;</span><span class="p">,</span><span class="s1">&#39;Shasta&#39;</span><span class="p">,</span><span class="s1">&#39;Sierra&#39;</span><span class="p">,</span><span class="s1">&#39;Siskiyou&#39;</span><span class="p">,</span><span class="s1">&#39;Solano&#39;</span><span class="p">,</span><span class="s1">&#39;Sonoma&#39;</span><span class="p">,</span><span class="s1">&#39;Stanislaus&#39;</span><span class="p">,</span><span class="s1">&#39;Sutter&#39;</span><span class="p">,</span><span class="s1">&#39;Tehama&#39;</span><span class="p">,</span><span class="s1">&#39;Trinity&#39;</span><span class="p">,</span><span class="s1">&#39;Tulare&#39;</span><span class="p">,</span><span class="s1">&#39;Tuolumne&#39;</span><span class="p">,</span><span class="s1">&#39;Yolo&#39;</span><span class="p">,</span><span class="s1">&#39;Yuba&#39;</span><span class="p">]</span>
+
+<span class="n">norcal</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">norcal</span><span class="p">]</span>
+
+<span class="n">tot_by_county_geom</span><span class="p">[</span><span class="s1">&#39;ca_region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">county_name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">socal</span><span class="p">),</span><span class="s1">&#39;ca_region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SoCal&quot;</span>
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">county_name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">norcal</span><span class="p">),</span><span class="s1">&#39;ca_region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;NorCal&quot;</span>
+
+<span class="n">tot_by_county_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;ca_region&#39;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture05_62_1.png" src="../_images/lecture05_62_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Check out the <a class="reference external" href="https://geographicdata.science/book/notebooks/05_choropleth.html">Choropleth Mapping Chapter in GDS book</a> and GIA Chapter 3</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

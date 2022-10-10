@@ -948,8 +948,63 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5250, 8)
-&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fires</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://github.com/barguzin/geo_data/raw/main/fires.zip&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">fires</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">fires</span><span class="p">))</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\geopandas\io\file.py:243,</span> in <span class="ni">_read_file</span><span class="nt">(filename, bbox, mask, rows, engine, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">_is_url</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">_urlopen</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">243</span>     <span class="n">path_or_bytes</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="n">from_bytes</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span> <span class="k">elif</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_file_like</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\http\client.py:481,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">479</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">481</span>         <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_safe_read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">482</span>     <span class="k">except</span> <span class="n">IncompleteRead</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\http\client.py:630,</span> in <span class="ni">HTTPResponse._safe_read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span> <span class="k">def</span> <span class="nf">_safe_read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amt</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">624</span>     <span class="sd">&quot;&quot;&quot;Read the number of bytes requested.</span>
+<span class="g g-Whitespace">    </span><span class="mi">625</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">626</span><span class="sd">     This function should be used when &lt;amt&gt; bytes &quot;should&quot; be present for</span>
+<span class="g g-Whitespace">    </span><span class="mi">627</span><span class="sd">     reading. If the bytes are truly not available (due to EOF), then the</span>
+<span class="g g-Whitespace">    </span><span class="mi">628</span><span class="sd">     IncompleteRead exception can be used to detect the problem.</span>
+<span class="g g-Whitespace">    </span><span class="mi">629</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">630</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">631</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">amt</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">632</span>         <span class="k">raise</span> <span class="n">IncompleteRead</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">amt</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -1110,7 +1165,7 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 9)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\AppData\Local\Temp\ipykernel_11564\270685699.py:6: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\AppData\Local\Temp\ipykernel_22136\270685699.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy

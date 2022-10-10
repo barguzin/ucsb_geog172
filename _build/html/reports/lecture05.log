@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['goleta = ox.geocode_to_gdf("Goleta, CA, USA") # get Goleta', '', "go_graph = ox.graph_from_place('Goleta, CA, USA')", 'go_nodes, go_streets  = ox.graph_to_gdfs(go_graph)', '']
-...
-["pois_proj = ox.project_gdf(pois, to_crs='EPSG:3857')", '', '# print to the output', "print(f'There are {pois.shape} cafes/restaurants/bars/pubs in SB!')", 'pois.head(3)']
+fires = gpd.read_file('https://github.com/barguzin/geo_data/raw/main/fires.zip')
+print(fires.shape) 
+print(type(fires))
 -------------------
 

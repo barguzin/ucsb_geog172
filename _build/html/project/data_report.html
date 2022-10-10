@@ -387,12 +387,58 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-sources">
+   Data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-report-requirements">
+   Data report requirements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-and-spatio-temporal-data">
+     Spatial and Spatio-temporal data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-functions-to-practice">
+     Python functions to practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-report-instructions">
+   Data report instructions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -404,6 +450,41 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-sources">
+   Data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-report-requirements">
+   Data report requirements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-and-spatio-temporal-data">
+     Spatial and Spatio-temporal data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-functions-to-practice">
+     Python functions to practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-report-instructions">
+   Data report instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -413,6 +494,74 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="data-report">
 <h1>Data Report<a class="headerlink" href="#data-report" title="Permalink to this headline">#</a></h1>
+<p>These report guidelines will help you get started on your geographical analysis project. The key to successful project is good data. There are numerous data repositories online and even more interesting questions that you can ask and answer with the data.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The Data Report is due 10/16/2022 by 23.59.</strong></p>
+</div>
+<hr class="docutils" />
+<section id="data-sources">
+<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h2>
+<p>Please see below for an outline of available data sources:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="../project.html"><span class="doc std std-doc">US Census Bureau</span></a>. Consider using CenPy API for Python (which makes getting data from Census much easier)</p></li>
+<li><p><a class="reference internal" href="../project.html"><span class="doc std std-doc">Kaggle</span></a>. Various data for data science and machine learning applications.</p></li>
+<li><p><a class="reference external" href="https://freegisdata.rtwilson.com/">Free GIS Data</a>. Contains list of useful resources to GIS data.</p></li>
+<li><p><a class="reference external" href="http://opendata.arcgis.com/">ESRI Open Data Hub</a></p></li>
+<li><p><a class="reference external" href="https://gisgeography.com/openstreetmap-download-osm-data/">OpenStreetMap</a>. Please see demo from Lecture 1 on how to utilize Python package <em>osmnx</em> to get the OSM data out programmatically.</p></li>
+<li><p><a class="reference external" href="https://gisgeography.com/best-free-gis-data-sources-raster-vector/">GIS Geography List for Data</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_GIS_data_sources">GIS data by country from Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://guides.lib.berkeley.edu/gis/international">Berkeley GIS International Data Library</a>. This library contains links to resources broadly grouped into the following categories: <em>basic GIS data, GIS data for humanities, GIS data for natural sciences, GIS data for social sciences, California and Berkeley GIS data</em>.</p></li>
+<li><p><a class="reference external" href="https://livingatlas.arcgis.com/en/browse/">ArcGIS Living Atlas of the World</a></p></li>
+<li><p><a class="reference external" href="https://www.nhgis.org/">National historical geographic information systems (NHGIS)</a>. easy access to summary tables and time series of population, housing, agriculture, and economic data, along with GIS-compatible boundary files, for years from 1790 through the present and for all levels of U.S. census geography, including states, counties, tracts, and blocks.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="data-report-requirements">
+<h2>Data report requirements<a class="headerlink" href="#data-report-requirements" title="Permalink to this headline">#</a></h2>
+<p>This is a course on geographical analysis. Thus, the data that you are analyzing should be geographically-referenced. For the purposes of this report you will need to download at least two data sets: spatial/spatio-temporal data and supplementary data.</p>
+<section id="spatial-and-spatio-temporal-data">
+<h3>Spatial and Spatio-temporal data<a class="headerlink" href="#spatial-and-spatio-temporal-data" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Points, lines and polygons.</p></li>
+<li><p>File-format: GeoPackage (.gpkg), ShapeFile (.shp), GeoDatabase (.gdb), GeoJSON (.geojson), etc.</p></li>
+<li><p>Samples size of at least 30 observations (BUT more is better!). Aim for hundreds, thousands, tens of thousands.</p></li>
+<li><p>For data that has a temporal component (datetime), there are many more ways to summarize it. This will make it easier to ask questions, but will also complicate your data analysis.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Examples of spatial variables (polygons)</strong>: <em>average rent in LA neighborhoods</em>, <em>percent of renter-occupied units in LA Census block groups</em>, <em>medium income in Census tracts</em>, <em>COVID-19 cases in US counties</em>.</p>
+<p><strong>Examples of spatial variables (points)</strong>: <em>AirBnB ads in New York City</em>, <em>Average temperature from weather station data</em>, <em>bike sharing stations data</em>, <em>locations of coffee shops in LA</em></p>
+<p><strong>Examples of spatial variables (lines)</strong>: <em>US rivers</em>, <em>US roads</em>, <em>GPS tracks of animals</em>.</p>
+<p><strong>Examples of supplementary data</strong>: <em>Census block groups</em>, <em>Census blocks</em>, <em>Census tracts</em>, <em>LA neighborhoods</em>, <em>NYC boroughs</em>.</p>
+</div>
+</section>
+<section id="python-functions-to-practice">
+<h3>Python functions to practice<a class="headerlink" href="#python-functions-to-practice" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>reading data (pd.read_csv, gpd.read_file)</p></li>
+<li><p>filtering data (df = df.loc[df.var1==’lab1’])</p></li>
+<li><p>selecting variables (df = df[[‘var1’, ‘var2’]])</p></li>
+<li><p>calculating new variables (df[‘new_var’] = df.old_var + df.old_var2)</p></li>
+<li><p>summarizing data (df.describe)</p></li>
+<li><p>plot data (df.plot, gdf.plot)</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-report-instructions">
+<h2>Data report instructions<a class="headerlink" href="#data-report-instructions" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Locate and download the data of your interest.</p></li>
+<li><p>Upload your data into Google Colab notebook (or other analytical software of your choice).</p></li>
+<li><p>Import uploaded data into Pandas/GeoPandas dataframe.</p></li>
+<li><p>Summarize at least two categorical and/or continuous variable in your dataset using ‘describe’ function.</p></li>
+<li><p>Create a histogram for at least two continuous variable in your data. Describe the distribution on each plot (unimodal, multimodal, normal, exponential, logarithmic, skewed, etc.).</p></li>
+<li><p>Create a geographic map of your study area. Plot your spatial/spatio-temporal data and supplemental/reference data.</p></li>
+<li><p>Write at least three interesting questions that you intend to study in your geographical analysis.</p></li>
+<li><p>Submit to GauchoSpace as *ipynb notebook or pdf.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

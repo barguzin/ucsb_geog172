@@ -184,7 +184,7 @@ pois.head(3)
 go_streets_proj.highway.value_counts()[:15]
 
 
-# In[4]:
+# In[20]:
 
 
 fig, ax = plt.subplots(figsize=(15,15))
@@ -205,7 +205,7 @@ fig.savefig('goleta_cafe.png', bbox_inches='tight')
 plt.close()
 
 
-# In[5]:
+# In[21]:
 
 
 Image(filename='goleta_cafe.png')
@@ -237,7 +237,7 @@ print(med_center)
 print(std_dist)
 
 
-# In[8]:
+# In[17]:
 
 
 # Set up figure and axis
@@ -276,7 +276,7 @@ fig.savefig('centro.png', bbox_inches='tight')
 plt.close()
 
 
-# In[9]:
+# In[18]:
 
 
 Image(filename='centro.png')

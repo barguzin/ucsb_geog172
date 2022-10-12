@@ -125,7 +125,7 @@ sewer = gpd.read_file('snow_data/sewergrates_ventilators.geojson')
 # In[6]:
 
 
-fig, ax = plt.subplots(figsize=(7,7))
+fig, ax = plt.subplots()
 
 # calculate marker size for plotting
 death_by_build['plotted_size'] = death_by_build.deaths * 10
@@ -434,15 +434,33 @@ plt.legend(numpoints=1)
 # * Partition space into regularly spaced grid cells.
 # * Since Process is uniform - expect same intensity everywhere
 
+# # Quadrat Statistic
+# 
+# $$
+# s^2 = \frac{\sum(x_i - \bar{x})^2}{m-1}
+# $$
+# 
+# $$
+# VMR = \frac{s^2}{\bar{x}}, \quad z = \Bigg( \sqrt{\frac{m-1}{2}} VMR - 1 \Bigg)
+# $$
+# 
+# where $m$ is the number of quadrats, $\bar{x}$ is the mean number of points per quadrat, $s^2$ is the variance of the number of points per quadrat, $(x-\bar{x})^2$ is the cell deviate and $VMR$ is the variance-mean ratio. 
+# 
+# See more details [here](http://webspace.ship.edu/pgmarr/Geo441/Examples/Quadrat%20Analysis.pdf)
+
+# # Quadrat Statistic 
+# 
+# * H_0: The distribution of cholera deaths is not significantly different than random (Null Hypothesis)
+# * H_a: The distribution of cholera deaths is significantly different than random (Alternative Hypothesis)
+# 
+# $\alpha=0.05$
+
 # In[23]:
 
 
 from pointpats import (
-    distance_statistics,
-    QStatistic,
-    random,
-    PointPattern,
-    centrography
+    distance_statistics, QStatistic,
+    random, PointPattern, centrography
 )
 
 qstat = QStatistic(points)
@@ -451,6 +469,41 @@ qstat.plot()
 
 
 # In[24]:
+
+
+list_counts = np.array([2,12,10,35,56,38,23,60,14])
+mean_count = np.repeat(27.7, len(list_counts))
+m = 250
+cells = 9
+
+xbar = m / cells
+var = np.sum((list_counts - mean_count)**2) / m-1
+vmr = var / xbar
+z = (np.sqrt((m-1)/2)*(vmr-1))
+
+
+print(var)
+print(vmr)
+print(z)
+
+
+# * total points: 250
+# * number of cells: 9
+# * degrees of freedom: (9-1) = 8 
+# * $\bar{x} = 250/9 = 27.7$
+# * $s^2 = 12.73
+# * VMR = 12.73/27.7 = 0.46
+# * z = -6.04
+# 
+# ## Because $z$ is not within $z_l \leq z \leq z_h$, where $z$ comes from the $z$-table and $z_l=-1.96$ and $z_h=1.96$, we cannot accept the null hypothesis. 
+
+# In[25]:
+
+
+12.73/27.7
+
+
+# In[26]:
 
 
 hull = centrography.ConvexHull(pp.points)
@@ -480,7 +533,7 @@ ran_qstat.plot()
 # \bar{d}_{min}=\frac{1}{n} \sum_{i=1}^n d_{min}(s_i)
 # $$
 
-# In[25]:
+# In[27]:
 
 
 tt = pp.knn()
@@ -488,7 +541,7 @@ tt = pp.knn()
 plt.hist(tt[1])
 
 
-# In[26]:
+# In[28]:
 
 
 # tt = pp.knn(3)
@@ -496,7 +549,7 @@ plt.hist(tt[1])
 # plt.hist(new_tt)
 
 
-# In[27]:
+# In[29]:
 
 
 random_point_pattern = PointPattern(random_poisson)

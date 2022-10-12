@@ -14,8 +14,6 @@ Please make sure to submit the lab by **October 17/18, 2022**, depending on your
 
 ## Lab Instructions
 
-1. Find your area of interest: for last names starting with A-G (West), H-M (Midwest), N-T (Northeast), T-Z (South). Filter temperature data to include only the area of your interest. See [this link](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf) for a list of state names. 
-
 ````{tip}
 
 Use the **isin()** function to subset your data.
@@ -25,12 +23,7 @@ my_region = ['California', 'Washington', 'Oregon']
 
 my_states = df.loc[df['state_name'].isin(my_region)]
 ```
-
 ````
-2. What is the average temperature in the area of your choice. (Use .mean() function). 
-3. Group your data by year and plot average temperature in your assigned region as a time-series plot. 
-4. Group your data by 'state' and caclulate average temperature for each state. Create a Figure with two subfigures. Add a choropleth map for each subfigure plotting average temperature per state using two different types of classification (choose any). 
-5. Create two dataframes: **weather_1980_2000** and **weather_2000_2020** by filtering your data on year of observation. 
 
 ````{tip}
 
@@ -45,6 +38,12 @@ new_df = df.loc['2014-01-01':'2015-01-01']
 ```
 
 ````
+
+1. Find your area of interest: for last names starting with A-G (West), H-M (Midwest), N-S (Northeast), T-Z (South). Filter temperature data to include only the area of your interest. See [this link](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf) for a list of state names. 
+2. What is the average temperature in the area of your choice. (Use .mean() function). 
+3. Group your data by year and plot average temperature in your assigned region as a time-series plot. 
+4. Group your data by 'state' and caclulate average temperature for each state. Create a Figure with two subfigures. Add a choropleth map for each subfigure plotting average temperature per state using two different types of classification (choose any). 
+5. Create two dataframes: **weather_1980_2000** and **weather_2000_2020** by filtering your data on year of observation. 
 6. Group two newly created datasets by 'state' and caclulate average temperature for each state. Create a Figure with two subfires. Add a choropleth map generated from **weather_1980_2000** and **quantile** classification to the **left** subfigure. Add a choropleth map generated from **weather_2000_2020** and **quantile** classification to the **right** subfigure.
 7. Create a Figure with two subfires. Add a choropleth map generated from **weather_1980_2000** and **mean standard deviation** classification to the **left** subfigure. Add a choropleth map generated from **weather_2000_2020** and **mean standard deviation** classification to the **right** subfigure. 
 8. Comment on every plot using markdown to format your asnwer. 

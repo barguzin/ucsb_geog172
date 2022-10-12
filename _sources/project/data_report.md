@@ -22,6 +22,7 @@ Please see below for an outline of available data sources:
 8. [Berkeley GIS International Data Library](https://guides.lib.berkeley.edu/gis/international). This library contains links to resources broadly grouped into the following categories: *basic GIS data, GIS data for humanities, GIS data for natural sciences, GIS data for social sciences, California and Berkeley GIS data*.  
 9. [ArcGIS Living Atlas of the World](https://livingatlas.arcgis.com/en/browse/)
 10. [National historical geographic information systems (NHGIS)](https://www.nhgis.org/). easy access to summary tables and time series of population, housing, agriculture, and economic data, along with GIS-compatible boundary files, for years from 1790 through the present and for all levels of U.S. census geography, including states, counties, tracts, and blocks.
+11. [GeoDa Data and Lab](https://geodacenter.github.io/data-and-lab/)
 
 ---
 

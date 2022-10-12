@@ -1,0 +1,1696 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Point Pattern Locations &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2 - Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3 - Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture06.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture06.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture06.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Point Pattern Locations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consider-a-series-of-point-locations-s-1-s-2-s-n-in-a-study-region-mathcal-r-for-a-two-dimensional-space-where-each-point-s-j-can-be-defined-with-a-pair-of-coordinates-such-that-s-j-x-j-y-j-for-each-location-j">
+     Consider a series of point locations $(s_1, s_2, …, s_n)$ in a study region $\mathcal{R}$. For a two-dimensional space where each point $s_j$ can be defined with a pair of coordinates, such that $s_j = (x_j, y_j)$ for each location $j$.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-point-process-is-a-stochastic-mechanism-that-generates-a-countable-set-of-events">
+     A point process is a stochastic mechanism that generates a countable set of events
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-trees-on-a-plot-meteor-strikes-crime-animals-in-the-field">
+     Examples: trees on a plot, meteor strikes, crime, animals in the field
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#point-pattern-analysis-ppa">
+   Point Pattern Analysis (PPA)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ppa">
+   PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-of-ppa">
+   Methods of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-first-case-of-ppa">
+   The first case of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#john-snow-and-epidemiology">
+   John Snow and Epidemiology
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cholera-and-john-snow">
+   Cholera and John Snow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geographic-analysis-on-cholera-deaths">
+   Geographic Analysis on Cholera deaths
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-centrography">
+   Measures of Centrography
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-tendency">
+   Central Tendency
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-center">
+   Mean Center
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manhattan-median">
+   Manhattan Median
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#euclidean-median">
+   Euclidean Median
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dispersion">
+   Dispersion
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-distance-standard-distance-circle">
+   Standard Distance &amp; Standard Distance Circle
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-deviational-ellipse">
+   Standard Deviational Ellipse
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-analysis">
+   Shape Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convex-hull">
+   Convex Hull
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimum-bounding-rectangle">
+   Minimum Bounding Rectangle
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quadrat-statistic">
+   Quadrat Statistic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distance-based-measures-of-ppa">
+   Distance-based Measures of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-nearest-neighbor-distance-statistics">
+   Mean Nearest Neighbor Distance Statistics
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-report-instructions-are-on-gauchospace-and-on-the-course-website">
+     Data Report instructions are on GauchoSpace and on the course website.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Point Pattern Locations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Point Pattern Locations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consider-a-series-of-point-locations-s-1-s-2-s-n-in-a-study-region-mathcal-r-for-a-two-dimensional-space-where-each-point-s-j-can-be-defined-with-a-pair-of-coordinates-such-that-s-j-x-j-y-j-for-each-location-j">
+     Consider a series of point locations $(s_1, s_2, …, s_n)$ in a study region $\mathcal{R}$. For a two-dimensional space where each point $s_j$ can be defined with a pair of coordinates, such that $s_j = (x_j, y_j)$ for each location $j$.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-point-process-is-a-stochastic-mechanism-that-generates-a-countable-set-of-events">
+     A point process is a stochastic mechanism that generates a countable set of events
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-trees-on-a-plot-meteor-strikes-crime-animals-in-the-field">
+     Examples: trees on a plot, meteor strikes, crime, animals in the field
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#point-pattern-analysis-ppa">
+   Point Pattern Analysis (PPA)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ppa">
+   PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods-of-ppa">
+   Methods of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-first-case-of-ppa">
+   The first case of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#john-snow-and-epidemiology">
+   John Snow and Epidemiology
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cholera-and-john-snow">
+   Cholera and John Snow
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geographic-analysis-on-cholera-deaths">
+   Geographic Analysis on Cholera deaths
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measures-of-centrography">
+   Measures of Centrography
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-tendency">
+   Central Tendency
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-center">
+   Mean Center
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manhattan-median">
+   Manhattan Median
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#euclidean-median">
+   Euclidean Median
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dispersion">
+   Dispersion
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-distance-standard-distance-circle">
+   Standard Distance &amp; Standard Distance Circle
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-deviational-ellipse">
+   Standard Deviational Ellipse
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-analysis">
+   Shape Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convex-hull">
+   Convex Hull
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimum-bounding-rectangle">
+   Minimum Bounding Rectangle
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quadrat-statistic">
+   Quadrat Statistic
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distance-based-measures-of-ppa">
+   Distance-based Measures of PPA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-nearest-neighbor-distance-statistics">
+   Mean Nearest Neighbor Distance Statistics
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-report-instructions-are-on-gauchospace-and-on-the-course-website">
+     Data Report instructions are on GauchoSpace and on the course website.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 06: Point Pattern Analysis </h3><section class="tex2jax_ignore mathjax_ignore" id="point-pattern-locations">
+<h1>Point Pattern Locations<a class="headerlink" href="#point-pattern-locations" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Fixed objects in space (intersection and traffic volume). Location is secondary to the value of observed traffic</p></li>
+<li><p>Sample of continuous geographic process (both the location and value matter!)</p></li>
+</ul>
+<blockquote>
+<div><p>Point pattern - manifestation of a geographic process</p>
+</div></blockquote>
+<section id="consider-a-series-of-point-locations-s-1-s-2-s-n-in-a-study-region-mathcal-r-for-a-two-dimensional-space-where-each-point-s-j-can-be-defined-with-a-pair-of-coordinates-such-that-s-j-x-j-y-j-for-each-location-j">
+<h2>Consider a series of point locations $(s_1, s_2, …, s_n)$ in a study region $\mathcal{R}$. For a two-dimensional space where each point $s_j$ can be defined with a pair of coordinates, such that $s_j = (x_j, y_j)$ for each location $j$.<a class="headerlink" href="#consider-a-series-of-point-locations-s-1-s-2-s-n-in-a-study-region-mathcal-r-for-a-two-dimensional-space-where-each-point-s-j-can-be-defined-with-a-pair-of-coordinates-such-that-s-j-x-j-y-j-for-each-location-j" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="a-point-process-is-a-stochastic-mechanism-that-generates-a-countable-set-of-events">
+<h2>A point process is a stochastic mechanism that generates a countable set of events<a class="headerlink" href="#a-point-process-is-a-stochastic-mechanism-that-generates-a-countable-set-of-events" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="examples-trees-on-a-plot-meteor-strikes-crime-animals-in-the-field">
+<h2>Examples: trees on a plot, meteor strikes, crime, animals in the field<a class="headerlink" href="#examples-trees-on-a-plot-meteor-strikes-crime-animals-in-the-field" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="point-pattern-analysis-ppa">
+<h1>Point Pattern Analysis (PPA)<a class="headerlink" href="#point-pattern-analysis-ppa" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Point pattern analysis (PPA) focuses on the analysis, modeling, visualization, and interpretation of spatial distribution of point data.</p></li>
+<li><p>Applications: crime analysis, in epidemiology, and in facility location planning and management.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ppa">
+<h1>PPA<a class="headerlink" href="#ppa" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>The pattern is judged against the hypothesis of complete spatial randomness (CSR)</p></li>
+<li><p>Departures from CSR can be due to two types of effects:</p>
+<ul>
+<li><p>First-order effects (intensity of the process across space). Think about intensity of a desease. Violating the constant probability of event (due to underlying covariate).</p></li>
+<li><p>Second-order effects (dependence and interaction between events). Think about how presence of infected individual influences the probability of infection in vicinity to that individual.</p></li>
+</ul>
+</li>
+<li><p>Once we have established the departure from CSR, further investigation may be required to pinpoint the location of such departure</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>PPA<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Density-based methods - deal with first-order properties of data (variation across area of interest)</p></li>
+<li><p>Distance-based methods - deal with second-order properties of data (influence on one another)</p></li>
+</ul>
+<img alt="https://mgimond.github.io/Spatial/img/1st_2nd_order_property.png" src="https://mgimond.github.io/Spatial/img/1st_2nd_order_property.png" />
+<p>Source: <a class="reference external" href="https://mgimond.github.io/Spatial/index.html">Intro to GIS Spatial Analysis</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="methods-of-ppa">
+<h1>Methods of PPA<a class="headerlink" href="#methods-of-ppa" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Kernel Density Estimation</p></li>
+<li><p>Quadrat Analysis</p></li>
+<li><p>Nearest Neighbor Analysis</p></li>
+<li><p>Ripley’s K</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-first-case-of-ppa">
+<h1>The first case of PPA<a class="headerlink" href="#the-first-case-of-ppa" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>from <strong>THIS</strong></p></th>
+<th class="text-align:center head"><p>to <strong>THIS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png"><img alt="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" style="width: 300px;" /></a></p></td>
+<td class="text-align:center"><p><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/c/cc/John_Snow.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/c/cc/John_Snow.jpg" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/John_Snow.jpg" style="width: 300px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="john-snow-and-epidemiology">
+<h1>John Snow and Epidemiology<a class="headerlink" href="#john-snow-and-epidemiology" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Cholera was one of the deadliest diseases to affect Britain in the nineteenth century</p></li>
+<li><p>It was believed that the disease was transmitted and spread by a ‘bad air’ or ‘bad smells’ from rotting organic matter</p></li>
+<li><p>1854 that the physician John Snow (1813-1858) made a major contribution to fighting cholera when he was able to demonstrate a link between cholera and the contaminated drinking water through his pioneering studies.</p></li>
+<li><p>Case Study: Soho District and Broad Street Pump</p></li>
+</ul>
+<p>Read full story <a class="reference external" href="http://www.ph.ucla.edu/epi/snow/snowcricketarticle.html">here</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cholera-and-john-snow">
+<h1>Cholera and John Snow<a class="headerlink" href="#cholera-and-john-snow" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>In the middle 1800s, people didn’t have running water or modern toilets in their homes. They used town wells and communal pumps to get the water they used for drinking, cooking and washing.  Septic systems were primitive and most homes and businesses dumped untreated sewage and animal waste directly into the Thames River or into open pits called “cesspools”.  Water companies often bottled water from the Thames and delivered it to pubs, breweries and other businesses.</p>
+</div></blockquote>
+<blockquote>
+<div><p>500 fatal attacks in 10 days</p>
+</div></blockquote>
+<blockquote>
+<div><p>John Snow found several important examples.  A workhouse, or prison, near Soho had 535 inmates but almost no cases of cholera.  Snow discovered the workhouse had its own well and bought water from the Grand Junction Water Works.</p>
+</div></blockquote>
+<blockquote>
+<div><p>The proprietor of the brewery, Mr. Huggins, told Snow that the men drank the liquor they made or water from the brewery’s own well and not water from the Broad Street pump.</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="geographic-analysis-on-cholera-deaths">
+<h1>Geographic Analysis on Cholera deaths<a class="headerlink" href="#geographic-analysis-on-cholera-deaths" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Does the data look random / uniform / dispersed? Or can we pinpoint the high concentration pockets?</p></li>
+<li><p>Can we relate high concentration areas to probable causes (e.g. water pumps, cesspools)?</p></li>
+<li><p>Two types of health geography questions?</p>
+<ul>
+<li><p>How does the desease spread? (Pump)</p></li>
+<li><p>How does the desease get to spreading environment? (Cesspools)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">geoplot</span> <span class="k">as</span> <span class="nn">gplt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://github.com/barguzin/geo_data/raw/main/snow_data.zip -O snow_data.zip -nc 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File &#39;snow_data.zip&#39; already there; not retrieving.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> mkdir snow_data <span class="p">|</span> unzip -o snow_data.zip -d snow_data/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  snow_data.zip
+  inflating: snow_data/deaths_by_bldg.geojson  
+  inflating: snow_data/deaths_by_block.geojson  
+  inflating: snow_data/deaths_by_bsrings.geojson  
+  inflating: snow_data/deaths_by_otherrings.geojson  
+  inflating: snow_data/deaths_nd_by_house.geojson  
+  inflating: snow_data/pumps.geojson  
+  inflating: snow_data/sewergrates_ventilators.geojson  
+  inflating: snow_data/subdistricts.geojson  
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A subdirectory or file snow_data already exists.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data documentation here </span>
+<span class="c1"># https://geodacenter.github.io/data-and-lab/data/snow_documentation.pdf</span>
+<span class="n">death_by_build</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;snow_data/deaths_by_bldg.geojson&#39;</span><span class="p">)</span>
+<span class="n">death_by_block</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;snow_data/deaths_by_block.geojson&#39;</span><span class="p">)</span>
+<span class="n">pumps</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;snow_data/pumps.geojson&#39;</span><span class="p">)</span>
+<span class="n">sewer</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;snow_data/sewergrates_ventilators.geojson&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sewer.plot(ax=ax, marker=&#39;.&#39;) # add sewers</span>
+<span class="c1"># sewer.loc[sewer.ventilator==1].plot(ax=ax)</span>
+<span class="c1"># sewer.loc[sewer.pestfield==1].plot(ax=ax)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+
+<span class="c1"># calculate marker size for plotting</span>
+<span class="n">death_by_build</span><span class="p">[</span><span class="s1">&#39;plotted_size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">deaths</span> <span class="o">*</span> <span class="mi">10</span>
+
+<span class="n">death_by_block</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span> <span class="c1"># plot city blocks</span>
+<span class="c1">#death_by_build.plot(markersize = &#39;plotted_size&#39;, ax=ax, color=&#39;r&#39;, label=&#39;deaths&#39;, marker=&#39;o&#39;); # plot deaths by buildings </span>
+<span class="n">death_by_build</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;deaths&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">pumps</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pumps&#39;</span><span class="p">);</span> <span class="c1"># plot pumps</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cholera Deaths and location of Pumps</span><span class="se">\n</span><span class="s1"> in Soho District, London.&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_18_0.png" src="../_images/lecture06_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig, ax = plt.subplots(figsize=(10,10))</span>
+
+<span class="c1"># # calculate marker size for plotting</span>
+<span class="c1"># death_by_block.boundary.plot(color=&#39;k&#39;, alpha=.2, linestyle=&#39;dashed&#39;,ax=ax); # plot city blocks</span>
+<span class="c1"># pumps.plot(marker=&#39;s&#39;, color=&#39;g&#39;, ec=&#39;k&#39;, markersize=120, ax=ax, label=&#39;pumps&#39;) # plot pumps</span>
+
+<span class="c1"># # have to import another library for a pretty legend </span>
+<span class="c1"># gplt.pointplot(</span>
+<span class="c1">#     death_by_build,</span>
+<span class="c1">#     scale=&#39;deaths&#39;,</span>
+<span class="c1">#     limits=(0, 20),</span>
+<span class="c1">#     #hue=&#39;deaths&#39;,</span>
+<span class="c1">#     #cmap=&#39;Reds&#39;,</span>
+<span class="c1">#     color=&#39;red&#39;,</span>
+<span class="c1">#     #scheme=&#39;Quantiles&#39;,</span>
+<span class="c1">#     legend=True,</span>
+<span class="c1">#     legend_var=&#39;scale&#39;,</span>
+<span class="c1">#     ax=ax</span>
+<span class="c1"># )</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">death_by_build</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>x</th>
+      <th>y</th>
+      <th>deaths</th>
+      <th>pumpID</th>
+      <th>distpump</th>
+      <th>distBSpump</th>
+      <th>BSpump</th>
+      <th>geometry</th>
+      <th>plotted_size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>529308.741420</td>
+      <td>181031.351546</td>
+      <td>3</td>
+      <td>1</td>
+      <td>88.048464</td>
+      <td>88.048</td>
+      <td>1</td>
+      <td>POINT (-0.13793 51.51342)</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>529312.163571</td>
+      <td>181025.172401</td>
+      <td>2</td>
+      <td>1</td>
+      <td>84.400413</td>
+      <td>84.400</td>
+      <td>1</td>
+      <td>POINT (-0.13788 51.51336)</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>529314.382429</td>
+      <td>181020.293688</td>
+      <td>1</td>
+      <td>1</td>
+      <td>82.319197</td>
+      <td>82.319</td>
+      <td>1</td>
+      <td>POINT (-0.13785 51.51332)</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>529317.379645</td>
+      <td>181014.258771</td>
+      <td>1</td>
+      <td>1</td>
+      <td>79.916876</td>
+      <td>79.917</td>
+      <td>1</td>
+      <td>POINT (-0.13781 51.51326)</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>529320.675449</td>
+      <td>181007.871628</td>
+      <td>4</td>
+      <td>1</td>
+      <td>77.809998</td>
+      <td>77.810</td>
+      <td>1</td>
+      <td>POINT (-0.13777 51.51320)</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>246</td>
+      <td>529362.664552</td>
+      <td>181156.058382</td>
+      <td>3</td>
+      <td>1</td>
+      <td>135.342515</td>
+      <td>135.343</td>
+      <td>1</td>
+      <td>POINT (-0.13711 51.51453)</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>247</td>
+      <td>529365.151891</td>
+      <td>181176.128560</td>
+      <td>2</td>
+      <td>1</td>
+      <td>154.335243</td>
+      <td>154.336</td>
+      <td>1</td>
+      <td>POINT (-0.13706 51.51471)</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>248</td>
+      <td>529274.165044</td>
+      <td>180907.312598</td>
+      <td>1</td>
+      <td>8</td>
+      <td>114.615825</td>
+      <td>169.873</td>
+      <td>0</td>
+      <td>POINT (-0.13847 51.51231)</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>249</td>
+      <td>529299.361335</td>
+      <td>180873.184663</td>
+      <td>1</td>
+      <td>8</td>
+      <td>78.425370</td>
+      <td>180.358</td>
+      <td>0</td>
+      <td>POINT (-0.13812 51.51200)</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>250</td>
+      <td>529324.815196</td>
+      <td>180857.948736</td>
+      <td>1</td>
+      <td>8</td>
+      <td>69.344090</td>
+      <td>181.907</td>
+      <td>0</td>
+      <td>POINT (-0.13776 51.51186)</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+<p>250 rows × 10 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate scatter plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_21_0.png" src="../_images/lecture06_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate scatter plot</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_22_0.png" src="../_images/lecture06_22_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">hb</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hexbin</span><span class="p">(</span>
+    <span class="n">death_by_build</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span>
+    <span class="n">death_by_build</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">],</span>
+    <span class="n">gridsize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="n">linewidths</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="c1">#alpha=0.5,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add colorbar</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">hb</span><span class="p">)</span>
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_23_0.png" src="../_images/lecture06_23_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate scatter plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hex&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_24_0.png" src="../_images/lecture06_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span>
+    <span class="n">gridsize</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">levels</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span>
+    <span class="c1">#bw_adjust=1.5,</span>
+    <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>
+    <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_25_0.png" src="../_images/lecture06_25_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">plot_joint</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.75</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">plot_marginals</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">rugplot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=-</span><span class="mf">.15</span><span class="p">,</span> <span class="n">clip_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ax_joint</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span> <span class="c1"># turn axis off </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture06_26_0.png" src="../_images/lecture06_26_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="measures-of-centrography">
+<h1>Measures of Centrography<a class="headerlink" href="#measures-of-centrography" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Central tendency</p>
+<ul>
+<li><p>Mean Center</p></li>
+<li><p>Manhattan Median</p></li>
+<li><p>Euclidean Median</p></li>
+</ul>
+</li>
+<li><p>Dispersion</p>
+<ul>
+<li><p>Ellipse</p></li>
+</ul>
+</li>
+<li><p>Shape (Extent)</p>
+<ul>
+<li><p>Convext Hull</p></li>
+<li><p>Bounding Box</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="central-tendency">
+<h1>Central Tendency<a class="headerlink" href="#central-tendency" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mean-center">
+<h1>Mean Center<a class="headerlink" href="#mean-center" title="Permalink to this headline">#</a></h1>
+<p>$$
+x_{mc} = \frac{ \sum x_i }{n}
+$$
+$$
+y_{mc} = \frac{ \sum y_i }{n}
+$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="manhattan-median">
+<h1>Manhattan Median<a class="headerlink" href="#manhattan-median" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>The Manhattan median is the location which minimizes the absolute distance to all the event points. It is an extension of the median measure in one-dimensional space to two-dimensional space. Since in one-dimensional space, a median is the number separating the higher half of a dataset from the lower half, we define the Manhattan median as a tuple whose first element is the median of  coordinates and second element is the median of  coordinates.</p>
+</div></blockquote>
+<p>$$
+min  f(x_{mm},y_{mm})= \sum^n_{i=1}(|x_i-x_{mm}|+|y_i-y_{mm}|)
+$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="euclidean-median">
+<h1>Euclidean Median<a class="headerlink" href="#euclidean-median" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>The Euclidean Median is the location from which the sum of the Euclidean distances to all points in a distribution is a minimum. It is an optimization problem and very important for more general location allocation problems. There is no closed form solution. We can use first iterative algorithm (Kuhn and Kuenne, 1962) to approximate Euclidean Median.</p>
+</div></blockquote>
+<p>$$
+min  f(x_{em},y_{em})= \sum^n_{i=1} \sqrt{(x_i-x_{em})^2+(y_i-y_{em})^2}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import centragraphy analysis functions </span>
+<span class="kn">from</span> <span class="nn">pointpats.centrography</span> <span class="kn">import</span> <span class="n">hull</span><span class="p">,</span> <span class="n">mbr</span><span class="p">,</span> <span class="n">mean_center</span><span class="p">,</span> <span class="n">weighted_mean_center</span><span class="p">,</span> <span class="n">manhattan_median</span> 
+<span class="kn">from</span> <span class="nn">pointpats.centrography</span> <span class="kn">import</span> <span class="n">std_distance</span><span class="p">,</span><span class="n">euclidean_median</span><span class="p">,</span><span class="n">ellipse</span>
+<span class="kn">from</span> <span class="nn">pointpats</span> <span class="kn">import</span> <span class="n">PointPattern</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract coords from the dataframe and stack them in lng/lat format for using pointpats package</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">pp</span> <span class="o">=</span> <span class="n">PointPattern</span><span class="p">(</span><span class="n">points</span><span class="p">)</span> <span class="c1">#create a point pattern &quot;pp&quot; from list </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">deaths</span> <span class="c1"># extract weights for weighted mean </span>
+
+<span class="n">mc</span> <span class="o">=</span> <span class="n">mean_center</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span> <span class="c1"># mean center</span>
+<span class="n">wmc</span> <span class="o">=</span> <span class="n">weighted_mean_center</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span> <span class="c1"># weighted mean</span>
+<span class="n">em</span> <span class="o">=</span> <span class="n">euclidean_median</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span> <span class="c1"># euclidean median </span>
+<span class="n">mm</span> <span class="o">=</span> <span class="n">manhattan_median</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Center coordinates </span><span class="se">\t</span><span class="s1"> </span><span class="se">\t</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">mc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weighted MC coordinates </span><span class="se">\t</span><span class="s1"> </span><span class="se">\t</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">wmc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Euclidean Median coordinates </span><span class="se">\t</span><span class="s1"> </span><span class="se">\t</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">em</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Manhattan Medi an coordinates </span><span class="se">\t</span><span class="s1"> </span><span class="se">\t</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">mm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Center coordinates 	 	: [529413.85369427 181033.78696473]
+Weighted MC coordinates 	 	: [529414.75675154 181031.89339795]
+Euclidean Median coordinates 	 	: [529410.20734233 181027.07075087]
+Manhattan Medi an coordinates 	 	: [529422.525932 181027.12929 ]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\pointpats\centrography.py:208: UserWarning: Manhattan Median is not unique for even point patterns.
+  warnings.warn(s)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;b^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wmc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wmc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Weighted Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;rv&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Manhattan Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">em</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">em</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;m+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Euclidean Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x23b4e271420&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture06_35_1.png" src="../_images/lecture06_35_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dispersion">
+<h1>Dispersion<a class="headerlink" href="#dispersion" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="standard-distance-standard-distance-circle">
+<h1>Standard Distance &amp; Standard Distance Circle<a class="headerlink" href="#standard-distance-standard-distance-circle" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>The Standard distance is closely related to the usual definition of the standard deviation of a data set, and it provides a measure of how dispersed the events are around their mean center</p>
+</div></blockquote>
+<p>$$
+SD = \displaystyle \sqrt{\frac{\sum^n_{i=1}(x_i-x_{m})^2}{n} + \frac{\sum^n_{i=1}(y_i-y_{m})^2}{n}}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stdd</span> <span class="o">=</span> <span class="n">std_distance</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+
+<span class="n">circle1</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="n">stdd</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">get_ax</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Standard Distance Circle&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">circle1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;b^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean Center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x23b4df0dde0&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture06_38_1.png" src="../_images/lecture06_38_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="standard-deviational-ellipse">
+<h1>Standard Deviational Ellipse<a class="headerlink" href="#standard-deviational-ellipse" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Compared with standard distance circle which measures dispersion using a single parameter <strong>SD</strong>, standard deviational ellipse measures dispersion and trend in two dimensions through angle of rotation $\theta$, dispersion along major axis $s_x$ and dispersion along minor axis $s_y$.</p>
+</div></blockquote>
+<p>$$
+s_x = \displaystyle \sqrt{\frac{2(\sum_{i=1}^n (x_i-\bar{x})\cos(\theta) - \sum_{i=1}^n (y_i-\bar{y})\sin(\theta))^2}{n-2}}
+$$</p>
+<p>$$
+s_y = \displaystyle \sqrt{\frac{2(\sum_{i=1}^n (x_i-\bar{x})\sin(\theta) - \sum_{i=1}^n (y_i-\bar{y})\cos(\theta))^2}{n-2}}
+$$</p>
+<p>$$
+\theta = \displaystyle \arctan{{ (\sum_i(x_i-\bar{x})^2-\sum_i(y_i-\bar{y})^2) + \frac{[(\sum_i(x_i-\bar{x})^2-\sum_i(y_i-\bar{y})^2)^2 + 4(\sum_i(x-\bar{x})(y_i-\bar{y}))^2]^\frac{1}{2}}{2\sum_i(x-\bar{x})(y_i-\bar{y})}}}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span><span class="p">,</span> <span class="n">sy</span><span class="p">,</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">ellipse</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+<span class="n">theta_degree</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="c1">#need degree of rotation to plot the ellipse</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span><span class="n">show</span><span class="p">,</span><span class="n">rand</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">figure</span><span class="p">()</span>
+<span class="c1">#ax = fig.add_subplot(111, aspect=&#39;equal&#39;)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="n">mean_center</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="n">sx</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">sy</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="o">=-</span><span class="n">theta_degree</span><span class="p">)</span> <span class="c1">#angle is rotation in degrees (anti-clockwise)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">get_ax</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Standard Deviational Ellipse&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="n">e</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+<span class="n">e</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">])</span>
+<span class="n">e</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;b^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture06_40_1.png" src="../_images/lecture06_40_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="shape-analysis">
+<h1>Shape Analysis<a class="headerlink" href="#shape-analysis" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="convex-hull">
+<h1>Convex Hull<a class="headerlink" href="#convex-hull" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>The convex hull of a point pattern pp is the smallest convex set that contains pp.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Centers&#39;</span><span class="p">,</span> <span class="n">hull</span><span class="o">=</span><span class="kc">True</span> <span class="p">)</span> <span class="c1">#plot point pattern &quot;pp&quot; as well as its convex hull</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;b^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wmc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wmc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Weighted Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;rv&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Manhattan Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">em</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">em</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;m+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Euclidean Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x23b50988550&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture06_43_1.png" src="../_images/lecture06_43_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="minimum-bounding-rectangle">
+<h1>Minimum Bounding Rectangle<a class="headerlink" href="#minimum-bounding-rectangle" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Minimum Bounding Rectangle (Box) is the same as the minimum bounding Rectangle of its convex hull. Thus, it is almost always bigger than convex hull.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Centers&#39;</span><span class="p">,</span>  <span class="n">hull</span><span class="o">=</span><span class="kc">True</span> <span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="kc">True</span> <span class="p">)</span><span class="c1">#plot point pattern &quot;pp&quot;, convex hull, and Minimum Bounding Rectangle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;b^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wmc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wmc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Weighted Mean Center&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;rv&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Manhattan Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">em</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">em</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;m+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Euclidean Median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x23b4df0e0b0&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture06_45_1.png" src="../_images/lecture06_45_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quadrat-statistic">
+<h1>Quadrat Statistic<a class="headerlink" href="#quadrat-statistic" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>CSR (Uniform and Independent)</p></li>
+<li><p>Partition space into regularly spaced grid cells.</p></li>
+<li><p>Since Process is uniform - expect same intensity everywhere</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pointpats</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">distance_statistics</span><span class="p">,</span>
+    <span class="n">QStatistic</span><span class="p">,</span>
+    <span class="n">random</span><span class="p">,</span>
+    <span class="n">PointPattern</span><span class="p">,</span>
+    <span class="n">centrography</span>
+<span class="p">)</span>
+
+<span class="n">qstat</span> <span class="o">=</span> <span class="n">QStatistic</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p-value: </span><span class="si">{</span><span class="n">qstat</span><span class="o">.</span><span class="n">chi2_pvalue</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">qstat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 5.956733903969489e-23
+</pre></div>
+</div>
+<img alt="../_images/lecture06_47_1.png" src="../_images/lecture06_47_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hull</span> <span class="o">=</span> <span class="n">centrography</span><span class="o">.</span><span class="n">ConvexHull</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+<span class="n">random_poisson</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">hull</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">pp</span><span class="o">.</span><span class="n">points</span><span class="p">))</span>
+
+<span class="n">ran_qstat</span> <span class="o">=</span> <span class="n">QStatistic</span><span class="p">(</span><span class="n">random_poisson</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p-value: </span><span class="si">{</span><span class="n">ran_qstat</span><span class="o">.</span><span class="n">chi2_pvalue</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ran_qstat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.01414899716767046
+</pre></div>
+</div>
+<img alt="../_images/lecture06_48_1.png" src="../_images/lecture06_48_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="distance-based-measures-of-ppa">
+<h1>Distance-based Measures of PPA<a class="headerlink" href="#distance-based-measures-of-ppa" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Nearest Neighbor Distance</p></li>
+<li><p>Distance functions (GFK)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mean-nearest-neighbor-distance-statistics">
+<h1>Mean Nearest Neighbor Distance Statistics<a class="headerlink" href="#mean-nearest-neighbor-distance-statistics" title="Permalink to this headline">#</a></h1>
+<p>The nearest neighbor for a point $u$ must meet the following condition:</p>
+<p>$$
+d_{u,N(u)} \leq d_{u,j} \forall j \in S - u
+$$</p>
+<p>It was demonstrated by Clark and Evans(1954) that mean nearest neighbor distance statistics distribution is a normal distribution under null hypothesis (underlying spatial process is CSR). We can utilize the test statistics to determine whether the point pattern is the outcome of CSR. If not, is it the outcome of cluster or regular spatial process?</p>
+<p>$$
+\bar{d}<em>{min}=\frac{1}{n} \sum</em>{i=1}^n d_{min}(s_i)
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tt</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">knn</span><span class="p">()</span>
+<span class="c1"># plot distances to nearest neighbor</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([188.,  46.,   8.,   6.,   1.,   0.,   0.,   0.,   0.,   1.]),
+ array([ 2.46704738, 11.18215934, 19.89727131, 28.61238327, 37.32749524,
+        46.0426072 , 54.75771917, 63.47283113, 72.1879431 , 80.90305506,
+        89.61816702]),
+ &lt;BarContainer object of 10 artists&gt;)
+</pre></div>
+</div>
+<img alt="../_images/lecture06_51_1.png" src="../_images/lecture06_51_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tt = pp.knn(3)</span>
+<span class="c1"># new_tt = tt[1].reshape(tt[1].shape[0]*tt[1].shape[1],)</span>
+<span class="c1"># plt.hist(new_tt)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_point_pattern</span> <span class="o">=</span> <span class="n">PointPattern</span><span class="p">(</span><span class="n">random_poisson</span><span class="p">)</span>
+
+<span class="n">tt</span> <span class="o">=</span> <span class="n">random_point_pattern</span><span class="o">.</span><span class="n">knn</span><span class="p">()</span>
+<span class="c1"># plot distances to nearest neighbor</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([39., 93., 62., 30., 17.,  7.,  0.,  0.,  1.,  1.]),
+ array([ 1.50804224,  6.04421181, 10.58038137, 15.11655094, 19.65272051,
+        24.18889007, 28.72505964, 33.2612292 , 37.79739877, 42.33356834,
+        46.8697379 ]),
+ &lt;BarContainer object of 10 artists&gt;)
+</pre></div>
+</div>
+<img alt="../_images/lecture06_53_1.png" src="../_images/lecture06_53_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+<section id="data-report-instructions-are-on-gauchospace-and-on-the-course-website">
+<h2>Data Report instructions are on GauchoSpace and on the <a class="reference external" href="https://barguzin.github.io/ucsb_geog172/project/data_report.html">course website</a>.<a class="headerlink" href="#data-report-instructions-are-on-gauchospace-and-on-the-course-website" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

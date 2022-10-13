@@ -1079,7 +1079,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;YEAR_&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;YEAR_&#39;&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture05_18_1.png" src="../_images/lecture05_18_1.png" />
@@ -1110,24 +1110,24 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 9)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_54096\270685699.py:6: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_3676\270685699.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   fires2021.drop(&#39;UNIT_ID&#39;, inplace=True, axis=1)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   super().__setitem__(key, value)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   super().__setitem__(key, value)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1147,7 +1147,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1785,42 +1785,15 @@ bins: [  1.   45.2  89.4 133.6 177.8 222. ]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fj5</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="o">.</span><span class="n">FisherJenks</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;dur_days&quot;</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fj5</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FisherJenks             
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:1798,</span> in <span class="ni">FisherJenks.__init__</span><span class="nt">(self, y, k)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1796</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Fewer unique values than specified classes.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1797</span> <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">k</span>
-<span class="ne">-&gt; </span><span class="mi">1798</span> <span class="n">MapClassifier</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1799</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;FisherJenks&quot;</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:617,</span> in <span class="ni">MapClassifier.__init__</span><span class="nt">(self, y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">615</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="n">FMT</span>
-<span class="g g-Whitespace">    </span><span class="mi">616</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-<span class="ne">--&gt; </span><span class="mi">617</span> <span class="bp">self</span><span class="o">.</span><span class="n">_classify</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">618</span> <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span><span class="p">()</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:636,</span> in <span class="ni">MapClassifier._classify</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">635</span> <span class="k">def</span> <span class="nf">_classify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">636</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_set_bins</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">637</span>     <span class="bp">self</span><span class="o">.</span><span class="n">yb</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span> <span class="o">=</span> <span class="n">bin1d</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bins</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:1803,</span> in <span class="ni">FisherJenks._set_bins</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1801</span> <span class="k">def</span> <span class="nf">_set_bins</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1802</span>     <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1803</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">_fisher_jenks_means</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:544,</span> in <span class="ni">_fisher_jenks_means</span><span class="nt">(values, classes, sort)</span>
-<span class="g g-Whitespace">    </span><span class="mi">542</span> <span class="n">s2</span> <span class="o">+=</span> <span class="n">val</span> <span class="o">*</span> <span class="n">val</span>
-<span class="g g-Whitespace">    </span><span class="mi">543</span> <span class="n">s1</span> <span class="o">+=</span> <span class="n">val</span>
-<span class="ne">--&gt; </span><span class="mi">544</span> <span class="n">w</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">545</span> <span class="n">v</span> <span class="o">=</span> <span class="n">s2</span> <span class="o">-</span> <span class="p">(</span><span class="n">s1</span> <span class="o">*</span> <span class="n">s1</span><span class="p">)</span> <span class="o">/</span> <span class="n">w</span>
-<span class="g g-Whitespace">    </span><span class="mi">546</span> <span class="n">i4</span> <span class="o">=</span> <span class="n">i3</span> <span class="o">-</span> <span class="mi">1</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+    Interval       Count
+------------------------
+[  1.00,  14.00] |  4109
+( 14.00,  43.00] |   575
+( 43.00,  80.00] |   249
+( 80.00, 124.00] |   225
+(124.00, 222.00] |    85
 </pre></div>
 </div>
 </div>

@@ -17,20 +17,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from google.colab import drive
-import os
-
-# if you want to save file to your google drive 
-drive.mount('/content/drive/')
+import pandas as pd
+import geopandas as gpd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import geoplot as gplt
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [46], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mgoogle[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolab[39;00m [38;5;28;01mimport[39;00m drive
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
-[0;32m      4[0m [38;5;66;03m# if you want to save file to your google drive [39;00m
+Cell [1;32mIn [1], line 6[0m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[0;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
+[1;32m----> 6[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeoplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgplt[39;00m
 
-[1;31mModuleNotFoundError[0m: No module named 'google'
-ModuleNotFoundError: No module named 'google'
+[1;31mModuleNotFoundError[0m: No module named 'geoplot'
+ModuleNotFoundError: No module named 'geoplot'
 

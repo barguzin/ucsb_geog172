@@ -181,7 +181,7 @@ Participation in both lectures and labs is crucial for learning new concepts and
 |3|10/10|Geovisualization|GIA Ch3, [GDS Choropleth](https://geographicdata.science/book/notebooks/05_choropleth.html)|
 |3|10/12|Point Pattern Analysis|GIA Ch5,6|
 |3|10/16|**Data Report Due**|⚠️|
-|4|10/17|Correlation and Covariance||
+|4|10/17|Inferential Statistics and Hypothesis Testing|Chapters 11 and 12 from [Learning Stats with Python](https://ethanweed.github.io/pythonbook/landingpage.html)|
 |4|10/19|ANOVA||
 |5|10/24|Spatial Autocorrelation 1|GIA Ch7|
 |5|10/26|Spatial Autocorrelation 2||

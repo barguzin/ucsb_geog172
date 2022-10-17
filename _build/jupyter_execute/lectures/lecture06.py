@@ -88,7 +88,7 @@ import geopandas as gpd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import geoplot as gplt
+#import geoplot as gplt
 
 
 # In[2]:
@@ -472,38 +472,26 @@ qstat.plot()
 
 
 list_counts = np.array([2,12,10,35,56,38,23,60,14])
-mean_count = np.repeat(27.7, len(list_counts))
-m = 250
-cells = 9
+#mean_count = np.repeat(27.7, len(list_counts))
+m = 9
+points = 250
 
-xbar = m / cells
-var = np.sum((list_counts - mean_count)**2) / m-1
+xbar = points / m
+var = np.var(list_counts)
+var = np.sum((list_counts - xbar)**2) / m-1
 vmr = var / xbar
-z = (np.sqrt((m-1)/2)*(vmr-1))
+#z = (np.sqrt((m-1)/2)*(vmr-1))
+z = np.sqrt((m-1)/2)*(vmr-1)
+
+print('mean points per cell:', xbar)
+print('variance:', var)
+print('VMR:', vmr)
+print('z-score', z)
 
 
-print(var)
-print(vmr)
-print(z)
-
-
-# * total points: 250
-# * number of cells: 9
-# * degrees of freedom: (9-1) = 8 
-# * $\bar{x} = 250/9 = 27.7$
-# * $s^2 = 12.73
-# * VMR = 12.73/27.7 = 0.46
-# * z = -6.04
-# 
-# ## Because $z$ is not within $z_l \leq z \leq z_h$, where $z$ comes from the $z$-table and $z_l=-1.96$ and $z_h=1.96$, we cannot accept the null hypothesis. 
+# ## If $z$ is not within $z_l \leq z \leq z_h$, where $z$ comes from the $z$-table and $z_l=-1.96$ and $z_h=1.96$, we cannot accept the null hypothesis. 
 
 # In[25]:
-
-
-12.73/27.7
-
-
-# In[26]:
 
 
 hull = centrography.ConvexHull(pp.points)
@@ -533,7 +521,7 @@ ran_qstat.plot()
 # \bar{d}_{min}=\frac{1}{n} \sum_{i=1}^n d_{min}(s_i)
 # $$
 
-# In[27]:
+# In[26]:
 
 
 tt = pp.knn()
@@ -541,7 +529,7 @@ tt = pp.knn()
 plt.hist(tt[1])
 
 
-# In[28]:
+# In[27]:
 
 
 # tt = pp.knn(3)
@@ -549,7 +537,7 @@ plt.hist(tt[1])
 # plt.hist(new_tt)
 
 
-# In[29]:
+# In[28]:
 
 
 random_point_pattern = PointPattern(random_poisson)

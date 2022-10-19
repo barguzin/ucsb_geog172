@@ -17,20 +17,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from google.colab import drive
-import os
+import seaborn as sns
+import pandas as pd
 
-# if you want to save file to your google drive 
-drive.mount('/content/drive/')
+dff = pd.DataFrame(list_of_data)
+dff = dff.T#.to_numpy().flatten()
+
+fig, ax=plt.subplots(1,2, figsize=(12,4))
+
+dff.plot(kind='hist', color='b', alpha=.1, ax=ax[0], legend=False);
+sns.histplot(list_of_means,ax=ax[1]);
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [46], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mgoogle[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolab[39;00m [38;5;28;01mimport[39;00m drive
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
-[0;32m      4[0m [38;5;66;03m# if you want to save file to your google drive [39;00m
+[1;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [1;32mIn [4], line 10[0m
+[0;32m      7[0m fig, ax[38;5;241m=[39mplt[38;5;241m.[39msubplots([38;5;241m1[39m,[38;5;241m2[39m, figsize[38;5;241m=[39m([38;5;241m12[39m,[38;5;241m4[39m))
+[0;32m      9[0m dff[38;5;241m.[39mplot(kind[38;5;241m=[39m[38;5;124m'[39m[38;5;124mhist[39m[38;5;124m'[39m, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mb[39m[38;5;124m'[39m, alpha[38;5;241m=[39m[38;5;241m.1[39m, ax[38;5;241m=[39max[[38;5;241m0[39m], legend[38;5;241m=[39m[38;5;28;01mFalse[39;00m);
+[1;32m---> 10[0m sns[38;5;241m.[39mhistplot(list_of_means,ax[38;5;241m=[39max[[38;5;241m1[39m])
 
-[1;31mModuleNotFoundError[0m: No module named 'google'
-ModuleNotFoundError: No module named 'google'
+[1;31mAttributeError[0m: module 'seaborn' has no attribute 'histplot'
+AttributeError: module 'seaborn' has no attribute 'histplot'
 

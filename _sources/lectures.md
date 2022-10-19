@@ -14,7 +14,7 @@ To view the HTML version of the lecture please open the link, save it to your co
 |5|Lecture 05|Geovisualization|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture05.html)|[PDF](https://drive.google.com/file/d/1h5TiQn0Ly07pCuRzaaJEj0wSkklhb4HD/view?usp=sharing)|
 |6|Lecture 06|Classification and Point Pattern Analysis|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture06.html)|[PDF](https://drive.google.com/file/d/177xmEnOA5jjtwe-atEmE4lNDaJaKIAxR/view?usp=sharing)|
 |7|Lecture 07|Inferential Statistics and Hypothesis Testing|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture07.html)|[PDF](https://drive.google.com/file/d/1BrT1fPU_SOy3nEcWiPtMDmlfeQkg77Ht/view?usp=sharing)|
-|8|Lecture 08||||
+|8|Lecture 08|Comparing Means (t-tests and ANOVA)|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture08.html)|[PDF](https://drive.google.com/file/d/1wFx-GLVQPv-QhsC9fMlupoHn9ZACRmkQ/view?usp=sharing)|
 |9|Lecture 09||||
 |10|Lecture 10||||
 |11|Lecture 11||||

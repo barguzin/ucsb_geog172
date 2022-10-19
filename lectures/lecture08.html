@@ -1,0 +1,2047 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Last Lecture Review (Distributions) &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2 - Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3 - Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture08.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture08.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture08.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Last Lecture Review (Distributions)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-z-and-t">
+   Last Lecture Review ($z$ and $t$)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#z-score">
+     $z$-score
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-score">
+     $t$-score
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-ci">
+   Last Lecture Review (CI)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-qq-plot">
+   Last Lecture Review (QQ-Plot)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-hypotheses">
+   Last Lecture Review (Hypotheses)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-errors">
+   Last Lecture Review (Errors)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#six-steps-of-hypothesis-tests">
+   Six Steps of Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Six Steps of Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-hypothesis-tests">
+   Setting-up Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-t-tests">
+   One Sample t-Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-1-3">
+   Steps 1-3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-4-6-critical-region">
+   Steps 4-6 (Critical Region)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-4-6-p-values">
+   Steps 4-6 ($p$-values)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rejection-region-approach">
+   Rejection region approach
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-value-approach">
+   P-value approach
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-value">
+   P-value
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#penguins-data">
+   Penguins Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-test-for-penguins">
+   One sample test for penguins
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-test-for-penguins-v2">
+   One sample test for penguins (v2)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independent-samples-t-test">
+   Independent Samples t-Test
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-data-is-not-normal-but-we-will-still-proceed-with-the-outlined-tests-to-demonstrate-python-functionality">
+   Our data is not normal, but we will still proceed with the outlined tests to demonstrate Python functionality.
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-see-later-what-tests-to-use-when-we-see-non-normal-data">
+     We will see later what tests to use when we see non-normal data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-means-between-independendent-samples">
+   Comparing means between independendent samples
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sample-stastistic-unpooled-variance">
+     Sample stastistic (Unpooled Variance)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confidence-intervals">
+     Confidence intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-tests">
+   Hypothesis tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting">
+   Interpreting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#with-a-p-value-of-9-011e-07-we-have-enough-evidence-to-reject-null-hypothesis-the-average-flipper-length-between-male-and-female-penguins-is-different">
+     With a $p$-value of 9.011e-07 we have enough evidence to reject null hypothesis. The average flipper length between male and female penguins is different.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-two-population-variances">
+   Comparing two population variances
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova">
+   ANOVA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing">
+   Hypothesis Testing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-statistic-for-a-one-way-anova">
+   Test statistic for a One-Way ANOVA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variance">
+   Variance
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares">
+   Sum of Squares
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-ss-to-an-f-test">
+   From SS to an F-test
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova-assumptions">
+   ANOVA assumptions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Last Lecture Review (Distributions)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Last Lecture Review (Distributions)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-z-and-t">
+   Last Lecture Review ($z$ and $t$)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#z-score">
+     $z$-score
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#t-score">
+     $t$-score
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-ci">
+   Last Lecture Review (CI)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-qq-plot">
+   Last Lecture Review (QQ-Plot)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-hypotheses">
+   Last Lecture Review (Hypotheses)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#last-lecture-review-errors">
+   Last Lecture Review (Errors)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#six-steps-of-hypothesis-tests">
+   Six Steps of Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Six Steps of Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-hypothesis-tests">
+   Setting-up Hypothesis Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-t-tests">
+   One Sample t-Tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-1-3">
+   Steps 1-3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-4-6-critical-region">
+   Steps 4-6 (Critical Region)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-4-6-p-values">
+   Steps 4-6 ($p$-values)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rejection-region-approach">
+   Rejection region approach
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-value-approach">
+   P-value approach
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#p-value">
+   P-value
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#penguins-data">
+   Penguins Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-test-for-penguins">
+   One sample test for penguins
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sample-test-for-penguins-v2">
+   One sample test for penguins (v2)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independent-samples-t-test">
+   Independent Samples t-Test
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-data-is-not-normal-but-we-will-still-proceed-with-the-outlined-tests-to-demonstrate-python-functionality">
+   Our data is not normal, but we will still proceed with the outlined tests to demonstrate Python functionality.
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-will-see-later-what-tests-to-use-when-we-see-non-normal-data">
+     We will see later what tests to use when we see non-normal data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-means-between-independendent-samples">
+   Comparing means between independendent samples
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sample-stastistic-unpooled-variance">
+     Sample stastistic (Unpooled Variance)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confidence-intervals">
+     Confidence intervals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-tests">
+   Hypothesis tests
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting">
+   Interpreting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#with-a-p-value-of-9-011e-07-we-have-enough-evidence-to-reject-null-hypothesis-the-average-flipper-length-between-male-and-female-penguins-is-different">
+     With a $p$-value of 9.011e-07 we have enough evidence to reject null hypothesis. The average flipper length between male and female penguins is different.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-two-population-variances">
+   Comparing two population variances
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova">
+   ANOVA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing">
+   Hypothesis Testing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-statistic-for-a-one-way-anova">
+   Test statistic for a One-Way ANOVA
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variance">
+   Variance
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares">
+   Sum of Squares
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-ss-to-an-f-test">
+   From SS to an F-test
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova-assumptions">
+   ANOVA assumptions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 8: Comparing Means (t-tests and ANOVA) </h3><section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-distributions">
+<h1>Last Lecture Review (Distributions)<a class="headerlink" href="#last-lecture-review-distributions" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>RV can be continuous (PDF) and discrete (PMF)</p></li>
+<li><p>Each distribution can be parametrized by their corresponding density functions</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-z-and-t">
+<h1>Last Lecture Review ($z$ and $t$)<a class="headerlink" href="#last-lecture-review-z-and-t" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We can convert normally distributed RVs into standard normal distribution ($z$-score)</p></li>
+<li><p>We can use the $z$-score to assess probability of observing data at or below the $z$. Use the $z$-table to look up probability values.</p></li>
+<li><p>We use $t$ when the population SD is not known (most real-life situations) or when sample size is below 30. Use the $t$-table  to look up probability values.</p></li>
+</ul>
+<section id="z-score">
+<h2>$z$-score<a class="headerlink" href="#z-score" title="Permalink to this headline">#</a></h2>
+<p>$$
+z = \frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}}
+$$</p>
+</section>
+<section id="t-score">
+<h2>$t$-score<a class="headerlink" href="#t-score" title="Permalink to this headline">#</a></h2>
+<p>$$
+t = \frac{\bar{x}-\mu}{\frac{s}{\sqrt{n}}}
+$$</p>
+<p>where $s$ is the sample variance, $\sigma$ is the population variance, $\bar{x}$ is the sample mean, and $\mu$ is the population mean.</p>
+<img alt="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/t-distribution/_jcr_content/par/styledcontainer_2069_1940499363/par/image.img.png/1580489179006.png" src="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test/t-distribution/_jcr_content/par/styledcontainer_2069_1940499363/par/image.img.png/1580489179006.png" />
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-ci">
+<h1>Last Lecture Review (CI)<a class="headerlink" href="#last-lecture-review-ci" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We can estimate population mean ($\mu$) and variance ($\sigma^2$) from sample mean ($\bar{x}$) and sample variance ($s^2$)</p></li>
+<li><p>We can provide confidence intervals for population mean using formulas $\bar{x} \pm t_{\alpha/2} \frac{s}{\sqrt{n}}$ with $df=n-1$</p></li>
+<li><p>Interpret the CI: We are $(1-\alpha)100%$ sure that the population mean, $\mu$, is between $\bar{x} - t_{\alpha/2} \frac{s}{\sqrt{n}}$ and $\bar{x} + t_{\alpha/2} \frac{s}{\sqrt{n}}$</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-qq-plot">
+<h1>Last Lecture Review (QQ-Plot)<a class="headerlink" href="#last-lecture-review-qq-plot" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>In statistics, a Q–Q plot (quantile-quantile plot) is a probability plot, a graphical method for comparing two probability distributions by plotting their quantiles against each other. If the two distributions being compared are similar, the points in the Q–Q plot will approximately lie on the identity line $y = x$.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="https://condor.depaul.edu/sjost/it223/documents/nplots.gif"><img alt="https://condor.depaul.edu/sjost/it223/documents/nplots.gif" src="https://condor.depaul.edu/sjost/it223/documents/nplots.gif" style="width: 300px;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-hypotheses">
+<h1>Last Lecture Review (Hypotheses)<a class="headerlink" href="#last-lecture-review-hypotheses" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><strong>Null hypothesis</strong> - is assumed to be true until there is evidence to suggest otherwise.</p></li>
+<li><p><strong>Alternative hypothesis</strong> - research hypotehsis.</p></li>
+</ul>
+<blockquote>
+<div><p>The goal of hypothesis testing is to see if there is enough evidence against the null hypothesis. If there is not enough evidence, then we fail to reject the null hypothesis</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="last-lecture-review-errors">
+<h1>Last Lecture Review (Errors)<a class="headerlink" href="#last-lecture-review-errors" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Null is <strong>true</strong>, the mean in the urban area is indeed 3.1 (as demonstrated on the sample).</p>
+<ul>
+<li><p>Reject <strong>true</strong> null (Type I error): $\alpha$ (<strong>False positive</strong>, i.e. ‘falsely rejecting true null’)</p></li>
+<li><p>Accept <strong>true</strong> null: $1 - \alpha$ (<strong>True Positive</strong>)</p></li>
+</ul>
+</li>
+<li><p>Null is <strong>false</strong>, the mean in the urban area is not 3.1 (biased sample, wrong conjecture in the first place, rare event).</p>
+<ul>
+<li><p>Reject <strong>false</strong> null: $1 - \beta$ (<strong>True negative</strong>)</p></li>
+<li><p>Accept <strong>false</strong> null (Type II error): $\beta$ (<strong>False negative</strong>, i.e. ‘falsely accepting false null’)</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p><strong>We can decrease the magnitude of errors by increasing a sample size!</strong></p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="six-steps-of-hypothesis-tests">
+<h1>Six Steps of Hypothesis Tests<a class="headerlink" href="#six-steps-of-hypothesis-tests" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Set up hypothesis and check conditions (normality, independence)</p></li>
+<li><p>Decide on the significance level $\alpha$ (probability cutoff for making decisions about null hypothesis). The probability we are willing to place on our test for making an incorrect decision rejecting the null hypothesis.</p></li>
+<li><p>Calculate test statistic.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Six Steps of Hypothesis Tests<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Calculate probability value ($p$-value) or find the rejection region</p></li>
+<li><p>Make decision about the null (reject of fail to reject)</p></li>
+<li><p>State overall conclusion.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="setting-up-hypothesis-tests">
+<h1>Setting-up Hypothesis Tests<a class="headerlink" href="#setting-up-hypothesis-tests" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Is the population mean different from $\mu_0$? (Two-tailed, non-directional)</p>
+<ul>
+<li><p>$H_0$: $\mu = \mu_0$</p></li>
+<li><p>$H_a$: $\mu \neq \mu_0$</p></li>
+</ul>
+</li>
+<li><p>Is the population mean greater than $\mu_0$? (Right-tailed, directional)</p>
+<ul>
+<li><p>$H_0$: $\mu = \mu_0$</p></li>
+<li><p>$H_a$: $\mu &gt; \mu_0$</p></li>
+</ul>
+</li>
+<li><p>Is the population mean less than $\mu_0$? (Left-tailed, directional)</p>
+<ul>
+<li><p>$H_0$: $\mu = \mu_0$</p></li>
+<li><p>$H_a$: $\mu &lt; \mu_0$</p></li>
+</ul>
+</li>
+</ul>
+<img alt="https://ars.els-cdn.com/content/image/3-s2.0-B9780128008522000092-f09-06-9780128008522.jpg" src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128008522000092-f09-06-9780128008522.jpg" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="one-sample-t-tests">
+<h1>One Sample t-Tests<a class="headerlink" href="#one-sample-t-tests" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="steps-1-3">
+<h1>Steps 1-3<a class="headerlink" href="#steps-1-3" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Set up hypothesis (see previous slide) and set $\mu_0=8.5$ (hypothesized population mean). The data comes from normal distribution of size = 30</p></li>
+<li><p>$\alpha=0.05$</p></li>
+<li><p>Calculate the test statistic</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="steps-4-6-critical-region">
+<h1>Steps 4-6 (Critical Region)<a class="headerlink" href="#steps-4-6-critical-region" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Find critical values (tables). Rejection regions:</p>
+<ul>
+<li><p>left-handed: reject $H_0$ if $t^* \leq t_{\alpha}$</p></li>
+<li><p>right-handed: reject $H_0$ if $t^* \geq t_{\alpha}$</p></li>
+<li><p>two-tailed: reject $H_0$ if $|t^*| \geq |t_{\alpha/2}|$</p></li>
+</ul>
+</li>
+<li><p>Make decision about the null</p></li>
+<li><p>State an overall conclusion</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="steps-4-6-p-values">
+<h1>Steps 4-6 ($p$-values)<a class="headerlink" href="#steps-4-6-p-values" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Computing p-value</p>
+<ul>
+<li><p>If $H_a$ is right-tailed, then the p-value is the probability the sample data produces a value equal to or greater than the observed test statistic. $P(t\leq t^*)$</p></li>
+<li><p>If $H_a$ is left-tailed, then the p-value is the probability the sample data produces a value equal to or less than the observed test statistic. $P(t\geq t^*)$</p></li>
+<li><p>If $H_a$ is two-tailed, then the p-value is two times the probability the sample data produces a value equal to or greater than the absolute value of the observed test statistic. $2 \times P(t\geq |t^*|)$</p></li>
+</ul>
+</li>
+<li><p>Make decision about the null. If the p-value is less than the significance level, $\alpha$, then reject $H_0$ (and conclude $H_a$)</p></li>
+<li><p>State an overall conclusion</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="example">
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>The mean length of the lumber is supposed to be 8.5 feet. A builder wants to check whether the shipment of lumber she receives has a mean length different from 8.5 feet. If the builder observes that the sample mean of 61 pieces of lumber is 8.3 feet with a sample standard deviation of 1.2 feet. What will she conclude? Is 8.3 very different from 8.5?</p>
+</div></blockquote>
+<p>$$
+\begin{align}
+t^* &amp;= \frac{\bar{x}-\mu}{\frac{s}{\sqrt{n}}} \
+&amp;= \frac{8.3-8.5}{\frac{1.2}{\sqrt{61}}} \
+&amp;= -1.3
+\end{align}
+$$</p>
+<p>Thus, we are asking if $-1.3$ is very far away from zero, since that corresponds to the case when $\bar{x}$ is equal to $\mu_0$. If it is far away, then it is unlikely that the null hypothesis is true and one rejects it. Otherwise, one cannot reject the null hypothesis.</p>
+<ol class="simple">
+<li><p>$H_0$: $\mu = 8.5$; $H_a$: $\mu \neq 8.5$</p></li>
+<li><p>$\alpha=.01$</p></li>
+<li><p>$t^* = -1.3$</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="rejection-region-approach">
+<h1>Rejection region approach<a class="headerlink" href="#rejection-region-approach" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>$df = 61-60 = 60$, the critical value is $t_{\alpha/2} = 2.660$, thus $t^*$ is not within $\pm 2.660$</p></li>
+<li><p>$t^*$ is not within rejection region, we fail to reject null hypothesis.</p></li>
+<li><p>With a test statistic of $-1.3$ and critical value of $\pm 2.660$ at a 1% level of significance, we do not have enough statistical evidence to reject the null hypothesis. We conclude that there is not enough statistical evidence that indicates that the mean length of lumber differs from $8.5$ feet.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="p-value-approach">
+<h1>P-value approach<a class="headerlink" href="#p-value-approach" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Without software to find a more exact probability, the best we can do from the t-table is find a range. We do see that the value falls between 1.296 and 1.671. These two t-values correspond to right-tail probabilities of 0.1 and 0.05, respectively. Since 1.3 is between these two t-values, then it stands to reason that the probability to the right of 1.3 would fall between 0.05 and 0.1. Therefore, the p-value would be = 2×(0.05 and 0.1) or from 0.1 to 0.2.</p></li>
+<li><p>Fail to reject the null</p></li>
+<li><p>With a test statistic of - 1.3 and p-value between 0.1 to 0.2, we fail to reject the null hypothesis at a 1% level of significance since the p-value would exceed our significance level. We conclude that there is not enough statistical evidence that indicates that the mean length of lumber differs from 8.5 feet.</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="p-value">
+<h1>P-value<a class="headerlink" href="#p-value" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>$p$-value is defined to be the smallest Type I error rate ($\alpha$) that you have to be willing to tolerate if you want to reject the null hypothesis.</p>
+</div></blockquote>
+<blockquote>
+<div><p>$p$-value (or probability value) is the probability that the test statistic equals the observed value or a more extreme value under the assumption that the null hypothesis is true.</p>
+</div></blockquote>
+<p>If our p-value is less than or equal to $\alpha$, then there is enough evidence to reject the null hypothesis.
+If our p-value is greater than $\alpha$, there is not enough evidence to reject the null hypothesis.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="penguins-data">
+<h1>Penguins Data<a class="headerlink" href="#penguins-data" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/lter_penguins.png"><img alt="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/lter_penguins.png" src="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/lter_penguins.png" style="width: 300px;" /></a></p></td>
+<td><p><a class="reference internal" href="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/culmen_depth.png"><img alt="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/culmen_depth.png" src="https://github.com/allisonhorst/palmerpenguins/raw/main/man/figures/culmen_depth.png" style="width: 300px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://github.com/allisonhorst/palmerpenguins">Source</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">penguins</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;penguins&quot;</span><span class="p">)</span>
+<span class="n">penguins</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>46.8</td>
+      <td>14.3</td>
+      <td>215.0</td>
+      <td>4850.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>50.4</td>
+      <td>15.7</td>
+      <td>222.0</td>
+      <td>5750.0</td>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>45.2</td>
+      <td>14.8</td>
+      <td>212.0</td>
+      <td>5200.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>49.9</td>
+      <td>16.1</td>
+      <td>213.0</td>
+      <td>5400.0</td>
+      <td>MALE</td>
+    </tr>
+  </tbody>
+</table>
+<p>344 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">corner</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture08_25_0.png" src="../_images/lecture08_25_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: ylabel=&#39;Frequency&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture08_26_1.png" src="../_images/lecture08_26_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="one-sample-test-for-penguins">
+<h1>One sample test for penguins<a class="headerlink" href="#one-sample-test-for-penguins" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: the mean body mass of penguins is 4201 grams</p></li>
+<li><p>$H_a$: the mean body mass of penguins is not 4201</p></li>
+</ul>
+<blockquote>
+<div><p>What kind of t-test is this?</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">popmean</span><span class="o">=</span><span class="mi">4201</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Our p-value is not below alpha, thus we cannot reject the null hypothesis.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We do not have enough statistical evidence to reject the null hypothesis.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We conclude that there is not enough statistical evidence that indicates that the mean</span><span class="se">\n</span><span class="s1"> mass of penguins differs from  4201 g.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_1sampResult(statistic=0.01739630065824133, pvalue=0.9861306342800811)
+Our p-value is not below alpha, thus we cannot reject the null hypothesis.
+We do not have enough statistical evidence to reject the null hypothesis.
+We conclude that there is not enough statistical evidence that indicates that the mean
+ mass of penguins differs from  4201 g.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="one-sample-test-for-penguins-v2">
+<h1>One sample test for penguins (v2)<a class="headerlink" href="#one-sample-test-for-penguins-v2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: the mean body mass of penguins is 4300 grams</p></li>
+<li><p>$H_a$: the mean body mass of penguins is less than 4300</p></li>
+</ul>
+<blockquote>
+<div><p>What kind of t-test is this?</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">popmean</span><span class="o">=</span><span class="mi">4300</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;less&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Our p-value is below **alpha**, thus we cannot accept the null hypothesis.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We do not have enough statistical evidence to accept the null hypothesis.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We conclude that there is enough statistical evidence that indicates that the mean</span><span class="se">\n</span><span class="s1"> mass of penguins is less than 4300 g.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_1sampResult(statistic=-2.265564736887436, pvalue=0.012052359189978712)
+Our p-value is below **alpha**, thus we cannot accept the null hypothesis.
+We do not have enough statistical evidence to accept the null hypothesis.
+We conclude that there is enough statistical evidence that indicates that the mean
+ mass of penguins is less than 4300 g.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="independent-samples-t-test">
+<h1>Independent Samples t-Test<a class="headerlink" href="#independent-samples-t-test" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Let’s assume that our <em>penguins</em> data is a combination of two independent samples: one for male penguins and another for female penguins.</p></li>
+<li><p>We can use a $t$-test to compare the means between the groups and state whether those are statistically different from one another.</p></li>
+<li><p>Be a good data scientist and check normality assumptions on the data sample.</p></li>
+</ul>
+<blockquote>
+<div><p>BIG QUESTION: Does flipper length vary depending on the sex of the penguin?</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># QQPLOT </span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">flipper_length_mm</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture08_32_0.png" src="../_images/lecture08_32_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shapiro-Wilk test</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">shapiro</span>
+<span class="n">shapiro</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">flipper_length_mm</span><span class="o">.</span><span class="n">dropna</span><span class="p">())</span> <span class="c1"># p-val&lt;0.05 - departure from normality</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ShapiroResult(statistic=0.9515460133552551, pvalue=3.541138271501154e-09)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="our-data-is-not-normal-but-we-will-still-proceed-with-the-outlined-tests-to-demonstrate-python-functionality">
+<h1>Our data is not normal, but we will still proceed with the outlined tests to demonstrate Python functionality.<a class="headerlink" href="#our-data-is-not-normal-but-we-will-still-proceed-with-the-outlined-tests-to-demonstrate-python-functionality" title="Permalink to this headline">#</a></h1>
+<section id="we-will-see-later-what-tests-to-use-when-we-see-non-normal-data">
+<h2>We will see later what tests to use when we see non-normal data<a class="headerlink" href="#we-will-see-later-what-tests-to-use-when-we-see-non-normal-data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># visualize difference with a plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;flipper_length_mm&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">penguins</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture08_35_0.png" src="../_images/lecture08_35_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="comparing-means-between-independendent-samples">
+<h1>Comparing means between independendent samples<a class="headerlink" href="#comparing-means-between-independendent-samples" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p><strong>SAMPLES ARE NOT PAIRED AND NOT RELATED IN ANY WAY TO ANOTHER!</strong></p>
+</div></blockquote>
+<p>Pooled standard deviation:</p>
+<p>$$
+s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n1+n2-2}}
+$$</p>
+<section id="sample-stastistic-unpooled-variance">
+<h2>Sample stastistic (Unpooled Variance)<a class="headerlink" href="#sample-stastistic-unpooled-variance" title="Permalink to this headline">#</a></h2>
+<p>$$
+t = \frac{\bar{x_1} - \bar{x_2} - 0}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}
+$$</p>
+</section>
+<section id="confidence-intervals">
+<h2>Confidence intervals<a class="headerlink" href="#confidence-intervals" title="Permalink to this headline">#</a></h2>
+<p>$$
+\bar{x}_1-\bar{x}<em>2\pm t</em>{\alpha/2}s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}
+$$</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hypothesis-tests">
+<h1>Hypothesis tests<a class="headerlink" href="#hypothesis-tests" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: $\mu_1 - \mu_2 = 0$; $H_a$: $\mu_1 - \mu_2 \neq 0$, with $df=n_1+n_2 - 2$</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">penguins</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>339</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>46.8</td>
+      <td>14.3</td>
+      <td>215.0</td>
+      <td>4850.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>341</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>50.4</td>
+      <td>15.7</td>
+      <td>222.0</td>
+      <td>5750.0</td>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>45.2</td>
+      <td>14.8</td>
+      <td>212.0</td>
+      <td>5200.0</td>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>Gentoo</td>
+      <td>Biscoe</td>
+      <td>49.9</td>
+      <td>16.1</td>
+      <td>213.0</td>
+      <td>5400.0</td>
+      <td>MALE</td>
+    </tr>
+  </tbody>
+</table>
+<p>344 rows × 7 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pingouin</span> <span class="kn">import</span> <span class="n">ttest</span><span class="p">,</span> <span class="n">mwu</span>
+<span class="n">penguins</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># drop null values </span>
+<span class="n">males</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">sex</span><span class="o">==</span><span class="s1">&#39;MALE&#39;</span><span class="p">,</span> <span class="s1">&#39;flipper_length_mm&#39;</span><span class="p">]</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">sex</span><span class="o">==</span><span class="s1">&#39;FEMALE&#39;</span><span class="p">,</span> <span class="s1">&#39;flipper_length_mm&#39;</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">females</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">ttest</span><span class="p">(</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(168,) (165,)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>T</th>
+      <th>dof</th>
+      <th>alternative</th>
+      <th>p-val</th>
+      <th>CI95%</th>
+      <th>cohen-d</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>T-test</th>
+      <td>4.807866</td>
+      <td>325.278352</td>
+      <td>two-sided</td>
+      <td>0.000002</td>
+      <td>[4.22, 10.06]</td>
+      <td>0.526244</td>
+      <td>5880.711</td>
+      <td>0.997654</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use Mann-Whitney non-parametric test (to account for non-normal data)</span>
+<span class="n">mwu</span><span class="p">(</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;two-sided&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>U-val</th>
+      <th>alternative</th>
+      <th>p-val</th>
+      <th>RBC</th>
+      <th>CLES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>MWU</th>
+      <td>18173.0</td>
+      <td>two-sided</td>
+      <td>9.011341e-07</td>
+      <td>-0.311183</td>
+      <td>0.655592</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting">
+<h1>Interpreting<a class="headerlink" href="#interpreting" title="Permalink to this headline">#</a></h1>
+<section id="with-a-p-value-of-9-011e-07-we-have-enough-evidence-to-reject-null-hypothesis-the-average-flipper-length-between-male-and-female-penguins-is-different">
+<h2>With a $p$-value of 9.011e-07 we have enough evidence to reject null hypothesis. The average flipper length between male and female penguins is different.<a class="headerlink" href="#with-a-p-value-of-9-011e-07-we-have-enough-evidence-to-reject-null-hypothesis-the-average-flipper-length-between-male-and-female-penguins-is-different" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="comparing-two-population-variances">
+<h1>Comparing two population variances<a class="headerlink" href="#comparing-two-population-variances" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: $\frac{\sigma_1^2}{\sigma_2^2}=1$; $H_a$: $\frac{\sigma_1^2}{\sigma_2^2} \neq 1$</p></li>
+<li><p>F-test: assumes two samples come from populations that are normally distributed</p></li>
+<li><p>Bartlett’s test</p></li>
+<li><p>Levene’s test</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">bartlett</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">bartlett</span><span class="p">(</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;the p-value: </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;populations have equal variances at alpha=0.05&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the p-value: 0.05197230787956047
+populations have equal variances at alpha=0.05
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="anova">
+<h1>ANOVA<a class="headerlink" href="#anova" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Analysis of Variance</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing">
+<h1>Hypothesis Testing<a class="headerlink" href="#hypothesis-testing" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We are ONCE AGAIN comparing <strong>MEANS</strong> from $t$ different samples</p></li>
+<li><p>$H_0$: $\mu_1 = \mu_2 = … = \mu_k$</p></li>
+<li><p>at least one mean is different OR not all the means are equal</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="test-statistic-for-a-one-way-anova">
+<h1>Test statistic for a One-Way ANOVA<a class="headerlink" href="#test-statistic-for-a-one-way-anova" title="Permalink to this headline">#</a></h1>
+<p>$$
+F = \frac{\text{between group variance}}{\text{within group variance}} = \frac{MS_{\text{effect}}}{MS_{\text{error}}}
+$$</p>
+<p>Under the null, the $F$ should be close to 1, if the ratio is large, we have evidence against teh null.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="variance">
+<h1>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">#</a></h1>
+<p>$$
+\mbox{Var}(Y) = \frac{1}{N} \sum_{k=1}^G \sum_{i=1}^{N_k} \left(Y_{ik} - \bar{Y} \right)^2
+$$</p>
+<p>where $G$ is the number of groups, $N$ is the number of observations (penguins), Y_{ik} is the total body mass of k-group (species) of an $i$th individual</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sum-of-squares">
+<h1>Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">#</a></h1>
+<p>$$
+\mbox{SS}<em>{tot} = \sum</em>{k=1}^G \sum_{i=1}^{N_k} \left(Y_{ik} - \bar{Y} \right)^2 \quad \text{- total sum of squares}
+$$</p>
+<p>$$
+\mbox{SS}<em>w = \sum</em>{k=1}^G \sum_{i=1}^{N_k} \left( Y_{ik} - \bar{Y}_k \right)^2 \quad \text{- within-group SS}
+$$</p>
+<p>$$
+{SS}<em>{b} = \sum</em>{k=1}^{G} \sum_{k=1}^G N_k \left( \bar{Y}_k - \bar{Y} \right)^2
+$$</p>
+<p>$$
+\mbox{SS}<em>w  + \mbox{SS}</em>{b} = \mbox{SS}_{tot}
+$$</p>
+<img alt="https://ethanweed.github.io/pythonbook/_images/05.03-anova_19_1.png" src="https://ethanweed.github.io/pythonbook/_images/05.03-anova_19_1.png" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="from-ss-to-an-f-test">
+<h1>From SS to an F-test<a class="headerlink" href="#from-ss-to-an-f-test" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$df_b = G-1$, $df_w = N-G$</p></li>
+<li><p>$MS_b = \frac{SS_b}{df_b}$, $MS_w = \frac{SS_w}{df_w}$</p></li>
+<li><p>$F=\frac{MS_b}{MS_w}$</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="anova-assumptions">
+<h1>ANOVA assumptions<a class="headerlink" href="#anova-assumptions" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Responses for each factor level have normal population distribution</p></li>
+<li><p>the distributions have the same variance</p></li>
+<li><p><strong>the data are independent</strong>!</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">penguins</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">)[</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean</th>
+      <th>std</th>
+      <th>size</th>
+    </tr>
+    <tr>
+      <th>species</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Adelie</th>
+      <td>3706.164384</td>
+      <td>458.620135</td>
+      <td>146</td>
+    </tr>
+    <tr>
+      <th>Chinstrap</th>
+      <td>3733.088235</td>
+      <td>384.335081</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>Gentoo</th>
+      <td>5092.436975</td>
+      <td>501.476154</td>
+      <td>119</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;species&#39;, ylabel=&#39;body_mass_g&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture08_54_1.png" src="../_images/lecture08_54_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ANOVA </span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+<span class="n">penguins</span><span class="o">.</span><span class="n">anova</span><span class="p">(</span><span class="n">dv</span><span class="o">=</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">,</span> <span class="n">between</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="n">detailed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\pingouin\parametric.py:992: FutureWarning: Not prepending group keys to the result index of transform-like apply. In the future, the group keys will be included in the index, regardless of whether the applied function returns a like-indexed object.
+To preserve the previous behavior, use
+
+	&gt;&gt;&gt; .groupby(..., group_keys=False)
+
+To adopt the future behavior and silence this warning, use 
+
+	&gt;&gt;&gt; .groupby(..., group_keys=True)
+  sserror = grp.apply(lambda x: (x - x.mean()) ** 2).sum()
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source</th>
+      <th>ddof1</th>
+      <th>ddof2</th>
+      <th>F</th>
+      <th>p-unc</th>
+      <th>np2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>species</td>
+      <td>2</td>
+      <td>330</td>
+      <td>341.894895</td>
+      <td>3.744505e-81</td>
+      <td>0.674489</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ANOVA VIA SCIPY </span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="c1"># stats f_oneway functions takes the groups as input and returns ANOVA F and p value</span>
+<span class="n">fvalue</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">species</span><span class="o">==</span><span class="s1">&#39;Adelie&#39;</span><span class="p">,</span> <span class="s1">&#39;body_mass_g&#39;</span><span class="p">],</span> 
+                                <span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">species</span><span class="o">==</span><span class="s1">&#39;Chinstrap&#39;</span><span class="p">,</span> <span class="s1">&#39;body_mass_g&#39;</span><span class="p">],</span> 
+                                <span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">species</span><span class="o">==</span><span class="s1">&#39;Gentoo&#39;</span><span class="p">,</span> <span class="s1">&#39;body_mass_g&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fvalue</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>341.8948949481461 3.74450512630046e-81
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;body_mass_g ~ C(species)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">anova_table</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">anova_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sum_sq</th>
+      <th>df</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>C(species)</th>
+      <td>1.451902e+08</td>
+      <td>2.0</td>
+      <td>341.894895</td>
+      <td>3.744505e-81</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>7.006945e+07</td>
+      <td>330.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996198/">Banerjee, A., Chitnis, U. B., Jadhav, S. L., Bhawalkar, J. S., &amp; Chaudhury, S. (2009). Hypothesis testing, type I and type II errors. Industrial psychiatry journal, 18(2), 127.</a></p>
+<p><a class="reference external" href="https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma990022376840203776">Rogerson, P. A. (2019). Statistical methods for geography: a student’s guide. Sage.</a></p>
+<p><a class="reference external" href="https://online.stat.psu.edu/stat500/">Penn State STAT 500: Applied Statistics Course Materials</a></p>
+<p><a class="reference external" href="https://ethanweed.github.io/pythonbook/landingpage.html">Learning Statistics with Python</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-# Lab 2 - Summarizing Data and Basic Python Plotting
+# Lab 2: Summarizing Data and Basic Python Plotting
 
 ````{caution}
 Please use this webpage as a set of general recommendations. The lab itself is located in [Google Colab](https://colab.research.google.com/drive/1Ggm6WsRVj95zx8AemRPu49Qk5Ecm503d?usp=sharing). Make sure to copy the notebook as you work through it. 

@@ -156,12 +156,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab2.html">
-     Lab 2 - Summarizing Data and Basic Python Plotting
+     Lab 2: Summarizing Data and Basic Python Plotting
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab3.html">
-     Lab 3 - Geovisualization
+     Lab 3: Geovisualization
     </a>
    </li>
    <li class="toctree-l2">
@@ -171,12 +171,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab5.html">
-     Lab 5
+     Lab 5: Testing for means, From Correlation and Autocorrelation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab6.html">
      Lab 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
     </a>
    </li>
   </ul>
@@ -917,7 +922,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File &#39;snow_data.zip&#39; already there; not retrieving.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;wget&#39; is not recognized as an internal or external command,
+operable program or batch file.
 </pre></div>
 </div>
 </div>
@@ -930,17 +936,8 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A subdirectory or file snow_data already exists.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  snow_data.zip
-  inflating: snow_data/deaths_by_bldg.geojson  
-  inflating: snow_data/deaths_by_block.geojson  
-  inflating: snow_data/deaths_by_bsrings.geojson  
-  inflating: snow_data/deaths_by_otherrings.geojson  
-  inflating: snow_data/deaths_nd_by_house.geojson  
-  inflating: snow_data/pumps.geojson  
-  inflating: snow_data/sewergrates_ventilators.geojson  
-  inflating: snow_data/subdistricts.geojson  
+&#39;unzip&#39; is not recognized as an internal or external command,
+operable program or batch file.
 </pre></div>
 </div>
 </div>
@@ -1221,18 +1218,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Generate scatter plot</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module &#39;seaborn&#39; has no attribute &#39;histplot&#39;
-</pre></div>
-</div>
-<img alt="../_images/lecture06_22_1.png" src="../_images/lecture06_22_1.png" />
+<img alt="../_images/lecture06_22_0.png" src="../_images/lecture06_22_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1411,7 +1397,7 @@ Euclidean Median coordinates 	 	: [529410.20734233 181027.07075087]
 Manhattan Medi an coordinates 	 	: [529422.525932 181027.12929 ]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\centrography.py:208: UserWarning: Manhattan Median is not unique for even point patterns.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\pointpats\centrography.py:208: UserWarning: Manhattan Median is not unique for even point patterns.
   warnings.warn(s)
 </pre></div>
 </div>
@@ -1429,7 +1415,7 @@ Manhattan Medi an coordinates 	 	: [529422.525932 181027.12929 ]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e715ffd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1aa54d50b80&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_35_1.png" src="../_images/lecture06_35_1.png" />
@@ -1461,7 +1447,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e7255d80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1aa54d75ea0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_38_1.png" src="../_images/lecture06_38_1.png" />
@@ -1505,7 +1491,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_40_1.png" src="../_images/lecture06_40_1.png" />
@@ -1532,7 +1518,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e72cba30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1aa588143a0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_43_1.png" src="../_images/lecture06_43_1.png" />
@@ -1556,7 +1542,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e7387790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1aa588e18d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_45_1.png" src="../_images/lecture06_45_1.png" />
@@ -1653,7 +1639,7 @@ z-score 25.396444444444445
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.048347097224378154
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.0003561874701197266
 </pre></div>
 </div>
 <img alt="../_images/lecture06_52_1.png" src="../_images/lecture06_52_1.png" />
@@ -1717,10 +1703,10 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([30., 43., 53., 45., 32., 19., 13., 10.,  2.,  3.]),
- array([ 1.41832384,  4.42328832,  7.42825279, 10.43321727, 13.43818175,
-        16.44314622, 19.4481107 , 22.45307518, 25.45803965, 28.46300413,
-        31.46796861]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([26., 49., 44., 56., 35., 22., 10.,  4.,  3.,  1.]),
+ array([ 0.83395463,  4.21331303,  7.59267144, 10.97202984, 14.35138824,
+        17.73074665, 21.11010505, 24.48946345, 27.86882186, 31.24818026,
+        34.62753867]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>

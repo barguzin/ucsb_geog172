@@ -1,0 +1,1799 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Review &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2: Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3: Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5: Testing for means, From Correlation and Autocorrelation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture09.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture09.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture09.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation">
+   Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlations-linear-relationships-in-data">
+   Correlations = Linear Relationships in Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation-of-correlation">
+   Mathematical Formulation of Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-properties-of-the-correlation-coefficient-pearson">
+   Statistical Properties of the correlation coefficient (Pearson)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Statistical Properties of the correlation coefficient (Pearson)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spearman-correlation">
+   Spearman Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-modeling-and-correlations">
+   Statistical Modeling and Correlations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations">
+   Misusing Correlations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations-2">
+   Misusing Correlations 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations-3">
+   Misusing Correlations 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-between-correlation-and-regression">
+   Connection between correlation and regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression">
+   Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-and-regression">
+   Correlation and Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autocorrelation">
+   Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-case-temporal-autocorrelation">
+   1D Case: Temporal Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-spatial-autocorrelation">
+   Global Spatial Autocorrelation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recall-tobler-s-first-law-of-geography">
+     Recall Tobler’s First Law of Geography
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-are-going-to-give-a-numerical-quantification-of-tfl-in-the-following-slides">
+       We are going to give a numerical quantification of TFL in the following slides
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-spatial-autocorrelation">
+   What is Spatial Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#andre-michel-guerry-18021866">
+   André-Michel Guerry, 1802–1866
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-look-at-spatial-autocorrelation-choropleth-mapping">
+   First Look at Spatial Autocorrelation - Choropleth Mapping
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-lag">
+   Spatial Lag
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moran-s-i">
+   Moran’s $I$
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-moran-s-scatterplot">
+   Interpreting Moran’s Scatterplot
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#permutation-inference">
+   Permutation Inference
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Permutation Inference
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation">
+   Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlations-linear-relationships-in-data">
+   Correlations = Linear Relationships in Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-formulation-of-correlation">
+   Mathematical Formulation of Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-properties-of-the-correlation-coefficient-pearson">
+   Statistical Properties of the correlation coefficient (Pearson)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Statistical Properties of the correlation coefficient (Pearson)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spearman-correlation">
+   Spearman Correlation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistical-modeling-and-correlations">
+   Statistical Modeling and Correlations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations">
+   Misusing Correlations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations-2">
+   Misusing Correlations 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misusing-correlations-3">
+   Misusing Correlations 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connection-between-correlation-and-regression">
+   Connection between correlation and regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression">
+   Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-and-regression">
+   Correlation and Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#autocorrelation">
+   Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-case-temporal-autocorrelation">
+   1D Case: Temporal Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-spatial-autocorrelation">
+   Global Spatial Autocorrelation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recall-tobler-s-first-law-of-geography">
+     Recall Tobler’s First Law of Geography
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#we-are-going-to-give-a-numerical-quantification-of-tfl-in-the-following-slides">
+       We are going to give a numerical quantification of TFL in the following slides
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-spatial-autocorrelation">
+   What is Spatial Autocorrelation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#andre-michel-guerry-18021866">
+   André-Michel Guerry, 1802–1866
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-look-at-spatial-autocorrelation-choropleth-mapping">
+   First Look at Spatial Autocorrelation - Choropleth Mapping
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-lag">
+   Spatial Lag
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moran-s-i">
+   Moran’s $I$
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-moran-s-scatterplot">
+   Interpreting Moran’s Scatterplot
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#permutation-inference">
+   Permutation Inference
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Permutation Inference
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 9: Correlations and Autocorrelations </h3><section class="tex2jax_ignore mathjax_ignore" id="review">
+<h1>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Hypothesis tests (Null, Alternative, p-value)</p></li>
+<li><p>Checking normality</p></li>
+<li><p>Comparing means</p>
+<ul>
+<li><p>one sample (arbitrary aka assumed mean value)</p></li>
+<li><p>two samples (compare mean between the samples / groups)</p></li>
+<li><p>more than two samples (ANOVA)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="correlation">
+<h1>Correlation<a class="headerlink" href="#correlation" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Visual Understanding of Correlation</p></li>
+<li><p>Mathematical Understanding of Correlation</p></li>
+<li><p>Statistical Modeling</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="correlations-linear-relationships-in-data">
+<h1>Correlations = Linear Relationships in Data<a class="headerlink" href="#correlations-linear-relationships-in-data" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Linear function $y = mx + b$, where $m$ is the slope and $b$ is the $y$-intercept</p></li>
+<li><p>Given two points $(x_1, x_2)$ and $(y_1, y_2)$ we can calculate teh slope $\frac{y_2-y_1}{x_2 - x_1}$</p></li>
+<li><p>The slope describes the relationship between the variables</p>
+<ul>
+<li><p>positive slope (positive linear relationship: increase in X is associated with increase in Y)</p></li>
+<li><p>negative slope (negative linear relationship: increase in X is associated with decrease in Y)</p></li>
+<li><p>slope of 0 or near 0 (no linear relationship)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="n">penguins</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;penguins&#39;</span><span class="p">)</span>
+<span class="n">penguins</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>Female</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x19359b46680&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_5_1.png" src="../_images/lecture09_5_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bill_length_mm&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture09_6_0.png" src="../_images/lecture09_6_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bill_length_mm&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;body_mass_g&#39;, ylabel=&#39;bill_length_mm&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_7_1.png" src="../_images/lecture09_7_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;body_mass_g&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;bill_length_mm&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1936195fd30&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_8_1.png" src="../_images/lecture09_8_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mathematical-formulation-of-correlation">
+<h1>Mathematical Formulation of Correlation<a class="headerlink" href="#mathematical-formulation-of-correlation" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Pearson’s $r$ - sample and $\rho$ for population.</p></li>
+</ul>
+<p>$$
+r=\dfrac{\sum (x_i-\bar{x})(y_i-\bar{y}) }{\sqrt{\sum (x_i-\bar{x})^2}\sqrt{\sum (y_i-\bar{y})^2}}=\frac{cov(x,y)}{\sigma_x \sigma_y}
+$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="statistical-properties-of-the-correlation-coefficient-pearson">
+<h1>Statistical Properties of the correlation coefficient (Pearson)<a class="headerlink" href="#statistical-properties-of-the-correlation-coefficient-pearson" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$ -1 \leq r \leq 1$</p></li>
+<li><p>The sign of the correlation provides a direction of <strong>linear</strong> relationship</p></li>
+<li><p>0 - means no relationship</p></li>
+<li><p>There are no units associated with $r$</p></li>
+<li><p>The close it is to $\pm 1$ the stronger the linear relationship</p></li>
+<li><p>If we fit a simple linear regression model between $Y$ and $X$, then $r$ has the same sign as $\beta_1$ (coefficient of $X$ in regression equation)</p></li>
+<li><p>correlation value is the same regardless of what we define as $X$ and $Y$.</p></li>
+</ul>
+<img alt="https://cdn1.byjus.com/wp-content/uploads/2021/03/covariance-3.png" src="https://cdn1.byjus.com/wp-content/uploads/2021/03/covariance-3.png" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Statistical Properties of the correlation coefficient (Pearson)<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: $\rho_p = 0$ versus $H_a$: $\rho_p \neq 0$</p></li>
+<li><p>The sampling distribution for Pearson’s $r_p$ is not normal. In order to attain confidence limits for $r_p$ based on a standard normal distribution, we transform $r_p$ using Fisher’s Z transformation to get a quantity, $z_p$, that has an approximate normal distribution. See formulas <a class="reference external" href="https://online.stat.psu.edu/stat509/lesson/18/18.1">here</a></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spearman-correlation">
+<h1>Spearman Correlation<a class="headerlink" href="#spearman-correlation" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Spearman rank correlation coefficient, $r_s$, is a non-parameteric measure of correlation based on data ranks. First, two variable values are ranked. Then, Pearson’s $r_p$ is calculated on the ranks.</p></li>
+<li><p>Spearman rank correlation coefficient quantifies the degree of linear association between the ranks of $X$ and the ranks of $Y$</p></li>
+<li><p>Also, $r_s$ does not estimate a natural population parameter (unlike Pearson’s which estimates $\rho_p$).</p></li>
+<li><p>An advantage of the Spearman rank correlation coefficient is that the $X$ and $Y$ values can be continuous or ordinal, and approximate normal distributions for $X$ and $Y$ are not required.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+
+<span class="n">pg</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="p">,</span> <span class="n">penguins</span><span class="o">.</span><span class="n">bill_length_mm</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>r</th>
+      <th>CI95%</th>
+      <th>p-val</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>pearson</th>
+      <td>342</td>
+      <td>0.6</td>
+      <td>[0.52, 0.66]</td>
+      <td>0.0</td>
+      <td>8.34e+30</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pairwise correlation</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">pairwise_corr</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+      <th>method</th>
+      <th>alternative</th>
+      <th>n</th>
+      <th>r</th>
+      <th>CI95%</th>
+      <th>p-unc</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bill_length_mm</td>
+      <td>bill_depth_mm</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>-0.235053</td>
+      <td>[-0.33, -0.13]</td>
+      <td>1.119662e-05</td>
+      <td>1005.717</td>
+      <td>0.99298</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bill_length_mm</td>
+      <td>flipper_length_mm</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>0.656181</td>
+      <td>[0.59, 0.71]</td>
+      <td>1.743974e-43</td>
+      <td>1.46e+40</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>bill_length_mm</td>
+      <td>body_mass_g</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>0.595110</td>
+      <td>[0.52, 0.66]</td>
+      <td>3.808283e-34</td>
+      <td>8.34e+30</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>bill_depth_mm</td>
+      <td>flipper_length_mm</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>-0.583851</td>
+      <td>[-0.65, -0.51]</td>
+      <td>1.232734e-32</td>
+      <td>2.679e+29</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>bill_depth_mm</td>
+      <td>body_mass_g</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>-0.471916</td>
+      <td>[-0.55, -0.39]</td>
+      <td>2.276941e-20</td>
+      <td>2.103e+17</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>flipper_length_mm</td>
+      <td>body_mass_g</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>342</td>
+      <td>0.871202</td>
+      <td>[0.84, 0.89]</td>
+      <td>4.370681e-107</td>
+      <td>1.87e+103</td>
+      <td>1.00000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span> <span class="c1"># calculate pairwise correlations</span>
+<span class="c1"># Generate a mask for the upper triangle</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">))</span>
+<span class="c1"># Set up the matplotlib figure</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># Generate a custom diverging colormap</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">diverging_palette</span><span class="p">(</span><span class="mi">230</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">as_cmap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Draw the heatmap with the mask and correct aspect ratio</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">.3</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shrink&quot;</span><span class="p">:</span> <span class="mf">.5</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_16_1.png" src="../_images/lecture09_16_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="statistical-modeling-and-correlations">
+<h1>Statistical Modeling and Correlations<a class="headerlink" href="#statistical-modeling-and-correlations" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Oftentimes our data has many variables (100s, 1000s)</p></li>
+<li><p>If we know which of our variables are INDEPENDENT VARIABLES (predictors) and DEPENDENT VARIABLES (outcome), we can use pairwise correlations to limit the number of predictors without sacrificing much of the predictive power</p>
+<ul>
+<li><p>in Statistics: use Accam’s razor principle - the simplest model is preferred to the complex one (provided similar accuracy)</p></li>
+<li><p>easier to interpret</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="misusing-correlations">
+<h1>Misusing Correlations<a class="headerlink" href="#misusing-correlations" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>The correlation methods discussed in this chapter should be used only with independent data; they should not be applied to repeated measures data where the data are not independent. For example, it would not be appropriate to use these measures of correlation to describe the relationship between Week 4 and Week 8 blood pressures in the same patients.</p></li>
+<li><p>Caution should be used in interpreting results of correlation analysis when large numbers of variables have been examined, resulting in a large number of correlation coefficients.</p></li>
+<li><p>The correlation of two variables that both have been recorded repeatedly over time can be misleading and spurious. Time trends should be removed from such data before attempting to measure correlation.</p></li>
+<li><p>To extend correlation results to a given population, the subjects under study must form a representative (i.e., random) sample from that population. The Pearson correlation coefficient can be very sensitive to outlying observations and all correlation coefficients are susceptible to sample selection biases.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="misusing-correlations-2">
+<h1>Misusing Correlations 2<a class="headerlink" href="#misusing-correlations-2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Care should be taken when attempting to correlate two variables where one is a part and one represents the total. For example, we would expect to find a positive correlation between height at age ten and adult height because the second quantity “contains” the first quantity.</p></li>
+<li><p>Correlation should not be used to study the relation between an initial measurement, X, and the change in that measurement over time, Y - X. X will be correlated with Y - X due to the regression to the mean phenomenon.</p></li>
+<li><p>Small correlation values do not necessarily indicate that two variables are unassociated. For example, Pearson’s $r_p$  will underestimate the association between two variables that show a quadratic relationship. Scatterplots should always be examined.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="misusing-correlations-3">
+<h1>Misusing Correlations 3<a class="headerlink" href="#misusing-correlations-3" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Correlation does not imply causation. If a strong correlation is observed between two variables A and B, there are several possible explanations:</p>
+<ul>
+<li><p>A influences B</p></li>
+<li><p>B influences A</p></li>
+<li><p>A and B are influenced by one or more additional variables</p></li>
+<li><p>The relationship observed between A and B was a chance error.</p></li>
+</ul>
+</li>
+<li><p>“Regular” correlation coefficients are often published when the researcher really intends to compare two methods of measuring the same quantity with respect to their agreement. This is a misguided analysis because correlation measures only the degree of association; it does not measure agreement (Use Kohen’s Kappa for that).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="connection-between-correlation-and-regression">
+<h1>Connection between correlation and regression<a class="headerlink" href="#connection-between-correlation-and-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Correlation does not imply causation! Thus we can only state that there is positive/negative association between two variables.</p></li>
+<li><p>Regression always comes with a strong believe about our understanding of direction of this association</p></li>
+</ul>
+<p>$$
+\text{home value} \sim \text{number of bedrooms} + \text{number of bethrooms} + \text{proximity to amenities}
+$$</p>
+<ul class="simple">
+<li><p>Regression breaks down our data into <strong>dependent</strong> and <strong>independent</strong> variables (predictors). Regression breaks down the how much of the variance in the dependent variable is caused by the variation in the independent variables (more on this later in the course).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Line fitting (optimizing the slope and intercept of the line so that the distances between the observed points and the line are minimized</p></li>
+</ul>
+<img alt="https://ethanweed.github.io/pythonbook/_images/05.04-regression_8_0.png" src="https://ethanweed.github.io/pythonbook/_images/05.04-regression_8_0.png" />
+<img alt="https://ethanweed.github.io/pythonbook/_images/05.04-regression_12_0.png" src="https://ethanweed.github.io/pythonbook/_images/05.04-regression_12_0.png" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># predictor</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">bill_length_mm</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span> <span class="c1"># predicted</span>
+
+<span class="n">reg1</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reg1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;R-squared is .35, meaning that body mass explains 35</span><span class="si">% o</span><span class="s1">f variability in bill length of a penguin&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         names     coef      se        T  pval      r2  adj_r2
+0    Intercept  26.8989  1.2691  21.1944   0.0  0.3542  0.3523
+1  body_mass_g   0.0041  0.0003  13.6544   0.0  0.3542  0.3523
+R-squared is .35, meaning that body mass explains 35% of variability in bill length of a penguin
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="correlation-and-regression">
+<h1>Correlation and Regression<a class="headerlink" href="#correlation-and-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Runnig a regression with one predictor is equivalent to running a correlation. In fact $r_p^2 = R^2$. Demonstrated on the next slide.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;correlation coef: </span><span class="si">{</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;regression coef: </span><span class="si">{</span><span class="n">reg1</span><span class="o">.</span><span class="n">r2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>correlation coef: 0.354155703142187
+regression coef: 0.3542
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="autocorrelation">
+<h1>Autocorrelation<a class="headerlink" href="#autocorrelation" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Correlation with a lagged copy of self</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Autocorrelation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Correlation works if we have two variables. These variables do not have any referencing (no temporal referencing no geo-referencing). <strong>ORDER and ARRANGEMENT DO NOT MATTER</strong>.</p></li>
+<li><p>Autocorrelation - relationship to itself. Works on one referenced variable.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="d-case-temporal-autocorrelation">
+<h1>1D Case: Temporal Autocorrelation<a class="headerlink" href="#d-case-temporal-autocorrelation" title="Permalink to this headline">#</a></h1>
+<p><img alt="" src="../_images/acf.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">sunspots</span><span class="o">.</span><span class="n">NOTE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>::
+
+    Number of Observations - 309 (Annual 1700 - 2008)
+    Number of Variables - 1
+    Variable name definitions::
+
+        SUNACTIVITY - Number of sunspots for each year
+
+    The data file contains a &#39;YEAR&#39; variable that is not returned by load.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dta</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">sunspots</span><span class="o">.</span><span class="n">load_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">data</span> <span class="c1">#sunspots per year</span>
+<span class="n">dta</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">datetools</span><span class="o">.</span><span class="n">dates_from_range</span><span class="p">(</span><span class="s2">&quot;1700&quot;</span><span class="p">,</span> <span class="s2">&quot;2008&quot;</span><span class="p">))</span>
+<span class="n">dta</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">dta</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">inferred_freq</span>
+<span class="k">del</span> <span class="n">dta</span><span class="p">[</span><span class="s2">&quot;YEAR&quot;</span><span class="p">]</span>
+<span class="n">dta</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture09_31_0.png" src="../_images/lecture09_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">plot_acf</span><span class="p">(</span><span class="n">dta</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">lags</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture09_32_0.png" src="../_images/lecture09_32_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="global-spatial-autocorrelation">
+<h1>Global Spatial Autocorrelation<a class="headerlink" href="#global-spatial-autocorrelation" title="Permalink to this headline">#</a></h1>
+<section id="recall-tobler-s-first-law-of-geography">
+<h2>Recall Tobler’s First Law of Geography<a class="headerlink" href="#recall-tobler-s-first-law-of-geography" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>Everything is related to everything else. But near things are more related than distant things. (Tobler, 1969)</p>
+</div></blockquote>
+<section id="we-are-going-to-give-a-numerical-quantification-of-tfl-in-the-following-slides">
+<h3>We are going to give a numerical quantification of TFL in the following slides<a class="headerlink" href="#we-are-going-to-give-a-numerical-quantification-of-tfl-in-the-following-slides" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-spatial-autocorrelation">
+<h1>What is Spatial Autocorrelation<a class="headerlink" href="#what-is-spatial-autocorrelation" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>it the absence of SA we observe complete spatial randomness (CSR):  a situation in which the location of an observation gives no information whatsoever about its value. No discernible spatial pattern is observed.</p></li>
+<li><p>Positive SA: similar values are located next to one another: HH and LL. Closeness + Stat similarity! Examples: income, poverty.</p></li>
+<li><p>Negative SA: similar values are located away from one another. Distance + Sta similarity! Examples: grocery stores, schools.</p></li>
+<li><p>The tools quantifying SA are typically gathered under the umbrella of exploratory spatial data analysis (ESDA) in geography</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">libpysal.examples</span> <span class="kn">import</span> <span class="n">load_example</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="n">guerry_loc</span> <span class="o">=</span> <span class="n">load_example</span><span class="p">(</span><span class="s1">&#39;Guerry&#39;</span><span class="p">)</span>
+<span class="n">guerry</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">guerry_loc</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;guerry.geojson&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">guerry</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Guerry
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chicago parcels
+Example not downloaded: Chile Migration
+Example not downloaded: Spirals
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(85, 24)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dept</th>
+      <th>Region</th>
+      <th>Dprtmnt</th>
+      <th>Crm_prs</th>
+      <th>Crm_prp</th>
+      <th>Litercy</th>
+      <th>Donatns</th>
+      <th>Infants</th>
+      <th>Suicids</th>
+      <th>MainCty</th>
+      <th>...</th>
+      <th>Infntcd</th>
+      <th>Dntn_cl</th>
+      <th>Lottery</th>
+      <th>Desertn</th>
+      <th>Instrct</th>
+      <th>Prsttts</th>
+      <th>Distanc</th>
+      <th>Area</th>
+      <th>Pop1831</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>E</td>
+      <td>Ain</td>
+      <td>28870</td>
+      <td>15890</td>
+      <td>37</td>
+      <td>5098</td>
+      <td>33120</td>
+      <td>35039</td>
+      <td>2</td>
+      <td>...</td>
+      <td>60</td>
+      <td>69</td>
+      <td>41</td>
+      <td>55</td>
+      <td>46</td>
+      <td>13</td>
+      <td>218.372</td>
+      <td>5762</td>
+      <td>346.03</td>
+      <td>MULTIPOLYGON (((801150.00000 2092615.00000, 80...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>N</td>
+      <td>Aisne</td>
+      <td>26226</td>
+      <td>5521</td>
+      <td>51</td>
+      <td>8901</td>
+      <td>14572</td>
+      <td>12831</td>
+      <td>2</td>
+      <td>...</td>
+      <td>82</td>
+      <td>36</td>
+      <td>38</td>
+      <td>82</td>
+      <td>24</td>
+      <td>327</td>
+      <td>65.945</td>
+      <td>7369</td>
+      <td>513.00</td>
+      <td>MULTIPOLYGON (((729326.00000 2521619.00000, 72...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>C</td>
+      <td>Allier</td>
+      <td>26747</td>
+      <td>7925</td>
+      <td>13</td>
+      <td>10973</td>
+      <td>17044</td>
+      <td>114121</td>
+      <td>2</td>
+      <td>...</td>
+      <td>42</td>
+      <td>76</td>
+      <td>66</td>
+      <td>16</td>
+      <td>85</td>
+      <td>34</td>
+      <td>161.927</td>
+      <td>7340</td>
+      <td>298.26</td>
+      <td>MULTIPOLYGON (((710830.00000 2137350.00000, 71...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>E</td>
+      <td>Basses-Alpes</td>
+      <td>12935</td>
+      <td>7289</td>
+      <td>46</td>
+      <td>2733</td>
+      <td>23018</td>
+      <td>14238</td>
+      <td>1</td>
+      <td>...</td>
+      <td>12</td>
+      <td>37</td>
+      <td>80</td>
+      <td>32</td>
+      <td>29</td>
+      <td>2</td>
+      <td>351.399</td>
+      <td>6925</td>
+      <td>155.90</td>
+      <td>MULTIPOLYGON (((882701.00000 1920024.00000, 88...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>E</td>
+      <td>Hautes-Alpes</td>
+      <td>17488</td>
+      <td>8174</td>
+      <td>69</td>
+      <td>6962</td>
+      <td>23076</td>
+      <td>16171</td>
+      <td>1</td>
+      <td>...</td>
+      <td>23</td>
+      <td>64</td>
+      <td>79</td>
+      <td>35</td>
+      <td>7</td>
+      <td>1</td>
+      <td>320.280</td>
+      <td>5549</td>
+      <td>129.10</td>
+      <td>MULTIPOLYGON (((886504.00000 1922890.00000, 88...</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 24 columns</p>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="andre-michel-guerry-18021866">
+<h1>André-Michel Guerry, 1802–1866<a class="headerlink" href="#andre-michel-guerry-18021866" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="https://www.researchgate.net/profile/Michael-Friendly/publication/244957809/figure/fig1/AS:298483740364806&#64;1448175477516/Guerry-and-Balbi-s-1829-Statistique-Comparee-de-l-Etat-de-lInstruction-et-du_Q320.jpg" src="https://www.researchgate.net/profile/Michael-Friendly/publication/244957809/figure/fig1/AS:298483740364806&#64;1448175477516/Guerry-and-Balbi-s-1829-Statistique-Comparee-de-l-Etat-de-lInstruction-et-du_Q320.jpg" /></p></td>
+<td><p><h3>French lawyer and amateur statistician, who, together with Adolphe Quetelet, is considered a founder of moral statistics, which led to the development criminology and sociology</h3> <h5> Read more <a class="reference external" href="https://www.datavis.ca/papers/guerry-STS241.pdf">here</a></h5></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="first-look-at-spatial-autocorrelation-choropleth-mapping">
+<h1>First Look at Spatial Autocorrelation - Choropleth Mapping<a class="headerlink" href="#first-look-at-spatial-autocorrelation-choropleth-mapping" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Can you discern patterns on the map?</p></li>
+<li><p>The shape and size of geometries can also significantly distort our perception of the underlying pattern!</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># re-creating the three maps from original publication</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">,</span><span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;Crm_prs&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  
+            <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;bbox_to_anchor&#39;</span><span class="p">:(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">)})</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;Crm_prp&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  
+            <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;bbox_to_anchor&#39;</span><span class="p">:(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">)})</span>
+<span class="n">guerry</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;Instrct&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;quantiles&#39;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  
+            <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;bbox_to_anchor&#39;</span><span class="p">:(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">)})</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Crimes Against Persons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span> 
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Crimes Against Property&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span> 
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Instruction&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span> 
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">);</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">);</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">);</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;guerry.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;guerry.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture09_39_0.png" src="../_images/lecture09_39_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-lag">
+<h1>Spatial Lag<a class="headerlink" href="#spatial-lag" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>the spatial lag captures the behavior of a variable in the immediate surroundings of each location (local smoother)</p></li>
+</ul>
+<p>$$
+Y_{sl} = WY
+$$</p>
+<p>$$
+y_{sl - i} = \sum_{j}w_{ij}y_j
+$$</p>
+<ul class="simple">
+<li><p>$W$ is typically row-standardized, bounded between 0 and 1. In other words, the spatial lag is <em>local mean</em>.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="moran-s-i">
+<h1>Moran’s $I$<a class="headerlink" href="#moran-s-i" title="Permalink to this headline">#</a></h1>
+<p>$$
+I = \dfrac{n}{\sum_i\sum_j w_{ij}} \dfrac{\sum_i\sum_j w_{ij} , z_i , z_j}{\sum_i z_i^2}
+$$</p>
+<p>where $n$ is the number of observations, $z_i$ is the standardized value of the variable of interest at location $i$, and $w_{ij}$ is the cell corresponding to the $i$-th row and $j$-th column of a $W$ spatial weights matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">libpysal.weights.contiguity</span> <span class="kn">import</span> <span class="n">Queen</span>
+<span class="kn">import</span> <span class="nn">splot</span>
+<span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">guerry</span><span class="p">[</span><span class="s1">&#39;Crm_prp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">Queen</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">guerry</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span>
+
+<span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">moran</span><span class="o">.</span><span class="n">I</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.26355334031776523
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">splot.esda</span> <span class="kn">import</span> <span class="n">moran_scatterplot</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">moran_scatterplot</span><span class="p">(</span><span class="n">moran</span><span class="p">,</span> <span class="n">aspect_equal</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture09_43_0.png" src="../_images/lecture09_43_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting-moran-s-scatterplot">
+<h1>Interpreting Moran’s Scatterplot<a class="headerlink" href="#interpreting-moran-s-scatterplot" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>The plot displays a positive relationship between both variables. This indicates the presence of positive spatial autocorrelation: similar values tend to be located close to each other (HH and LL).</p></li>
+<li><p>This, however, does not mean that this is the only case in the dataset: HL and LH are possible. But it means that, if we had to summarize the main pattern of the data in terms of how clustered similar values are, the best way would be to say they are positively correlated and, hence, <strong>clustered</strong> over space.</p></li>
+<li><p>In the context of an example the department with high concentrations of crimes against property tend to cluster together.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="permutation-inference">
+<h1>Permutation Inference<a class="headerlink" href="#permutation-inference" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Inference for Moran’s I is based on a null hypothesis of complete spatial randomness.</p></li>
+<li><p>The distribution of the statistic under the null can be derived using either an assumption of normality (independent normal random variates), or so-called randomization (i.e., each value is equally likely to occur at any location).</p></li>
+<li><p>While the analytical derivations provide easy to interpret expressions for the mean and the variance of the statistic under the null hypothesis, inference based on them employs an approximation to a standard normal distribution, which may be inappropriate when the underlying assumptions are not satisfied</p></li>
+<li><p>An alternative to the analytical derivation is a computational approach based on permutation. This calculates a reference distribution for the statistic under the null hypothesis of spatial randomness by randomly permuting the observed values over the locations.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>Permutation Inference<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>The statistic is computed for each of these randomly reshuffled data sets, which yields a reference distribution. This approach is not sensitive to potential violations of underlying assumptions, and is thus more robust, although limited in generality to the actual sample.</p></li>
+<li><p>The reference distribution is used to calculate a so-called pseudo p-value.
+$$
+p = \frac{R+1}{M+1}
+$$
+where $R$ is the number of times permuted statistic is more extreme than observed and $M$ is the number of simulations.</p></li>
+</ul>
+<blockquote>
+<div><p>A result that has a p-value of 0.01 with 99 permutations is not necessarily more significant than a result with a p-value of 0.001 with 999 permutations. (Source: https://geodacenter.github.io/workbook/5a_global_auto/lab5a.html)</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">splot.esda</span> <span class="kn">import</span> <span class="n">plot_moran</span>
+
+<span class="n">plot_moran</span><span class="p">(</span><span class="n">moran</span><span class="p">,</span> <span class="n">zstandard</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\splot\_viz_esda_mpl.py:354: FutureWarning: 
+
+`shade` is now deprecated in favor of `fill`; setting `fill=True`.
+This will become an error in seaborn v0.14.0; please update your code.
+
+  sbn.kdeplot(moran.sim, shade=shade, color=color, ax=ax, **kwargs)
+</pre></div>
+</div>
+<img alt="../_images/lecture09_47_1.png" src="../_images/lecture09_47_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Our simulated p-value for Moran`s I: </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Our simulated p-value for Moran`s I: 0.001
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

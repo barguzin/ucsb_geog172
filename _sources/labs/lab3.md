@@ -1,4 +1,4 @@
-# Lab 3 - Geovisualization 
+# Lab 3: Geovisualization 
 
 ````{caution}
 This lab will provide an opportunity to practice choropleth mapping and point pattern analysis. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1bN83L4Q6pYDVuGEjhiN_3Jq7tFdb7E95?usp=sharing) and copying it to your Google Drive. 

@@ -5,7 +5,7 @@ This lab will provide an opportunity to practice inferential statistics in Pytho
 ````
 
 ````{important}
-Please submit your lab by modifying the code in the in the GC above!
+Please submit your lab by modifying the [template notebook](https://colab.research.google.com/drive/1RtfI9YNNhMOuz-VLpoNHQ7zQVlzUr2hU?usp=sharing)!
 ````
 
 ````{warning}
@@ -25,7 +25,7 @@ Make sure to submit the lab by **October 31 / November 1, 2022**, depending on t
 7. Run **ANOVA** to compare the mean of your variable of interest. Write down your hypotheses in markdown. Interpret your results. 
 8. Generate **pairwise correlation** between your variable of interest and other numeric variables in the data frame. 
 9. Use **Rooks** contingency rule to generate spatial weights matrix for Guerry data. Standardize weights by rows. 
-10. Calculate Moran's $I$ for the variable of your choice. 
+10. Calculate Moran's $I$ for the variable of your choice.
 11. Calculate simulated $p$-value. Interpret your results. 
 12. Create Moran's scatter plot for the variable of your choice. Interpet your plot. 
 13. Submit your report to GauchoSpace. Please submit both the .ipynb and .pdf of the notebook. 

@@ -29,3 +29,21 @@ Make sure to submit the lab by **October 31 / November 1, 2022**, depending on t
 11. Calculate simulated $p$-value. Interpret your results. 
 12. Create Moran's scatter plot for the variable of your choice. Interpet your plot. 
 13. Submit your report to GauchoSpace. Please submit both the .ipynb and .pdf of the notebook. 
+
+--- 
+
+## Lab 5 (Bonus Points - 25 points)
+
+> Repeat your spatial autocorrelation analysis in GeoDa. 
+
+You will be following the instructions from [GeoDa](https://geodacenter.github.io/workbook/5a_global_auto/lab5a.html) documentation on Global Spatial Autocorrelation. 
+
+0. Download GeoDa onto your computer from [here](https://geodacenter.github.io/download.html)
+1. Grab Guerry data from [GeoDa Data and Lab page](https://geodacenter.github.io/data-and-lab/Guerry/)
+2. Start GeoDa and open the downloaded files 
+3. Generate spatial weights for Guerry data. Tools > Weights Manager. Select 'CODE_DE' as an 'ID variable' and keep 'Queen contiguity' option. Click 'Create'. When prompted, save the weights on the computer in the directory of your choosing. 
+4. Create a Moran scatter plot. Use 'Moran scatter plot' icon on a toolbar and select Univariate Moran's I from the menu. **Use the variable of your choice from the main part of the lab**. 
+5. Generate a histogram of simulated randomized statistic. Right click on the Moran's scatterplot > Randomization > 999 Permutations. Report the pseudo p-value. 
+6. Take a screenshot (see image below) and upload it to the Google Colab Markdown. 
+
+![](/imgs/screenshot_lab5.PNG)

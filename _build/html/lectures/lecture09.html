@@ -180,6 +180,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab7.html">
+     Lab 7:
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab8.html">
      Lab 8:
     </a>
@@ -854,7 +859,7 @@ title="Print to PDF"
       <td>18.7</td>
       <td>181.0</td>
       <td>3750.0</td>
-      <td>Male</td>
+      <td>MALE</td>
     </tr>
     <tr>
       <th>1</th>
@@ -864,7 +869,7 @@ title="Print to PDF"
       <td>17.4</td>
       <td>186.0</td>
       <td>3800.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>2</th>
@@ -874,7 +879,7 @@ title="Print to PDF"
       <td>18.0</td>
       <td>195.0</td>
       <td>3250.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>3</th>
@@ -894,7 +899,7 @@ title="Print to PDF"
       <td>19.3</td>
       <td>193.0</td>
       <td>3450.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
   </tbody>
 </table>
@@ -907,7 +912,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x19359b46680&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x241bbef6fe0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_5_1.png" src="../_images/lecture09_5_1.png" />
@@ -930,7 +935,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;body_mass_g&#39;, ylabel=&#39;bill_length_mm&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;body_mass_g&#39;, ylabel=&#39;bill_length_mm&#39;&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_7_1.png" src="../_images/lecture09_7_1.png" />
@@ -943,7 +948,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1936195fd30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x241c413f3d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_8_1.png" src="../_images/lecture09_8_1.png" />
@@ -1174,10 +1179,14 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_23336\2552591983.py:2: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
+  corr = penguins.corr() # calculate pairwise correlations
 </pre></div>
 </div>
-<img alt="../_images/lecture09_16_1.png" src="../_images/lecture09_16_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: &gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_16_2.png" src="../_images/lecture09_16_2.png" />
 </div>
 </div>
 </section>
@@ -1384,180 +1393,193 @@ regression coef: 0.3542
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Guerry
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chicago parcels
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading AirBnB to C:\Users\barguzin\AppData\Local\pysal\pysal\AirBnB
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Atlanta to C:\Users\barguzin\AppData\Local\pysal\pysal\Atlanta
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Baltimore to C:\Users\barguzin\AppData\Local\pysal\pysal\Baltimore
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Bostonhsg to C:\Users\barguzin\AppData\Local\pysal\pysal\Bostonhsg
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Buenosaires to C:\Users\barguzin\AppData\Local\pysal\pysal\Buenosaires
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Charleston1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Charleston1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Charleston2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Charleston2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Chicago Health to C:\Users\barguzin\AppData\Local\pysal\pysal\Chicago_Health
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Chicago commpop to C:\Users\barguzin\AppData\Local\pysal\pysal\Chicago_commpop
+Example not downloaded: Chicago parcels
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Chile Labor to C:\Users\barguzin\AppData\Local\pysal\pysal\Chile_Labor
 Example not downloaded: Chile Migration
-Example not downloaded: Spirals
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(85, 24)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Cincinnati to C:\Users\barguzin\AppData\Local\pysal\pysal\Cincinnati
+Downloading Cleveland to C:\Users\barguzin\AppData\Local\pysal\pysal\Cleveland
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>dept</th>
-      <th>Region</th>
-      <th>Dprtmnt</th>
-      <th>Crm_prs</th>
-      <th>Crm_prp</th>
-      <th>Litercy</th>
-      <th>Donatns</th>
-      <th>Infants</th>
-      <th>Suicids</th>
-      <th>MainCty</th>
-      <th>...</th>
-      <th>Infntcd</th>
-      <th>Dntn_cl</th>
-      <th>Lottery</th>
-      <th>Desertn</th>
-      <th>Instrct</th>
-      <th>Prsttts</th>
-      <th>Distanc</th>
-      <th>Area</th>
-      <th>Pop1831</th>
-      <th>geometry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>E</td>
-      <td>Ain</td>
-      <td>28870</td>
-      <td>15890</td>
-      <td>37</td>
-      <td>5098</td>
-      <td>33120</td>
-      <td>35039</td>
-      <td>2</td>
-      <td>...</td>
-      <td>60</td>
-      <td>69</td>
-      <td>41</td>
-      <td>55</td>
-      <td>46</td>
-      <td>13</td>
-      <td>218.372</td>
-      <td>5762</td>
-      <td>346.03</td>
-      <td>MULTIPOLYGON (((801150.00000 2092615.00000, 80...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>N</td>
-      <td>Aisne</td>
-      <td>26226</td>
-      <td>5521</td>
-      <td>51</td>
-      <td>8901</td>
-      <td>14572</td>
-      <td>12831</td>
-      <td>2</td>
-      <td>...</td>
-      <td>82</td>
-      <td>36</td>
-      <td>38</td>
-      <td>82</td>
-      <td>24</td>
-      <td>327</td>
-      <td>65.945</td>
-      <td>7369</td>
-      <td>513.00</td>
-      <td>MULTIPOLYGON (((729326.00000 2521619.00000, 72...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>C</td>
-      <td>Allier</td>
-      <td>26747</td>
-      <td>7925</td>
-      <td>13</td>
-      <td>10973</td>
-      <td>17044</td>
-      <td>114121</td>
-      <td>2</td>
-      <td>...</td>
-      <td>42</td>
-      <td>76</td>
-      <td>66</td>
-      <td>16</td>
-      <td>85</td>
-      <td>34</td>
-      <td>161.927</td>
-      <td>7340</td>
-      <td>298.26</td>
-      <td>MULTIPOLYGON (((710830.00000 2137350.00000, 71...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>E</td>
-      <td>Basses-Alpes</td>
-      <td>12935</td>
-      <td>7289</td>
-      <td>46</td>
-      <td>2733</td>
-      <td>23018</td>
-      <td>14238</td>
-      <td>1</td>
-      <td>...</td>
-      <td>12</td>
-      <td>37</td>
-      <td>80</td>
-      <td>32</td>
-      <td>29</td>
-      <td>2</td>
-      <td>351.399</td>
-      <td>6925</td>
-      <td>155.90</td>
-      <td>MULTIPOLYGON (((882701.00000 1920024.00000, 88...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>E</td>
-      <td>Hautes-Alpes</td>
-      <td>17488</td>
-      <td>8174</td>
-      <td>69</td>
-      <td>6962</td>
-      <td>23076</td>
-      <td>16171</td>
-      <td>1</td>
-      <td>...</td>
-      <td>23</td>
-      <td>64</td>
-      <td>79</td>
-      <td>35</td>
-      <td>7</td>
-      <td>1</td>
-      <td>320.280</td>
-      <td>5549</td>
-      <td>129.10</td>
-      <td>MULTIPOLYGON (((886504.00000 1922890.00000, 88...</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 24 columns</p>
-</div></div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Columbus to C:\Users\barguzin\AppData\Local\pysal\pysal\Columbus
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Elections to C:\Users\barguzin\AppData\Local\pysal\pysal\Elections
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Grid100 to C:\Users\barguzin\AppData\Local\pysal\pysal\Grid100
+Downloading Groceries to C:\Users\barguzin\AppData\Local\pysal\pysal\Groceries
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Guerry to C:\Users\barguzin\AppData\Local\pysal\pysal\Guerry
+Downloading Health Indicators to C:\Users\barguzin\AppData\Local\pysal\pysal\Health_Indicators
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Health+ to C:\Users\barguzin\AppData\Local\pysal\pysal\Health+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Hickory1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Hickory1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Hickory2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Hickory2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Home Sales to C:\Users\barguzin\AppData\Local\pysal\pysal\Home_Sales
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Houston to C:\Users\barguzin\AppData\Local\pysal\pysal\Houston
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Juvenile to C:\Users\barguzin\AppData\Local\pysal\pysal\Juvenile
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Lansing1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Lansing1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Lansing2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Lansing2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Laozone to C:\Users\barguzin\AppData\Local\pysal\pysal\Laozone
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading LasRosas to C:\Users\barguzin\AppData\Local\pysal\pysal\LasRosas
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Liquor Stores to C:\Users\barguzin\AppData\Local\pysal\pysal\Liquor_Stores
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Malaria to C:\Users\barguzin\AppData\Local\pysal\pysal\Malaria
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Milwaukee1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Milwaukee1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Milwaukee2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Milwaukee2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NCOVR to C:\Users\barguzin\AppData\Local\pysal\pysal\NCOVR
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NDVI to C:\Users\barguzin\AppData\Local\pysal\pysal\NDVI
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NYC to C:\Users\barguzin\AppData\Local\pysal\pysal\NYC
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NYC Earnings to C:\Users\barguzin\AppData\Local\pysal\pysal\NYC_Earnings
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NYC Education to C:\Users\barguzin\AppData\Local\pysal\pysal\NYC_Education
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NYC Neighborhoods to C:\Users\barguzin\AppData\Local\pysal\pysal\NYC_Neighborhoods
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading NYC Socio-Demographics to C:\Users\barguzin\AppData\Local\pysal\pysal\NYC_Socio-Demographics
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Natregimes to C:\Users\barguzin\AppData\Local\pysal\pysal\Natregimes
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Nepal to C:\Users\barguzin\AppData\Local\pysal\pysal\Nepal
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Ohiolung to C:\Users\barguzin\AppData\Local\pysal\pysal\Ohiolung
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Orlando1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Orlando1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Orlando2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Orlando2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Oz9799 to C:\Users\barguzin\AppData\Local\pysal\pysal\Oz9799
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Phoenix ACS to C:\Users\barguzin\AppData\Local\pysal\pysal\Phoenix_ACS
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Pittsburgh to C:\Users\barguzin\AppData\Local\pysal\pysal\Pittsburgh
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Police to C:\Users\barguzin\AppData\Local\pysal\pysal\Police
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Rio Grande do Sul to C:\Users\barguzin\AppData\Local\pysal\pysal\Rio_Grande_do_Sul
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading SIDS to C:\Users\barguzin\AppData\Local\pysal\pysal\SIDS
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading SIDS2 to C:\Users\barguzin\AppData\Local\pysal\pysal\SIDS2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Sacramento1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Sacramento1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Sacramento2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Sacramento2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading SanFran Crime to C:\Users\barguzin\AppData\Local\pysal\pysal\SanFran_Crime
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Savannah1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Savannah1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Savannah2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Savannah2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Scotlip to C:\Users\barguzin\AppData\Local\pysal\pysal\Scotlip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Seattle1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Seattle1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Seattle2 to C:\Users\barguzin\AppData\Local\pysal\pysal\Seattle2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Snow
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading South to C:\Users\barguzin\AppData\Local\pysal\pysal\South
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Spirals
+Downloading StLouis to C:\Users\barguzin\AppData\Local\pysal\pysal\StLouis
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading Tampa1 to C:\Users\barguzin\AppData\Local\pysal\pysal\Tampa1
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="andre-michel-guerry-18021866">

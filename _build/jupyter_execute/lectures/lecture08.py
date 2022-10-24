@@ -299,7 +299,7 @@ print(males.shape, females.shape)
 ttest(males, females) 
 
 
-# In[14]:
+# In[11]:
 
 
 # use Mann-Whitney non-parametric test (to account for non-normal data)
@@ -317,7 +317,7 @@ mwu(males, females, alternative='two-sided')
 # * Bartlett's test
 # * Levene's test
 
-# In[15]:
+# In[12]:
 
 
 from scipy.stats import bartlett
@@ -384,19 +384,19 @@ print('populations have equal variances at alpha=0.05')
 # * the distributions have the same variance 
 # * **the data are independent**!
 
-# In[16]:
+# In[13]:
 
 
 penguins.groupby('species')['body_mass_g'].agg(['mean', 'std', 'size'])
 
 
-# In[17]:
+# In[14]:
 
 
 sns.boxplot(data=penguins, x='species', y='body_mass_g', hue='sex')
 
 
-# In[18]:
+# In[15]:
 
 
 #ANOVA 
@@ -404,7 +404,7 @@ import pingouin as pg
 penguins.anova(dv='body_mass_g', between='species', detailed=False)
 
 
-# In[19]:
+# In[16]:
 
 
 # ANOVA VIA SCIPY 
@@ -416,7 +416,7 @@ fvalue, pvalue = stats.f_oneway(penguins.loc[penguins.species=='Adelie', 'body_m
 print(fvalue, pvalue)
 
 
-# In[20]:
+# In[17]:
 
 
 import statsmodels.api as sm

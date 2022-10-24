@@ -444,7 +444,7 @@ import pingouin as pg
 ax = pg.qqplot(pengs.flipper_length_mm, dist='norm')
 
 
-# In[17]:
+# In[21]:
 
 
 from scipy.stats import shapiro

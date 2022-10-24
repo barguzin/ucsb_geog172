@@ -182,14 +182,14 @@ Participation in both lectures and labs is crucial for learning new concepts and
 |3|10/12|Point Pattern Analysis|GIA Ch5,6|
 |3|10/16|**Data Report Due**|⚠️|
 |4|10/17|Inferential Statistics and Hypothesis Testing|Chapters 11 and 12 from [Learning Stats with Python](https://ethanweed.github.io/pythonbook/landingpage.html)|
-|4|10/19|ANOVA||
+|4|10/19|ANOVA|Rogerson (posted in GauchoSpace)|
 |5|10/24|Spatial Autocorrelation 1|GIA Ch7|
-|5|10/26|Spatial Autocorrelation 2||
+|5|10/26|Spatial Autocorrelation 2|[GeoDa Docs](https://geodacenter.github.io/workbook/5a_global_auto/lab5a.html)|
 |6|10/31|LISA and Local Moran's $I$|GIA Ch8|
 |6|11/2|Other Local Statistics|
-|6|11/6|**Interim Data Report Due**|⚠️|
 |7|11/7|Spatial Regression 1|[SR](https://geographicdata.science/book/notebooks/11_regression.html)|
 |7|11/9|Spatial Regression 2||
+|7|11/13|**Interim Data Report Due**|⚠️|
 |8|11/14|Spatial Clustering/Regionalization 1|[CR](https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html)|
 |8|11/16|Spatial Clustering/Regionalization 2||
 |9|11/21|Spatial Interpolation|GIA Ch9|

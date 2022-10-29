@@ -1,4 +1,4 @@
-# Lab 5: Testing for means, From Correlation and Autocorrelation
+# Lab 5: Means, Correlations and Autocorrelation. 
 
 ````{caution}
 This lab will provide an opportunity to practice inferential statistics and global spatial autocorrelation in Python. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1BMSDi0hpQJ3kVSSNN3a-8n5u05hyXKOC?usp=sharing) and copying it to your Google Drive. 

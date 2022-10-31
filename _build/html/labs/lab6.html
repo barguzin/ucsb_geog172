@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lab 7:" href="lab7.html" />
-    <link rel="prev" title="Lab 5: Testing for means, From Correlation and Autocorrelation" href="lab5.html" />
+    <link rel="prev" title="Lab 5: Means, Correlations and Autocorrelation." href="lab5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -173,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lab5.html">
-     Lab 5: Testing for means, From Correlation and Autocorrelation
+     Lab 5: Means, Correlations and Autocorrelation.
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -397,12 +397,55 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-automating-data-ingestion-with-gdown">
+   Part 1: Automating data ingestion with
+   <em>
+    gdown
+   </em>
+   .
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-exploratory-data-analysis-workflow-assessing-airbnb-ads-in-denver-co">
+   Part 2: Exploratory Data Analysis Workflow. Assessing AirBnb ads in Denver, CO.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-3-working-through-interim-report">
+   Part 3: Working through Interim Report.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab instructions.
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -414,6 +457,38 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-automating-data-ingestion-with-gdown">
+   Part 1: Automating data ingestion with
+   <em>
+    gdown
+   </em>
+   .
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-exploratory-data-analysis-workflow-assessing-airbnb-ads-in-denver-co">
+   Part 2: Exploratory Data Analysis Workflow. Assessing AirBnb ads in Denver, CO.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-3-working-through-interim-report">
+   Part 3: Working through Interim Report.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab instructions.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -423,6 +498,62 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="lab-6">
 <h1>Lab 6<a class="headerlink" href="#lab-6" title="Permalink to this headline">#</a></h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This lab will provide you with an opportunity to practice exploratory spatial data analysis (ESDA), and specifically the local indicators of spatial association. The second part will focus on working through your Data Interim Report (due November 6, 2022). Please start by opening <a class="reference external" href="https://colab.research.google.com/drive/1ebEcCaaKR_SWizV5hxtzCj26NDWNICAt?usp=sharing">this Google Colab notebook</a> and copying it to your Google Drive.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please submit your lab by modifying the <a class="reference external" href="https://colab.research.google.com/drive/15D8bOdq6S4Ytn9kmIvdBNh_FxSePsDCk?usp=sharing">template notebook</a>!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to submit the lab by <strong>November 7 / 8, 2022</strong>, depending on the scheduled time of your section.</p>
+</div>
+<hr class="docutils" />
+<section id="part-1-automating-data-ingestion-with-gdown">
+<h2>Part 1: Automating data ingestion with <em>gdown</em>.<a class="headerlink" href="#part-1-automating-data-ingestion-with-gdown" title="Permalink to this headline">#</a></h2>
+<p>See lab notebook for examples and instructions.</p>
+</section>
+<section id="part-2-exploratory-data-analysis-workflow-assessing-airbnb-ads-in-denver-co">
+<h2>Part 2: Exploratory Data Analysis Workflow. Assessing AirBnb ads in Denver, CO.<a class="headerlink" href="#part-2-exploratory-data-analysis-workflow-assessing-airbnb-ads-in-denver-co" title="Permalink to this headline">#</a></h2>
+<p>See lab notebook for examples and instructions.</p>
+</section>
+<section id="part-3-working-through-interim-report">
+<h2>Part 3: Working through Interim Report.<a class="headerlink" href="#part-3-working-through-interim-report" title="Permalink to this headline">#</a></h2>
+<p>See lab notebook for examples and instructions.</p>
+</section>
+<hr class="docutils" />
+<section id="lab-instructions">
+<h2>Lab instructions.<a class="headerlink" href="#lab-instructions" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>You will repeat the spatial autocorrelation analysis on AirBnb data for the place of your choosing.</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Go to the <a class="reference external" href="http://insideairbnb.com/get-the-data/">insideairbnb website</a>.</p></li>
+<li><p>Choose any metropolitan area! Download <em>listings.csv</em> and <em>neighbourhoods.geojson</em>. Rename if necessary.</p></li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>You need to select urban / metro area, not entire state!</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>select data with at least 30 neighborhoods which are connected by land (e.g. Hawaii would be trickier to analyze than Austin).</p>
+</div>
+<ol class="simple">
+<li><p>Upload data to Google drive, import via gdown and unzip to the working directory.</p></li>
+<li><p>Calculate average price per neighborhood (unit of analysis in your <em>neighbourhood.geojson</em> file)</p></li>
+<li><p>Join your calculated average to geographic data.</p></li>
+<li><p>Create a choropleth map using ‘Fisher Jenks’ scheme.</p></li>
+<li><p>Create a spatial weights matrix using Queens contiguity. Row-standardize the weights.</p></li>
+<li><p>Calculate and report global Moran’s $I$ and simulated p-value at $\alpha=0.05$ confidence level.</p></li>
+<li><p>Plot both the histogram with simulated p-values and Moran’s scatter plot</p></li>
+<li><p>Calculate and plot Local Moran’s $I$ on a map at $\alpha=0.05$ level.</p></li>
+<li><p>Interpret your map characterizing spatial clusters and outliers.</p></li>
+<li><p>Submit to GauchoSpace as .ipynb and .pdf.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -456,7 +587,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lab 5: Testing for means, From Correlation and Autocorrelation</p>
+            <p class="prev-next-title">Lab 5: Means, Correlations and Autocorrelation.</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="lab7.html" title="next page">

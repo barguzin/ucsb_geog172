@@ -173,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab5.html">
-     Lab 5: Testing for means, From Correlation and Autocorrelation
+     Lab 5: Means, Correlations and Autocorrelation.
     </a>
    </li>
    <li class="toctree-l2">
@@ -397,12 +397,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-instructions">
+   Project Instructions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -414,6 +443,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-instructions">
+   Project Instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -423,6 +470,73 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="interim-report">
 <h1>Interim Report<a class="headerlink" href="#interim-report" title="Permalink to this headline">#</a></h1>
+<p>These guidelines will help you apply the methods learned in lecture and labs onto your geographical analysis project with the data that you collected for your <em>Data Report</em>. The key to successful interim report is being tedious. State your hypotheses, use visualizations to derive interesting insights from the data. Support your visual insights using statistical tests we have covered.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The Data Report is due 11/06/2022 by 23.59.</strong></p>
+</div>
+<hr class="docutils" />
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
+<p>Treat this report as a standalone document to that you prepare for your supervisor at potential job. You are given the data set and your task is to tell interesting story using graphs, plots, maps, followed by statistical hypotheses to support your initial findings derived from visualizations.</p>
+<ol class="simple">
+<li><p>At least two scatter plots or bar charts or pie charts or time series plot (or any other type of a plot)</p></li>
+<li><p>At least one summary table (crosstab table). This can be the table that you would use for plotting. For instance aggregate statistic (mean, sum, etc.) per state that you will be using to create a choropleth map.</p></li>
+<li><p>At least one correlation coefficient</p></li>
+<li><p>At least one one sample t/z-test</p></li>
+<li><p>At least one two sample test</p></li>
+<li><p>At least one ANOVA test</p></li>
+<li><p>At least one Global Moran’s $I$</p></li>
+<li><p>At least one Local Moran’s $I$. This can be the same variable as in (7).</p></li>
+<li><p>At least one Moran scatter plot</p></li>
+<li><p>At least one density plot with simulated $p$-value</p></li>
+<li><p>At least one choropleth map with clusters (hotspots/coldspots) and outliers</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure to follow the hypothesis steps outlined in the Hypothesis testing slides: <strong>state hypotheses, set your confidence interval, run the test, get p-value, interpret your p-value by either failing to reject or rejecting null</strong>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="project-instructions">
+<h2>Project Instructions<a class="headerlink" href="#project-instructions" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create a new Google Colab notebook</p></li>
+<li><p>Import the data from your interim report into the notebook</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the code from the recently announced example <a class="reference internal" href="../notebooks/gdown.html"><span class="doc std std-doc">notebook</span></a> and gdown.</p>
+</div>
+<ol class="simple">
+<li><p>Break your report into three parts: Visual Exploration, Statistical Tests, Geographic Analysis. Use level-1 heading for titles of these parts (i.e. # Part name).</p></li>
+<li><p>Add content to the report, by including all of the items found in the ‘Project Requirements’ section.</p></li>
+<li><p>Provide hypotheses and interpretations for corresponding parts.</p></li>
+<li><p>Weave the plots and interpretations into a coherent document. The data story should be easy to follow.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Examples of well-written notebooks for exploratory data analysis:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/code/ekami66/detailed-exploratory-data-analysis-with-python/notebook">Housing prices on Kaggle</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/my-6-part-powerful-eda-template-that-speaks-of-ultimate-skill-6bdde3c91431">Towards Data Science Blog Page</a>. If the page does not open or if you have exceeded the amount of free articles on Medium blog platform, right-click and open in the incognito window.</p></li>
+<li><p><a class="reference external" href="https://analyticsindiamag.com/top-ten-kaggle-notebooks-for-data-science-enthusiasts-in-2021/">Collection of top 10 Kaggle notebooks</a></p></li>
+</ul>
+</div>
+<ol class="simple">
+<li><p>Submit the following to GauchoSpace.</p>
+<ol class="simple">
+<li><p>Data (as either a csv or a geojson). This step is not required if you used the ‘gdown’ approach described above.</p></li>
+<li><p>Notebook in ipynb format.</p></li>
+<li><p>Notebook as exported pdf.</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Your submitted notebook must run and/or have all of the cell output rendered, so that it could be graded.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

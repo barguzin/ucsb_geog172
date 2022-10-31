@@ -17,11 +17,11 @@ To view the HTML version of the lecture please open the link, save it to your co
 |8|Lecture 08|Comparing Means (t-tests and ANOVA)|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture08.html)|[PDF](https://drive.google.com/file/d/1wFx-GLVQPv-QhsC9fMlupoHn9ZACRmkQ/view?usp=sharing)|
 |9|Lecture 09|From Correlation to Spatial Autocorrelation|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture09.html)|[PDF](https://drive.google.com/file/d/1C1yHb3OSRtbk0AzlFfIlNS-11ShZS_f-/view?usp=sharing)|
 |10|Lecture 10|Global Spatial Autocorrelation|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture10.html)|[PDF](https://drive.google.com/file/d/1enl8YAa5rjYvZdIU8ViG73iPrY4xcTKT/view?usp=sharing)|
-|11|Lecture 11||||
-|12|Lecture 12||||
-|13|Lecture 13||||
-|14|Lecture 14||||
-|15|Lecture 15||||
-|16|Lecture 16||||
-|17|Lecture 17||||
-|18|Lecture 18||||
+|11|Lecture 11|Local Spatial Autocorrelation|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture11.html)|[PDF](https://drive.google.com/file/d/1S2nzjzdnws9YIBBMZqYgyLgSHXTtnY-0/view?usp=sharing)|
+|12|Lecture 12|From Distance Functions to Clustering|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture12.html)|[PDF](https://drive.google.com/file/d/1gfCQogWXgwN9tTeD5wRSKD_eczNDX93B/view?usp=sharing)|
+|13|Lecture 13||[HTML]()|[PDF]()|
+|14|Lecture 14||[HTML]()|[PDF]()|
+|15|Lecture 15||[HTML]()|[PDF]()|
+|16|Lecture 16||[HTML]()|[PDF]()|
+|17|Lecture 17||[HTML]()|[PDF]()|
+|18|Lecture 18||[HTML]()|[PDF]()|

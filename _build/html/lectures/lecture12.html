@@ -1,0 +1,1418 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Review &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2: Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3: Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5: Means, Correlations and Autocorrelation.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab7.html">
+     Lab 7:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture12.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture12.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture12.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#airbnb-data">
+   Airbnb Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amsterdam">
+     Amsterdam
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#words-of-caution-with-quadrant-analysis">
+   Words of Caution with Quadrant Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-functions">
+   Ripley’s Functions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-g-function-event-to-event">
+   Ripley’s $G$ Function (event-to-event)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-g-intuition">
+   Ripley’s $G$ intuition
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-f-function-point-event">
+   Ripley’s $F$ function (point-event)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-k-function">
+   Ripley’s $K$ function
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifying-clusters-via-density">
+   Identifying Clusters via Density
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dbscan">
+   DBSCAN
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#airbnb-data">
+   Airbnb Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amsterdam">
+     Amsterdam
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#words-of-caution-with-quadrant-analysis">
+   Words of Caution with Quadrant Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-functions">
+   Ripley’s Functions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-g-function-event-to-event">
+   Ripley’s $G$ Function (event-to-event)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-g-intuition">
+   Ripley’s $G$ intuition
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-f-function-point-event">
+   Ripley’s $F$ function (point-event)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ripley-s-k-function">
+   Ripley’s $K$ function
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identifying-clusters-via-density">
+   Identifying Clusters via Density
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dbscan">
+   DBSCAN
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 12: More on Clustering and Clusters </h3><section class="tex2jax_ignore mathjax_ignore" id="review">
+<h1>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>LISA separates the data into two groups:</p>
+<ul>
+<li><p>local clusters</p></li>
+<li><p>local outliers</p></li>
+</ul>
+</li>
+<li><p>Motivating question: <em>How can we assess spatial patterns in point data?</em></p>
+<ul>
+<li><p>Point pattern analysis (centrography, quadrant analysis)</p></li>
+<li><p><strong>Clustering</strong></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="airbnb-data">
+<h1>Airbnb Data<a class="headerlink" href="#airbnb-data" title="Permalink to this headline">#</a></h1>
+<section id="amsterdam">
+<h2>Amsterdam<a class="headerlink" href="#amsterdam" title="Permalink to this headline">#</a></h2>
+<p>We will download the file from the website you’ve been working with to access the data for Lab 6. To be able to run the code below, you need to install a Python distribution of wget (e.g. pip install wget). Command ‘wget’ runs natively on Unix-based systems (e.g. Linux and MacOS), but if you are on Windows, we need to work around it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m wget http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-09-07/visualisations/listings.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\python.exe: No module named wget
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m wget http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-09-07/visualisations/neighbourhoods.geojson
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\python.exe: No module named wget
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">cx</span>
+<span class="kn">from</span> <span class="nn">pointpats</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">distance_statistics</span><span class="p">,</span>
+    <span class="n">QStatistic</span><span class="p">,</span>
+    <span class="n">random</span><span class="p">,</span>
+    <span class="n">PointPattern</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geo</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;neighbourhoods.geojson&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">geo</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">geo</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;listings.csv&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(22, 3)
+epsg:4979
+(6893, 18)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>name</th>
+      <th>host_id</th>
+      <th>host_name</th>
+      <th>neighbourhood_group</th>
+      <th>neighbourhood</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>room_type</th>
+      <th>price</th>
+      <th>minimum_nights</th>
+      <th>number_of_reviews</th>
+      <th>last_review</th>
+      <th>reviews_per_month</th>
+      <th>calculated_host_listings_count</th>
+      <th>availability_365</th>
+      <th>number_of_reviews_ltm</th>
+      <th>license</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2818</td>
+      <td>Quiet Garden View Room &amp; Super Fast WiFi</td>
+      <td>3159</td>
+      <td>Daniel</td>
+      <td>NaN</td>
+      <td>Oostelijk Havengebied - Indische Buurt</td>
+      <td>52.36435</td>
+      <td>4.94358</td>
+      <td>Private room</td>
+      <td>49</td>
+      <td>3</td>
+      <td>305</td>
+      <td>2022-08-30</td>
+      <td>1.86</td>
+      <td>1</td>
+      <td>14</td>
+      <td>25</td>
+      <td>0363 5F3A 5684 6750 D14D</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20168</td>
+      <td>Studio with private bathroom in the centre 1</td>
+      <td>59484</td>
+      <td>Alexander</td>
+      <td>NaN</td>
+      <td>Centrum-Oost</td>
+      <td>52.36407</td>
+      <td>4.89393</td>
+      <td>Private room</td>
+      <td>106</td>
+      <td>1</td>
+      <td>339</td>
+      <td>2020-04-09</td>
+      <td>2.22</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0363 CBB3 2C10 0C2A 1E29</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>27886</td>
+      <td>Romantic, stylish B&amp;B houseboat in canal district</td>
+      <td>97647</td>
+      <td>Flip</td>
+      <td>NaN</td>
+      <td>Centrum-West</td>
+      <td>52.38761</td>
+      <td>4.89188</td>
+      <td>Private room</td>
+      <td>136</td>
+      <td>2</td>
+      <td>231</td>
+      <td>2022-04-24</td>
+      <td>1.78</td>
+      <td>1</td>
+      <td>121</td>
+      <td>8</td>
+      <td>0363 974D 4986 7411 88D8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>28871</td>
+      <td>Comfortable double room</td>
+      <td>124245</td>
+      <td>Edwin</td>
+      <td>NaN</td>
+      <td>Centrum-West</td>
+      <td>52.36775</td>
+      <td>4.89092</td>
+      <td>Private room</td>
+      <td>75</td>
+      <td>2</td>
+      <td>428</td>
+      <td>2022-08-24</td>
+      <td>2.92</td>
+      <td>2</td>
+      <td>117</td>
+      <td>75</td>
+      <td>0363 607B EA74 0BD8 2F6F</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>29051</td>
+      <td>Comfortable single room</td>
+      <td>124245</td>
+      <td>Edwin</td>
+      <td>NaN</td>
+      <td>Centrum-Oost</td>
+      <td>52.36584</td>
+      <td>4.89111</td>
+      <td>Private room</td>
+      <td>55</td>
+      <td>2</td>
+      <td>582</td>
+      <td>2022-08-29</td>
+      <td>4.16</td>
+      <td>2</td>
+      <td>160</td>
+      <td>86</td>
+      <td>0363 607B EA74 0BD8 2F6F</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert pd to gpd </span>
+<span class="n">bnb_pts</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]))</span>
+
+<span class="n">coordinates</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">random_pattern</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">random_pattern</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Random&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+<span class="n">bnb_pts</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observed&#39;</span><span class="p">);</span>
+<span class="n">cx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">bnb_pts</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_9_0.png" src="../_images/lecture12_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qstat</span> <span class="o">=</span> <span class="n">QStatistic</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value:&#39;</span><span class="p">,</span> <span class="n">qstat</span><span class="o">.</span><span class="n">chi2_pvalue</span><span class="p">)</span>
+<span class="n">qstat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.0
+</pre></div>
+</div>
+<img alt="../_images/lecture12_10_1.png" src="../_images/lecture12_10_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qstat_null</span> <span class="o">=</span> <span class="n">QStatistic</span><span class="p">(</span><span class="n">random_pattern</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value:&#39;</span><span class="p">,</span> <span class="n">qstat_null</span><span class="o">.</span><span class="n">chi2_pvalue</span><span class="p">)</span>
+<span class="n">qstat_null</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.6248399453990456
+</pre></div>
+</div>
+<img alt="../_images/lecture12_11_1.png" src="../_images/lecture12_11_1.png" />
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="words-of-caution-with-quadrant-analysis">
+<h1>Words of Caution with Quadrant Analysis<a class="headerlink" href="#words-of-caution-with-quadrant-analysis" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Quadrat counts are measured in a regular tiling that is overlaid on top of the potentially irregular extent of our pattern. Thus, irregular but random patterns can be mistakenly found ‘significant’</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">libpysal</span>
+
+<span class="n">alpha_shape</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">circs</span> <span class="o">=</span> <span class="n">libpysal</span><span class="o">.</span><span class="n">cg</span><span class="o">.</span><span class="n">alpha_shape_auto</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">return_circles</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">random_pattern_ashape</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">alpha_shape</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\libpysal\cg\alpha_shapes.py:578: UserWarning: Numba not imported, so alpha shape construction may be slower than expected.
+  warn(NUMBA_WARN)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qstat_null_ashape</span> <span class="o">=</span> <span class="n">QStatistic</span><span class="p">(</span><span class="n">random_pattern_ashape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value:&#39;</span><span class="p">,</span> <span class="n">qstat_null_ashape</span><span class="o">.</span><span class="n">chi2_pvalue</span><span class="p">)</span>
+<span class="n">qstat_null_ashape</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 1.1879505900716385e-76
+</pre></div>
+</div>
+<img alt="../_images/lecture12_14_1.png" src="../_images/lecture12_14_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ripley-s-functions">
+<h1>Ripley’s Functions<a class="headerlink" href="#ripley-s-functions" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Characterize clustering and co-location of point patterns</p></li>
+<li><p>Look at nearest neighbor distances between each point and their neighbors at different distance tresholds</p></li>
+<li><p>The plot denotes cumulative percentage against the increasing distance radii</p></li>
+<li><p>Observed cumulative distribution is compared against a reference (spatially random) distribution (Poisson point process)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ripley-s-g-function-event-to-event">
+<h1>Ripley’s $G$ Function (event-to-event)<a class="headerlink" href="#ripley-s-g-function-event-to-event" title="Permalink to this headline">#</a></h1>
+<p>$$
+G(d) = \sum_{i=1}^n \frac{ \phi_i^d}{n}
+$$</p>
+<p>$G(d)$ is the proportion of nearest neighbor distances that are less than $d$.</p>
+<p>$$
+\phi_i^d =
+\begin{cases}
+1       &amp; \quad \text{if } d_{min}(s_i)&lt;d \
+0       &amp; \quad \text{otherwise } \
+\end{cases}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the dataset is large (we need to resample) for computational purposes </span>
+<span class="n">n</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">g_test</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">g_test</span><span class="p">(</span>
+    <span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">support</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">keep_simulations</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(500,)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">g_test</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">g_test</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">support</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">keep_simulations</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:713,</span> in <span class="ni">g_test</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations)</span>
+<span class="g g-Whitespace">    </span><span class="mi">662</span> <span class="k">def</span> <span class="nf">g_test</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">663</span>     <span class="n">coordinates</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">support</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">670</span>     <span class="n">n_simulations</span><span class="o">=</span><span class="mi">9999</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">672</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">673</span><span class="sd">     Ripley&#39;s G function</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span><span class="sd">         or None if keep_simulations=False (which is the default)</span>
+<span class="g g-Whitespace">    </span><span class="mi">712</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">713</span>     <span class="k">return</span> <span class="n">_ripley_test</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">714</span>         <span class="s2">&quot;G&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">715</span>         <span class="n">coordinates</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">716</span>         <span class="n">support</span><span class="o">=</span><span class="n">support</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">717</span>         <span class="n">distances</span><span class="o">=</span><span class="n">distances</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">718</span>         <span class="n">metric</span><span class="o">=</span><span class="n">metric</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">719</span>         <span class="n">hull</span><span class="o">=</span><span class="n">hull</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">720</span>         <span class="n">edge_correction</span><span class="o">=</span><span class="n">edge_correction</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span>         <span class="n">keep_simulations</span><span class="o">=</span><span class="n">keep_simulations</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="n">n_simulations</span><span class="o">=</span><span class="n">n_simulations</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:582,</span> in <span class="ni">_ripley_test</span><span class="nt">(calltype, coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span>         <span class="n">n_distances</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">random_tree</span><span class="p">,</span> <span class="n">random_i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>         <span class="n">core_kwargs</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">579</span>             <span class="n">n_distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">580</span>             <span class="n">empty_distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">581</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">582</span> <span class="n">rep_support</span><span class="p">,</span> <span class="n">simulations_i</span> <span class="o">=</span> <span class="n">stat_function</span><span class="p">(</span><span class="n">random_i</span><span class="p">,</span> <span class="o">**</span><span class="n">core_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="n">pvalues</span> <span class="o">+=</span> <span class="n">simulations_i</span> <span class="o">&gt;=</span> <span class="n">observed_statistic</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="k">if</span> <span class="n">keep_simulations</span><span class="p">:</span>
+
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:278,</span> in <span class="ni">g</span><span class="nt">(coordinates, support, distances, metric, edge_correction)</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>         <span class="n">tree</span> <span class="o">=</span> <span class="n">_build_best_tree</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="k">finally</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">278</span>         <span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="n">counts</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="n">support</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="n">fracs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span> <span class="o">/</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:354,</span> in <span class="ni">k_neighbors</span><span class="nt">(tree, coordinates, k, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span> <span class="k">def</span> <span class="nf">k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd">     Query a kdtree for k neighbors, handling the self-neighbor case</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="sd">     in the case of coincident points. </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span><span class="sd">     in its query result. </span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">354</span>     <span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>     <span class="n">n</span><span class="p">,</span> <span class="n">ks</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">shape</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>     <span class="k">assert</span> <span class="n">ks</span> <span class="o">==</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ripley-s-g-intuition">
+<h1>Ripley’s $G$ intuition<a class="headerlink" href="#ripley-s-g-intuition" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Distance <strong>between</strong> points</p></li>
+<li><p>In distributions of distances, a <strong>clustered</strong> pattern must have more points near one another than a pattern that is <strong>dispersed</strong>; and a <strong>completely random pattern</strong> should have something in between.</p></li>
+<li><p>If the function increases rapidly with distance, we probably have a clustered pattern. If it increases slowly with distance, we have a dispersed pattern. Something in the middle will be difficult to distinguish from pure chance.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width_ratios</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="c1"># plot all the simulations with very fine lines</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">g_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span> <span class="n">g_test</span><span class="o">.</span><span class="n">simulations</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span>
+<span class="p">)</span>
+<span class="c1"># and show the average of simulations</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">g_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">g_test</span><span class="o">.</span><span class="n">simulations</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;median simulation&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="c1"># and the observed pattern&#39;s G function</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">g_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span> <span class="n">g_test</span><span class="o">.</span><span class="n">statistic</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;observed&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># clean up labels and axes</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;distance&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f nearest neighbor</span><span class="se">\n</span><span class="s2">distances shorter&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1">#ax[0].set_xlim(0, 2000)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Ripley&#39;s $G(d)$ function&quot;</span><span class="p">)</span>
+
+<span class="c1"># plot the pattern itself on the next frame</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># and clean up labels and axes there, too</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Pattern&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Ripley_G.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Ripley_G.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_20_0.png" src="../_images/lecture12_20_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ripley-s-f-function-point-event">
+<h1>Ripley’s $F$ function (point-event)<a class="headerlink" href="#ripley-s-f-function-point-event" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>analyzing the distance to points in the pattern from locations in empty space (the ‘empty space function’)</p></li>
+<li><p>$F$ accumulates, for a growing distance range, the percentage of points that can be found within that range from a random point pattern generated within the extent of the observed pattern</p></li>
+<li><p>If the pattern has large gaps or empty areas, the function will increase slowly. But, if the pattern is highly dispersed, then the function will increase rapidly.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f_test</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">f_test</span><span class="p">(</span>
+    <span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">support</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">keep_simulations</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width_ratios</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="c1"># plot all the simulations with very fine lines</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">f_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span> <span class="n">f_test</span><span class="o">.</span><span class="n">simulations</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span>
+<span class="p">)</span>
+<span class="c1"># and show the average of simulations</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">f_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">f_test</span><span class="o">.</span><span class="n">simulations</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;median simulation&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="c1"># and the observed pattern&#39;s G function</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">f_test</span><span class="o">.</span><span class="n">support</span><span class="p">,</span> <span class="n">f_test</span><span class="o">.</span><span class="n">statistic</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;observed&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># clean up labels and axes</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;distance&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f nearest neighbor</span><span class="se">\n</span><span class="s2">distances shorter&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1">#ax[0].set_xlim(0, 2000)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Ripley&#39;s $F(d)$ function&quot;</span><span class="p">)</span>
+
+<span class="c1"># plot the pattern itself on the next frame</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># and clean up labels and axes there, too</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Pattern&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Ripley_F.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Ripley_F.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_24_0.png" src="../_images/lecture12_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># alternatively </span>
+<span class="kn">from</span> <span class="nn">pointpats</span> <span class="kn">import</span> <span class="n">PointPattern</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pointpats</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="n">pp</span> <span class="o">=</span> <span class="n">PointPattern</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">])</span> <span class="c1"># creates a point pattern plot </span>
+<span class="n">ffun</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">F</span><span class="p">(</span><span class="n">pp</span><span class="p">,</span> <span class="n">intervals</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">gfun</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">G</span><span class="p">(</span><span class="n">pp</span><span class="p">,</span> <span class="n">intervals</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gfun</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_26_0.png" src="../_images/lecture12_26_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ripley-s-k-function">
+<h1>Ripley’s $K$ function<a class="headerlink" href="#ripley-s-k-function" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Considers distance to higher order neighbors (between all pairs of of event points)</p></li>
+</ul>
+<p>$$
+K(d) = \frac{\sum_{i=1}^n \sum_{j=1}^n \psi_{ij}(d)}{n \hat{\lambda}}
+$$</p>
+<p>where</p>
+<p>$$
+\psi_{ij}(d) =
+\begin{cases}
+1       &amp; \quad \text{if } d_{ij}&lt;d \
+0       &amp; \quad \text{otherwise } \
+\end{cases}
+$$</p>
+<p>$\sum \psi_{id}(d)$ is the number of events within a circle of radius d centered on event si</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kfun</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">K</span><span class="p">(</span><span class="n">pp</span><span class="p">,</span> <span class="n">intervals</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">kfun</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_28_0.png" src="../_images/lecture12_28_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="identifying-clusters-via-density">
+<h1>Identifying Clusters via Density<a class="headerlink" href="#identifying-clusters-via-density" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>DBSCAN (Density-Based Spatial Clustering of Applications) - algorithm from knowledge discovery and machine learning.</p></li>
+<li><p>DBSCAN is deterministic (there is no associated inferential framework as in LISA). Thus, we cannot relate it to CSR.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dbscan">
+<h1>DBSCAN<a class="headerlink" href="#dbscan" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Cluster is a concentration of at least $m$ points, each of them within a distance $r$ of at least another point in cluster (both $m$ and $r$ must be specified by a user).</p></li>
+<li><p>DBSCAN patterns:</p>
+<ul>
+<li><p>Noise, for those points outside a cluster.</p></li>
+<li><p>Cores, for those points inside a cluster with at least m points in the cluster within distance r.</p></li>
+<li><p>Borders for points inside a cluster with less than m other points in the cluster within distance r.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="https://miro.medium.com/max/627/1*yT96veo7Zb5QeswV7Vr7YQ.png"><img alt="https://miro.medium.com/max/627/1*yT96veo7Zb5QeswV7Vr7YQ.png" src="https://miro.medium.com/max/627/1*yT96veo7Zb5QeswV7Vr7YQ.png" style="width: 500px;" /></a>
+<img alt="https://miro.medium.com/proxy/1*tc8UF-h0nQqUfLC8-0uInQ.gif" src="https://miro.medium.com/proxy/1*tc8UF-h0nQqUfLC8-0uInQ.gif" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">DBSCAN</span>
+
+<span class="c1"># Define DBSCAN</span>
+<span class="n">clusterer</span> <span class="o">=</span> <span class="n">DBSCAN</span><span class="p">(</span><span class="n">eps</span><span class="o">=</span><span class="mf">0.009</span><span class="p">,</span> <span class="n">min_samples</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># Fit to our data</span>
+<span class="n">clusterer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-7 {color: black;background-color: white;}#sk-container-id-7 pre{padding: 0;}#sk-container-id-7 div.sk-toggleable {background-color: white;}#sk-container-id-7 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-7 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-7 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-7 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-7 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-7 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-7 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-7 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-7 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-7 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-7 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-7 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-7 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-7 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-7 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-7 div.sk-item {position: relative;z-index: 1;}#sk-container-id-7 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-7 div.sk-item::before, #sk-container-id-7 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-7 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-7 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-7 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-7 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-7 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-7 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-7 div.sk-label-container {text-align: center;}#sk-container-id-7 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-7 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-7" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>DBSCAN(eps=0.009, min_samples=10)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">DBSCAN</label><div class="sk-toggleable__content"><pre>DBSCAN(eps=0.009, min_samples=10)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span> 
+<span class="n">Counter</span><span class="p">(</span><span class="n">clusterer</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Counter({0: 6429,
+         1: 149,
+         -1: 119,
+         7: 27,
+         2: 11,
+         8: 37,
+         3: 40,
+         4: 31,
+         5: 28,
+         6: 11,
+         9: 11})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lbls</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">clusterer</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">clusterer</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">categories</span><span class="p">))</span>
+<span class="n">colordict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">colors</span><span class="p">))</span>  
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lbls</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">colordict</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+
+<span class="c1"># Setup figure and axis</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="c1"># Subset points that are not part of any cluster (noise)</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lbls</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">]]</span>
+<span class="c1"># Plot noise in grey</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">noise</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">],</span> <span class="n">noise</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Plot all points that are not noise in red</span>
+<span class="c1"># NOTE how this is done through some fancy indexing, where</span>
+<span class="c1">#      we take the index of all points (tw) and substract from</span>
+<span class="c1">#      it the index of those that are noise</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">noise</span><span class="o">.</span><span class="n">index</span><span class="p">),</span> <span class="s2">&quot;longitude&quot;</span><span class="p">],</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">noise</span><span class="o">.</span><span class="n">index</span><span class="p">),</span> <span class="s2">&quot;latitude&quot;</span><span class="p">],</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">noise</span><span class="o">.</span><span class="n">index</span><span class="p">),</span> <span class="s2">&quot;color&quot;</span><span class="p">],</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Add basemap</span>
+<span class="n">cx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">bnb_pts</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;dbscan.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">pad_inches</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;dbscan.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture12_36_0.png" src="../_images/lecture12_36_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>https://www.kdnuggets.com/2020/04/dbscan-clustering-algorithm-machine-learning.html</p></li>
+<li><p>https://geographicdata.science/book/notebooks/08_point_pattern_analysis.html#randomness-clustering</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -3,7 +3,7 @@
 These guidelines will help you apply the methods learned in lecture and labs onto your geographical analysis project with the data that you collected for your *Data Report*. The key to successful interim report is being tedious. State your hypotheses, use visualizations to derive interesting insights from the data. Support your visual insights using statistical tests we have covered. 
 
 ````{warning}
-**The Data Report is due 11/06/2022 by 23.59.** 
+**The Data Report is due 11/13/2022 by 23.59.** 
 ````
 
 ---
@@ -23,6 +23,7 @@ Treat this report as a standalone document to that you prepare for your supervis
 9. At least one Moran scatter plot 
 10. At least one density plot with simulated $p$-value 
 11. At least one choropleth map with clusters (hotspots/coldspots) and outliers
+12. At least one clustering partitioning on your data (clustering can be done on both: point pattern data and areal (polygon) data.)
 
 ````{important}
 Make sure to follow the hypothesis steps outlined in the Hypothesis testing slides: **state hypotheses, set your confidence interval, run the test, get p-value, interpret your p-value by either failing to reject or rejecting null**.
@@ -34,21 +35,10 @@ Make sure to follow the hypothesis steps outlined in the Hypothesis testing slid
 
 1. Create a new Google Colab notebook 
 2. Import the data from your interim report into the notebook 
-````{tip}
-Use the code from the recently announced example [notebook](notebooks/../../notebooks/gdown.ipynb) and gdown.
-````
 3. Break your report into three parts: Visual Exploration, Statistical Tests, Geographic Analysis. Use level-1 heading for titles of these parts (i.e. \# Part name). 
 4. Add content to the report, by including all of the items found in the 'Project Requirements' section. 
 5. Provide hypotheses and interpretations for corresponding parts. 
 6. Weave the plots and interpretations into a coherent document. The data story should be easy to follow. 
-
-````{tip}
-Examples of well-written notebooks for exploratory data analysis: 
-
-* [Housing prices on Kaggle](https://www.kaggle.com/code/ekami66/detailed-exploratory-data-analysis-with-python/notebook)
-* [Towards Data Science Blog Page](https://towardsdatascience.com/my-6-part-powerful-eda-template-that-speaks-of-ultimate-skill-6bdde3c91431). If the page does not open or if you have exceeded the amount of free articles on Medium blog platform, right-click and open in the incognito window. 
-* [Collection of top 10 Kaggle notebooks](https://analyticsindiamag.com/top-ten-kaggle-notebooks-for-data-science-enthusiasts-in-2021/)
-````
 7. Submit the following to GauchoSpace. 
    1. Data (as either a csv or a geojson). This step is not required if you used the 'gdown' approach described above. 
    2. Notebook in ipynb format.
@@ -56,4 +46,15 @@ Examples of well-written notebooks for exploratory data analysis:
 
 ````{caution}
 Your submitted notebook must run and/or have all of the cell output rendered, so that it could be graded. 
+````
+
+````{tip}
+Use the code from the recently announced example [notebook](notebooks/../../notebooks/gdown.ipynb) and gdown.
+````
+````{tip}
+Examples of well-written notebooks for exploratory data analysis: 
+
+* [Housing prices on Kaggle](https://www.kaggle.com/code/ekami66/detailed-exploratory-data-analysis-with-python/notebook)
+* [Towards Data Science Blog Page](https://towardsdatascience.com/my-6-part-powerful-eda-template-that-speaks-of-ultimate-skill-6bdde3c91431). If the page does not open or if you have exceeded the amount of free articles on Medium blog platform, right-click and open in the incognito window. 
+* [Collection of top 10 Kaggle notebooks](https://analyticsindiamag.com/top-ten-kaggle-notebooks-for-data-science-enthusiasts-in-2021/)
 ````

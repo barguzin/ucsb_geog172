@@ -186,7 +186,7 @@ Participation in both lectures and labs is crucial for learning new concepts and
 |5|10/24|Spatial Autocorrelation 1|GIA Ch7|
 |5|10/26|Spatial Autocorrelation 2|[GeoDa Docs](https://geodacenter.github.io/workbook/5a_global_auto/lab5a.html)|
 |6|10/31|LISA and Local Moran's $I$|GIA Ch8|
-|6|11/2|Other Local Statistics|
+|6|11/2|Point Pattern Clustering|[PPA](https://geographicdata.science/book/notebooks/08_point_pattern_analysis.html)|
 |7|11/7|Spatial Regression 1|[SR](https://geographicdata.science/book/notebooks/11_regression.html)|
 |7|11/9|Spatial Regression 2||
 |7|11/13|**Interim Data Report Due**|⚠️|

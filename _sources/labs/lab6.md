@@ -34,14 +34,6 @@ See lab notebook for examples and instructions.
 
 1. Go to the [insideairbnb website](http://insideairbnb.com/get-the-data/). 
 2. Choose any metropolitan area! Download *listings.csv* and *neighbourhoods.geojson*. Rename if necessary.  
-
-````{caution}
-**You need to select urban / metro area, not entire state!**
-````
-
-````{tip}
-select data with at least 30 neighborhoods which are connected by land (e.g. Hawaii would be trickier to analyze than Austin). 
-````
 3. Upload data to Google drive, import via gdown and unzip to the working directory. 
 4. Calculate average price per neighborhood (unit of analysis in your *neighbourhood.geojson* file)
 5. Join your calculated average to geographic data. 
@@ -52,3 +44,12 @@ select data with at least 30 neighborhoods which are connected by land (e.g. Haw
 10. Calculate and plot Local Moran's $I$ on a map at $\alpha=0.05$ level. 
 11. Interpret your map characterizing spatial clusters and outliers. 
 12. Submit to GauchoSpace as .ipynb and .pdf. 
+
+
+````{caution}
+**You need to select urban / metro area, not entire state!**
+````
+
+````{tip}
+select data with at least 30 neighborhoods which are connected by land (e.g. Hawaii would be trickier to analyze than Austin). 
+````

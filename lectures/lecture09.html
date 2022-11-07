@@ -859,7 +859,7 @@ title="Print to PDF"
       <td>18.7</td>
       <td>181.0</td>
       <td>3750.0</td>
-      <td>Male</td>
+      <td>MALE</td>
     </tr>
     <tr>
       <th>1</th>
@@ -869,7 +869,7 @@ title="Print to PDF"
       <td>17.4</td>
       <td>186.0</td>
       <td>3800.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>2</th>
@@ -879,7 +879,7 @@ title="Print to PDF"
       <td>18.0</td>
       <td>195.0</td>
       <td>3250.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>3</th>
@@ -899,7 +899,7 @@ title="Print to PDF"
       <td>19.3</td>
       <td>193.0</td>
       <td>3450.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
   </tbody>
 </table>
@@ -912,7 +912,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x19578109f90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1c58a87ca00&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_5_1.png" src="../_images/lecture09_5_1.png" />
@@ -935,7 +935,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;body_mass_g&#39;, ylabel=&#39;bill_length_mm&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;body_mass_g&#39;, ylabel=&#39;bill_length_mm&#39;&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_7_1.png" src="../_images/lecture09_7_1.png" />
@@ -948,7 +948,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x195781be560&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1c58c78e980&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_8_1.png" src="../_images/lecture09_8_1.png" />
@@ -1001,16 +1001,45 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pg</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">body_mass_g</span><span class="p">,</span> <span class="n">penguins</span><span class="o">.</span><span class="n">bill_length_mm</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pingouin&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>r</th>
+      <th>CI95%</th>
+      <th>p-val</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>pearson</th>
+      <td>342</td>
+      <td>0.6</td>
+      <td>[0.52, 0.66]</td>
+      <td>0.0</td>
+      <td>8.34e+30</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1020,6 +1049,11 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1150,10 +1184,14 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_17220\2552591983.py:2: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
+  corr = penguins.corr() # calculate pairwise correlations
 </pre></div>
 </div>
-<img alt="../_images/lecture09_16_1.png" src="../_images/lecture09_16_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: &gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture09_16_2.png" src="../_images/lecture09_16_2.png" />
 </div>
 </div>
 </section>
@@ -1358,10 +1396,16 @@ regression coef: 0.3542
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Guerry
-Example not downloaded: Chicago parcels
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chicago parcels
 Example not downloaded: Chile Migration
-Example not downloaded: Spirals
-(85, 24)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Spirals
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(85, 24)
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1627,7 +1671,15 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.26355334031776523
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">libpysal.weights.contiguity</span> <span class="kn">import</span> <span class="n">Queen</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">splot</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">y</span> <span class="o">=</span> <span class="n">guerry</span><span class="p">[</span><span class="s1">&#39;Crm_prp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;splot&#39;
 </pre></div>
 </div>
 </div>

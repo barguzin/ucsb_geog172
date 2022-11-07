@@ -19,14 +19,12 @@ Treat this report as a standalone document to that you prepare for your supervis
 5. At least one two sample test 
 6. At least one ANOVA test 
 7. At least one Global Moran's $I$ 
-8. At least one Local Moran's $I$. This can be the same variable as in (7). 
-9. At least one Moran scatter plot 
-10. At least one density plot with simulated $p$-value 
-11. At least one choropleth map with clusters (hotspots/coldspots) and outliers
-12. At least one clustering partitioning on your data (clustering can be done on both: point pattern data and areal (polygon) data.)
+8. At least one Moran scatter plot 
+9. At least one choropleth map with clusters (hotspots/coldspots) and outliers
+10. At least one clustering partitioning on your data (clustering can be done on both: point pattern data and areal (polygon) data.)
 
 ````{important}
-Make sure to follow the hypothesis steps outlined in the Hypothesis testing slides: **state hypotheses, set your confidence interval, run the test, get p-value, interpret your p-value by either failing to reject or rejecting null**.
+Make sure to follow the hypothesis steps outlined in the Hypothesis testing slides: **state hypotheses, set your confidence level, run the test, get p-value, interpret your p-value by either failing to reject or rejecting null**.
 ````
 
 --- 

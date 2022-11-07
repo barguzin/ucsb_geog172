@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Lectures" href="../lectures.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
    Syllabus
@@ -223,19 +224,19 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../lectures.html">
    Lectures
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lec01.html">
-     Lecture 1
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Review
     </a>
    </li>
   </ul>
@@ -544,6 +545,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feature-engineering">
+   Feature Engineering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-final-view-of-partitioning-for-data">
+   The Final View of Partitioning for Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions">
    Questions
   </a>
@@ -672,6 +683,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feature-engineering">
+   Feature Engineering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-final-view-of-partitioning-for-data">
+   The Final View of Partitioning for Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions">
    Questions
   </a>
@@ -760,20 +781,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">libpysal.weights</span> <span class="kn">import</span> <span class="n">Queen</span><span class="p">,</span> <span class="n">KNN</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;esda&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="using-pysal-example-data">
@@ -790,18 +797,25 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Cincinnati
-Example not downloaded: Chicago parcels
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chicago parcels
 Example not downloaded: Chile Migration
 Example not downloaded: Spirals
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\.DS_Store&#39;,
- &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.dbf&#39;,
- &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.prj&#39;,
- &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shp&#39;,
- &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shx&#39;,
- &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\__MACOSX\\walnuthills_updated\\._.DS_Store&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\walnuthills_updated\\.DS_Store&#39;,
+ &#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\walnuthills_updated\\cincinnati.dbf&#39;,
+ &#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\walnuthills_updated\\cincinnati.prj&#39;,
+ &#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\walnuthills_updated\\cincinnati.shp&#39;,
+ &#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\walnuthills_updated\\cincinnati.shx&#39;,
+ &#39;C:\\Users\\barguzin\\pysal_data\\Cincinnati\\__MACOSX\\walnuthills_updated\\._.DS_Store&#39;]
 </pre></div>
 </div>
 </div>
@@ -1281,9 +1295,9 @@ memory usage: 260.8+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
   Warn(
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
   Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
 </pre></div>
 </div>
@@ -1328,17 +1342,19 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
   Warn(
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
   Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
   Warn(
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
   Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
   Warn(
-C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 4
+C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 4
   Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
 </pre></div>
 </div>
@@ -1377,6 +1393,10 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\libpysal\weights\_contW_lists.py:29: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+  return list(it.chain(*(list(zip(*shape.coords.xy)) for shape in shape)))
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1418,7 +1438,7 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
     <tr>
       <th>AGE_65</th>
       <td>0.127756</td>
-      <td>0.003</td>
+      <td>0.002</td>
     </tr>
     <tr>
       <th>WHITE</th>
@@ -1433,7 +1453,7 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
     <tr>
       <th>ASIAN</th>
       <td>0.057050</td>
-      <td>0.009</td>
+      <td>0.008</td>
     </tr>
     <tr>
       <th>NH_WHITE</th>
@@ -1458,7 +1478,7 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
     <tr>
       <th>OCCHU_OWNE</th>
       <td>0.245055</td>
-      <td>0.002</td>
+      <td>0.001</td>
     </tr>
     <tr>
       <th>OCCHU_RENT</th>
@@ -1732,7 +1752,7 @@ C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\sklearn\cluster\_kmeans.py:1332: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\sklearn\cluster\_kmeans.py:1334: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
   warnings.warn(
 </pre></div>
 </div>
@@ -2342,7 +2362,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x203653746a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x28db7859000&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture13_45_1.png" src="../_images/lecture13_45_1.png" />
@@ -2350,8 +2370,7 @@ dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;ward5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span>
-<span class="c1"># Setup figure and ax</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup figure and ax</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
 <span class="c1">### K-Means ###</span>
@@ -2359,7 +2378,7 @@ dtype: int64
 <span class="c1"># Plot unique values choropleth including</span>
 <span class="c1"># a legend and with no boundary lines</span>
 <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5&quot;</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span>
     <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span>
     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -2376,7 +2395,7 @@ dtype: int64
 <span class="c1"># Plot unique values choropleth including</span>
 <span class="c1"># a legend and with no boundary lines</span>
 <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5&quot;</span><span class="p">,</span>
     <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Set3&quot;</span><span class="p">,</span>
     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -2444,7 +2463,7 @@ dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi</span><span class="o">.</span><span class="n">labels_</span>
 <span class="c1"># Setup figure and ax</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
 <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
@@ -2504,7 +2523,7 @@ dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;medo_k5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">medo</span><span class="o">.</span><span class="n">labels_</span>
 <span class="c1"># Setup figure and ax</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
 <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="n">column</span><span class="o">=</span><span class="s2">&quot;medo_k5&quot;</span><span class="p">,</span>
@@ -2525,6 +2544,23 @@ dtype: int64
 </div>
 </div>
 <img alt="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="feature-engineering">
+<h1>Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Get $X$ and $Y$ coordinates from block centroids</p></li>
+<li><p>Normalize absolute values into percentage points</p>
+<ul>
+<li><p>pct_elder</p></li>
+<li><p>pct_white</p></li>
+<li><p>pct_black</p></li>
+<li><p>pct_own</p></li>
+<li><p>pct_rent</p></li>
+<li><p>pct_vac</p></li>
+</ul>
+</li>
+<li><p>fill missing values with zeroes (for any gaps in our data)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add xy to clustering</span>
@@ -2562,27 +2598,27 @@ dtype: int64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the seed for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123456</span><span class="p">)</span>
 <span class="c1"># Specify cluster model with spatial constraint</span>
-<span class="n">regi2</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
+<span class="n">xy_norm_model</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
     <span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> 
     <span class="c1">#connectivity=w.sparse, </span>
     <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span>
 <span class="p">)</span>
 <span class="c1"># Fit algorithm to the data</span>
-<span class="n">regi2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
+<span class="n">xy_norm_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-3 {color: black;background-color: white;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(n_clusters=5)</pre></div></div></div></div></div></div></div>
+<div class="output text_html"><style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(n_clusters=5)</pre></div></div></div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi2</span><span class="o">.</span><span class="n">labels_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;xy_norm_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xy_norm_model</span><span class="o">.</span><span class="n">labels_</span>
 <span class="c1"># Setup figure and ax</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
 <span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;xy_norm_model&quot;</span><span class="p">,</span>
     <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -2596,7 +2632,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lecture13_61_0.png" src="../_images/lecture13_61_0.png" />
+<img alt="../_images/lecture13_62_0.png" src="../_images/lecture13_62_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2604,31 +2640,31 @@ dtype: int64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the seed for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123456</span><span class="p">)</span>
 <span class="c1"># Specify cluster model with spatial constraint</span>
-<span class="n">regi2</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
+<span class="n">xy_norm_geo_model</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
     <span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> 
     <span class="n">connectivity</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">sparse</span><span class="p">,</span> 
     <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span>
 <span class="p">)</span>
 <span class="c1"># Fit algorithm to the data</span>
-<span class="n">regi2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
+<span class="n">xy_norm_geo_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-4 {color: black;background-color: white;}#sk-container-id-4 pre{padding: 0;}#sk-container-id-4 div.sk-toggleable {background-color: white;}#sk-container-id-4 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-4 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-4 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-4 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-4 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-4 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-4 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-4 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-4 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-4 div.sk-item {position: relative;z-index: 1;}#sk-container-id-4 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-4 div.sk-item::before, #sk-container-id-4 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-4 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-4 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-4 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-4 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-4 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-4 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-4 div.sk-label-container {text-align: center;}#sk-container-id-4 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-4 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+<div class="output text_html"><style>#sk-container-id-3 {color: black;background-color: white;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
 	with 2970 stored elements in Compressed Sparse Row format&gt;,
-                        n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+                        n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
 	with 2970 stored elements in Compressed Sparse Row format&gt;,
                         n_clusters=5)</pre></div></div></div></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi2</span><span class="o">.</span><span class="n">labels_</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;xy_norm_geo5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xy_norm_geo_model</span><span class="o">.</span><span class="n">labels_</span>
 <span class="c1"># Setup figure and ax</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
 <span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;xy_norm_geo5&quot;</span><span class="p">,</span>
     <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -2642,7 +2678,53 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lecture13_63_0.png" src="../_images/lecture13_63_0.png" />
+<img alt="../_images/lecture13_64_0.png" src="../_images/lecture13_64_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-final-view-of-partitioning-for-data">
+<h1>The Final View of Partitioning for Data<a class="headerlink" href="#the-final-view-of-partitioning-for-data" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">();</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;k-Means Clustering (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;AHC Clustering (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Regionalized AHC Clustering (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;medo_k5&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;k-Medoids Clustering (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;xy_norm_model&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;AHC Clustering with Normalized Variables </span><span class="se">\n</span><span class="s1"> and Geographic Coordinates  (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;xy_norm_geo5&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">5</span><span class="p">]);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;AHC Clustering with Normalized Variables </span><span class="se">\n</span><span class="s1"> and Geographic Coordinates and Contiguity  (k=5)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+
+<span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=-</span><span class="mf">0.45</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;all_clust.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;all_clust.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_67_0.png" src="../_images/lecture13_67_0.png" />
 </div>
 </div>
 </section>
@@ -2680,6 +2762,13 @@ dtype: int64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../lectures.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lectures</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

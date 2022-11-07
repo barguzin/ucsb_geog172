@@ -29,7 +29,7 @@ gol_data.plot(ax=ax, fc='None', ec='k');
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [16], line 1[0m
+Input [1;32mIn [16][0m, in [0;36m<cell line: 1>[1;34m()[0m
 [1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mcenpy[39;00m 
 [0;32m      2[0m dectest [38;5;241m=[39m cenpy[38;5;241m.[39mproducts[38;5;241m.[39mDecennial2010()
 [0;32m      3[0m gol_data [38;5;241m=[39m dectest[38;5;241m.[39mfrom_place([38;5;124m'[39m[38;5;124mGoleta,CA[39m[38;5;124m'[39m, level[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblock[39m[38;5;124m'[39m, variables[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m^P004[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mP001001[39m[38;5;124m'[39m])

@@ -1,39 +1,61 @@
 Traceback (most recent call last):
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 1204, in execute
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 84, in wrapped
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 62, in just_run
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\asyncio\base_events.py", line 646, in run_until_complete
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\asyncio\base_events.py", line 646, in run_until_complete
     return future.result()
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 663, in async_execute
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+  File "C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import cenpy 
-dectest = cenpy.products.Decennial2010()
-gol_data = dectest.from_place('Goleta,CA', level='block', variables=['^P004', 'P001001'])
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(12,4))
+ax = plt.axes(projection=ccrs.PlateCarree())
+ax.stock_img()
 
-gol_data.plot(column='P004003', cmap='Reds', ax=ax, fc='w', ec='k');
-gol_data.plot(ax=ax, fc='None', ec='k');
+ny_lon, ny_lat = -73.935242, 40.730610
+lnd_lon, lnd_lat = -0.1275, 51.50722
+
+plt.plot([ny_lon, lnd_lon], [ny_lat, lnd_lat],
+         color='blue', linewidth=2, marker='o',
+         transform=ccrs.Geodetic(),
+         )
+
+plt.plot([ny_lon, lnd_lon], [ny_lat, lnd_lat],
+         color='red', linestyle='--',
+         transform=ccrs.PlateCarree(),
+         )
+
+plt.text(ny_lon - 3, ny_lat - 12, 'New York',
+         horizontalalignment='right',
+         transform=ccrs.Geodetic())
+
+plt.text(lnd_lon + 3, lnd_lat - 12, 'London',
+         horizontalalignment='left',
+         transform=ccrs.Geodetic())
+
+ax.set_extent([-100,30,0,80])
+plt.savefig('flights.jpeg')
+plt.close()
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [16], line 1[0m
-[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mcenpy[39;00m 
-[0;32m      2[0m dectest [38;5;241m=[39m cenpy[38;5;241m.[39mproducts[38;5;241m.[39mDecennial2010()
-[0;32m      3[0m gol_data [38;5;241m=[39m dectest[38;5;241m.[39mfrom_place([38;5;124m'[39m[38;5;124mGoleta,CA[39m[38;5;124m'[39m, level[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblock[39m[38;5;124m'[39m, variables[38;5;241m=[39m[[38;5;124m'[39m[38;5;124m^P004[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mP001001[39m[38;5;124m'[39m])
+Cell [1;32mIn [3], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mcartopy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcrs[39;00m [38;5;28;01mas[39;00m [38;5;21;01mccrs[39;00m
+[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[0;32m      4[0m ax [38;5;241m=[39m plt[38;5;241m.[39maxes(projection[38;5;241m=[39mccrs[38;5;241m.[39mPlateCarree())
 
-[1;31mModuleNotFoundError[0m: No module named 'cenpy'
-ModuleNotFoundError: No module named 'cenpy'
+[1;31mModuleNotFoundError[0m: No module named 'cartopy'
+ModuleNotFoundError: No module named 'cartopy'
 

@@ -1,0 +1,2706 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Review &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1 - Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2: Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3: Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5: Means, Correlations and Autocorrelation.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab7.html">
+     Lab 7:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture13.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture13.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture13.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clustering">
+   Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-clustering-tasks">
+   Classical clustering tasks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regionalization">
+   Regionalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-clustering-algorithms">
+   Types of Clustering Algorithms
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-pysal-example-data">
+   Using PySAL example data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#similarity">
+   Similarity
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standardizing-variables">
+   Standardizing Variables
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering">
+   K-means Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering-algorithm">
+   K-means Clustering Algorithm
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#characterizing-clusters">
+   Characterizing Clusters
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchical-clustering">
+   Hierarchical Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ahc-algorithm">
+   AHC Algorithm
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Regionalization
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatially-constrained-hierarchical-clustering">
+     Spatially Constrained Hierarchical Clustering
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-regionalization">
+   Why Regionalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-we-getting-imbalanced-clusters">
+   Why are we getting imbalanced clusters?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-medoids-clustering-pam">
+   K-Medoids Clustering (PAM)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learn-more-https-geographicdata-science-book-notebooks-10-clustering-and-regionalization-html">
+     Learn more: https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Review
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clustering">
+   Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-clustering-tasks">
+   Classical clustering tasks
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regionalization">
+   Regionalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-clustering-algorithms">
+   Types of Clustering Algorithms
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-pysal-example-data">
+   Using PySAL example data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#similarity">
+   Similarity
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standardizing-variables">
+   Standardizing Variables
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering">
+   K-means Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering-algorithm">
+   K-means Clustering Algorithm
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#characterizing-clusters">
+   Characterizing Clusters
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchical-clustering">
+   Hierarchical Clustering
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ahc-algorithm">
+   AHC Algorithm
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Regionalization
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatially-constrained-hierarchical-clustering">
+     Spatially Constrained Hierarchical Clustering
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-regionalization">
+   Why Regionalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-are-we-getting-imbalanced-clusters">
+   Why are we getting imbalanced clusters?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-medoids-clustering-pam">
+   K-Medoids Clustering (PAM)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learn-more-https-geographicdata-science-book-notebooks-10-clustering-and-regionalization-html">
+     Learn more: https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 13: Clustering and Regionalization </h3><section class="tex2jax_ignore mathjax_ignore" id="review">
+<h1>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Many of the techniques we covered had to do with either one variable (autocorrelation) or pairs of variables (correlation). Today from <em>univariate</em> to <em>multivariate</em>.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="clustering">
+<h1>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Part of unsupervised learning.</p>
+<ul>
+<li><p>Latent patterns in our data</p></li>
+<li><p>NO LABELS!</p></li>
+</ul>
+</li>
+<li><p>Groups are not pre-determined (classification)</p></li>
+<li><p>DBSCAN - example of density-based clustering</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="classical-clustering-tasks">
+<h1>Classical clustering tasks<a class="headerlink" href="#classical-clustering-tasks" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Online shoppers (segmentation)</p></li>
+<li><p>Spotify users who like similar music</p></li>
+<li><p>Hospital Patients</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Clustering<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p><strong>Partition</strong> the observations into groups, where each observation is <strong>similar</strong> to another member of the group.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Partitioning (pre-define number of clusters, pre-defined number of members in a group, pre-define radius)</p></li>
+<li><p>Similarity can be measured differently (attribute space - multidimensional, we can also add geography or spaital similarity to the clustering)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regionalization">
+<h1>Regionalization<a class="headerlink" href="#regionalization" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>We can think of clusters as regions (similar groups of observations that have common attributes and spatial proximity)</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="types-of-clustering-algorithms">
+<h1>Types of Clustering Algorithms<a class="headerlink" href="#types-of-clustering-algorithms" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Connectivity-based (hierarchical)</p></li>
+<li><p>Centroid-based (k-means, k-medoid, c-means, etc.)</p></li>
+<li><p>Distribution-based (clusters are groups most likely belonging to the same distribution)</p></li>
+<li><p>Density-based (DBSCAN)</p></li>
+<li><p>Grid-based</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
+<span class="kn">from</span> <span class="nn">libpysal.weights</span> <span class="kn">import</span> <span class="n">Queen</span><span class="p">,</span> <span class="n">KNN</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pingouin&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="using-pysal-example-data">
+<h1>Using PySAL example data<a class="headerlink" href="#using-pysal-example-data" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">libpysal.examples</span> <span class="kn">import</span> <span class="n">load_example</span><span class="p">,</span> <span class="n">available</span>
+
+<span class="c1">#[_ for _ in available().Name]</span>
+
+<span class="n">cin</span> <span class="o">=</span> <span class="n">load_example</span><span class="p">(</span><span class="s1">&#39;Cincinnati&#39;</span><span class="p">)</span>
+<span class="n">cin</span><span class="o">.</span><span class="n">get_file_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Cincinnati
+Example not downloaded: Chicago parcels
+Example not downloaded: Chile Migration
+Example not downloaded: Spirals
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\.DS_Store&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.dbf&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.prj&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shp&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shx&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\__MACOSX\\walnuthills_updated\\._.DS_Store&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">cin</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;cincinnati.shp&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cin_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(457, 73)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>AREA</th>
+      <th>BLOCK</th>
+      <th>BG</th>
+      <th>TRACT</th>
+      <th>COUNTY</th>
+      <th>MSA</th>
+      <th>POPULATION</th>
+      <th>MALE</th>
+      <th>FEMALE</th>
+      <th>...</th>
+      <th>OWNER_SIZE</th>
+      <th>RENTER_SIZ</th>
+      <th>DENSITY</th>
+      <th>BURGLARY</th>
+      <th>ASSAULT</th>
+      <th>THEFT</th>
+      <th>BURG_D</th>
+      <th>ASSALT_D</th>
+      <th>THEFT_D</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>726907.0</td>
+      <td>0.09</td>
+      <td>390610042002001</td>
+      <td>390610042002</td>
+      <td>39061004200</td>
+      <td>39061</td>
+      <td>1640</td>
+      <td>479.0</td>
+      <td>221.0</td>
+      <td>258.0</td>
+      <td>...</td>
+      <td>1.46</td>
+      <td>1.42</td>
+      <td>5384.7901</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>POLYGON ((1407302.966 415693.734, 1407473.141 ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>695744.0</td>
+      <td>0.01</td>
+      <td>390610022004003</td>
+      <td>390610022004</td>
+      <td>39061002200</td>
+      <td>39061</td>
+      <td>1640</td>
+      <td>85.0</td>
+      <td>39.0</td>
+      <td>46.0</td>
+      <td>...</td>
+      <td>3.22</td>
+      <td>2.15</td>
+      <td>6643.1423</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>POLYGON ((1398841.243 416718.444, 1399605.382 ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>695762.0</td>
+      <td>0.01</td>
+      <td>390610033002017</td>
+      <td>390610033002</td>
+      <td>39061003300</td>
+      <td>39061</td>
+      <td>1640</td>
+      <td>29.0</td>
+      <td>18.0</td>
+      <td>11.0</td>
+      <td>...</td>
+      <td>1.00</td>
+      <td>1.33</td>
+      <td>4326.5018</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>POLYGON ((1398733.468 416975.853, 1398794.240 ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>695780.0</td>
+      <td>0.01</td>
+      <td>390610022004002</td>
+      <td>390610022004</td>
+      <td>39061002200</td>
+      <td>39061</td>
+      <td>1640</td>
+      <td>117.0</td>
+      <td>59.0</td>
+      <td>58.0</td>
+      <td>...</td>
+      <td>2.57</td>
+      <td>2.25</td>
+      <td>20784.6991</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>POLYGON ((1399564.078 416046.633, 1399605.382 ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>695798.0</td>
+      <td>0.02</td>
+      <td>390610033001009</td>
+      <td>390610033001</td>
+      <td>39061003300</td>
+      <td>39061</td>
+      <td>1640</td>
+      <td>96.0</td>
+      <td>51.0</td>
+      <td>45.0</td>
+      <td>...</td>
+      <td>1.00</td>
+      <td>1.42</td>
+      <td>4019.0506</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>POLYGON ((1398841.243 416718.444, 1398733.468 ...</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 73 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[[</span><span class="s1">&#39;WHITE&#39;</span><span class="p">,</span> <span class="s1">&#39;AP_WHITE&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>WHITE</th>
+      <th>AP_WHITE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>457.000000</td>
+      <td>457.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>23.954048</td>
+      <td>24.870897</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>65.200837</td>
+      <td>66.990628</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>3.000000</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>19.000000</td>
+      <td>21.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>634.000000</td>
+      <td>657.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[[</span><span class="s1">&#39;OCCHU_OWNE&#39;</span><span class="p">,</span> <span class="s1">&#39;OCCHU_RENT&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OCCHU_OWNE</th>
+      <th>OCCHU_RENT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>457.000000</td>
+      <td>457.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>8.617068</td>
+      <td>28.070022</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>18.680250</td>
+      <td>46.020203</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4.000000</td>
+      <td>14.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>10.000000</td>
+      <td>35.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>245.000000</td>
+      <td>543.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture13_13_1.png" src="../_images/lecture13_13_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
+RangeIndex: 457 entries, 0 to 456
+Data columns (total 73 columns):
+ #   Column      Non-Null Count  Dtype   
+---  ------      --------------  -----   
+ 0   ID          457 non-null    float64 
+ 1   AREA        457 non-null    float64 
+ 2   BLOCK       457 non-null    object  
+ 3   BG          457 non-null    object  
+ 4   TRACT       457 non-null    object  
+ 5   COUNTY      457 non-null    object  
+ 6   MSA         457 non-null    object  
+ 7   POPULATION  457 non-null    float64 
+ 8   MALE        457 non-null    float64 
+ 9   FEMALE      457 non-null    float64 
+ 10  AGE_0_5     457 non-null    float64 
+ 11  AGE_5_9     457 non-null    float64 
+ 12  AGE_10_14   457 non-null    float64 
+ 13  AGE_15_19   457 non-null    float64 
+ 14  AGE_20_24   457 non-null    float64 
+ 15  AGE_25_34   457 non-null    float64 
+ 16  AGE_35_44   457 non-null    float64 
+ 17  AGE_45_54   457 non-null    float64 
+ 18  AGE_55_59   457 non-null    float64 
+ 19  AGE_60_64   457 non-null    float64 
+ 20  AGE_65_74   457 non-null    float64 
+ 21  AGE_75_84   457 non-null    float64 
+ 22  AGE_85      457 non-null    float64 
+ 23  MEDIAN_AGE  457 non-null    float64 
+ 24  AGE_18      457 non-null    float64 
+ 25  MALE_18     457 non-null    float64 
+ 26  FEMALE_18   457 non-null    float64 
+ 27  AGE_21      457 non-null    float64 
+ 28  AGE_62      457 non-null    float64 
+ 29  AGE_65      457 non-null    float64 
+ 30  MALE_65     457 non-null    float64 
+ 31  FEMALE_65   457 non-null    float64 
+ 32  F1_RACE     457 non-null    float64 
+ 33  WHITE       457 non-null    float64 
+ 34  BLACK       457 non-null    float64 
+ 35  AMINDIAN    457 non-null    float64 
+ 36  ASIAN       457 non-null    float64 
+ 37  HAWAIIAN    457 non-null    float64 
+ 38  OTHER_RACE  457 non-null    float64 
+ 39  F2_RACES    457 non-null    float64 
+ 40  AP_WHITE    457 non-null    float64 
+ 41  AP_BLACK    457 non-null    float64 
+ 42  AP_AMINDIA  457 non-null    float64 
+ 43  AP_ASIAN    457 non-null    float64 
+ 44  AP_HAWAIIA  457 non-null    float64 
+ 45  AP_OTHER    457 non-null    float64 
+ 46  AP_HISPANI  457 non-null    float64 
+ 47  NOT_HISPAN  457 non-null    float64 
+ 48  NH_WHITE    457 non-null    float64 
+ 49  IN_HOUSEHO  457 non-null    float64 
+ 50  GROUP_QUAR  457 non-null    float64 
+ 51  GQ_INSTITU  457 non-null    float64 
+ 52  GQ_NONINST  457 non-null    float64 
+ 53  HOUSEHOLDS  457 non-null    float64 
+ 54  HH_FAMILY   457 non-null    float64 
+ 55  HH_NONFAMI  457 non-null    float64 
+ 56  AVG_HHSIZE  457 non-null    float64 
+ 57  AVG_FAMSIZ  457 non-null    float64 
+ 58  HSNG_UNITS  457 non-null    float64 
+ 59  HU_OCCUPIE  457 non-null    float64 
+ 60  HU_VACANT   457 non-null    float64 
+ 61  OCCHU_OWNE  457 non-null    float64 
+ 62  OCCHU_RENT  457 non-null    float64 
+ 63  OWNER_SIZE  457 non-null    float64 
+ 64  RENTER_SIZ  457 non-null    float64 
+ 65  DENSITY     457 non-null    float64 
+ 66  BURGLARY    457 non-null    int64   
+ 67  ASSAULT     457 non-null    int64   
+ 68  THEFT       457 non-null    int64   
+ 69  BURG_D      457 non-null    float64 
+ 70  ASSALT_D    457 non-null    float64 
+ 71  THEFT_D     457 non-null    float64 
+ 72  geometry    457 non-null    geometry
+dtypes: float64(64), geometry(1), int64(3), object(5)
+memory usage: 260.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># consider only specific variables for clustering </span>
+<span class="c1"># see variable description at GEODA lab </span>
+<span class="c1"># https://geodacenter.github.io/data-and-lab/walnut_hills/</span>
+<span class="n">predictors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POPULATION&#39;</span><span class="p">,</span> <span class="s1">&#39;MEDIAN_AGE&#39;</span><span class="p">,</span> <span class="s1">&#39;AGE_65&#39;</span><span class="p">,</span> <span class="s1">&#39;WHITE&#39;</span><span class="p">,</span> <span class="s1">&#39;BLACK&#39;</span><span class="p">,</span> <span class="s1">&#39;ASIAN&#39;</span><span class="p">,</span> 
+          <span class="s1">&#39;NH_WHITE&#39;</span><span class="p">,</span> <span class="s1">&#39;HOUSEHOLDS&#39;</span><span class="p">,</span> <span class="s1">&#39;AVG_HHSIZE&#39;</span><span class="p">,</span> <span class="s1">&#39;HU_VACANT&#39;</span><span class="p">,</span> <span class="s1">&#39;OCCHU_OWNE&#39;</span><span class="p">,</span> <span class="s1">&#39;OCCHU_RENT&#39;</span><span class="p">]</span>
+
+<span class="n">crime_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BURGLARY&#39;</span><span class="p">,</span> <span class="s1">&#39;ASSAULT&#39;</span><span class="p">,</span> <span class="s1">&#39;THEFT&#39;</span><span class="p">]</span>
+
+<span class="c1"># more examples with plotting available from </span>
+<span class="c1"># https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="c1"># Make the axes accessible with single indexing</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="c1"># Start a loop over all the variables of interest</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">predictors</span><span class="p">):</span>
+    <span class="c1"># select the axis where the map will go</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># Plot the map</span>
+    <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">column</span><span class="o">=</span><span class="n">col</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;Quantiles&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;BuPu&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># Remove axis clutter</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+    <span class="c1"># Set the axis title to the name of variable being plotted</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;crime_predictors.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+  Warn(
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+  Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;crime_predictors.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_17_0.png" src="../_images/lecture13_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="c1"># Make the axes accessible with single indexing</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="c1"># Start a loop over all the variables of interest</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">crime_vars</span><span class="p">):</span>
+    <span class="c1"># select the axis where the map will go</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># Plot the map</span>
+    <span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">column</span><span class="o">=</span><span class="n">col</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;Quantiles&quot;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;BuPu&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># Remove axis clutter</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+    <span class="c1"># Set the axis title to the name of variable being plotted</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;crime_types.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+  Warn(
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+  Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+  Warn(
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 3
+  Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:238: UserWarning: Warning: Not enough unique values in array to form k classes
+  Warn(
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:241: UserWarning: Warning: setting k to 4
+  Warn(&quot;Warning: setting k to %d&quot; % k_q, UserWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;crime_types.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_19_0.png" src="../_images/lecture13_19_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">Queen</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">cin_df</span><span class="p">)</span>
+
+<span class="c1"># Calculate Moran&#39;s I for each variable</span>
+<span class="n">mi_results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Moran</span><span class="p">(</span><span class="n">cin_df</span><span class="p">[</span><span class="n">variable</span><span class="p">],</span> <span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">predictors</span>
+<span class="p">]</span>
+<span class="c1"># Structure results as a list of tuples</span>
+<span class="n">mi_results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">variable</span><span class="p">,</span> <span class="n">res</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">predictors</span><span class="p">,</span> <span class="n">mi_results</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="c1"># Display on table</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">mi_results</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Variable&quot;</span><span class="p">,</span> <span class="s2">&quot;Moran&#39;s I&quot;</span><span class="p">,</span> <span class="s2">&quot;P-value&quot;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Variable&quot;</span><span class="p">)</span>
+<span class="n">table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Moran's I</th>
+      <th>P-value</th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>POPULATION</th>
+      <td>0.162529</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>MEDIAN_AGE</th>
+      <td>0.175654</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>AGE_65</th>
+      <td>0.127756</td>
+      <td>0.003</td>
+    </tr>
+    <tr>
+      <th>WHITE</th>
+      <td>0.264340</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>BLACK</th>
+      <td>0.285679</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>ASIAN</th>
+      <td>0.057050</td>
+      <td>0.009</td>
+    </tr>
+    <tr>
+      <th>NH_WHITE</th>
+      <td>0.263554</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>HOUSEHOLDS</th>
+      <td>0.165267</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>AVG_HHSIZE</th>
+      <td>0.284141</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>HU_VACANT</th>
+      <td>0.198203</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>OCCHU_OWNE</th>
+      <td>0.245055</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <th>OCCHU_RENT</th>
+      <td>0.133238</td>
+      <td>0.001</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<blockquote>
+<div><p>Each of the variables displays significant positive spatial autocorrelation, suggesting clear spatial structure in the socioeconomic geography of San Diego. This means it is likely the clusters we find will have a non random spatial distribution.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xy_vars</span> <span class="o">=</span> <span class="n">predictors</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;BURGLARY&#39;</span><span class="p">]</span>
+
+<span class="n">corr_df</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">pairwise_corr</span><span class="p">(</span><span class="n">cin_df</span><span class="p">[</span><span class="n">xy_vars</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+<span class="n">corr_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">corr_df</span><span class="o">.</span><span class="n">Y</span> <span class="o">==</span> <span class="s1">&#39;BURGLARY&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+      <th>method</th>
+      <th>alternative</th>
+      <th>n</th>
+      <th>r</th>
+      <th>CI95%</th>
+      <th>p-unc</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>67</th>
+      <td>HOUSEHOLDS</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.550126</td>
+      <td>[0.48, 0.61]</td>
+      <td>1.647029e-37</td>
+      <td>1.683e+34</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>OCCHU_RENT</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.541269</td>
+      <td>[0.47, 0.6]</td>
+      <td>3.835054e-36</td>
+      <td>7.444e+32</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>POPULATION</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.499936</td>
+      <td>[0.43, 0.57]</td>
+      <td>2.856307e-30</td>
+      <td>1.146e+27</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>HU_VACANT</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.499887</td>
+      <td>[0.43, 0.57]</td>
+      <td>2.899383e-30</td>
+      <td>1.129e+27</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>BLACK</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.492950</td>
+      <td>[0.42, 0.56]</td>
+      <td>2.351419e-29</td>
+      <td>1.424e+26</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>OCCHU_OWNE</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.385024</td>
+      <td>[0.3, 0.46]</td>
+      <td>1.344824e-17</td>
+      <td>3.565e+14</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>AGE_65</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.377739</td>
+      <td>[0.3, 0.45]</td>
+      <td>6.014186e-17</td>
+      <td>8.173e+13</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>NH_WHITE</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.240948</td>
+      <td>[0.15, 0.33]</td>
+      <td>1.850323e-07</td>
+      <td>4.481e+04</td>
+      <td>0.999485</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>WHITE</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.239724</td>
+      <td>[0.15, 0.32]</td>
+      <td>2.142888e-07</td>
+      <td>3.89e+04</td>
+      <td>0.999432</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>AVG_HHSIZE</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.144546</td>
+      <td>[0.05, 0.23]</td>
+      <td>1.949163e-03</td>
+      <td>6.998</td>
+      <td>0.873839</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>MEDIAN_AGE</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.115112</td>
+      <td>[0.02, 0.2]</td>
+      <td>1.380667e-02</td>
+      <td>1.202</td>
+      <td>0.693597</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>ASIAN</td>
+      <td>BURGLARY</td>
+      <td>pearson</td>
+      <td>two-sided</td>
+      <td>457</td>
+      <td>0.035869</td>
+      <td>[-0.06, 0.13]</td>
+      <td>4.443094e-01</td>
+      <td>0.078</td>
+      <td>0.119285</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="similarity">
+<h1>Similarity<a class="headerlink" href="#similarity" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Absolute values will drown variables which have higher range of values (0-1 Vs 0-1000)</p></li>
+<li><p>Standardize values by mean and stdev</p></li>
+<li><p><strong>For non-normal, skewed and bimodal distributions robust scaling may be required!</strong></p></li>
+<li><p>Use <strong>sklearn</strong> package</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="standardizing-variables">
+<h1>Standardizing Variables<a class="headerlink" href="#standardizing-variables" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><strong>scale()</strong>: $z = \frac{x_i - \bar{x}}{\sigma_x}$</p></li>
+<li><p><strong>robust_scale()</strong>: $z = \frac{x_i - \tilde{x}}{\lceil x \rceil_{75} - \lceil x \rceil_{25}}$ (median and IQR)</p></li>
+<li><p><strong>minmax_scale()</strong>: $z = \frac{x - min(x)}{max(x-min(x))}$</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">robust_scale</span>
+
+<span class="n">db_scaled</span> <span class="o">=</span> <span class="n">robust_scale</span><span class="p">(</span><span class="n">cin_df</span><span class="p">[</span><span class="n">predictors</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering">
+<h1>K-means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Pre-specified number of clusters (groups)</p></li>
+<li><p>Each observation is closer to the mean of its own group than it is to the mean of any other group</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering-algorithm">
+<h1>K-means Clustering Algorithm<a class="headerlink" href="#k-means-clustering-algorithm" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Assign all observations to one of the $k$ labels</p></li>
+<li><p>Calculate multivariate mean over all covaraites for each cluster</p></li>
+<li><p>Reassign observations to the cluster with closest mean</p></li>
+<li><p>Repeat and update until there are no more changes</p></li>
+</ol>
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/K-means_convergence.gif/617px-K-means_convergence.gif" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/K-means_convergence.gif/617px-K-means_convergence.gif" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialise KMeans instance</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="c1"># Initialise KMeans instance</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># Set the seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="c1"># Run K-Means algorithm</span>
+<span class="n">k5cls</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled</span><span class="p">)</span>
+<span class="c1"># Print first five labels</span>
+<span class="n">k5cls</span><span class="o">.</span><span class="n">labels_</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\sklearn\cluster\_kmeans.py:1332: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 0, 0, 0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign labels into a column</span>
+<span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;k5cls&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k5cls</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="c1"># Plot unique values choropleth including</span>
+<span class="c1"># a legend and with no boundary lines</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;kmeans.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;kmeans.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_31_0.png" src="../_images/lecture13_31_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="characterizing-clusters">
+<h1>Characterizing Clusters<a class="headerlink" href="#characterizing-clusters" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Very imbalanced partitioning</p></li>
+<li><p>Some contiguity is noticeable, but the arrangement is patchy</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group data table by cluster label and count observations</span>
+<span class="n">k5sizes</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;k5cls&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="n">k5sizes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k5cls
+0    417
+1      1
+2      1
+3     10
+4     28
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dissolve areas by Cluster, aggregate by summing,</span>
+<span class="c1"># and keep column for area</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">dissolve</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">)[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
+<span class="n">areas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k5cls
+0    9.993732e+07
+1    1.116340e+06
+2    6.673713e+05
+3    1.572282e+07
+4    3.126180e+07
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group table by cluster label, keep the variables used</span>
+<span class="c1"># for clustering, and obtain their mean</span>
+<span class="n">k5means</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;k5cls&quot;</span><span class="p">)[</span><span class="n">predictors</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># Transpose the table and print it rounding each value</span>
+<span class="c1"># to three decimals</span>
+<span class="n">k5means</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>k5cls</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>POPULATION</th>
+      <td>56.942</td>
+      <td>1108.00</td>
+      <td>361.00</td>
+      <td>420.400</td>
+      <td>331.893</td>
+    </tr>
+    <tr>
+      <th>MEDIAN_AGE</th>
+      <td>26.170</td>
+      <td>21.80</td>
+      <td>25.00</td>
+      <td>29.310</td>
+      <td>41.879</td>
+    </tr>
+    <tr>
+      <th>AGE_65</th>
+      <td>4.851</td>
+      <td>6.00</td>
+      <td>16.00</td>
+      <td>35.400</td>
+      <td>72.179</td>
+    </tr>
+    <tr>
+      <th>WHITE</th>
+      <td>13.084</td>
+      <td>435.00</td>
+      <td>259.00</td>
+      <td>325.000</td>
+      <td>55.250</td>
+    </tr>
+    <tr>
+      <th>BLACK</th>
+      <td>41.806</td>
+      <td>244.00</td>
+      <td>5.00</td>
+      <td>61.300</td>
+      <td>268.821</td>
+    </tr>
+    <tr>
+      <th>ASIAN</th>
+      <td>0.518</td>
+      <td>372.00</td>
+      <td>85.00</td>
+      <td>21.900</td>
+      <td>1.250</td>
+    </tr>
+    <tr>
+      <th>NH_WHITE</th>
+      <td>12.926</td>
+      <td>422.00</td>
+      <td>258.00</td>
+      <td>322.300</td>
+      <td>54.464</td>
+    </tr>
+    <tr>
+      <th>HOUSEHOLDS</th>
+      <td>24.890</td>
+      <td>356.00</td>
+      <td>180.00</td>
+      <td>139.500</td>
+      <td>159.143</td>
+    </tr>
+    <tr>
+      <th>AVG_HHSIZE</th>
+      <td>1.830</td>
+      <td>1.92</td>
+      <td>1.87</td>
+      <td>1.548</td>
+      <td>1.915</td>
+    </tr>
+    <tr>
+      <th>HU_VACANT</th>
+      <td>5.309</td>
+      <td>6.00</td>
+      <td>13.00</td>
+      <td>17.900</td>
+      <td>22.393</td>
+    </tr>
+    <tr>
+      <th>OCCHU_OWNE</th>
+      <td>5.746</td>
+      <td>2.00</td>
+      <td>29.00</td>
+      <td>45.000</td>
+      <td>37.893</td>
+    </tr>
+    <tr>
+      <th>OCCHU_RENT</th>
+      <td>19.144</td>
+      <td>354.00</td>
+      <td>151.00</td>
+      <td>94.500</td>
+      <td>121.250</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index db on cluster ID</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;k5cls&quot;</span><span class="p">)</span>
+<span class="c1"># Keep only variables used for clustering</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="p">[</span><span class="n">predictors</span><span class="p">]</span>
+<span class="c1"># Stack column names into a column, obtaining</span>
+<span class="c1"># a &quot;long&quot; version of the dataset</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+<span class="c1"># Take indices into proper columns</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># Rename column names</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;level_1&quot;</span><span class="p">:</span> <span class="s2">&quot;Attribute&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Values&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="c1"># Check out result</span>
+<span class="n">tidy_db</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>k5cls</th>
+      <th>Attribute</th>
+      <th>Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>POPULATION</td>
+      <td>479.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>MEDIAN_AGE</td>
+      <td>55.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>AGE_65</td>
+      <td>174.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>WHITE</td>
+      <td>433.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>BLACK</td>
+      <td>32.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scale fonts to make them more readable</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="c1"># Setup the facets</span>
+<span class="n">facets</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">tidy_db</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Attribute&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span>
+    <span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">col_wrap</span><span class="o">=</span><span class="mi">3</span>
+<span class="p">)</span>
+<span class="c1"># Build the plot from `sns.kdeplot`</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">facets</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">,</span> <span class="s2">&quot;Values&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">warn_singular</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_37_0.png" src="../_images/lecture13_37_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hierarchical-clustering">
+<h1>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Agglomerative Hierarchical Clustering (AHC)</p></li>
+<li><p>Hierarchy of solutions (starts at singletons) and assign all observations into same cluster</p></li>
+<li><p>We are looking for in-between clustering solutions</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ahc-algorithm">
+<h1>AHC Algorithm<a class="headerlink" href="#ahc-algorithm" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Every observation is its own cluster</p></li>
+<li><p>Find two closest observations based on distance metric (Euclidean Distance)</p></li>
+<li><p>Join the closest into a new cluster</p></li>
+<li><p>Repeat 2 and 3 until reaching the desired degree of aggregation</p></li>
+</ol>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hierarchical_clustering_simple_diagram.svg/1280px-Hierarchical_clustering_simple_diagram.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hierarchical_clustering_simple_diagram.svg/1280px-Hierarchical_clustering_simple_diagram.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hierarchical_clustering_simple_diagram.svg/1280px-Hierarchical_clustering_simple_diagram.svg.png" style="width: 500px;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
+
+<span class="c1"># Set seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Iniciate the algorithm</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># Run clustering</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled</span><span class="p">)</span>
+<span class="c1"># Assign labels to main data table</span>
+<span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;ward5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ward5sizes</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;ward5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="n">ward5sizes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ward5
+0    442
+1      5
+2      8
+3      1
+4      1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ward5means</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;ward5&quot;</span><span class="p">)[</span><span class="n">predictors</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">ward5means</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ward5</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>POPULATION</th>
+      <td>70.152</td>
+      <td>583.600</td>
+      <td>414.625</td>
+      <td>1108.00</td>
+      <td>361.00</td>
+    </tr>
+    <tr>
+      <th>MEDIAN_AGE</th>
+      <td>26.969</td>
+      <td>52.520</td>
+      <td>24.462</td>
+      <td>21.80</td>
+      <td>25.00</td>
+    </tr>
+    <tr>
+      <th>AGE_65</th>
+      <td>7.964</td>
+      <td>154.600</td>
+      <td>13.125</td>
+      <td>6.00</td>
+      <td>16.00</td>
+    </tr>
+    <tr>
+      <th>WHITE</th>
+      <td>14.760</td>
+      <td>244.400</td>
+      <td>313.375</td>
+      <td>435.00</td>
+      <td>259.00</td>
+    </tr>
+    <tr>
+      <th>BLACK</th>
+      <td>53.041</td>
+      <td>324.200</td>
+      <td>63.500</td>
+      <td>244.00</td>
+      <td>5.00</td>
+    </tr>
+    <tr>
+      <th>ASIAN</th>
+      <td>0.550</td>
+      <td>5.000</td>
+      <td>25.250</td>
+      <td>372.00</td>
+      <td>85.00</td>
+    </tr>
+    <tr>
+      <th>NH_WHITE</th>
+      <td>14.566</td>
+      <td>242.200</td>
+      <td>311.125</td>
+      <td>422.00</td>
+      <td>258.00</td>
+    </tr>
+    <tr>
+      <th>HOUSEHOLDS</th>
+      <td>31.260</td>
+      <td>317.200</td>
+      <td>103.375</td>
+      <td>356.00</td>
+      <td>180.00</td>
+    </tr>
+    <tr>
+      <th>AVG_HHSIZE</th>
+      <td>1.835</td>
+      <td>1.688</td>
+      <td>1.557</td>
+      <td>1.92</td>
+      <td>1.87</td>
+    </tr>
+    <tr>
+      <th>HU_VACANT</th>
+      <td>6.163</td>
+      <td>38.400</td>
+      <td>13.000</td>
+      <td>6.00</td>
+      <td>13.00</td>
+    </tr>
+    <tr>
+      <th>OCCHU_OWNE</th>
+      <td>7.165</td>
+      <td>125.000</td>
+      <td>14.375</td>
+      <td>2.00</td>
+      <td>29.00</td>
+    </tr>
+    <tr>
+      <th>OCCHU_RENT</th>
+      <td>24.095</td>
+      <td>192.200</td>
+      <td>89.000</td>
+      <td>354.00</td>
+      <td>151.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index db on cluster ID</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;ward5&quot;</span><span class="p">)</span>
+<span class="c1"># Keep only variables used for clustering</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="p">[</span><span class="n">predictors</span><span class="p">]</span>
+<span class="c1"># Stack column names into a column, obtaining</span>
+<span class="c1"># a &quot;long&quot; version of the dataset</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+<span class="c1"># Take indices into proper columns</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># Rename column names</span>
+<span class="n">tidy_db</span> <span class="o">=</span> <span class="n">tidy_db</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;level_1&quot;</span><span class="p">:</span> <span class="s2">&quot;Attribute&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Values&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="c1"># Check out result</span>
+<span class="n">tidy_db</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ward5</th>
+      <th>Attribute</th>
+      <th>Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>POPULATION</td>
+      <td>479.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>MEDIAN_AGE</td>
+      <td>55.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>AGE_65</td>
+      <td>174.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>WHITE</td>
+      <td>433.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>BLACK</td>
+      <td>32.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup the facets</span>
+<span class="n">facets</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">tidy_db</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Attribute&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;ward5&quot;</span><span class="p">,</span>
+    <span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">col_wrap</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Build the plot as a `sns.kdeplot`</span>
+<span class="n">facets</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">,</span> <span class="s2">&quot;Values&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">warn_singular</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x203653746a0&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture13_45_1.png" src="../_images/lecture13_45_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;ward5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1">### K-Means ###</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Plot unique values choropleth including</span>
+<span class="c1"># a legend and with no boundary lines</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Add title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;K-Means solution ($k=5$)&quot;</span><span class="p">)</span>
+
+<span class="c1">### AHC ###</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># Plot unique values choropleth including</span>
+<span class="c1"># a legend and with no boundary lines</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;k5cls&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Set3&quot;</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Add title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;AHC solution ($k=5$)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the map</span>
+<span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;two_clust.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;two_clust.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_47_0.png" src="../_images/lecture13_47_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Regionalization<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<section id="spatially-constrained-hierarchical-clustering">
+<h2>Spatially Constrained Hierarchical Clustering<a class="headerlink" href="#spatially-constrained-hierarchical-clustering" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="why-regionalization">
+<h1>Why Regionalization<a class="headerlink" href="#why-regionalization" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Clustering helps us investigate the structure of our data (spatial contiguity is not always a requirement)</p></li>
+<li><p>We impose spatial constraint on clusters (geographically coherent areas + coherent data profiles)</p></li>
+<li><p>Counties within states (administrative principles), clusters within out data (statistical similarity)</p></li>
+<li><p>Spatial weights matrix can be used as a measure of spatial similarity</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123456</span><span class="p">)</span>
+<span class="c1"># Specify cluster model with spatial constraint</span>
+<span class="n">regi</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
+    <span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> <span class="n">connectivity</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">sparse</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+<span class="c1"># Fit algorithm to the data</span>
+<span class="n">regi</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+	with 2970 stored elements in Compressed Sparse Row format&gt;,
+                        n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+	with 2970 stored elements in Compressed Sparse Row format&gt;,
+                        n_clusters=5)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Display the map</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_51_0.png" src="../_images/lecture13_51_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="why-are-we-getting-imbalanced-clusters">
+<h1>Why are we getting imbalanced clusters?<a class="headerlink" href="#why-are-we-getting-imbalanced-clusters" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Data is not normal</p></li>
+<li><p>Methods are not robust to outliers</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="n">predictors</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_53_0.png" src="../_images/lecture13_53_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-medoids-clustering-pam">
+<h1>K-Medoids Clustering (PAM)<a class="headerlink" href="#k-medoids-clustering-pam" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Partitioning around medoid (instead of ‘mean’, select most central actual observation).</p></li>
+<li><p>The medoid of a cluster is defined as the object in the cluster whose average dissimilarity to all the objects in the cluster is minimal, that is, it is a most centrally located point in the cluster.</p></li>
+<li><p>$k$-medoids minimizes a sum of pairwise dissimilarities instead of a sum of squared Euclidean distances (depends on implementation), it is more robust to noise and outliers than k-means</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn_extra.cluster</span> <span class="kn">import</span> <span class="n">KMedoids</span>
+
+<span class="n">kmedoids</span> <span class="o">=</span> <span class="n">KMedoids</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">medo</span> <span class="o">=</span> <span class="n">kmedoids</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df</span><span class="p">[</span><span class="s2">&quot;medo_k5&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">medo</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
+<span class="n">cin_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;medo_k5&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Display the map</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_56_0.png" src="../_images/lecture13_56_0.png" />
+</div>
+</div>
+<img alt="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add xy to clustering</span>
+<span class="n">cin_df2</span> <span class="o">=</span> <span class="n">cin_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># calculate centroid locs</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;lng&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">y</span>
+
+<span class="c1"># pct vars </span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_elder&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">AGE_65</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">POPULATION</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_white&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">WHITE</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">POPULATION</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_black&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">BLACK</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">POPULATION</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_own&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">OCCHU_OWNE</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">HSNG_UNITS</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_rent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">OCCHU_RENT</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">HSNG_UNITS</span>
+<span class="n">cin_df2</span><span class="p">[</span><span class="s1">&#39;pct_vac&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">HU_VACANT</span> <span class="o">/</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">HSNG_UNITS</span>
+
+<span class="n">cin_df2</span> <span class="o">=</span> <span class="n">cin_df2</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">new_predictors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;POPULATION&#39;</span><span class="p">,</span> <span class="s1">&#39;MEDIAN_AGE&#39;</span><span class="p">,</span> <span class="s1">&#39;lng&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_elder&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_white&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_black&#39;</span><span class="p">,</span> 
+                 <span class="s1">&#39;pct_own&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_rent&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_vac&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_scaled2</span> <span class="o">=</span> <span class="n">robust_scale</span><span class="p">(</span><span class="n">cin_df2</span><span class="p">[</span><span class="n">new_predictors</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123456</span><span class="p">)</span>
+<span class="c1"># Specify cluster model with spatial constraint</span>
+<span class="n">regi2</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
+    <span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> 
+    <span class="c1">#connectivity=w.sparse, </span>
+    <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+<span class="c1"># Fit algorithm to the data</span>
+<span class="n">regi2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-3 {color: black;background-color: white;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(n_clusters=5)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi2</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Display the map</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_61_0.png" src="../_images/lecture13_61_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the seed for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123456</span><span class="p">)</span>
+<span class="c1"># Specify cluster model with spatial constraint</span>
+<span class="n">regi2</span> <span class="o">=</span> <span class="n">AgglomerativeClustering</span><span class="p">(</span>
+    <span class="n">linkage</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> 
+    <span class="n">connectivity</span><span class="o">=</span><span class="n">w</span><span class="o">.</span><span class="n">sparse</span><span class="p">,</span> 
+    <span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span>
+<span class="c1"># Fit algorithm to the data</span>
+<span class="n">regi2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">db_scaled2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-4 {color: black;background-color: white;}#sk-container-id-4 pre{padding: 0;}#sk-container-id-4 div.sk-toggleable {background-color: white;}#sk-container-id-4 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-4 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-4 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-4 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-4 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-4 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-4 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-4 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-4 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-4 div.sk-item {position: relative;z-index: 1;}#sk-container-id-4 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-4 div.sk-item::before, #sk-container-id-4 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-4 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-4 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-4 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-4 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-4 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-4 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-4 div.sk-label-container {text-align: center;}#sk-container-id-4 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-4 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+	with 2970 stored elements in Compressed Sparse Row format&gt;,
+                        n_clusters=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(connectivity=&lt;457x457 sparse matrix of type &#x27;&lt;class &#x27;numpy.float64&#x27;&gt;&#x27;
+	with 2970 stored elements in Compressed Sparse Row format&gt;,
+                        n_clusters=5)</pre></div></div></div></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cin_df2</span><span class="p">[</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regi2</span><span class="o">.</span><span class="n">labels_</span>
+<span class="c1"># Setup figure and ax</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="c1"># Plot unique values choropleth including a legend and with no boundary lines</span>
+<span class="n">cin_df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;ward5wq&quot;</span><span class="p">,</span>
+    <span class="n">categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Display the map</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture13_63_0.png" src="../_images/lecture13_63_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+<section id="learn-more-https-geographicdata-science-book-notebooks-10-clustering-and-regionalization-html">
+<h2>Learn more: https://geographicdata.science/book/notebooks/10_clustering_and_regionalization.html<a class="headerlink" href="#learn-more-https-geographicdata-science-book-notebooks-10-clustering-and-regionalization-html" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

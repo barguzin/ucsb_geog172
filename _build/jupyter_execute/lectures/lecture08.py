@@ -282,13 +282,13 @@ sns.despine()
 # 
 # * $H_0$: $\mu_1 - \mu_2 = 0$; $H_a$: $\mu_1 - \mu_2 \neq 0$, with $df=n_1+n_2 - 2$ 
 
-# In[9]:
+# In[12]:
 
 
 penguins
 
 
-# In[10]:
+# In[13]:
 
 
 from pingouin import ttest, mwu
@@ -299,7 +299,7 @@ print(males.shape, females.shape)
 ttest(males, females) 
 
 
-# In[11]:
+# In[14]:
 
 
 # use Mann-Whitney non-parametric test (to account for non-normal data)
@@ -317,7 +317,7 @@ mwu(males, females, alternative='two-sided')
 # * Bartlett's test
 # * Levene's test
 
-# In[12]:
+# In[15]:
 
 
 from scipy.stats import bartlett
@@ -384,19 +384,19 @@ print('populations have equal variances at alpha=0.05')
 # * the distributions have the same variance 
 # * **the data are independent**!
 
-# In[13]:
+# In[16]:
 
 
 penguins.groupby('species')['body_mass_g'].agg(['mean', 'std', 'size'])
 
 
-# In[14]:
+# In[17]:
 
 
 sns.boxplot(data=penguins, x='species', y='body_mass_g', hue='sex')
 
 
-# In[15]:
+# In[18]:
 
 
 #ANOVA 
@@ -404,7 +404,7 @@ import pingouin as pg
 penguins.anova(dv='body_mass_g', between='species', detailed=False)
 
 
-# In[16]:
+# In[19]:
 
 
 # ANOVA VIA SCIPY 
@@ -416,7 +416,7 @@ fvalue, pvalue = stats.f_oneway(penguins.loc[penguins.species=='Adelie', 'body_m
 print(fvalue, pvalue)
 
 
-# In[17]:
+# In[20]:
 
 
 import statsmodels.api as sm

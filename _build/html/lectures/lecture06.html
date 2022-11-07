@@ -234,8 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="lec01.html">
-     Lecture 1
+    <a class="reference internal" href="lecture13.html">
+     Review
     </a>
    </li>
   </ul>
@@ -939,9 +939,6 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A subdirectory or file snow_data already exists.
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  snow_data.zip
   inflating: snow_data/deaths_by_bldg.geojson  
   inflating: snow_data/deaths_by_block.geojson  
@@ -951,6 +948,9 @@ title="Print to PDF"
   inflating: snow_data/pumps.geojson  
   inflating: snow_data/sewergrates_ventilators.geojson  
   inflating: snow_data/subdistricts.geojson  
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A subdirectory or file snow_data already exists.
 </pre></div>
 </div>
 </div>
@@ -1231,18 +1231,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Generate scatter plot</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">death_by_build</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">death_by_build</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">death_by_build</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module &#39;seaborn&#39; has no attribute &#39;histplot&#39;
-</pre></div>
-</div>
-<img alt="../_images/lecture06_22_1.png" src="../_images/lecture06_22_1.png" />
+<img alt="../_images/lecture06_22_0.png" src="../_images/lecture06_22_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1421,7 +1410,7 @@ Euclidean Median coordinates 	 	: [529410.20734233 181027.07075087]
 Manhattan Medi an coordinates 	 	: [529422.525932 181027.12929 ]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\centrography.py:208: UserWarning: Manhattan Median is not unique for even point patterns.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\pointpats\centrography.py:208: UserWarning: Manhattan Median is not unique for even point patterns.
   warnings.warn(s)
 </pre></div>
 </div>
@@ -1439,7 +1428,7 @@ Manhattan Medi an coordinates 	 	: [529422.525932 181027.12929 ]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e715ffd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15990b3f3d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_35_1.png" src="../_images/lecture06_35_1.png" />
@@ -1471,7 +1460,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e7255d80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15991c04220&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_38_1.png" src="../_images/lecture06_38_1.png" />
@@ -1542,7 +1531,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e72cba30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15991c4e830&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_43_1.png" src="../_images/lecture06_43_1.png" />
@@ -1566,7 +1555,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x222e7387790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15991c7feb0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture06_45_1.png" src="../_images/lecture06_45_1.png" />
@@ -1663,7 +1652,7 @@ z-score 25.396444444444445
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.048347097224378154
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p-value: 0.00044906807983339765
 </pre></div>
 </div>
 <img alt="../_images/lecture06_52_1.png" src="../_images/lecture06_52_1.png" />
@@ -1727,10 +1716,10 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([30., 43., 53., 45., 32., 19., 13., 10.,  2.,  3.]),
- array([ 1.41832384,  4.42328832,  7.42825279, 10.43321727, 13.43818175,
-        16.44314622, 19.4481107 , 22.45307518, 25.45803965, 28.46300413,
-        31.46796861]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([45., 71., 69., 29., 26.,  6.,  2.,  1.,  0.,  1.]),
+ array([ 1.94195477,  6.08734859, 10.2327424 , 14.37813622, 18.52353003,
+        22.66892384, 26.81431766, 30.95971147, 35.10510529, 39.2504991 ,
+        43.39589292]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>

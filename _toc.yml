@@ -27,5 +27,5 @@ chapters:
     - file: project/final_report
 - file: lectures
   sections:
-    - file: lectures/lec01
+    - file: lectures/lecture13.ipynb
 

@@ -445,7 +445,6 @@ facets.map(sns.kdeplot, "Values", fill=True, warn_singular=False).add_legend()
 # In[29]:
 
 
-cin_df["ward5"] = model.labels_
 # Setup figure and ax
 f, axs = plt.subplots(1, 2, figsize=(12, 6))
 
@@ -454,7 +453,7 @@ ax = axs[0]
 # Plot unique values choropleth including
 # a legend and with no boundary lines
 cin_df.plot(
-    column="ward5",
+    column="k5cls",
     categorical=True,
     cmap="Set2",
     legend=True,
@@ -471,7 +470,7 @@ ax = axs[1]
 # Plot unique values choropleth including
 # a legend and with no boundary lines
 cin_df.plot(
-    column="k5cls",
+    column="ward5",
     categorical=True,
     cmap="Set3",
     legend=True,
@@ -523,7 +522,7 @@ regi.fit(db_scaled)
 
 cin_df["ward5wq"] = regi.labels_
 # Setup figure and ax
-f, ax = plt.subplots(1, figsize=(9, 9))
+f, ax = plt.subplots(1, figsize=(5, 5))
 # Plot unique values choropleth including a legend and with no boundary lines
 cin_df.plot(
     column="ward5wq",
@@ -570,7 +569,7 @@ medo = kmedoids.fit(db_scaled)
 
 cin_df["medo_k5"] = medo.labels_
 # Setup figure and ax
-f, ax = plt.subplots(1, figsize=(9, 9))
+f, ax = plt.subplots(1, figsize=(5, 5))
 # Plot unique values choropleth including a legend and with no boundary lines
 cin_df.plot(
     column="medo_k5",
@@ -586,6 +585,18 @@ plt.show()
 
 
 # <img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png">
+
+# # Feature Engineering 
+# 
+# * Get $X$ and $Y$ coordinates from block centroids 
+# * Normalize absolute values into percentage points 
+#     * pct_elder
+#     * pct_white
+#     * pct_black 
+#     * pct_own
+#     * pct_rent
+#     * pct_vac
+# * fill missing values with zeroes (for any gaps in our data) 
 
 # In[36]:
 
@@ -617,65 +628,65 @@ new_predictors = ['POPULATION', 'MEDIAN_AGE', 'lng', 'lat', 'pct_elder', 'pct_wh
 db_scaled2 = robust_scale(cin_df2[new_predictors])
 
 
+# In[38]:
+
+
+# Set the seed for reproducibility
+np.random.seed(123456)
+# Specify cluster model with spatial constraint
+xy_norm_model = AgglomerativeClustering(
+    linkage="ward", 
+    #connectivity=w.sparse, 
+    n_clusters=5
+)
+# Fit algorithm to the data
+xy_norm_model.fit(db_scaled2)
+
+
+# In[39]:
+
+
+cin_df2["xy_norm_model"] = xy_norm_model.labels_
+# Setup figure and ax
+f, ax = plt.subplots(1, figsize=(5, 5))
+# Plot unique values choropleth including a legend and with no boundary lines
+cin_df2.plot(
+    column="xy_norm_model",
+    categorical=True,
+    legend=True,
+    linewidth=0,
+    ax=ax,
+)
+# Remove axis
+ax.set_axis_off()
+# Display the map
+plt.show()
+
+
 # In[40]:
 
 
 # Set the seed for reproducibility
 np.random.seed(123456)
 # Specify cluster model with spatial constraint
-regi2 = AgglomerativeClustering(
-    linkage="ward", 
-    #connectivity=w.sparse, 
-    n_clusters=5
-)
-# Fit algorithm to the data
-regi2.fit(db_scaled2)
-
-
-# In[41]:
-
-
-cin_df2["ward5wq"] = regi2.labels_
-# Setup figure and ax
-f, ax = plt.subplots(1, figsize=(9, 9))
-# Plot unique values choropleth including a legend and with no boundary lines
-cin_df2.plot(
-    column="ward5wq",
-    categorical=True,
-    legend=True,
-    linewidth=0,
-    ax=ax,
-)
-# Remove axis
-ax.set_axis_off()
-# Display the map
-plt.show()
-
-
-# In[42]:
-
-
-# Set the seed for reproducibility
-np.random.seed(123456)
-# Specify cluster model with spatial constraint
-regi2 = AgglomerativeClustering(
+xy_norm_geo_model = AgglomerativeClustering(
     linkage="ward", 
     connectivity=w.sparse, 
     n_clusters=5
 )
 # Fit algorithm to the data
-regi2.fit(db_scaled2)
+xy_norm_geo_model.fit(db_scaled2)
 
 
-# In[43]:
+# In[41]:
 
 
-cin_df2["ward5wq"] = regi2.labels_
+cin_df2["xy_norm_geo5"] = xy_norm_geo_model.labels_
 # Setup figure and ax
-f, ax = plt.subplots(1, figsize=(9, 9))
+f, ax = plt.subplots(1, figsize=(5, 5))
 # Plot unique values choropleth including a legend and with no boundary lines
 cin_df2.plot(
-    column="ward5wq",
+    column="xy_norm_geo5",
     categorical=True,
     legend=True,
     linewidth=0,
@@ -685,6 +696,46 @@ cin_df2.plot(
 ax.set_axis_off()
 # Display the map
 plt.show()
+
+
+# # The Final View of Partitioning for Data 
+
+# In[42]:
+
+
+sns.set(font_scale=1)
+fig, axs = plt.subplots(3, 2, figsize=(10, 16))
+
+axs = axs.flatten();
+
+cin_df2.plot(column="k5cls", categorical=True, legend=True, linewidth=0, ax=axs[0]);
+axs[0].set_title('k-Means Clustering (k=5)', fontsize=14);
+
+cin_df2.plot(column="ward5", categorical=True, legend=True, linewidth=0, ax=axs[1]);
+axs[1].set_title('AHC Clustering (k=5)', fontsize=14);
+
+cin_df2.plot(column="ward5wq", categorical=True, legend=True, linewidth=0, ax=axs[2]);
+axs[2].set_title('Regionalized AHC Clustering (k=5)', fontsize=14);
+
+cin_df2.plot(column="medo_k5", categorical=True, legend=True, linewidth=0, ax=axs[3]);
+axs[3].set_title('k-Medoids Clustering (k=5)', fontsize=14);
+
+cin_df2.plot(column="xy_norm_model", categorical=True, legend=True, linewidth=0, ax=axs[4]);
+axs[4].set_title('AHC Clustering with Normalized Variables \n and Geographic Coordinates  (k=5)', fontsize=14);
+
+cin_df2.plot(column="xy_norm_geo5", categorical=True, legend=True, linewidth=0, ax=axs[5]);
+axs[5].set_title('AHC Clustering with Normalized Variables \n and Geographic Coordinates and Contiguity  (k=5)', fontsize=14);
+
+[i.set_axis_off() for i in axs]
+plt.subplots_adjust(hspace=-0.45)
+fig.savefig('all_clust.png', bbox_inches='tight')
+plt.close()
+
+
+# In[43]:
+
+
+Image(filename='all_clust.png') 
 
 
 # # Questions

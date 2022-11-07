@@ -187,7 +187,7 @@ sns.histplot(x="x", y="y", data=death_by_build, bins=9, cbar=True, cmap="Reds");
 ax.scatter(death_by_build.x, death_by_build.y, color='r', s=20, ec='k');
 
 
-# In[11]:
+# In[12]:
 
 
 f, ax = plt.subplots()
@@ -209,14 +209,14 @@ plt.colorbar(hb)
 ax.set_axis_off()
 
 
-# In[12]:
+# In[13]:
 
 
 # Generate scatter plot
 sns.jointplot(x="x", y="y", data=death_by_build, kind='hex', color='red');
 
 
-# In[13]:
+# In[14]:
 
 
 f, ax = plt.subplots()
@@ -241,7 +241,7 @@ ax.scatter(death_by_build.x, death_by_build.y, color='r', s=20, ec='k')
 ax.set_axis_off()
 
 
-# In[14]:
+# In[15]:
 
 
 g = sns.jointplot(data=death_by_build, x="x", y="y", color='red')
@@ -290,7 +290,7 @@ g.ax_joint.set_axis_off() # turn axis off
 # min  f(x_{em},y_{em})= \sum^n_{i=1} \sqrt{(x_i-x_{em})^2+(y_i-y_{em})^2}
 # $$
 
-# In[15]:
+# In[16]:
 
 
 #import centragraphy analysis functions 
@@ -299,7 +299,7 @@ from pointpats.centrography import std_distance,euclidean_median,ellipse
 from pointpats import PointPattern
 
 
-# In[16]:
+# In[17]:
 
 
 # extract coords from the dataframe and stack them in lng/lat format for using pointpats package
@@ -308,7 +308,7 @@ points = np.stack((death_by_build.x.to_numpy(), death_by_build.y.to_numpy()), ax
 pp = PointPattern(points) #create a point pattern "pp" from list 
 
 
-# In[17]:
+# In[18]:
 
 
 weights = death_by_build.deaths # extract weights for weighted mean 
@@ -324,7 +324,7 @@ print('Euclidean Median coordinates \t \t:', em)
 print('Manhattan Medi an coordinates \t \t:', mm)
 
 
-# In[18]:
+# In[19]:
 
 
 pp.plot()
@@ -345,7 +345,7 @@ plt.legend(numpoints=1)
 # SD = \displaystyle \sqrt{\frac{\sum^n_{i=1}(x_i-x_{m})^2}{n} + \frac{\sum^n_{i=1}(y_i-y_{m})^2}{n}}
 # $$
 
-# In[19]:
+# In[20]:
 
 
 stdd = std_distance(pp.points)
@@ -374,7 +374,7 @@ plt.legend(numpoints=1)
 # \theta = \displaystyle \arctan{\{ (\sum_i(x_i-\bar{x})^2-\sum_i(y_i-\bar{y})^2) + \frac{[(\sum_i(x_i-\bar{x})^2-\sum_i(y_i-\bar{y})^2)^2 + 4(\sum_i(x-\bar{x})(y_i-\bar{y}))^2]^\frac{1}{2}}{2\sum_i(x-\bar{x})(y_i-\bar{y})}\}}
 # $$
 
-# In[20]:
+# In[21]:
 
 
 sx, sy, theta = ellipse(pp.points)
@@ -402,7 +402,7 @@ show()
 # 
 # > The convex hull of a point pattern pp is the smallest convex set that contains pp. 
 
-# In[21]:
+# In[22]:
 
 
 pp.plot(title='Centers', hull=True ) #plot point pattern "pp" as well as its convex hull
@@ -417,7 +417,7 @@ plt.legend(numpoints=1)
 # 
 # > Minimum Bounding Rectangle (Box) is the same as the minimum bounding Rectangle of its convex hull. Thus, it is almost always bigger than convex hull.
 
-# In[22]:
+# In[23]:
 
 
 pp.plot(title='Centers',  hull=True , window=True )#plot point pattern "pp", convex hull, and Minimum Bounding Rectangle
@@ -455,7 +455,7 @@ plt.legend(numpoints=1)
 # 
 # $\alpha=0.05$
 
-# In[23]:
+# In[24]:
 
 
 from pointpats import (
@@ -468,7 +468,7 @@ print(f'p-value: {qstat.chi2_pvalue}')
 qstat.plot()
 
 
-# In[24]:
+# In[25]:
 
 
 list_counts = np.array([2,12,10,35,56,38,23,60,14])
@@ -491,7 +491,7 @@ print('z-score', z)
 
 # ## If $z$ is not within $z_l \leq z \leq z_h$, where $z$ comes from the $z$-table and $z_l=-1.96$ and $z_h=1.96$, we cannot accept the null hypothesis. 
 
-# In[25]:
+# In[27]:
 
 
 hull = centrography.ConvexHull(pp.points)
@@ -521,7 +521,7 @@ ran_qstat.plot()
 # \bar{d}_{min}=\frac{1}{n} \sum_{i=1}^n d_{min}(s_i)
 # $$
 
-# In[26]:
+# In[28]:
 
 
 tt = pp.knn()
@@ -529,7 +529,7 @@ tt = pp.knn()
 plt.hist(tt[1])
 
 
-# In[27]:
+# In[29]:
 
 
 # tt = pp.knn(3)
@@ -537,7 +537,7 @@ plt.hist(tt[1])
 # plt.hist(new_tt)
 
 
-# In[28]:
+# In[30]:
 
 
 random_point_pattern = PointPattern(random_poisson)

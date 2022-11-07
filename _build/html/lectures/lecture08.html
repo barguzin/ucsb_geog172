@@ -1162,7 +1162,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>18.7</td>
       <td>181.0</td>
       <td>3750.0</td>
-      <td>Male</td>
+      <td>MALE</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1172,7 +1172,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>17.4</td>
       <td>186.0</td>
       <td>3800.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1182,7 +1182,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>18.0</td>
       <td>195.0</td>
       <td>3250.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1202,7 +1202,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>19.3</td>
       <td>193.0</td>
       <td>3450.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1232,7 +1232,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>14.3</td>
       <td>215.0</td>
       <td>4850.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>341</th>
@@ -1242,7 +1242,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>15.7</td>
       <td>222.0</td>
       <td>5750.0</td>
-      <td>Male</td>
+      <td>MALE</td>
     </tr>
     <tr>
       <th>342</th>
@@ -1252,7 +1252,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>14.8</td>
       <td>212.0</td>
       <td>5200.0</td>
-      <td>Female</td>
+      <td>FEMALE</td>
     </tr>
     <tr>
       <th>343</th>
@@ -1262,7 +1262,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
       <td>16.1</td>
       <td>213.0</td>
       <td>5400.0</td>
-      <td>Male</td>
+      <td>MALE</td>
     </tr>
   </tbody>
 </table>
@@ -1288,7 +1288,7 @@ If our p-value is greater than $\alpha$, there is not enough evidence to reject 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Frequency&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: ylabel=&#39;Frequency&#39;&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture08_26_1.png" src="../_images/lecture08_26_1.png" />
@@ -1376,16 +1376,12 @@ We conclude that there is enough statistical evidence that indicates that the me
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># QQPLOT </span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">penguins</span><span class="o">.</span><span class="n">flipper_length_mm</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pingouin&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
 </pre></div>
 </div>
+<img alt="../_images/lecture08_32_1.png" src="../_images/lecture08_32_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1514,6 +1510,16 @@ $$</p>
       <td>FEMALE</td>
     </tr>
     <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <th>4</th>
       <td>Adelie</td>
       <td>Torgersen</td>
@@ -1522,16 +1528,6 @@ $$</p>
       <td>193.0</td>
       <td>3450.0</td>
       <td>FEMALE</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Adelie</td>
-      <td>Torgersen</td>
-      <td>39.3</td>
-      <td>20.6</td>
-      <td>190.0</td>
-      <td>3650.0</td>
-      <td>MALE</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1544,14 +1540,14 @@ $$</p>
       <td>...</td>
     </tr>
     <tr>
-      <th>338</th>
+      <th>339</th>
       <td>Gentoo</td>
       <td>Biscoe</td>
-      <td>47.2</td>
-      <td>13.7</td>
-      <td>214.0</td>
-      <td>4925.0</td>
-      <td>FEMALE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>340</th>
@@ -1595,7 +1591,7 @@ $$</p>
     </tr>
   </tbody>
 </table>
-<p>333 rows × 7 columns</p>
+<p>344 rows × 7 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">

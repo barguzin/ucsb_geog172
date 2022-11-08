@@ -1,7 +1,7 @@
-# Lab 6
+# Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
 
 ````{caution}
-This lab will provide you with an opportunity to practice exploratory spatial data analysis (ESDA), and specifically the local indicators of spatial association. The second part will focus on working through your Data Interim Report (due November 6, 2022). Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1ebEcCaaKR_SWizV5hxtzCj26NDWNICAt?usp=sharing) and copying it to your Google Drive. 
+This lab will provide you with an opportunity to practice exploratory spatial data analysis (ESDA), and specifically the local indicators of spatial association. The second part will focus on working through your Data Interim Report (due November 13, 2022). Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1ebEcCaaKR_SWizV5hxtzCj26NDWNICAt?usp=sharing) and copying it to your Google Drive. 
 ````
 
 ````{important}

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lab 7: &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    <title>Lab 7: Clustering the Blocks of Cincinnati &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lab 8:" href="lab8.html" />
-    <link rel="prev" title="Lab 6" href="lab6.html" />
+    <link rel="prev" title="Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas." href="lab6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="lab1.html">
-     Lab 1 - Google Colab, Markdown and Python
+     Lab 1: Google Colab, Markdown and Python
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lab4.html">
-     Lab 4: Inferential Statistics
+     Lab 4: Inferential Statistics for Penguins
     </a>
    </li>
    <li class="toctree-l2">
@@ -178,12 +178,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lab6.html">
-     Lab 6
+     Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Lab 7:
+     Lab 7: Clustering the Blocks of Cincinnati
     </a>
    </li>
    <li class="toctree-l2">
@@ -236,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lectures/lecture13.html">
-     Review
+    <a class="reference internal" href="../lectures/lec01.html">
+     Lecture 1 Notes
     </a>
    </li>
   </ul>
@@ -397,23 +397,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lab 7:</h1>
+                <h1>Lab 7: Clustering the Blocks of Cincinnati</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -421,8 +458,35 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lab-7">
-<h1>Lab 7:<a class="headerlink" href="#lab-7" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-7-clustering-the-blocks-of-cincinnati">
+<h1>Lab 7: Clustering the Blocks of Cincinnati<a class="headerlink" href="#lab-7-clustering-the-blocks-of-cincinnati" title="Permalink to this headline">#</a></h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This lab will provide you with an opportunity to investigate the spatial crime patterns in Cincinnati. The second part will focus on working through your Data Interim Report (due November 13, 2022). Please start by opening <a class="reference external" href="https://colab.research.google.com/drive/1F3rv7hDzxOVMPxy--D5DpYDUUMkRqe1A?usp=sharing">this Google Colab notebook</a> and copying it to your Google Drive.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please submit your lab by modifying the notebook available at the link above!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to submit the lab by <strong>November 14 / 15, 2022</strong>, depending on the scheduled time of your section.</p>
+</div>
+<hr class="docutils" />
+<section id="lab-instructions">
+<h2>Lab Instructions<a class="headerlink" href="#lab-instructions" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create a histogram for the following variables: ‘BURGLARY’, ‘ASSAULT’, ‘THEFT’</p></li>
+<li><p>Create a choropleth map for the three variables</p></li>
+<li><p>Calculate Global Moran’s I for for the three variables</p></li>
+<li><p>Create LISA (Local Moran’s I) maps for the three variables</p></li>
+<li><p>Scale your data using robust_scale()</p></li>
+<li><p>Run hierarchical clustering and plot your results on a geographic map</p></li>
+<li><p>Run hierarchical clustering with contiguity constraints and plot your results on a geographic map</p></li>
+<li><p>Compare two geographic maps with clusters and explain which of the partitioning should be preferred and why.</p></li>
+<li><p>Submit to GauchoSpace.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -456,7 +520,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lab 6</p>
+            <p class="prev-next-title">Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="lab8.html" title="next page">

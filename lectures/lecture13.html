@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Lectures" href="../lectures.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
    Syllabus
@@ -152,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab1.html">
-     Lab 1 - Google Colab, Markdown and Python
+     Lab 1: Google Colab, Markdown and Python
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab4.html">
-     Lab 4: Inferential Statistics
+     Lab 4: Inferential Statistics for Penguins
     </a>
    </li>
    <li class="toctree-l2">
@@ -177,12 +176,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab6.html">
-     Lab 6
+     Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab7.html">
-     Lab 7:
+     Lab 7: Clustering the Blocks of Cincinnati
     </a>
    </li>
    <li class="toctree-l2">
@@ -224,19 +223,19 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lectures.html">
    Lectures
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Review
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1 Notes
     </a>
    </li>
   </ul>
@@ -781,6 +780,13 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="using-pysal-example-data">
@@ -797,11 +803,6 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
-Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
-  return warn(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Cincinnati
 </pre></div>
 </div>
@@ -1438,7 +1439,7 @@ C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifie
     <tr>
       <th>AGE_65</th>
       <td>0.127756</td>
-      <td>0.002</td>
+      <td>0.001</td>
     </tr>
     <tr>
       <th>WHITE</th>
@@ -1453,7 +1454,7 @@ C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifie
     <tr>
       <th>ASIAN</th>
       <td>0.057050</td>
-      <td>0.008</td>
+      <td>0.010</td>
     </tr>
     <tr>
       <th>NH_WHITE</th>
@@ -2362,7 +2363,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x28db7859000&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ecf9c7a560&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture13_45_1.png" src="../_images/lecture13_45_1.png" />
@@ -2762,13 +2763,6 @@ dtype: int64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../lectures.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lectures</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>

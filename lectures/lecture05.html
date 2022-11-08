@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab1.html">
-     Lab 1 - Google Colab, Markdown and Python
+     Lab 1: Google Colab, Markdown and Python
     </a>
    </li>
    <li class="toctree-l2">
@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab4.html">
-     Lab 4: Inferential Statistics
+     Lab 4: Inferential Statistics for Penguins
     </a>
    </li>
    <li class="toctree-l2">
@@ -176,12 +176,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab6.html">
-     Lab 6
+     Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab7.html">
-     Lab 7:
+     Lab 7: Clustering the Blocks of Cincinnati
     </a>
    </li>
    <li class="toctree-l2">
@@ -234,8 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="lecture13.html">
-     Review
+    <a class="reference internal" href="lec01.html">
+     Lecture 1 Notes
     </a>
    </li>
   </ul>
@@ -1120,7 +1120,7 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 9)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_15392\270685699.py:6: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_30280\270685699.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -1823,12 +1823,12 @@ bins: [  1.   45.2  89.4 133.6 177.8 222. ]
 <span class="g g-Whitespace">   </span><span class="mi">1802</span>     <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="ne">-&gt; </span><span class="mi">1803</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">_fisher_jenks_means</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])</span>
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:549,</span> in <span class="ni">_fisher_jenks_means</span><span class="nt">(values, classes, sort)</span>
-<span class="g g-Whitespace">    </span><span class="mi">547</span> <span class="k">if</span> <span class="n">i4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">548</span>     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">classes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">549</span>         <span class="k">if</span> <span class="n">mat2</span><span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">mat2</span><span class="p">[</span><span class="n">i4</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]):</span>
-<span class="g g-Whitespace">    </span><span class="mi">550</span>             <span class="n">mat1</span><span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i3</span>
-<span class="g g-Whitespace">    </span><span class="mi">551</span>             <span class="n">mat2</span><span class="p">[</span><span class="n">l</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">mat2</span><span class="p">[</span><span class="n">i4</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py:544,</span> in <span class="ni">_fisher_jenks_means</span><span class="nt">(values, classes, sort)</span>
+<span class="g g-Whitespace">    </span><span class="mi">542</span> <span class="n">s2</span> <span class="o">+=</span> <span class="n">val</span> <span class="o">*</span> <span class="n">val</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span> <span class="n">s1</span> <span class="o">+=</span> <span class="n">val</span>
+<span class="ne">--&gt; </span><span class="mi">544</span> <span class="n">w</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">545</span> <span class="n">v</span> <span class="o">=</span> <span class="n">s2</span> <span class="o">-</span> <span class="p">(</span><span class="n">s1</span> <span class="o">*</span> <span class="n">s1</span><span class="p">)</span> <span class="o">/</span> <span class="n">w</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span> <span class="n">i4</span> <span class="o">=</span> <span class="n">i3</span> <span class="o">-</span> <span class="mi">1</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

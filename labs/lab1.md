@@ -1,4 +1,4 @@
-# Lab 1 - Google Colab, Markdown and Python
+# Lab 1: Google Colab, Markdown and Python
 
 This lab will teach you how to use some important tools that you will be extensively using throughout this course: 
 

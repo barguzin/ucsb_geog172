@@ -1,4 +1,4 @@
-# Lab 4: Inferential Statistics 
+# Lab 4: Inferential Statistics for Penguins
 
 ````{caution}
 This lab will provide an opportunity to practice inferential statistics in Python. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1waie4zvnE4Vc6rDYcDDzJ_u1ixrmKmEv?usp=sharing) and copying it to your Google Drive. 

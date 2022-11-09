@@ -627,22 +627,22 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: geopandas in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (0.11.1)
 Requirement already satisfied: shapely in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.8.4)
 Requirement already satisfied: fiona in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.8.21)
-Requirement already satisfied: pyproj in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (3.4.0)
-Requirement already satisfied: rtree in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (0.9.7)
-Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from geopandas) (1.4.4)
+Requirement already satisfied: pyproj in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (3.3.1)
+Requirement already satisfied: rtree in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (1.0.0)
 Requirement already satisfied: packaging in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from geopandas) (21.3)
+Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from geopandas) (1.4.3)
 Requirement already satisfied: attrs&gt;=17 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (21.4.0)
 Requirement already satisfied: certifi in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (2022.9.24)
-Requirement already satisfied: click&gt;=4.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (8.0.4)
+Requirement already satisfied: click&gt;=4.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (8.1.3)
 Requirement already satisfied: cligj&gt;=0.5 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (0.7.2)
 Requirement already satisfied: click-plugins&gt;=1.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (1.1.1)
 Requirement already satisfied: six&gt;=1.7 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (1.16.0)
 Requirement already satisfied: munch in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (2.5.0)
-Requirement already satisfied: setuptools in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (65.5.0)
+Requirement already satisfied: setuptools in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from fiona) (59.8.0)
 Requirement already satisfied: colorama in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from click&gt;=4.0-&gt;fiona) (0.4.5)
+Requirement already satisfied: numpy&gt;=1.21.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (1.22.0)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.21.0 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (1.23.3)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2022.1)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from pandas&gt;=1.0.0-&gt;geopandas) (2022.2.1)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\barguzin\anaconda3\envs\geo_env\lib\site-packages (from packaging-&gt;geopandas) (3.0.9)
 </pre></div>
 </div>
@@ -671,7 +671,8 @@ Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\barguzin\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>File &#39;fire_perims.zip&#39; already there; not retrieving.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;wget&#39; is not recognized as an internal or external command,
+operable program or batch file.
 </pre></div>
 </div>
 </div>
@@ -683,7 +684,8 @@ Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\barguzin\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Archive:  fire_perims.zip
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;unzip&#39; is not recognized as an internal or external command,
+operable program or batch file.
 </pre></div>
 </div>
 </div>
@@ -1411,7 +1413,7 @@ epsg:4326
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean 4342.1049991099635
 median 135.8330841064453
-std 28498.10488152866
+std 28498.104881528623
 </pre></div>
 </div>
 </div>
@@ -1491,7 +1493,7 @@ std 28498.10488152866
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28624990.01473281
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28624990.013936557
 </pre></div>
 </div>
 </div>
@@ -1623,7 +1625,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 3)
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1652,9 +1654,33 @@ dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>NaN</td>
-      <td>-99</td>
-      <td>-99</td>
+      <td>191012</td>
+      <td>57.7</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>191112</td>
+      <td>55.4</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>191212</td>
+      <td>55.5</td>
+      <td>-1.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>191312</td>
+      <td>56.4</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>191412</td>
+      <td>57.4</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -1682,82 +1708,62 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">Input In [38],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># prep year </span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># convert to </span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span> <span class="o">=</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span> <span class="o">=</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">date_year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date_year&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ca_temps</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\generic.py:5912,</span> in <span class="ni">NDFrame.astype</span><span class="nt">(self, dtype, copy, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5905</span>     <span class="n">results</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">   </span><span class="mi">5906</span>         <span class="bp">self</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
-<span class="nn">   5907         for i</span> in <span class="ni">range(len</span><span class="nt">(self.columns))</span>
-<span class="g g-Whitespace">   </span><span class="mi">5908</span>     <span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">5910</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">5911</span>     <span class="c1"># else, only a single dtype is given</span>
-<span class="ne">-&gt; </span><span class="mi">5912</span>     <span class="n">new_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5913</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_constructor</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;astype&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5915</span> <span class="c1"># GH 33113: handle empty frame or series</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\internals\managers.py:419,</span> in <span class="ni">BaseBlockManager.astype</span><span class="nt">(self, dtype, copy, errors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">418</span> <span class="k">def</span> <span class="nf">astype</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">errors</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;raise&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">419</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="s2">&quot;astype&quot;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\internals\managers.py:304,</span> in <span class="ni">BaseBlockManager.apply</span><span class="nt">(self, f, align_keys, ignore_failures, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span>         <span class="n">applied</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">304</span>         <span class="n">applied</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">)(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">NotImplementedError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">ignore_failures</span><span class="p">:</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\internals\blocks.py:580,</span> in <span class="ni">Block.astype</span><span class="nt">(self, dtype, copy, errors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">563</span><span class="sd"> Coerce to the new dtype.</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">576</span><span class="sd"> Block</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span> <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span>
-<span class="ne">--&gt; </span><span class="mi">580</span> <span class="n">new_values</span> <span class="o">=</span> <span class="n">astype_array_safe</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">582</span> <span class="n">new_values</span> <span class="o">=</span> <span class="n">maybe_coerce_values</span><span class="p">(</span><span class="n">new_values</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="n">newb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_block</span><span class="p">(</span><span class="n">new_values</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\dtypes\cast.py:1292,</span> in <span class="ni">astype_array_safe</span><span class="nt">(values, dtype, copy, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1289</span>     <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="o">.</span><span class="n">numpy_dtype</span>
-<span class="g g-Whitespace">   </span><span class="mi">1291</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1292</span>     <span class="n">new_values</span> <span class="o">=</span> <span class="n">astype_array</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1293</span> <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1294</span>     <span class="c1"># e.g. astype_nansafe can fail on object-dtype of strings</span>
-<span class="g g-Whitespace">   </span><span class="mi">1295</span>     <span class="c1">#  trying to convert to float</span>
-<span class="g g-Whitespace">   </span><span class="mi">1296</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;ignore&quot;</span><span class="p">:</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\dtypes\cast.py:1237,</span> in <span class="ni">astype_array</span><span class="nt">(values, dtype, copy)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1234</span>     <span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1236</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1237</span>     <span class="n">values</span> <span class="o">=</span> <span class="n">astype_nansafe</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1239</span> <span class="c1"># in pandas we don&#39;t store numpy str dtypes, so convert to object</span>
-<span class="g g-Whitespace">   </span><span class="mi">1240</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\core\dtypes\cast.py:1154,</span> in <span class="ni">astype_nansafe</span><span class="nt">(arr, dtype, copy, skipna)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1150</span> <span class="k">elif</span> <span class="n">is_object_dtype</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1151</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1152</span>     <span class="c1"># work around NumPy brokenness, #1987</span>
-<span class="g g-Whitespace">   </span><span class="mi">1153</span>     <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1154</span>         <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">astype_intsafe</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1156</span>     <span class="c1"># if we have a datetime/timedelta array of objects</span>
-<span class="g g-Whitespace">   </span><span class="mi">1157</span>     <span class="c1"># then coerce to a proper dtype and recall astype_nansafe</span>
-<span class="g g-Whitespace">   </span><span class="mi">1159</span>     <span class="k">elif</span> <span class="n">is_datetime64_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pandas\_libs\lib.pyx:668,</span> in <span class="ni">pandas._libs.lib.astype_intsafe</span><span class="nt">()</span>
-
-<span class="ne">ValueError</span>: cannot convert float NaN to integer
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>temp</th>
+      <th>anomaly</th>
+    </tr>
+    <tr>
+      <th>date_year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2005</th>
+      <td>58.6</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>58.6</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>58.9</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>58.9</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <td>58.8</td>
+      <td>1.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1834,7 +1840,9 @@ int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5250, 15)
-(5626, 17)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5626, 17)
 </pre></div>
 </div>
 </div>
@@ -1846,10 +1854,7 @@ int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-c9a2d474-b33d-4843-a762-8540c54e25a8">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1884,9 +1889,6 @@ int64
       <th>dur_days</th>
       <th>index_right</th>
       <th>name</th>
-      <th>cartodb_id</th>
-      <th>created_at</th>
-      <th>updated_at</th>
     </tr>
   </thead>
   <tbody>
@@ -1905,13 +1907,10 @@ int64
       <td>None</td>
       <td>3252.523280</td>
       <td>4.435447e+05</td>
-      <td>MULTIPOLYGON (((-13508442.409 4705925.209, -13...</td>
+      <td>MULTIPOLYGON (((-13508442.691 4705925.734, -13...</td>
       <td>5.0</td>
       <td>50.0</td>
       <td>Placer</td>
-      <td>31.0</td>
-      <td>2015-07-04T21:04:58+00:00</td>
-      <td>2015-07-04T21:04:58+00:00</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1928,13 +1927,10 @@ int64
       <td>None</td>
       <td>9653.760308</td>
       <td>2.774464e+06</td>
-      <td>MULTIPOLYGON (((-13508926.470 4695975.605, -13...</td>
+      <td>MULTIPOLYGON (((-13508926.724 4695976.079, -13...</td>
       <td>3.0</td>
       <td>50.0</td>
       <td>Placer</td>
-      <td>31.0</td>
-      <td>2015-07-04T21:04:58+00:00</td>
-      <td>2015-07-04T21:04:58+00:00</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1951,13 +1947,10 @@ int64
       <td>None</td>
       <td>1577.155857</td>
       <td>5.233211e+04</td>
-      <td>MULTIPOLYGON (((-13500067.208 4716383.997, -13...</td>
+      <td>MULTIPOLYGON (((-13500067.530 4716384.517, -13...</td>
       <td>1.0</td>
       <td>50.0</td>
       <td>Placer</td>
-      <td>31.0</td>
-      <td>2015-07-04T21:04:58+00:00</td>
-      <td>2015-07-04T21:04:58+00:00</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1974,13 +1967,10 @@ int64
       <td>None</td>
       <td>1035.787625</td>
       <td>4.174722e+04</td>
-      <td>MULTIPOLYGON (((-13503127.052 4791691.861, -13...</td>
+      <td>MULTIPOLYGON (((-13503127.248 4791692.208, -13...</td>
       <td>5.0</td>
       <td>42.0</td>
       <td>Yuba</td>
-      <td>58.0</td>
-      <td>2015-07-04T21:04:58+00:00</td>
-      <td>2015-07-04T21:04:58+00:00</td>
     </tr>
     <tr>
       <th>6</th>
@@ -1997,93 +1987,14 @@ int64
       <td>None</td>
       <td>7596.639583</td>
       <td>1.525302e+06</td>
-      <td>MULTIPOLYGON (((-13511624.004 4738027.149, -13...</td>
+      <td>MULTIPOLYGON (((-13511624.292 4738027.675, -13...</td>
       <td>1.0</td>
       <td>42.0</td>
       <td>Yuba</td>
-      <td>58.0</td>
-      <td>2015-07-04T21:04:58+00:00</td>
-      <td>2015-07-04T21:04:58+00:00</td>
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c9a2d474-b33d-4843-a762-8540c54e25a8')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-c9a2d474-b33d-4843-a762-8540c54e25a8 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c9a2d474-b33d-4843-a762-8540c54e25a8');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-</div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2101,10 +2012,7 @@ int64
 top 10 counties with most fires
 </pre></div>
 </div>
-<div class="output text_html">
-  <div id="df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2179,83 +2087,7 @@ top 10 counties with most fires
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-eca47d2e-6a17-4e74-a586-7dcfdbd8ec2c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-</div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2268,10 +2100,7 @@ top 10 counties with most fires
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bottom 10 counties with most fires
 </pre></div>
 </div>
-<div class="output text_html">
-  <div id="df-090a000b-f41e-4127-9302-dbb9fbb6cded">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2346,83 +2175,7 @@ top 10 counties with most fires
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-090a000b-f41e-4127-9302-dbb9fbb6cded')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-090a000b-f41e-4127-9302-dbb9fbb6cded button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-090a000b-f41e-4127-9302-dbb9fbb6cded');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-</div></div>
+</div></div></div>
 </div>
 <section id="optional-plot-number-of-fires-in-top-10-counties-in-california-over-time">
 <h2>Optional: plot number of fires in top 10 counties in California over time<a class="headerlink" href="#optional-plot-number-of-fires-in-top-10-counties-in-california-over-time" title="Permalink to this headline">#</a></h2>
@@ -2437,9 +2190,14 @@ top 10 counties with most fires
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content
-Mounted at /content/drive/
-/content
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># if you want to save file to your google drive </span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google&#39;
 </pre></div>
 </div>
 </div>

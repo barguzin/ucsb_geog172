@@ -94,7 +94,7 @@ import seaborn as sns
 # In[2]:
 
 
-get_ipython().system('wget https://github.com/barguzin/geo_data/raw/main/snow_data.zip -O snow_data.zip -nc ')
+get_ipython().system('wget https://github.com/barguzin/geo_data/raw/main/snow_data.zip -O snow_data.zip -nc')
 
 
 # In[3]:

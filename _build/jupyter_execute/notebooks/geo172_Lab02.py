@@ -25,13 +25,13 @@ import numpy as np
 # In[3]:
 
 
-get_ipython().system(' wget https://frap.fire.ca.gov/media/3ufh3ajg/fire21_1.zip -O fire_perims.zip -nc ')
+get_ipython().system(' wget https://frap.fire.ca.gov/media/3ufh3ajg/fire21_1.zip -O fire_perims.zip -nc')
 
 
 # In[4]:
 
 
-get_ipython().system(' unzip -n fire_perims.zip ')
+get_ipython().system(' unzip -n fire_perims.zip')
 
 
 # In[5]:
@@ -393,7 +393,7 @@ ax2.set_title('Total duration of wildfires in CA')
 
 # Let's imagine you work at the county GIS Department. You are tasked to describe the wildfire situation in that county. We need to be able to subset our data set by county. For that we need to run spatial join. 
 
-# In[45]:
+# In[42]:
 
 
 # join fires to counties 
@@ -408,7 +408,7 @@ print(sj.shape) # total number of fires after join - notice some were duplicated
 sj.head()
 
 
-# In[52]:
+# In[44]:
 
 
 fires_by_county = sj.groupby(['name'])['INC_NUM'].size().reset_index()
@@ -419,7 +419,7 @@ print('top 10 counties with most fires')
 fires_by_county[::-1][:10]
 
 
-# In[54]:
+# In[45]:
 
 
 print('bottom 10 counties with most fires')
@@ -428,7 +428,7 @@ fires_by_county[:10]
 
 # #### Optional: plot number of fires in top 10 counties in California over time
 
-# In[56]:
+# In[46]:
 
 
 from google.colab import drive

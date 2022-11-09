@@ -20,7 +20,7 @@ To view the HTML version of the lecture please open the link, save it to your co
 |11|Lecture 11|Local Spatial Autocorrelation|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture11.html)|[PDF](https://drive.google.com/file/d/1S2nzjzdnws9YIBBMZqYgyLgSHXTtnY-0/view?usp=sharing)|[IPYNB](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture11.ipynb)|
 |12|Lecture 12|From Distance Functions to Clustering|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture12.html)|[PDF](https://drive.google.com/file/d/1gfCQogWXgwN9tTeD5wRSKD_eczNDX93B/view?usp=sharing)|[IPYNB](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture12.ipynb)|
 |13|Lecture 13|Clustering and Regionalization|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture13.html)|[PDF](https://drive.google.com/file/d/1GJa4RfxV85caymDDo9R22THkCg77_daz/view?usp=sharing)|[IPYNB](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture13.ipynb)|
-|14|Lecture 14||[HTML]()|[PDF]()|[IPYNB]()|
+|14|Lecture 14|Clustering Diagnostics|[HTML](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture14.html)|[PDF](https://drive.google.com/file/d/1fMbc-jldgZ25Ys4F537bDRi-ZxyifCYX/view?usp=sharing)|[IPYNB](https://raw.githubusercontent.com/barguzin/ucsb_geog172/main/lectures/lecture14.ipynb)|
 |15|Lecture 15||[HTML]()|[PDF]()|[IPYNB]()|
 |16|Lecture 16||[HTML]()|[PDF]()|[IPYNB]()|
 |17|Lecture 17||[HTML]()|[PDF]()|[IPYNB]()|

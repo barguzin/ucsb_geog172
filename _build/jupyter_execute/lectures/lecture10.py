@@ -125,7 +125,7 @@ print(
 # I_B = \frac{\sum_i (\sum_j w_{ij} y_j \times x_i)}{ \sum_i x_i^2},
 # $$
 
-# In[8]:
+# In[6]:
 
 
 from esda.moran import Moran_BV
@@ -137,7 +137,7 @@ moran_bv = Moran_BV(y, x, w)
 print(f"Bivariate Moran's I: {round(moran_bv.I, 3)}")
 
 
-# In[11]:
+# In[7]:
 
 
 import scipy 
@@ -150,7 +150,7 @@ plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, 1))(np.unique(x)))
 r, p = scipy.stats.pearsonr(x, y) 
 
 
-# In[12]:
+# In[8]:
 
 
 from splot.esda import plot_moran_bv_simulation, plot_moran_bv
@@ -162,7 +162,7 @@ plt.show()
 
 # # Bivariate Moran Facet Matrix
 
-# In[13]:
+# In[9]:
 
 
 from esda.moran import Moran_BV_matrix
@@ -176,7 +176,7 @@ fig.savefig('moran_facet.png')
 plt.close()
 
 
-# In[14]:
+# In[10]:
 
 
 from IPython.display import Image

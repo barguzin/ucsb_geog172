@@ -1,0 +1,1780 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Correction &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1: Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2: Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3: Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics for Penguins
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5: Means, Correlations and Autocorrelation.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab7.html">
+     Lab 7: Clustering the Blocks of Cincinnati
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1 Notes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture15.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture15.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture15.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Correction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-optimal-number-of-clusters-on-this-plot-is-3-the-closer-to-1-the-better">
+     The optimal number of clusters on this plot is 3! (The closer to +1 the better).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#announcements">
+   Announcements
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-refresher">
+   Correlation Refresher
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-ways-to-understand-regression">
+   Different Ways to Understand Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-we-do-analysis-on-this-data">
+   How do we do analysis on this data?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression">
+   Regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression-implies-modeling-dependent-variable-outcome-using-one-or-more-independent-variables-predictors">
+     Regression implies modeling
+     <strong>
+      dependent
+     </strong>
+     variable (outcome) using one or more
+     <strong>
+      independent
+     </strong>
+     variables (predictors)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-modeling-statistical-framework">
+   The Modeling (statistical) Framework
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-statistical-geometric-framework">
+   Combining statistical + geometric framework
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometry-optimization">
+   Geometry + Optimization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understanding-regression-equation">
+   Understanding Regression Equation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caution">
+   Caution ⚠️
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#order-in-regression-matters-typically-predictor-goes-first-and-outcome-goes-second-we-are-modeling-the-log-price-as-a-function-of-the-number-of-people-that-the-apartment-from-the-listing-can-accommodate">
+     Order in regression matters (typically, predictor goes first and outcome goes second)! We are modeling the log(price) as a function of the number of people that the apartment from the listing can accommodate.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-regression">
+   Multiple Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-equation">
+   Regression Equation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariate-general-case">
+   Multivariate (general) Case
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantifying-the-fit-of-the-regression">
+   Quantifying the Fit of the Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-fit-interpretable-r-squared">
+   Making Fit Interpretable - R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-r-squared">
+   Interpreting R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adjusted-r-squared">
+   Adjusted R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-and-regression-connection">
+   Correlation and Regression Connection
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-regression-with-all-predictors">
+   Running regression with all predictors
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-and-regression">
+   Hypothesis Testing and Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-calculation">
+   Hypothesis Testing (Calculation)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Hypothesis Testing (Calculation)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-hypothesis-tests-not-covered-in-class">
+   Other Hypothesis Tests (not covered in class)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#see-this-tutorial-for-more-details">
+     See this tutorial for more details
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions-of-the-regression">
+   Assumptions of the regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions-of-the-regression-2">
+   Assumptions of the regression 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Correction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Correction
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-optimal-number-of-clusters-on-this-plot-is-3-the-closer-to-1-the-better">
+     The optimal number of clusters on this plot is 3! (The closer to +1 the better).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#announcements">
+   Announcements
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-refresher">
+   Correlation Refresher
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-ways-to-understand-regression">
+   Different Ways to Understand Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-we-do-analysis-on-this-data">
+   How do we do analysis on this data?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression">
+   Regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression-implies-modeling-dependent-variable-outcome-using-one-or-more-independent-variables-predictors">
+     Regression implies modeling
+     <strong>
+      dependent
+     </strong>
+     variable (outcome) using one or more
+     <strong>
+      independent
+     </strong>
+     variables (predictors)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-modeling-statistical-framework">
+   The Modeling (statistical) Framework
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-statistical-geometric-framework">
+   Combining statistical + geometric framework
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometry-optimization">
+   Geometry + Optimization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understanding-regression-equation">
+   Understanding Regression Equation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caution">
+   Caution ⚠️
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#order-in-regression-matters-typically-predictor-goes-first-and-outcome-goes-second-we-are-modeling-the-log-price-as-a-function-of-the-number-of-people-that-the-apartment-from-the-listing-can-accommodate">
+     Order in regression matters (typically, predictor goes first and outcome goes second)! We are modeling the log(price) as a function of the number of people that the apartment from the listing can accommodate.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-regression">
+   Multiple Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-equation">
+   Regression Equation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariate-general-case">
+   Multivariate (general) Case
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantifying-the-fit-of-the-regression">
+   Quantifying the Fit of the Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-fit-interpretable-r-squared">
+   Making Fit Interpretable - R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-r-squared">
+   Interpreting R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adjusted-r-squared">
+   Adjusted R-squared
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlation-and-regression-connection">
+   Correlation and Regression Connection
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-regression-with-all-predictors">
+   Running regression with all predictors
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-and-regression">
+   Hypothesis Testing and Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothesis-testing-calculation">
+   Hypothesis Testing (Calculation)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Hypothesis Testing (Calculation)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-hypothesis-tests-not-covered-in-class">
+   Other Hypothesis Tests (not covered in class)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#see-this-tutorial-for-more-details">
+     See this tutorial for more details
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions-of-the-regression">
+   Assumptions of the regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions-of-the-regression-2">
+   Assumptions of the regression 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 15: Linear Regression </h3><section class="tex2jax_ignore mathjax_ignore" id="correction">
+<h1>Correction<a class="headerlink" href="#correction" title="Permalink to this headline">#</a></h1>
+<section id="the-optimal-number-of-clusters-on-this-plot-is-3-the-closer-to-1-the-better">
+<h2>The optimal number of clusters on this plot is 3! (The closer to +1 the better).<a class="headerlink" href="#the-optimal-number-of-clusters-on-this-plot-is-3-the-closer-to-1-the-better" title="Permalink to this headline">#</a></h2>
+<img alt="../_images/sil_plot.PNG" src="../_images/sil_plot.PNG" />
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="announcements">
+<h1>Announcements<a class="headerlink" href="#announcements" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>No labs this week (STRIKE)</p></li>
+<li><p>Extended office hours (M:2-6pm, W:1-3pm)</p></li>
+<li><p>Interim report due <strong>W: midnight</strong></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="correlation-refresher">
+<h1>Correlation Refresher<a class="headerlink" href="#correlation-refresher" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Correlation - is linear relationship between two variables (bivariate).</p></li>
+<li><p>Standardized measure (+1 / -1)</p></li>
+<li><p>Slope of the line between scatter points on a scatter plot</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="different-ways-to-understand-regression">
+<h1>Different Ways to Understand Regression<a class="headerlink" href="#different-ways-to-understand-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Fancy correlation</p></li>
+<li><p>Optimization problem</p></li>
+<li><p>statistical framework for modeling</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m wget https://geographicdata.science/book/_downloads/dcd429d1761a2d0efdbc4532e141ba14/regression_db.geojson
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\python.exe: No module named wget
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;regression_db.geojson&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="n">db</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6110, 20)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>accommodates</th>
+      <th>bathrooms</th>
+      <th>bedrooms</th>
+      <th>beds</th>
+      <th>neighborhood</th>
+      <th>pool</th>
+      <th>d2balboa</th>
+      <th>coastal</th>
+      <th>price</th>
+      <th>log_price</th>
+      <th>id</th>
+      <th>pg_Apartment</th>
+      <th>pg_Condominium</th>
+      <th>pg_House</th>
+      <th>pg_Other</th>
+      <th>pg_Townhouse</th>
+      <th>rt_Entire_home/apt</th>
+      <th>rt_Private_room</th>
+      <th>rt_Shared_room</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>North Hills</td>
+      <td>0</td>
+      <td>2.972077</td>
+      <td>0</td>
+      <td>425.0</td>
+      <td>6.052089</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>POINT (-117.12971 32.75399)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>Mission Bay</td>
+      <td>0</td>
+      <td>11.501385</td>
+      <td>1</td>
+      <td>205.0</td>
+      <td>5.323010</td>
+      <td>5570</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>POINT (-117.25253 32.78421)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>North Hills</td>
+      <td>0</td>
+      <td>2.493893</td>
+      <td>0</td>
+      <td>99.0</td>
+      <td>4.595120</td>
+      <td>9553</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.14121 32.75327)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>Mira Mesa</td>
+      <td>0</td>
+      <td>22.293757</td>
+      <td>0</td>
+      <td>72.0</td>
+      <td>4.276666</td>
+      <td>14668</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.15269 32.93110)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>Roseville</td>
+      <td>0</td>
+      <td>6.829451</td>
+      <td>0</td>
+      <td>55.0</td>
+      <td>4.007333</td>
+      <td>38245</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.21870 32.74202)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variable_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;accommodates&quot;</span><span class="p">,</span>  <span class="c1"># Number of people it accommodates</span>
+    <span class="s2">&quot;bathrooms&quot;</span><span class="p">,</span>  <span class="c1"># Number of bathrooms</span>
+    <span class="s2">&quot;bedrooms&quot;</span><span class="p">,</span>  <span class="c1"># Number of bedrooms</span>
+    <span class="s2">&quot;beds&quot;</span><span class="p">,</span>  <span class="c1"># Number of beds</span>
+    <span class="c1"># Below are binary variables, 1 True, 0 False</span>
+    <span class="s2">&quot;rt_Private_room&quot;</span><span class="p">,</span>  <span class="c1"># Room type: private room</span>
+    <span class="s2">&quot;rt_Shared_room&quot;</span><span class="p">,</span>  <span class="c1"># Room type: shared room</span>
+    <span class="s2">&quot;pg_Condominium&quot;</span><span class="p">,</span>  <span class="c1"># Property group: condo</span>
+    <span class="s2">&quot;pg_House&quot;</span><span class="p">,</span>  <span class="c1"># Property group: house</span>
+    <span class="s2">&quot;pg_Other&quot;</span><span class="p">,</span>  <span class="c1"># Property group: other</span>
+    <span class="s2">&quot;pg_Townhouse&quot;</span><span class="p">,</span>  <span class="c1"># Property group: townhouse</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-do-we-do-analysis-on-this-data">
+<h1>How do we do analysis on this data?<a class="headerlink" href="#how-do-we-do-analysis-on-this-data" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Visualize</p></li>
+<li><p>Run pairwise correlations</p></li>
+<li><p>Run Global Moran’s I (and local if necessary)</p></li>
+<li><p>Run clustering (to investigate any patterns in multivariate data)</p></li>
+<li><p><strong>RUN REGRESSION</strong> (today)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> 
+            <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.1f&quot;</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">},</span> 
+           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;vlag&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">vmax</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">());</span>
+<span class="c1">#plt.gcf().subplots_adjust(left=0.15)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;corr_matrix.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;corr_matrix.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture15_11_0.png" src="../_images/lecture15_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now the same with the table </span>
+<span class="n">db_corr</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">pairwise_corr</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">db_corr</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">db_corr</span><span class="o">.</span><span class="n">X</span> <span class="o">==</span> <span class="s1">&#39;log_price&#39;</span><span class="p">)</span><span class="o">|</span><span class="p">(</span><span class="n">db_corr</span><span class="o">.</span><span class="n">Y</span> <span class="o">==</span> <span class="s1">&#39;log_price&#39;</span><span class="p">),</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;p-unc&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+      <th>Y</th>
+      <th>r</th>
+      <th>p-unc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>115</th>
+      <td>log_price</td>
+      <td>rt_Private_room</td>
+      <td>-0.525523</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>log_price</td>
+      <td>rt_Shared_room</td>
+      <td>-0.277179</td>
+      <td>3.452531e-108</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>log_price</td>
+      <td>pg_Apartment</td>
+      <td>-0.140333</td>
+      <td>3.004493e-28</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>log_price</td>
+      <td>pg_Townhouse</td>
+      <td>0.005033</td>
+      <td>6.940470e-01</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>log_price</td>
+      <td>id</td>
+      <td>0.015802</td>
+      <td>2.168407e-01</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>pool</td>
+      <td>log_price</td>
+      <td>0.018576</td>
+      <td>1.465442e-01</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>log_price</td>
+      <td>pg_Other</td>
+      <td>0.031385</td>
+      <td>1.415184e-02</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>log_price</td>
+      <td>pg_House</td>
+      <td>0.073500</td>
+      <td>8.828480e-09</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>log_price</td>
+      <td>pg_Condominium</td>
+      <td>0.074952</td>
+      <td>4.469152e-09</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>d2balboa</td>
+      <td>log_price</td>
+      <td>0.132289</td>
+      <td>2.927701e-25</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>coastal</td>
+      <td>log_price</td>
+      <td>0.332528</td>
+      <td>1.165628e-157</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>beds</td>
+      <td>log_price</td>
+      <td>0.597273</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>bathrooms</td>
+      <td>log_price</td>
+      <td>0.605840</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>log_price</td>
+      <td>rt_Entire_home/apt</td>
+      <td>0.610318</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>bedrooms</td>
+      <td>log_price</td>
+      <td>0.670055</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>accommodates</td>
+      <td>log_price</td>
+      <td>0.727280</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>price</td>
+      <td>log_price</td>
+      <td>0.789370</td>
+      <td>0.000000e+00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;log_price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;accommodates&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> 
+                <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;rt_Entire_home/apt&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> 
+               <span class="n">style</span><span class="o">=</span><span class="s1">&#39;rt_Private_room&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture15_13_0.png" src="../_images/lecture15_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;log_price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;accommodates&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture15_14_0.png" src="../_images/lecture15_14_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Finding the best fitting line for the set of points (2d case) - GEOMETRIC SENSE!</p>
+</div></blockquote>
+<section id="regression-implies-modeling-dependent-variable-outcome-using-one-or-more-independent-variables-predictors">
+<h2>Regression implies modeling <strong>dependent</strong> variable (outcome) using one or more <strong>independent</strong> variables (predictors)<a class="headerlink" href="#regression-implies-modeling-dependent-variable-outcome-using-one-or-more-independent-variables-predictors" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-modeling-statistical-framework">
+<h1>The Modeling (statistical) Framework<a class="headerlink" href="#the-modeling-statistical-framework" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>outcome - price of AirBnb in San Diego, predictors - # of bedrooms, bathrooms, type of property, etc.</p></li>
+</ul>
+<blockquote>
+<div><p>We are trying to explain ‘variance’ in the outcome by ‘variance’ in predictors</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="combining-statistical-geometric-framework">
+<h1>Combining statistical + geometric framework<a class="headerlink" href="#combining-statistical-geometric-framework" title="Permalink to this headline">#</a></h1>
+<p>$$
+\hat{Y_i} = b_0 + b_1 X_i + \epsilon_i
+$$</p>
+<p>where $\hat{Y_i}$ denotes our prediction (line), $X_i$ predictor variable value for $i$th observations, $\beta_0$ is the intercept, and $\beta_1$ is the regression coefficient. And $\epsilon_i = \hat{Y_i} - Y_i$ (residuals/errors = predicted - actual values).</p>
+<img alt="https://ethanweed.github.io/pythonbook/_images/05.04-regression_12_0.png" src="https://ethanweed.github.io/pythonbook/_images/05.04-regression_12_0.png" />
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="geometry-optimization">
+<h1>Geometry + Optimization<a class="headerlink" href="#geometry-optimization" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We want our combined $\epsilon$ (error/residuals) to be as small as possible.</p></li>
+</ul>
+<blockquote>
+<div><p>The estimated regression coefficients $\hat{\beta_0}$ and $\hat{\beta_1}$ are those that <strong>minimise the sum of the squared residuals</strong></p>
+</div></blockquote>
+<p>$$
+\sum_i (Y_i - \hat{Y}_i)^2
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mod1</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="s1">&#39;accommodates&#39;</span><span class="p">],</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;log_price&#39;</span><span class="p">])</span>
+<span class="n">mod1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>4.123498</td>
+      <td>0.012696</td>
+      <td>324.794585</td>
+      <td>0.0</td>
+      <td>0.528936</td>
+      <td>0.528859</td>
+      <td>4.098610</td>
+      <td>4.148386</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>accommodates</td>
+      <td>0.206661</td>
+      <td>0.002495</td>
+      <td>82.815413</td>
+      <td>0.0</td>
+      <td>0.528936</td>
+      <td>0.528859</td>
+      <td>0.201769</td>
+      <td>0.211553</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;log_price&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture15_21_0.png" src="../_images/lecture15_21_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="understanding-regression-equation">
+<h1>Understanding Regression Equation<a class="headerlink" href="#understanding-regression-equation" title="Permalink to this headline">#</a></h1>
+<p>$$
+\hat{Y}_i = b_0 + b_1 X_i = 4.1 + 0.2 \ X_i<br />
+$$</p>
+<blockquote>
+<div><p>For 1-unit increase in the number of people that the Airbnb property accommodates, we expect the log(price) to go up by .2</p>
+</div></blockquote>
+<blockquote>
+<div><p>The expected value of $\hat{Y_i}$ when $X_i = 0$ is 4.1</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="caution">
+<h1>Caution ⚠️<a class="headerlink" href="#caution" title="Permalink to this headline">#</a></h1>
+<section id="order-in-regression-matters-typically-predictor-goes-first-and-outcome-goes-second-we-are-modeling-the-log-price-as-a-function-of-the-number-of-people-that-the-apartment-from-the-listing-can-accommodate">
+<h2>Order in regression matters (typically, predictor goes first and outcome goes second)! We are modeling the log(price) as a function of the number of people that the apartment from the listing can accommodate.<a class="headerlink" href="#order-in-regression-matters-typically-predictor-goes-first-and-outcome-goes-second-we-are-modeling-the-log-price-as-a-function-of-the-number-of-people-that-the-apartment-from-the-listing-can-accommodate" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="multiple-regression">
+<h1>Multiple Regression<a class="headerlink" href="#multiple-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Adding terms to our equations (from <em>bivariate</em> to <em>multivariate</em>)</p></li>
+</ul>
+<p>$$
+Y_i = b_2 X_{i2} + b_1 X_{i1} + b_0 + \epsilon_i
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mod2</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">db</span><span class="p">[[</span><span class="s1">&#39;accommodates&#39;</span><span class="p">,</span> <span class="s1">&#39;bedrooms&#39;</span><span class="p">]],</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;log_price&#39;</span><span class="p">])</span>
+<span class="n">mod2</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>4.10</td>
+      <td>0.01</td>
+      <td>323.10</td>
+      <td>0.0</td>
+      <td>0.54</td>
+      <td>0.54</td>
+      <td>4.07</td>
+      <td>4.12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>accommodates</td>
+      <td>0.16</td>
+      <td>0.00</td>
+      <td>35.33</td>
+      <td>0.0</td>
+      <td>0.54</td>
+      <td>0.54</td>
+      <td>0.15</td>
+      <td>0.17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>bedrooms</td>
+      <td>0.15</td>
+      <td>0.01</td>
+      <td>13.44</td>
+      <td>0.0</td>
+      <td>0.54</td>
+      <td>0.54</td>
+      <td>0.13</td>
+      <td>0.17</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="regression-equation">
+<h1>Regression Equation<a class="headerlink" href="#regression-equation" title="Permalink to this headline">#</a></h1>
+<p>$$
+\hat{Y}<em>i = 4.10 + 0.16 \ X</em>{i1} + 0.15 \ X_{i2}<br />
+$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="multivariate-general-case">
+<h1>Multivariate (general) Case<a class="headerlink" href="#multivariate-general-case" title="Permalink to this headline">#</a></h1>
+<p>$$
+Y_i = \left( \sum_{k=1}^K b_{k} X_{ik} \right) + b_0 + \epsilon_i
+$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quantifying-the-fit-of-the-regression">
+<h1>Quantifying the Fit of the Regression<a class="headerlink" href="#quantifying-the-fit-of-the-regression" title="Permalink to this headline">#</a></h1>
+<p>$$
+\mbox{SS}_{res} = \sum_i (Y_i - \hat{Y}_i)^2 \quad \text{sum of squared residuals}
+$$</p>
+<p>$$
+\mbox{SS}_{tot} = \sum_i (Y_i - \bar{Y})^2 \quad \text{total variability}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate </span>
+<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">mod1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mod1</span><span class="o">.</span><span class="n">names</span><span class="o">==</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="s1">&#39;coef&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="n">db</span><span class="p">[</span><span class="s1">&#39;accommodates&#39;</span><span class="p">]</span> \
+    <span class="o">*</span> <span class="n">mod1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mod1</span><span class="o">.</span><span class="n">names</span><span class="o">==</span><span class="s1">&#39;accommodates&#39;</span><span class="p">,</span><span class="s1">&#39;coef&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">Y_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       5.156802
+1       5.363463
+2       4.536820
+3       4.536820
+4       4.536820
+          ...   
+6105    4.536820
+6106    5.363463
+6107    4.330159
+6108    4.743481
+6109    4.743481
+Name: accommodates, Length: 6110, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SS_resid</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+<span class="n">SS_tot</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Squared residuals: </span><span class="si">{</span><span class="n">SS_resid</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;total variation: </span><span class="si">{</span><span class="n">SS_tot</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [14],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">SS_resid</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">SS_tot</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Squared residuals: </span><span class="si">{</span><span class="n">SS_resid</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;total variation: </span><span class="si">{</span><span class="n">SS_tot</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="making-fit-interpretable-r-squared">
+<h1>Making Fit Interpretable - R-squared<a class="headerlink" href="#making-fit-interpretable-r-squared" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Get standardized value (something similar to (auto)correlation coefficient)</p></li>
+<li><p>Make standardize value meaningful (good/bad) fit: +1 (good fit), 0 (no fit)</p></li>
+</ul>
+<p>$$
+R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R2</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span> <span class="p">(</span><span class="n">SS_resid</span> <span class="o">/</span> <span class="n">SS_tot</span><span class="p">)</span>
+<span class="n">R2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5289360594305659
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting-r-squared">
+<h1>Interpreting R-squared<a class="headerlink" href="#interpreting-r-squared" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>$R^2$ is the proportion of the variance in the outcome variable that can be accounted for by the predictor. The number of people accommodated per listing explains 52.9% of the variation in the price of the listing.</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="adjusted-r-squared">
+<h1>Adjusted R-squared<a class="headerlink" href="#adjusted-r-squared" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Adding variables to the model will always increase $R^2$! BUT, we need to take degrees of freedom into account!</p></li>
+<li><p>The adjusted value will only increase if the new variables improve the model performance more than you’d expect by chance.</p></li>
+<li><p>We loose elegant interpretation about explained variability!</p></li>
+</ul>
+<p>$$
+\mbox{adj. } R^2 = 1 - \left(\frac{\mbox{SS}<em>{res}}{\mbox{SS}</em>{tot}} \times \frac{N-1}{N-K-1} \right)
+$$</p>
+<p>where $N$ - is the number of observations, $K$ - number of predictors</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="correlation-and-regression-connection">
+<h1>Correlation and Regression Connection<a class="headerlink" href="#correlation-and-regression-connection" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>$R^2$ is the same as $r_p$</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="running-regression-with-all-predictors">
+<h1>Running regression with all predictors<a class="headerlink" href="#running-regression-with-all-predictors" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysal.model</span> <span class="kn">import</span> <span class="n">spreg</span>
+
+<span class="c1"># Fit OLS model</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variable name</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;reg1.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">summary</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># Python 3.x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">r2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">ar2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6683445024123358
+0.667800715729949
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing-and-regression">
+<h1>Hypothesis Testing and Regression<a class="headerlink" href="#hypothesis-testing-and-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>$H_0$: $H_0: Y_i = b_0 + \epsilon_i$ (there is no relationship)</p></li>
+<li><p>$H_a$: $H_1: Y_i = \left( \sum_{k=1}^K b_{k} X_{ik} \right) + b_0 + \epsilon_i$ (our proposed model is valid)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hypothesis-testing-calculation">
+<h1>Hypothesis Testing (Calculation)<a class="headerlink" href="#hypothesis-testing-calculation" title="Permalink to this headline">#</a></h1>
+<p>$$
+\mbox{SS}<em>{mod} = \mbox{SS}</em>{tot} - \mbox{SS}_{res}
+$$</p>
+<p>$$
+\begin{split}
+\begin{array}{rcl}
+\mbox{MS}<em>{mod} &amp;=&amp; \displaystyle\frac{\mbox{SS}</em>{mod} }{df_{mod}} \ \
+\mbox{MS}<em>{res} &amp;=&amp; \displaystyle\frac{\mbox{SS}</em>{res} }{df_{res} }
+\end{array}
+\end{split}
+$$</p>
+<p>where $df_{res} = N -K - 1$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Hypothesis Testing (Calculation)<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>$$
+F =  \frac{\mbox{MS}<em>{mod}}{\mbox{MS}</em>{res}}
+$$</p>
+<blockquote>
+<div><p>Pingouin cannot calculate $F$ statistic. Instead we can use the summary table from spreg.</p>
+</div></blockquote>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="other-hypothesis-tests-not-covered-in-class">
+<h1>Other Hypothesis Tests (not covered in class)<a class="headerlink" href="#other-hypothesis-tests-not-covered-in-class" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Test for individual coefficients</p></li>
+<li><p>Testing significance of correlation (both single and all pairwise)</p></li>
+</ul>
+<section id="see-this-tutorial-for-more-details">
+<h2>See <a class="reference external" href="https://ethanweed.github.io/pythonbook/05.04-regression.html#linear-regression-with-python">this tutorial</a> for more details<a class="headerlink" href="#see-this-tutorial-for-more-details" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="assumptions-of-the-regression">
+<h1>Assumptions of the regression<a class="headerlink" href="#assumptions-of-the-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><strong>Normality</strong>. Standard linear regression relies on an assumption of normality. Specifically, it assumes that the residuals are normally distributed. It’s actually okay if the predictors and the outcome are non-normal, so long as the residuals are normal.</p></li>
+<li><p><strong>Linearity</strong>. Relationship between $X$ and $Y$ are assumed linear! Regardless of whether it’s a simple regression or a multiple regression, we assume that the relatiships involved are linear.</p></li>
+<li><p><strong>Homogeneity of variance</strong>. Each residual is generated from a normal distribution with mean 0, and with a standard deviation that is the same for every single residual. Standard deviation of the residual should be the same for all values of $\hat{Y_i}$.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="assumptions-of-the-regression-2">
+<h1>Assumptions of the regression 2<a class="headerlink" href="#assumptions-of-the-regression-2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p><strong>Uncorrelated predictors</strong>. We don’t want predictors to be too strongly correlated with each other. Predictors that are too strongly correlated with each other (referred to as “collinearity”) can cause problems when evaluating the model</p></li>
+<li><p><strong>Residuals are independent of each other</strong>. Check residuals for irregularity in variance. Some irregularity would normally point to the omitted variable or OMITTED GEOGRAPHIC EFFECT!.</p></li>
+<li><p><strong>Outliers</strong>. Implicit assumption that regression model should not be too strongly influenced by one or two anomalous data points; since this raises questions about the adequacy of the model, and the trustworthiness of the data in some cases.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

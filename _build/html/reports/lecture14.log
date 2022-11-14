@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from kneed import KneeLocator
+kl = KneeLocator(range(1, 14), sse, curve="convex", direction="decreasing")
+f,ax=plt.subplots(figsize=(16,5))
+ax.plot(range(1, 14), sse, 's-', markersize=10)
+ax.axvline(x=kl.elbow, color='k', linestyle='dashed', lw=1) # add vertical line
+ax.set_xticks(range(1, 14))
+ax.set_xlabel("Number of Clusters")
+ax.set_ylabel("SSE")
+plt.show()
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Input [1;32mIn [12][0m, in [0;36m<cell line: 1>[1;34m()[0m
+[1;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkneed[39;00m [38;5;28;01mimport[39;00m KneeLocator
+[0;32m      2[0m kl [38;5;241m=[39m KneeLocator([38;5;28mrange[39m([38;5;241m1[39m, [38;5;241m14[39m), sse, curve[38;5;241m=[39m[38;5;124m"[39m[38;5;124mconvex[39m[38;5;124m"[39m, direction[38;5;241m=[39m[38;5;124m"[39m[38;5;124mdecreasing[39m[38;5;124m"[39m)
+[0;32m      3[0m f,ax[38;5;241m=[39mplt[38;5;241m.[39msubplots(figsize[38;5;241m=[39m([38;5;241m16[39m,[38;5;241m5[39m))
+
+[1;31mModuleNotFoundError[0m: No module named 'kneed'
+ModuleNotFoundError: No module named 'kneed'
+

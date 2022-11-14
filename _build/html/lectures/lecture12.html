@@ -640,7 +640,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under listings (2).csv
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\python.exe: No module named wget
 </pre></div>
 </div>
 </div>
@@ -652,7 +652,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under neighbourhoods (2).geojson
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\python.exe: No module named wget
 </pre></div>
 </div>
 </div>
@@ -897,7 +897,7 @@ epsg:4979
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.841844262368965
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.8315947701264139
 </pre></div>
 </div>
 <img alt="../_images/lecture12_11_1.png" src="../_images/lecture12_11_1.png" />
@@ -919,6 +919,12 @@ epsg:4979
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\libpysal\cg\alpha_shapes.py:574: UserWarning: Numba not imported, so alpha shape construction may be slower than expected.
+  warn(NUMBA_WARN)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -929,7 +935,7 @@ epsg:4979
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 2.345305801934306e-61
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 1.1998606531173963e-60
 </pre></div>
 </div>
 <img alt="../_images/lecture12_14_1.png" src="../_images/lecture12_14_1.png" />
@@ -977,14 +983,14 @@ $$</p>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">g_test</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">g_test</span><span class="p">(</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">support</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">keep_simulations</span><span class="o">=</span><span class="kc">True</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:713,</span> in <span class="ni">g_test</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:713,</span> in <span class="ni">g_test</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations)</span>
 <span class="g g-Whitespace">    </span><span class="mi">662</span> <span class="k">def</span> <span class="nf">g_test</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">663</span>     <span class="n">coordinates</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">support</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1009,7 +1015,7 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="n">n_simulations</span><span class="o">=</span><span class="n">n_simulations</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:582,</span> in <span class="ni">_ripley_test</span><span class="nt">(calltype, coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations, **kwargs)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:582,</span> in <span class="ni">_ripley_test</span><span class="nt">(calltype, coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">577</span>         <span class="n">n_distances</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">random_tree</span><span class="p">,</span> <span class="n">random_i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">578</span>         <span class="n">core_kwargs</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">579</span>             <span class="n">n_distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span>
@@ -1019,51 +1025,24 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="n">pvalues</span> <span class="o">+=</span> <span class="n">simulations_i</span> <span class="o">&gt;=</span> <span class="n">observed_statistic</span>
 <span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="k">if</span> <span class="n">keep_simulations</span><span class="p">:</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:232,</span> in <span class="ni">g</span><span class="nt">(coordinates, support, distances, metric, edge_correction)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="k">def</span> <span class="nf">g</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>     <span class="n">coordinates</span><span class="p">,</span> <span class="n">support</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">distances</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;euclidean&quot;</span><span class="p">,</span> <span class="n">edge_correction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>     <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span><span class="sd">     Ripley&#39;s G function</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="sd"> </span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:278,</span> in <span class="ni">g</span><span class="nt">(coordinates, support, distances, metric, edge_correction)</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>         <span class="n">tree</span> <span class="o">=</span> <span class="n">_build_best_tree</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="k">finally</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">278</span>         <span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="n">counts</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="n">support</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="n">fracs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span> <span class="o">/</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:354,</span> in <span class="ni">k_neighbors</span><span class="nt">(tree, coordinates, k, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span> <span class="k">def</span> <span class="nf">k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd">     Query a kdtree for k neighbors, handling the self-neighbor case</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="sd">     in the case of coincident points. </span>
 <span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">232</span>     <span class="n">coordinates</span><span class="p">,</span> <span class="n">support</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">metric</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="n">_prepare</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">233</span>         <span class="n">coordinates</span><span class="p">,</span> <span class="n">support</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">metric</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">edge_correction</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="k">if</span> <span class="n">distances</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="k">if</span> <span class="n">distances</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:60,</span> in <span class="ni">_prepare</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">coordinates</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">60</span> <span class="n">hull</span> <span class="o">=</span> <span class="n">_prepare_hull</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">hull</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="c1"># evaluate distances</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="k">if</span> <span class="p">(</span><span class="n">distances</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="n">metric</span> <span class="o">==</span> <span class="s2">&quot;precomputed&quot;</span><span class="p">:</span>
-
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:398,</span> in <span class="ni">prepare_hull</span><span class="nt">(coordinates, hull)</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span>     <span class="k">return</span> <span class="n">hull</span>
-<span class="g g-Whitespace">    </span><span class="mi">397</span> <span class="k">if</span> <span class="p">(</span><span class="n">hull</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">hull</span> <span class="o">==</span> <span class="s2">&quot;bbox&quot;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">398</span>     <span class="k">return</span> <span class="n">bbox</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> <span class="k">if</span> <span class="n">HAS_SHAPELY</span><span class="p">:</span>  <span class="c1"># protect the isinstance check if import has failed</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hull</span><span class="p">,</span> <span class="p">(</span><span class="n">_ShapelyPolygon</span><span class="p">,</span> <span class="n">_ShapelyMultiPolygon</span><span class="p">)):</span>
-
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\functools.py:889,</span> in <span class="ni">singledispatch.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">885</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">886</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">funcname</span><span class="si">}</span><span class="s1"> requires at least &#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">887</span>                     <span class="s1">&#39;1 positional argument&#39;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">889</span> <span class="k">return</span> <span class="n">dispatch</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:81,</span> in <span class="ni">_</span><span class="nt">(shape)</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span> <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="k">return</span> <span class="n">shape</span>
-<span class="ne">---&gt; </span><span class="mi">81</span> <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">*</span><span class="n">shape</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="o">*</span><span class="n">shape</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)])</span>
-
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\numpy\core\_methods.py:44,</span> in <span class="ni">_amin</span><span class="nt">(a, axis, out, keepdims, initial, where)</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="k">def</span> <span class="nf">_amin</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>           <span class="n">initial</span><span class="o">=</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">44</span>     <span class="k">return</span> <span class="n">umr_minimum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span><span class="sd">     in its query result. </span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">354</span>     <span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>     <span class="n">n</span><span class="p">,</span> <span class="n">ks</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">shape</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>     <span class="k">assert</span> <span class="n">ks</span> <span class="o">==</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

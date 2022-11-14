@@ -912,7 +912,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1afe5b57460&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x2a9bc0dcd60&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_5_1.png" src="../_images/lecture09_5_1.png" />
@@ -948,7 +948,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1af8cc1fa30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x2a9c4570af0&gt;
 </pre></div>
 </div>
 <img alt="../_images/lecture09_8_1.png" src="../_images/lecture09_8_1.png" />
@@ -1039,7 +1039,12 @@ $$</p>
     </tr>
   </tbody>
 </table>
-</div></div></div>
+</div></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1284,7 +1289,7 @@ R-squared is .35, meaning that body mass explains 35% of variability in bill len
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>correlation coef: 0.35415570314218686
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>correlation coef: 0.354155703142187
 regression coef: 0.3542
 </pre></div>
 </div>
@@ -1662,7 +1667,15 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.26355334031776523
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">libpysal.weights.contiguity</span> <span class="kn">import</span> <span class="n">Queen</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">splot</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">y</span> <span class="o">=</span> <span class="n">guerry</span><span class="p">[</span><span class="s1">&#39;Crm_prp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;splot&#39;
 </pre></div>
 </div>
 </div>
@@ -1721,7 +1734,7 @@ where $R$ is the number of times permuted statistic is more extreme than observe
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\splot\_viz_esda_mpl.py:354: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\splot\_viz_esda_mpl.py:354: FutureWarning: 
 
 `shade` is now deprecated in favor of `fill`; setting `fill=True`.
 This will become an error in seaborn v0.14.0; please update your code.

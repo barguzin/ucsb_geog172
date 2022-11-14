@@ -1,0 +1,46 @@
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :   log_price                Number of Observations:        6110
+Mean dependent var  :      4.9958                Number of Variables   :          11
+S.D. dependent var  :      0.8072                Degrees of Freedom    :        6099
+R-squared           :      0.6683
+Adjusted R-squared  :      0.6678
+Sum squared residual:    1320.148                F-statistic           :   1229.0564
+Sigma-square        :       0.216                Prob(F-statistic)     :           0
+S.E. of regression  :       0.465                Log likelihood        :   -3988.895
+Sigma-square ML     :       0.216                Akaike info criterion :    7999.790
+S.E of regression ML:      0.4648                Schwarz criterion     :    8073.685
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       4.3883830       0.0161147     272.3217773       0.0000000
+        accommodates       0.0834523       0.0050781      16.4336318       0.0000000
+           bathrooms       0.1923790       0.0109668      17.5419773       0.0000000
+            bedrooms       0.1525221       0.0111323      13.7009195       0.0000000
+                beds      -0.0417231       0.0069383      -6.0134430       0.0000000
+     rt_Private_room      -0.5506868       0.0159046     -34.6244758       0.0000000
+      rt_Shared_room      -1.2383055       0.0384329     -32.2198992       0.0000000
+      pg_Condominium       0.1436347       0.0221499       6.4846529       0.0000000
+            pg_House      -0.0104894       0.0145315      -0.7218393       0.4704209
+            pg_Other       0.1411546       0.0228016       6.1905633       0.0000000
+        pg_Townhouse      -0.0416702       0.0342758      -1.2157316       0.2241342
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           11.964
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        2671.611           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               10         322.532           0.0000
+Koenker-Bassett test             10         135.581           0.0000
+================================ END OF REPORT =====================================

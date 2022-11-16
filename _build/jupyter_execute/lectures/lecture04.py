@@ -327,7 +327,7 @@ gol_data.plot(column='P004003', cmap='Reds', ax=ax, fc='w', ec='k');
 gol_data.plot(ax=ax, fc='None', ec='k');
 
 
-# In[20]:
+# In[17]:
 
 
 from pysal.lib import weights
@@ -338,7 +338,7 @@ w_rook = weights.contiguity.Rook.from_dataframe(gol_data)
 w_queen.neighbors[0]
 
 
-# In[21]:
+# In[18]:
 
 
 import pandas as pd
@@ -348,7 +348,7 @@ df_r = pd.DataFrame(*w_rook.full()).astype(int)
 print(df_q.shape) 
 
 
-# In[22]:
+# In[19]:
 
 
 import matplotlib.cm as cm
@@ -359,7 +359,7 @@ ax[0].imshow(df_q, origin='lower', cmap = cm.Greys_r)
 ax[1].imshow(df_r, origin='lower', cmap = cm.Greys_r)
 
 
-# In[23]:
+# In[20]:
 
 
 import warnings
@@ -378,7 +378,7 @@ ax.set_xlim(minx, maxx)
 ax.set_ylim(miny, maxy)
 
 
-# In[24]:
+# In[21]:
 
 
 import pandas as pd
@@ -401,7 +401,7 @@ ax.axvline(s2.mean(), color='r', lw=2)
 # * Distance-based
 # * Kernel-based
 
-# In[25]:
+# In[22]:
 
 
 knn4_w = weights.distance.KNN.from_dataframe(gol_data, k=4)
@@ -409,13 +409,13 @@ knn4_w = weights.distance.KNN.from_dataframe(gol_data, k=4)
 knn4_w.islands
 
 
-# In[26]:
+# In[23]:
 
 
 knn4_w.histogram
 
 
-# In[27]:
+# In[24]:
 
 
 points = np.array([[0,0], [1,5], [2,1], [3,6], [5,6], [7,1], [1,7]])
@@ -436,7 +436,7 @@ plt.close()
 # 
 # > Create a weight matrix for the units below. 
 
-# In[28]:
+# In[25]:
 
 
 from IPython.display import Image

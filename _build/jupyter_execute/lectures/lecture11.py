@@ -69,7 +69,7 @@ from splot.esda import plot_moran
 import matplotlib.pyplot as plt
 
 
-# In[7]:
+# In[3]:
 
 
 y = guerry['Crm_prp'].values
@@ -82,7 +82,7 @@ print("Moran's I:", moran.I)
 print("Moran's p-val:", moran.p_sim)
 
 
-# In[8]:
+# In[4]:
 
 
 plot_moran(moran, zstandard=True, figsize=(10,4))
@@ -91,14 +91,14 @@ plt.show()
 
 # <img src="https://geographicdata.science/book/_images/07_local_autocorrelation_21_0.png">
 
-# In[9]:
+# In[5]:
 
 
 # calculate Moran_Local and plot
 moran_loc = Moran_Local(y, w)
 
 
-# In[20]:
+# In[6]:
 
 
 fig, ax = moran_scatterplot(moran_loc, p=0.05)
@@ -107,14 +107,14 @@ ax.set_ylabel('Spatial Lag of Crimes Against Property')
 plt.show()
 
 
-# In[15]:
+# In[7]:
 
 
 lisa_cluster(moran_loc, guerry, p=0.05, figsize = (5,5), aspect=1)
 plt.show()
 
 
-# In[18]:
+# In[8]:
 
 
 # Calculate the p-value cut-off to control 

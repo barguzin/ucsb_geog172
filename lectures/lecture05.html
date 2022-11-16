@@ -1120,24 +1120,24 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(205, 9)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\AppData\Local\Temp\ipykernel_41620\270685699.py:6: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\AppData\Local\Temp\ipykernel_21496\270685699.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   fires2021.drop(&#39;UNIT_ID&#39;, inplace=True, axis=1)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   super().__setitem__(key, value)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   super().__setitem__(key, value)
-C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1157,7 +1157,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1472: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1456: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1521,9 +1521,7 @@ epsg:3310 epsg:3310
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5243, 9)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5598, 11)
+(5598, 11)
 </pre></div>
 </div>
 </div>
@@ -1795,55 +1793,15 @@ bins: [  1.   45.2  89.4 133.6 177.8 222. ]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unexpected exception formatting exception. Falling back to standard exception
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3398, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\barguzin\AppData\Local\Temp\ipykernel_41620\250184530.py&quot;, line 1, in &lt;cell line: 1&gt;
-    fj5 = mapclassify.FisherJenks(fires[&quot;dur_days&quot;], k=5)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py&quot;, line 1798, in __init__
-    MapClassifier.__init__(self, y)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py&quot;, line 617, in __init__
-    self._classify()
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py&quot;, line 636, in _classify
-    self._set_bins()
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py&quot;, line 1803, in _set_bins
-    self.bins = np.array(_fisher_jenks_means(x, classes=self.k)[1:])
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\mapclassify\classifiers.py&quot;, line -1, in _fisher_jenks_means
-KeyboardInterrupt
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FisherJenks             
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\interactiveshell.py&quot;, line 1993, in showtraceback
-    stb = self.InteractiveTB.structured_traceback(
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\ultratb.py&quot;, line 1118, in structured_traceback
-    return FormattedTB.structured_traceback(
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\ultratb.py&quot;, line 1012, in structured_traceback
-    return VerboseTB.structured_traceback(
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\ultratb.py&quot;, line 865, in structured_traceback
-    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\ultratb.py&quot;, line 818, in format_exception_as_a_whole
-    frames.append(self.format_record(r))
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\IPython\core\ultratb.py&quot;, line 736, in format_record
-    result += &#39;&#39;.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\utils.py&quot;, line 145, in cached_property_wrapper
-    value = obj.__dict__[self.func.__name__] = self.func(obj)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\core.py&quot;, line 698, in lines
-    pieces = self.included_pieces
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\utils.py&quot;, line 145, in cached_property_wrapper
-    value = obj.__dict__[self.func.__name__] = self.func(obj)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\core.py&quot;, line 649, in included_pieces
-    pos = scope_pieces.index(self.executing_piece)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\utils.py&quot;, line 145, in cached_property_wrapper
-    value = obj.__dict__[self.func.__name__] = self.func(obj)
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\stack_data\core.py&quot;, line 628, in executing_piece
-    return only(
-  File &quot;C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\executing\executing.py&quot;, line 164, in only
-    raise NotOneValueFound(&#39;Expected one value, found 0&#39;)
-executing.executing.NotOneValueFound: Expected one value, found 0
+    Interval       Count
+------------------------
+[  1.00,  14.00] |  4109
+( 14.00,  43.00] |   575
+( 43.00,  80.00] |   249
+( 80.00, 124.00] |   225
+(124.00, 222.00] |    85
 </pre></div>
 </div>
 </div>

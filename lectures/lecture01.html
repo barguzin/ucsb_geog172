@@ -1032,76 +1032,154 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sys:1: ResourceWarning: unclosed socket &lt;zmq.Socket(zmq.PUSH) at 0x238e60b8700&gt;
-ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are (85, 58) cafes/restaurants/bars/pubs in SB!
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 13&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">pois</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geometries</span><span class="o">.</span><span class="n">geometries_from_point</span><span class="p">(</span><span class="n">center_point</span> <span class="o">=</span> <span class="p">(</span><span class="n">goleta</span><span class="o">.</span><span class="n">lat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">goleta</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="n">dist</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">go_proj</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">project_gdf</span><span class="p">(</span><span class="n">goleta</span><span class="p">,</span> <span class="n">to_crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">)</span> <span class="c1"># re-project layers</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">go_streets_proj</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">project_gdf</span><span class="p">(</span><span class="n">go_streets</span><span class="p">,</span> <span class="n">to_crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">pois_proj</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">project_gdf</span><span class="p">(</span><span class="n">pois</span><span class="p">,</span> <span class="n">to_crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># print to the output</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\osmnx\projection.py:100,</span> in <span class="ni">project_gdf</span><span class="nt">(gdf, to_crs, to_latlong)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="c1"># else if to_crs was passed-in, project gdf to this CRS</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="k">elif</span> <span class="n">to_crs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">100</span>     <span class="n">gdf_proj</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">to_crs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Projected GeoDataFrame to </span><span class="si">{</span><span class="n">to_crs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="c1"># otherwise, automatically project the gdf to UTM</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span> <span class="k">else</span><span class="p">:</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geodataframe.py:1377,</span> in <span class="ni">GeoDataFrame.to_crs</span><span class="nt">(self, crs, epsg, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1375</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span>     <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1377</span> <span class="n">geom</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="n">epsg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span> <span class="n">df</span><span class="o">.</span><span class="n">geometry</span> <span class="o">=</span> <span class="n">geom</span>
-<span class="g g-Whitespace">   </span><span class="mi">1379</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">inplace</span><span class="p">:</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\geopandas\geoseries.py:1117,</span> in <span class="ni">GeoSeries.to_crs</span><span class="nt">(self, crs, epsg)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span> <span class="k">def</span> <span class="nf">to_crs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span>     <span class="sd">&quot;&quot;&quot;Returns a ``GeoSeries`` with all geometries transformed to a new</span>
-<span class="g g-Whitespace">   </span><span class="mi">1042</span><span class="sd">     coordinate reference system.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1114</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1115</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1116</span>     <span class="k">return</span> <span class="n">GeoSeries</span><span class="p">(</span>
-<span class="ne">-&gt; </span><span class="mi">1117</span>         <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">,</span> <span class="n">epsg</span><span class="o">=</span><span class="n">epsg</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\geopandas\array.py:767,</span> in <span class="ni">GeometryArray.to_crs</span><span class="nt">(self, crs, epsg)</span>
-<span class="g g-Whitespace">    </span><span class="mi">763</span>     <span class="k">return</span> <span class="bp">self</span>
-<span class="g g-Whitespace">    </span><span class="mi">765</span> <span class="n">transformer</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">from_crs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">crs</span><span class="p">,</span> <span class="n">always_xy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">767</span> <span class="n">new_data</span> <span class="o">=</span> <span class="n">vectorized</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">transformer</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">768</span> <span class="k">return</span> <span class="n">GeometryArray</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\geopandas\_vectorized.py:983,</span> in <span class="ni">transform</span><span class="nt">(data, func)</span>
-<span class="g g-Whitespace">    </span><span class="mi">981</span>         <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">geom</span>
-<span class="g g-Whitespace">    </span><span class="mi">982</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">983</span>         <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">geom</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">985</span> <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\shapely\ops.py:302,</span> in <span class="ni">transform</span><span class="nt">(func, geom)</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="k">if</span> <span class="n">geom</span><span class="o">.</span><span class="n">type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;LineString&#39;</span><span class="p">,</span> <span class="s1">&#39;LinearRing&#39;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">302</span>         <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="p">)(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">geom</span><span class="o">.</span><span class="n">coords</span><span class="p">))))</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="k">elif</span> <span class="n">geom</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="n">shell</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">exterior</span><span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>             <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">geom</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">coords</span><span class="p">))))</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\shapely\coords.py:58,</span> in <span class="ni">CoordinateSequence.__len__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="n">cs_len</span> <span class="o">=</span> <span class="n">c_uint</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cseq</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">58</span>     <span class="n">lgeos</span><span class="o">.</span><span class="n">GEOSCoordSeq_getSize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cseq</span><span class="p">,</span> <span class="n">byref</span><span class="p">(</span><span class="n">cs_len</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="k">return</span> <span class="n">cs_len</span><span class="o">.</span><span class="n">value</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>amenity</th>
+      <th>brand</th>
+      <th>brand:wikidata</th>
+      <th>brand:wikipedia</th>
+      <th>cuisine</th>
+      <th>name</th>
+      <th>official_name</th>
+      <th>takeaway</th>
+      <th>geometry</th>
+      <th>source</th>
+      <th>...</th>
+      <th>disused:building</th>
+      <th>capacity</th>
+      <th>height</th>
+      <th>roof:colour</th>
+      <th>roof:shape</th>
+      <th>contact:facebook</th>
+      <th>addr:housename</th>
+      <th>designation</th>
+      <th>ways</th>
+      <th>type</th>
+    </tr>
+    <tr>
+      <th>element_type</th>
+      <th>osmid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">node</th>
+      <th>448863565</th>
+      <td>cafe</td>
+      <td>Starbucks</td>
+      <td>Q37158</td>
+      <td>en:Starbucks</td>
+      <td>coffee_shop</td>
+      <td>Starbucks</td>
+      <td>Starbucks Coffee</td>
+      <td>yes</td>
+      <td>POINT (-119.84817 34.41147)</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1341709739</th>
+      <td>restaurant</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>american</td>
+      <td>IHOP</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>POINT (-119.78818 34.44325)</td>
+      <td>Local Knowledge</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1348747781</th>
+      <td>restaurant</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>indian</td>
+      <td>Masala Spice Indian Cuisine</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>POINT (-119.82570 34.44172)</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 58 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1119,12 +1197,12 @@ secondary                   644
 unclassified                249
 cycleway                    150
 track                        84
-[footway, service]           60
-[footway, residential]       60
+[residential, footway]       60
 motorway_link                44
-[footway, path]              30
+[service, footway]           30
+[path, footway]              30
+[footway, service]           30
 motorway                     27
-living_street                14
 Name: highway, dtype: int64
 </pre></div>
 </div>
@@ -1194,18 +1272,6 @@ Name: highway, dtype: int64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-13341454.75696344   4086141.85634311]
 [-13342101.87019569   4085474.32197616]
 2964.6474778578227
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:22: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  spatial.qhull.ConvexHull,
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:42: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:85: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:132: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull, x: float, y: float):
-C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:174: DeprecationWarning: Please use `ConvexHull` from the `scipy.spatial` namespace, the `scipy.spatial.qhull` namespace is deprecated.
-  def _(shape: spatial.qhull.ConvexHull):
 </pre></div>
 </div>
 </div>

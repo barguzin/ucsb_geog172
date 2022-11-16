@@ -1376,7 +1376,7 @@ We conclude that there is enough statistical evidence that indicates that the me
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
 Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
   return warn(
 </pre></div>
@@ -1393,7 +1393,7 @@ Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ShapiroResult(statistic=0.9515460133552551, pvalue=3.541138271501154e-09)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ShapiroResult(statistic=0.9515451788902283, pvalue=3.540273851854181e-09)
 </pre></div>
 </div>
 </div>
@@ -1616,7 +1616,7 @@ $$</p>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">females</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">ttest</span><span class="p">(</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">)</span>
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pingouin\parametric.py:231,</span> in <span class="ni">ttest</span><span class="nt">(x, y, paired, alternative, correction, r, confidence)</span>
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pingouin\parametric.py:231,</span> in <span class="ni">ttest</span><span class="nt">(x, y, paired, alternative, correction, r, confidence)</span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="n">paired</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="c1"># Remove rows with missing values</span>
 <span class="ne">--&gt; </span><span class="mi">231</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">remove_na</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="n">paired</span><span class="p">)</span>
@@ -1624,7 +1624,7 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">if</span> <span class="n">ny</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="c1"># Case one sample T-test</span>
 
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pingouin\utils.py:236,</span> in <span class="ni">remove_na</span><span class="nt">(x, y, paired, axis)</span>
+<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pingouin\utils.py:236,</span> in <span class="ni">remove_na</span><span class="nt">(x, y, paired, axis)</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">else</span><span class="p">:</span>  <span class="c1"># y is list, np.array, pd.Series</span>
 <span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">236</span>     <span class="k">assert</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;y cannot be an empty list or array.&quot;</span>

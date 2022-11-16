@@ -1,0 +1,3008 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plan for today &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">GEOG 172 - Intermediate Geographical Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to GEOG 172
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../example_notebooks.html">
+   Example Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/00-python-basics.html">
+     Basic elements of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/geo172_Lab02.html">
+     Getting Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../labs.html">
+   Labs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab1.html">
+     Lab 1: Google Colab, Markdown and Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab2.html">
+     Lab 2: Summarizing Data and Basic Python Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab3.html">
+     Lab 3: Geovisualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab4.html">
+     Lab 4: Inferential Statistics for Penguins
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab5.html">
+     Lab 5: Means, Correlations and Autocorrelation.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab6.html">
+     Lab 6: Assessing the Spatial Distribution of AirBnb listings in metropolitan areas.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab7.html">
+     Lab 7: Clustering the Blocks of Cincinnati
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab8.html">
+     Lab 8:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../project.html">
+   Geographical Analysis Project
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/data_report.html">
+     Data Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/interim_report.html">
+     Interim Report
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/presentation.html">
+     Presentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../project/final_report.html">
+     Final Report
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures.html">
+   Lectures
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lec01.html">
+     Lecture 1 Notes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lectures/lecture16.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lecture16.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lectures/lecture16.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Plan for today
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-at-spatial-structure-of-data">
+   Getting at Spatial Structure of Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-moran-scatterplot">
+   Interpreting Moran Scatterplot
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-lisa-maps">
+   Interpreting LISA maps
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-need-to-bring-geography-into-regression-framework">
+     We need to bring geography into regression framework
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-regression">
+   Spatial Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations-about-model-2">
+   Observations About Model 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-heterogeneity">
+   Spatial Heterogeneity
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-fixed-effects">
+   Spatial Fixed Effects
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpeting-spatial-fixed-effects">
+   Interpeting Spatial Fixed Effects
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-regimes">
+   Spatial Regimes
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-dependence">
+   Spatial Dependence
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slx-model-exogenous-effects">
+   SLX Model (Exogenous effects)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slx-model-example">
+   SLX Model (Example)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-slx-model">
+   Interpreting SLX model
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-error">
+   Spatial Error
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-lag">
+   Spatial Lag
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Plan for today</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Plan for today
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-at-spatial-structure-of-data">
+   Getting at Spatial Structure of Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-moran-scatterplot">
+   Interpreting Moran Scatterplot
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-lisa-maps">
+   Interpreting LISA maps
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-need-to-bring-geography-into-regression-framework">
+     We need to bring geography into regression framework
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-regression">
+   Spatial Regression
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observations-about-model-2">
+   Observations About Model 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-heterogeneity">
+   Spatial Heterogeneity
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-fixed-effects">
+   Spatial Fixed Effects
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpeting-spatial-fixed-effects">
+   Interpeting Spatial Fixed Effects
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-regimes">
+   Spatial Regimes
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-dependence">
+   Spatial Dependence
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slx-model-exogenous-effects">
+   SLX Model (Exogenous effects)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slx-model-example">
+   SLX Model (Example)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreting-slx-model">
+   Interpreting SLX model
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-error">
+   Spatial Error
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-lag">
+   Spatial Lag
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources">
+   Sources
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   Questions?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
+    <h2> <center> Evgeny Noi </h2>
+        <h3> <center> Lecture 16: Regression Diagnostics and GWR </h3><section class="tex2jax_ignore mathjax_ignore" id="plan-for-today">
+<h1>Plan for today<a class="headerlink" href="#plan-for-today" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Regression Diagnostics</p></li>
+<li><p>Spatial Regression (GWR)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+<span class="kn">import</span> <span class="nn">statsmodels</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">from</span> <span class="nn">pysal.model</span> <span class="kn">import</span> <span class="n">spreg</span>
+<span class="kn">from</span> <span class="nn">libpysal.weights</span> <span class="kn">import</span> <span class="n">Queen</span><span class="p">,</span> <span class="n">Rook</span><span class="p">,</span> <span class="n">KNN</span>
+<span class="kn">from</span> <span class="nn">esda.moran</span> <span class="kn">import</span> <span class="n">Moran</span>
+<span class="kn">from</span> <span class="nn">pysal.explore</span> <span class="kn">import</span> <span class="n">esda</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\spaghetti\network.py:36: FutureWarning: The next major release of pysal/spaghetti (2.0.0) will drop support for all ``libpysal.cg`` geometries. This change is a first step in refactoring ``spaghetti`` that is expected to result in dramatically reduced runtimes for network instantiation and operations. Users currently requiring network and point pattern input as ``libpysal.cg`` geometries should prepare for this simply by converting to ``shapely`` geometries.
+  warnings.warn(f&quot;{dep_msg}&quot;, FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;regression_db.geojson&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="n">db</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6110, 20)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>accommodates</th>
+      <th>bathrooms</th>
+      <th>bedrooms</th>
+      <th>beds</th>
+      <th>neighborhood</th>
+      <th>pool</th>
+      <th>d2balboa</th>
+      <th>coastal</th>
+      <th>price</th>
+      <th>log_price</th>
+      <th>id</th>
+      <th>pg_Apartment</th>
+      <th>pg_Condominium</th>
+      <th>pg_House</th>
+      <th>pg_Other</th>
+      <th>pg_Townhouse</th>
+      <th>rt_Entire_home/apt</th>
+      <th>rt_Private_room</th>
+      <th>rt_Shared_room</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>North Hills</td>
+      <td>0</td>
+      <td>2.972077</td>
+      <td>0</td>
+      <td>425.0</td>
+      <td>6.052089</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>POINT (-117.12971 32.75399)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>Mission Bay</td>
+      <td>0</td>
+      <td>11.501385</td>
+      <td>1</td>
+      <td>205.0</td>
+      <td>5.323010</td>
+      <td>5570</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>POINT (-117.25253 32.78421)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>North Hills</td>
+      <td>0</td>
+      <td>2.493893</td>
+      <td>0</td>
+      <td>99.0</td>
+      <td>4.595120</td>
+      <td>9553</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.14121 32.75327)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>Mira Mesa</td>
+      <td>0</td>
+      <td>22.293757</td>
+      <td>0</td>
+      <td>72.0</td>
+      <td>4.276666</td>
+      <td>14668</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.15269 32.93110)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>Roseville</td>
+      <td>0</td>
+      <td>6.829451</td>
+      <td>0</td>
+      <td>55.0</td>
+      <td>4.007333</td>
+      <td>38245</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>POINT (-117.21870 32.74202)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variable_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;accommodates&quot;</span><span class="p">,</span>  <span class="c1"># Number of people it accommodates</span>
+    <span class="s2">&quot;bathrooms&quot;</span><span class="p">,</span>  <span class="c1"># Number of bathrooms</span>
+    <span class="s2">&quot;bedrooms&quot;</span><span class="p">,</span>  <span class="c1"># Number of bedrooms</span>
+    <span class="s2">&quot;beds&quot;</span><span class="p">,</span>  <span class="c1"># Number of beds</span>
+    <span class="c1"># Below are binary variables, 1 True, 0 False</span>
+    <span class="s2">&quot;rt_Private_room&quot;</span><span class="p">,</span>  <span class="c1"># Room type: private room</span>
+    <span class="s2">&quot;rt_Shared_room&quot;</span><span class="p">,</span>  <span class="c1"># Room type: shared room</span>
+    <span class="s2">&quot;pg_Condominium&quot;</span><span class="p">,</span>  <span class="c1"># Property group: condo</span>
+    <span class="s2">&quot;pg_House&quot;</span><span class="p">,</span>  <span class="c1"># Property group: house</span>
+    <span class="s2">&quot;pg_Other&quot;</span><span class="p">,</span>  <span class="c1"># Property group: other</span>
+    <span class="s2">&quot;pg_Townhouse&quot;</span><span class="p">,</span>  <span class="c1"># Property group: townhouse</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">price</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;log(Price)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;log(Price)&#39;)
+</pre></div>
+</div>
+<img alt="../_images/lecture16_5_1.png" src="../_images/lecture16_5_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fitting linear model</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span> <span class="s2">&quot;log_price ~ accommodates + bathrooms + bedrooms + beds + rt_Private_room + rt_Shared_room + </span><span class="se">\</span>
+<span class="s2">              pg_Condominium + pg_House + pg_Other + pg_Townhouse&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>log_price</td>    <th>  R-squared:         </th> <td>   0.668</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.668</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1229.</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Tue, 15 Nov 2022</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>20:34:47</td>     <th>  Log-Likelihood:    </th> <td> -3988.9</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>  6110</td>      <th>  AIC:               </th> <td>   8000.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>  6099</td>      <th>  BIC:               </th> <td>   8074.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>    10</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+         <td></td>            <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>       <td>    4.3884</td> <td>    0.016</td> <td>  272.322</td> <td> 0.000</td> <td>    4.357</td> <td>    4.420</td>
+</tr>
+<tr>
+  <th>accommodates</th>    <td>    0.0835</td> <td>    0.005</td> <td>   16.434</td> <td> 0.000</td> <td>    0.073</td> <td>    0.093</td>
+</tr>
+<tr>
+  <th>bathrooms</th>       <td>    0.1924</td> <td>    0.011</td> <td>   17.542</td> <td> 0.000</td> <td>    0.171</td> <td>    0.214</td>
+</tr>
+<tr>
+  <th>bedrooms</th>        <td>    0.1525</td> <td>    0.011</td> <td>   13.701</td> <td> 0.000</td> <td>    0.131</td> <td>    0.174</td>
+</tr>
+<tr>
+  <th>beds</th>            <td>   -0.0417</td> <td>    0.007</td> <td>   -6.013</td> <td> 0.000</td> <td>   -0.055</td> <td>   -0.028</td>
+</tr>
+<tr>
+  <th>rt_Private_room</th> <td>   -0.5507</td> <td>    0.016</td> <td>  -34.624</td> <td> 0.000</td> <td>   -0.582</td> <td>   -0.520</td>
+</tr>
+<tr>
+  <th>rt_Shared_room</th>  <td>   -1.2383</td> <td>    0.038</td> <td>  -32.220</td> <td> 0.000</td> <td>   -1.314</td> <td>   -1.163</td>
+</tr>
+<tr>
+  <th>pg_Condominium</th>  <td>    0.1436</td> <td>    0.022</td> <td>    6.485</td> <td> 0.000</td> <td>    0.100</td> <td>    0.187</td>
+</tr>
+<tr>
+  <th>pg_House</th>        <td>   -0.0105</td> <td>    0.015</td> <td>   -0.722</td> <td> 0.470</td> <td>   -0.039</td> <td>    0.018</td>
+</tr>
+<tr>
+  <th>pg_Other</th>        <td>    0.1412</td> <td>    0.023</td> <td>    6.191</td> <td> 0.000</td> <td>    0.096</td> <td>    0.186</td>
+</tr>
+<tr>
+  <th>pg_Townhouse</th>    <td>   -0.0417</td> <td>    0.034</td> <td>   -1.216</td> <td> 0.224</td> <td>   -0.109</td> <td>    0.026</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>964.842</td> <th>  Durbin-Watson:     </th> <td>   1.836</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>2671.611</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.850</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 5.758</td>  <th>  Cond. No.          </th> <td>    41.5</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># base code</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tools.tools</span> <span class="kn">import</span> <span class="n">maybe_unwrap_results</span>
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.gofplots</span> <span class="kn">import</span> <span class="n">ProbPlot</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span>
+<span class="kn">import</span> <span class="nn">statsmodels.stats.api</span> <span class="k">as</span> <span class="nn">sms</span>
+
+<span class="n">style_talk</span> <span class="o">=</span> <span class="s1">&#39;seaborn-talk&#39;</span>    <span class="c1">#refer to plt.style.available</span>
+
+<span class="k">class</span> <span class="nc">Linear_Reg_Diagnostic</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Diagnostic plots to identify potential problems in a linear regression fit.</span>
+<span class="sd">    Mainly,</span>
+<span class="sd">        a. non-linearity of data</span>
+<span class="sd">        b. Correlation of error terms</span>
+<span class="sd">        c. non-constant variance</span>
+<span class="sd">        d. outliers</span>
+<span class="sd">        e. high-leverage points</span>
+<span class="sd">        f. collinearity</span>
+
+<span class="sd">    Author:</span>
+<span class="sd">        Prajwal Kafle (p33ajkafle@gmail.com, where 3 = r)</span>
+<span class="sd">        Does not come with any sort of warranty.</span>
+<span class="sd">        Please test the code one your end before using.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">results</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">statsmodels</span><span class="o">.</span><span class="n">regression</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">RegressionResultsWrapper</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        For a linear regression model, generates following diagnostic plots:</span>
+
+<span class="sd">        a. residual</span>
+<span class="sd">        b. qq</span>
+<span class="sd">        c. scale location and</span>
+<span class="sd">        d. leverage</span>
+
+<span class="sd">        and a table</span>
+
+<span class="sd">        e. vif</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            results (Type[statsmodels.regression.linear_model.RegressionResultsWrapper]):</span>
+<span class="sd">                must be instance of statsmodels.regression.linear_model object</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            TypeError: if instance does not belong to above object</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">        &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">        &gt;&gt;&gt; import pandas as pd</span>
+<span class="sd">        &gt;&gt;&gt; import statsmodels.formula.api as smf</span>
+<span class="sd">        &gt;&gt;&gt; x = np.linspace(-np.pi, np.pi, 100)</span>
+<span class="sd">        &gt;&gt;&gt; y = 3*x + 8 + np.random.normal(0,1, 100)</span>
+<span class="sd">        &gt;&gt;&gt; df = pd.DataFrame({&#39;x&#39;:x, &#39;y&#39;:y})</span>
+<span class="sd">        &gt;&gt;&gt; res = smf.ols(formula= &quot;y ~ x&quot;, data=df).fit()</span>
+<span class="sd">        &gt;&gt;&gt; cls = Linear_Reg_Diagnostic(res)</span>
+<span class="sd">        &gt;&gt;&gt; cls(plot_context=&quot;seaborn-paper&quot;)</span>
+
+<span class="sd">        In case you do not need all plots you can also independently make an individual plot/table</span>
+<span class="sd">        in following ways</span>
+
+<span class="sd">        &gt;&gt;&gt; cls = Linear_Reg_Diagnostic(res)</span>
+<span class="sd">        &gt;&gt;&gt; cls.residual_plot()</span>
+<span class="sd">        &gt;&gt;&gt; cls.qq_plot()</span>
+<span class="sd">        &gt;&gt;&gt; cls.scale_location_plot()</span>
+<span class="sd">        &gt;&gt;&gt; cls.leverage_plot()</span>
+<span class="sd">        &gt;&gt;&gt; cls.vif_table()</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">statsmodels</span><span class="o">.</span><span class="n">regression</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">RegressionResultsWrapper</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;result must be instance of statsmodels.regression.linear_model.RegressionResultsWrapper object&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="n">maybe_unwrap_results</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_true</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">endog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">fittedvalues</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xvar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xvar_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog_names</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">residual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">resid</span><span class="p">)</span>
+        <span class="n">influence</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">get_influence</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span> <span class="o">=</span> <span class="n">influence</span><span class="o">.</span><span class="n">resid_studentized_internal</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">leverage</span> <span class="o">=</span> <span class="n">influence</span><span class="o">.</span><span class="n">hat_matrix_diag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cooks_distance</span> <span class="o">=</span> <span class="n">influence</span><span class="o">.</span><span class="n">cooks_distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nparams</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_context</span><span class="o">=</span><span class="s1">&#39;seaborn-paper&#39;</span><span class="p">):</span>
+        <span class="c1"># print(plt.style.available)</span>
+        <span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="n">plot_context</span><span class="p">):</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">residual_plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qq_plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scale_location_plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">leverage_plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">vif_table</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span>
+
+
+    <span class="k">def</span> <span class="nf">residual_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Residual vs Fitted Plot</span>
+
+<span class="sd">        Graphical tool to identify non-linearity.</span>
+<span class="sd">        (Roughly) Horizontal red line is an indicator that the residual has a linear pattern</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+        <span class="n">sns</span><span class="o">.</span><span class="n">residplot</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">residual</span><span class="p">,</span>
+            <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+            <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="c1"># annotations</span>
+        <span class="n">residual_abs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">residual</span><span class="p">)</span>
+        <span class="n">abs_resid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">residual_abs</span><span class="p">))</span>
+        <span class="n">abs_resid_top_3</span> <span class="o">=</span> <span class="n">abs_resid</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">abs_resid_top_3</span><span class="p">):</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">residual</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C3&#39;</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Residuals vs Fitted&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitted values&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ax</span>
+
+    <span class="k">def</span> <span class="nf">qq_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Standarized Residual vs Theoretical Quantile plot</span>
+
+<span class="sd">        Used to visually check if residuals are normally distributed.</span>
+<span class="sd">        Points spread along the diagonal line will suggest so.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+        <span class="n">QQ</span> <span class="o">=</span> <span class="n">ProbPlot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">)</span>
+        <span class="n">QQ</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="c1"># annotations</span>
+        <span class="n">abs_norm_resid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">abs_norm_resid_top_3</span> <span class="o">=</span> <span class="n">abs_norm_resid</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">abs_norm_resid_top_3</span><span class="p">):</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">QQ</span><span class="o">.</span><span class="n">theoretical_quantiles</span><span class="p">,</span> <span class="mi">0</span><span class="p">)[</span><span class="n">r</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C3&#39;</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Normal Q-Q&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Theoretical Quantiles&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Standardized Residuals&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ax</span>
+
+    <span class="k">def</span> <span class="nf">scale_location_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sqrt(Standarized Residual) vs Fitted values plot</span>
+
+<span class="sd">        Used to check homoscedasticity of the residuals.</span>
+<span class="sd">        Horizontal line will suggest so.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+        <span class="n">residual_norm_abs_sqrt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">))</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span><span class="p">,</span> <span class="n">residual_norm_abs_sqrt</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">residual_norm_abs_sqrt</span><span class="p">,</span>
+            <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="c1"># annotations</span>
+        <span class="n">abs_sq_norm_resid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">residual_norm_abs_sqrt</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">abs_sq_norm_resid_top_3</span> <span class="o">=</span> <span class="n">abs_sq_norm_resid</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">abs_sq_norm_resid_top_3</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">residual_norm_abs_sqrt</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C3&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Scale-Location&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fitted values&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\sqrt{|\mathrm{Standardized\ Residuals}|}$&#39;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">ax</span>
+
+    <span class="k">def</span> <span class="nf">leverage_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Residual vs Leverage plot</span>
+
+<span class="sd">        Points falling outside Cook&#39;s distance curves are considered observation that can sway the fit</span>
+<span class="sd">        aka are influential.</span>
+<span class="sd">        Good to have none outside the curves.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">leverage</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+
+        <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">leverage</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">,</span>
+            <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">ci</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+        <span class="c1"># annotations</span>
+        <span class="n">leverage_top_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cooks_distance</span><span class="p">),</span> <span class="mi">0</span><span class="p">)[:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">leverage_top_3</span><span class="p">:</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leverage</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">residual_norm</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C3&#39;</span><span class="p">)</span>
+
+        <span class="n">xtemp</span><span class="p">,</span> <span class="n">ytemp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cooks_dist_line</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># 0.5 line</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtemp</span><span class="p">,</span> <span class="n">ytemp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cook&#39;s distance&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+        <span class="n">xtemp</span><span class="p">,</span> <span class="n">ytemp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cooks_dist_line</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 1 line</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xtemp</span><span class="p">,</span> <span class="n">ytemp</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leverage</span><span class="p">)</span><span class="o">+</span><span class="mf">0.01</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Residuals vs Leverage&#39;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Leverage&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Standardized Residuals&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ax</span>
+
+    <span class="k">def</span> <span class="nf">vif_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        VIF table</span>
+
+<span class="sd">        VIF, the variance inflation factor, is a measure of multicollinearity.</span>
+<span class="sd">        VIF &gt; 5 for a variable indicates that it is highly collinear with the</span>
+<span class="sd">        other input variables.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">vif_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="n">vif_df</span><span class="p">[</span><span class="s2">&quot;Features&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xvar_names</span>
+        <span class="n">vif_df</span><span class="p">[</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xvar</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xvar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">vif_df</span>
+                <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;VIF Factor&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+
+    <span class="k">def</span> <span class="nf">__cooks_dist_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Helper function for plotting Cook&#39;s distance curves</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nparams</span>
+        <span class="n">formula</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">factor</span> <span class="o">*</span> <span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leverage</span><span class="p">),</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">formula</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="bp">cls</span> <span class="o">=</span> <span class="n">Linear_Reg_Diagnostic</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="bp">cls</span><span class="o">.</span><span class="n">residual_plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Residuals vs Fitted&#39;}, xlabel=&#39;Fitted values&#39;, ylabel=&#39;Residuals&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/lecture16_8_1.png" src="../_images/lecture16_8_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="bp">cls</span><span class="o">.</span><span class="n">qq_plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_9_0.png" src="../_images/lecture16_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="bp">cls</span><span class="o">.</span><span class="n">scale_location_plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_10_0.png" src="../_images/lecture16_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># look out for the points outside of the Cook&#39;s curves</span>
+<span class="bp">cls</span><span class="o">.</span><span class="n">leverage_plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_11_0.png" src="../_images/lecture16_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># look out for the variance inflation factor (VIF) &gt; 5 </span>
+<span class="bp">cls</span><span class="o">.</span><span class="n">vif_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           Features  VIF Factor
+10     pg_Townhouse        1.09
+6    rt_Shared_room        1.13
+7    pg_Condominium        1.15
+9          pg_Other        1.17
+8          pg_House        1.45
+5   rt_Private_room        1.49
+2         bathrooms        2.53
+4              beds        3.99
+3          bedrooms        4.52
+1      accommodates        5.87
+0         Intercept        7.33
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="getting-at-spatial-structure-of-data">
+<h1>Getting at Spatial Structure of Data<a class="headerlink" href="#getting-at-spatial-structure-of-data" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Visual plots</p></li>
+<li><p>Global Moran’s I</p></li>
+<li><p>Local Moran’s I</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit OLS model</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variable name</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create column with residual values from m1</span>
+<span class="n">db</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">m1</span><span class="o">.</span><span class="n">u</span>
+<span class="c1"># Obtain the median value of residuals in each neighbourhood</span>
+<span class="n">medians</span> <span class="o">=</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;neighborhood&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">residual</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;hood_residual&quot;</span><span class="p">))</span>
+
+<span class="c1"># Increase fontsize</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
+<span class="c1"># Set up figure</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="c1"># Grab figure&#39;s axis</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="c1"># Generate bloxplot of values by neighbourhood</span>
+<span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">medians</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;neighborhood&quot;</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;hood_residual&quot;</span><span class="p">)</span>
+<span class="c1"># Note the data includes the median values merged on-the-fly</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;neighborhood&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;residual&quot;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;bwr&quot;</span>
+<span class="p">)</span>
+<span class="c1"># Auto-format of the X labels</span>
+<span class="n">f</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="c1"># Display</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_15_0.png" src="../_images/lecture16_15_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysal.lib</span> <span class="kn">import</span> <span class="n">weights</span>
+<span class="n">w_knn</span> <span class="o">=</span> <span class="n">KNN</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m1</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m1</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Model Residuals - $u$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial Lag of Model Residuals - $W u$&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_16_0.png" src="../_images/lecture16_16_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.14904244159430066 0.001
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting-moran-scatterplot">
+<h1>Interpreting Moran Scatterplot<a class="headerlink" href="#interpreting-moran-scatterplot" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>When the model tends to over-predict a given AirBnB’s nightly log price, sites around that AirBnB are more likely to also be over-predicted.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">contextily</span>
+<span class="c1"># Re-weight W to 20 nearest neighbors</span>
+<span class="c1"># knn.reweight(k=20, inplace=True)</span>
+<span class="c1"># Row standardise weights</span>
+<span class="n">w_knn</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="s2">&quot;R&quot;</span>
+<span class="c1"># Run LISA on residuals</span>
+<span class="n">outliers</span> <span class="o">=</span> <span class="n">esda</span><span class="o">.</span><span class="n">moran</span><span class="o">.</span><span class="n">Moran_Local</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">,</span> <span class="n">permutations</span><span class="o">=</span><span class="mi">9999</span><span class="p">)</span>
+<span class="c1"># Select only LISA cluster cores</span>
+<span class="n">error_clusters</span> <span class="o">=</span> <span class="n">outliers</span><span class="o">.</span><span class="n">q</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="c1"># Filter out non-significant clusters</span>
+<span class="n">error_clusters</span> <span class="o">&amp;=</span> <span class="n">outliers</span><span class="o">.</span><span class="n">p_sim</span> <span class="o">&lt;=</span> <span class="mf">0.001</span>
+<span class="c1"># Add `error_clusters` and `local_I` columns</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">error_clusters</span><span class="o">=</span><span class="n">error_clusters</span><span class="p">,</span>
+        <span class="n">local_I</span><span class="o">=</span><span class="n">outliers</span><span class="o">.</span><span class="n">Is</span>
+        <span class="c1"># Retain error clusters only</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="s2">&quot;error_clusters&quot;</span>
+        <span class="c1"># Sort by I value to largest plot on top</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+        <span class="s2">&quot;local_I&quot;</span>
+        <span class="c1"># Plot I values</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;local_I&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bwr&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c1"># Add basemap</span>
+<span class="n">contextily</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+<span class="c1"># Remove axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_19_0.png" src="../_images/lecture16_19_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting-lisa-maps">
+<h1>Interpreting LISA maps<a class="headerlink" href="#interpreting-lisa-maps" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Coldspots - underpredictions, hotspots - overpredictions. We observe spatial patterns to model residuals (predictive performance).</p>
+</div></blockquote>
+<section id="we-need-to-bring-geography-into-regression-framework">
+<h2>We need to bring geography into regression framework<a class="headerlink" href="#we-need-to-bring-geography-into-regression-framework" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-regression">
+<h1>Spatial Regression<a class="headerlink" href="#spatial-regression" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Explicitly introduces space or geographical context into the statistical framework of a regression</p></li>
+<li><p>Space can act as a reasonable proxy for other factors we cannot but should include in our model.</p></li>
+<li><p><strong>Construct spatial featrues to bring geography!</strong></p>
+<ul>
+<li><p>proximity to Balboa Park (tourist attraction)</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;d2balboa&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">contextily</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_22_0.png" src="../_images/lecture16_22_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">balboa_names</span> <span class="o">=</span> <span class="n">variable_names</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;d2balboa&quot;</span><span class="p">]</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">db</span><span class="p">[</span><span class="n">balboa_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span><span class="n">name_x</span><span class="o">=</span><span class="n">balboa_names</span><span class="p">,)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">[[</span><span class="n">m1</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">m1</span><span class="o">.</span><span class="n">ar2</span><span class="p">],</span> <span class="p">[</span><span class="n">m2</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">m2</span><span class="o">.</span><span class="n">ar2</span><span class="p">]],</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;M1&quot;</span><span class="p">,</span> <span class="s2">&quot;M2&quot;</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;R2&quot;</span><span class="p">,</span> <span class="s2">&quot;Adj. R2&quot;</span><span class="p">],</span>
+<span class="p">)</span> <span class="c1"># the model fit does not change </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>R2</th>
+      <th>Adj. R2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>M1</th>
+      <td>0.668345</td>
+      <td>0.667801</td>
+    </tr>
+    <tr>
+      <th>M2</th>
+      <td>0.668502</td>
+      <td>0.667904</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up table of regression coefficients</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="c1"># Pull out regression coefficients and</span>
+        <span class="c1"># flatten as they are returned as Nx1 array</span>
+        <span class="s2">&quot;Coeff.&quot;</span><span class="p">:</span> <span class="n">m2</span><span class="o">.</span><span class="n">betas</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out and flatten standard errors</span>
+        <span class="s2">&quot;Std. Error&quot;</span><span class="p">:</span> <span class="n">m2</span><span class="o">.</span><span class="n">std_err</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out P-values from t-stat object</span>
+        <span class="s2">&quot;P-Value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m2</span><span class="o">.</span><span class="n">t_stat</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">m2</span><span class="o">.</span><span class="n">name_x</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coeff.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CONSTANT</th>
+      <td>4.379624</td>
+      <td>0.016915</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>accommodates</th>
+      <td>0.083644</td>
+      <td>0.005079</td>
+      <td>1.156896e-59</td>
+    </tr>
+    <tr>
+      <th>bathrooms</th>
+      <td>0.190791</td>
+      <td>0.011005</td>
+      <td>9.120139e-66</td>
+    </tr>
+    <tr>
+      <th>bedrooms</th>
+      <td>0.150746</td>
+      <td>0.011179</td>
+      <td>7.418035e-41</td>
+    </tr>
+    <tr>
+      <th>beds</th>
+      <td>-0.041476</td>
+      <td>0.006939</td>
+      <td>2.394322e-09</td>
+    </tr>
+    <tr>
+      <th>rt_Private_room</th>
+      <td>-0.552996</td>
+      <td>0.015960</td>
+      <td>2.680270e-240</td>
+    </tr>
+    <tr>
+      <th>rt_Shared_room</th>
+      <td>-1.235521</td>
+      <td>0.038462</td>
+      <td>2.586867e-209</td>
+    </tr>
+    <tr>
+      <th>pg_Condominium</th>
+      <td>0.140459</td>
+      <td>0.022225</td>
+      <td>2.803765e-10</td>
+    </tr>
+    <tr>
+      <th>pg_House</th>
+      <td>-0.013302</td>
+      <td>0.014623</td>
+      <td>3.630396e-01</td>
+    </tr>
+    <tr>
+      <th>pg_Other</th>
+      <td>0.141176</td>
+      <td>0.022798</td>
+      <td>6.309880e-10</td>
+    </tr>
+    <tr>
+      <th>pg_Townhouse</th>
+      <td>-0.045784</td>
+      <td>0.034356</td>
+      <td>1.826992e-01</td>
+    </tr>
+    <tr>
+      <th>d2balboa</th>
+      <td>0.001645</td>
+      <td>0.000967</td>
+      <td>8.902052e-02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m2</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m2</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_25_0.png" src="../_images/lecture16_25_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="observations-about-model-2">
+<h1>Observations About Model 2<a class="headerlink" href="#observations-about-model-2" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We still observe clustering in residuals (something we are not capturing well) - GEO</p></li>
+<li><p>Positive coefficient for Balboa is not intuitive (we are paying more to stay farther from Balboa)</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-heterogeneity">
+<h1>Spatial Heterogeneity<a class="headerlink" href="#spatial-heterogeneity" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We have assumed that the influence of distance is uniform across the study area, BUT some neighborhoods are systematically more expensive than others.</p></li>
+<li><p><strong>parts of the model vary systematically with geography</strong></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-fixed-effects">
+<h1>Spatial Fixed Effects<a class="headerlink" href="#spatial-fixed-effects" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Captures the fixed effect through a proxy that influences price (neighborhood)</p></li>
+<li><p>Create a separate binary variable for each of the $r$ neighborhoods</p></li>
+</ul>
+<p>$$
+\log{P_i} = \alpha_r + \sum_k \mathbf{X}_{ik}\beta_k  + \epsilon_i
+$$</p>
+<p>where $\alpha_r$ varies across neighborhoods</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;log_price ~ &quot;</span>
+    <span class="o">+</span> <span class="s2">&quot; + &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">variable_names</span><span class="p">)</span>
+    <span class="o">+</span> <span class="s2">&quot; + neighborhood - 1&quot;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>log_price ~ accommodates + bathrooms + bedrooms + beds + rt_Private_room + rt_Shared_room + pg_Condominium + pg_House + pg_Other + pg_Townhouse + neighborhood - 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m3</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">db</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store variable names for all the spatial fixed effects</span>
+<span class="n">sfe_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m3</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="s2">&quot;neighborhood[&quot;</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+<span class="c1"># Create table</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Coef.&quot;</span><span class="p">:</span> <span class="n">m3</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="n">sfe_names</span><span class="p">],</span>
+        <span class="s2">&quot;Std. Error&quot;</span><span class="p">:</span> <span class="n">m3</span><span class="o">.</span><span class="n">bse</span><span class="p">[</span><span class="n">sfe_names</span><span class="p">],</span>
+        <span class="s2">&quot;P-Value&quot;</span><span class="p">:</span> <span class="n">m3</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="n">sfe_names</span><span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coef.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>neighborhood[Balboa Park]</th>
+      <td>4.280766</td>
+      <td>0.033292</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Bay Ho]</th>
+      <td>4.198251</td>
+      <td>0.076878</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Bay Park]</th>
+      <td>4.329223</td>
+      <td>0.050987</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Carmel Valley]</th>
+      <td>4.389261</td>
+      <td>0.056553</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[City Heights West]</th>
+      <td>4.053518</td>
+      <td>0.058378</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Clairemont Mesa]</th>
+      <td>4.095259</td>
+      <td>0.047699</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[College Area]</th>
+      <td>4.033697</td>
+      <td>0.058258</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Core]</th>
+      <td>4.726186</td>
+      <td>0.052643</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Cortez Hill]</th>
+      <td>4.608090</td>
+      <td>0.051526</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>neighborhood[Del Mar Heights]</th>
+      <td>4.496910</td>
+      <td>0.054337</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># spreg spatial fixed effect implementation</span>
+<span class="n">m4</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS_Regimes</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Variable specifying neighborhood membership</span>
+    <span class="n">db</span><span class="p">[</span><span class="s2">&quot;neighborhood&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+    <span class="c1"># Allow the constant term to vary by group/regime</span>
+    <span class="n">constant_regi</span><span class="o">=</span><span class="s2">&quot;many&quot;</span><span class="p">,</span>
+    <span class="c1"># Variables to be allowed to vary (True) or kept</span>
+    <span class="c1"># constant (False). Here we set all to False</span>
+    <span class="n">cols2regi</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">variable_names</span><span class="p">),</span>
+    <span class="c1"># Allow separate sigma coefficients to be estimated</span>
+    <span class="c1"># by regime (False so a single sigma)</span>
+    <span class="n">regime_err_sep</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variables names</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">m4</span><span class="o">.</span><span class="n">betas</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">-</span> <span class="n">m3</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.e+00,  4.e-12,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,
+        0.e+00,  0.e+00, -2.e-12,  0.e+00, -0.e+00,  0.e+00,  0.e+00,
+        0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,
+       -0.e+00,  0.e+00,  0.e+00, -0.e+00,  0.e+00,  0.e+00,  0.e+00,
+        0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,
+        0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00,
+        0.e+00,  0.e+00,  0.e+00,  0.e+00, -0.e+00, -0.e+00,  0.e+00,
+       -0.e+00, -0.e+00,  0.e+00,  0.e+00,  0.e+00,  0.e+00])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighborhood_effects</span> <span class="o">=</span> <span class="n">m3</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;neighborhood&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create a sequence with the variable names without</span>
+<span class="c1"># `neighborhood[` and `]`</span>
+<span class="n">stripped</span> <span class="o">=</span> <span class="n">neighborhood_effects</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span>
+    <span class="s2">&quot;neighborhood[&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">)</span>
+<span class="c1"># Reindex the neighborhood_effects Series on clean names</span>
+<span class="n">neighborhood_effects</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">stripped</span>
+<span class="c1"># Convert Series to DataFrame</span>
+<span class="n">neighborhood_effects</span> <span class="o">=</span> <span class="n">neighborhood_effects</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;fixed_effect&quot;</span><span class="p">)</span>
+<span class="c1"># Print top of table</span>
+<span class="n">neighborhood_effects</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fixed_effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Balboa Park</th>
+      <td>4.280766</td>
+    </tr>
+    <tr>
+      <th>Bay Ho</th>
+      <td>4.198251</td>
+    </tr>
+    <tr>
+      <th>Bay Park</th>
+      <td>4.329223</td>
+    </tr>
+    <tr>
+      <th>Carmel Valley</th>
+      <td>4.389261</td>
+    </tr>
+    <tr>
+      <th>City Heights West</th>
+      <td>4.053518</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="s2">&quot;http://data.insideairbnb.com/united-states/ca/san-diego/2022-09-18/visualisations/neighbourhoods.geojson &quot;</span><span class="p">,</span> <span class="s2">&quot;sd_geo.geojson&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;sd_geo.geojson&#39;, &lt;http.client.HTTPMessage at 0x23530ac9060&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighborhoods</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;sd_geo.geojson&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot base layer with all neighborhoods in grey</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">neighborhoods</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="c1"># Merge SFE estimates (note not every polygon</span>
+<span class="c1"># receives an estimate since not every polygon</span>
+<span class="c1"># contains AirBnb properties)</span>
+<span class="n">neighborhoods</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">neighborhood_effects</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;neighbourhood&quot;</span><span class="p">,</span>
+    <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span>
+    <span class="c1"># Drop polygons without a SFE estimate</span>
+<span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fixed_effect&quot;</span><span class="p">]</span>
+    <span class="c1"># Plot quantile choropleth</span>
+<span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="s2">&quot;fixed_effect&quot;</span><span class="p">,</span>  <span class="c1"># Variable to display</span>
+    <span class="n">scheme</span><span class="o">=</span><span class="s2">&quot;quantiles&quot;</span><span class="p">,</span>  <span class="c1"># Choropleth scheme</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>  <span class="c1"># No. of classes in the choropleth</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>  <span class="c1"># Polygon border width</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>  <span class="c1"># Color scheme</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>  <span class="c1"># Axis to draw on</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="s1">&#39;bbox_to_anchor&#39;</span><span class="p">:(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)}</span>
+<span class="p">)</span>
+<span class="c1"># Add basemap</span>
+<span class="n">contextily</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span>
+    <span class="n">ax</span><span class="p">,</span>
+    <span class="n">crs</span><span class="o">=</span><span class="n">neighborhoods</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">contextily</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">PositronNoLabels</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Remove axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+<span class="c1"># Display</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_36_0.png" src="../_images/lecture16_36_0.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpeting-spatial-fixed-effects">
+<h1>Interpeting Spatial Fixed Effects<a class="headerlink" href="#interpeting-spatial-fixed-effects" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>We can see a clear spatial structure in the SFE estimates. The most expensive neighborhoods tend to be located nearby the coast, while the cheapest ones are more inland.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m4</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m4</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_38_0.png" src="../_images/lecture16_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">m4</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span> <span class="c1"># smaller Moran&#39;s I (compared to .14) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.04374941138999537 0.001
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-regimes">
+<h1>Spatial Regimes<a class="headerlink" href="#spatial-regimes" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Allow not only intercepts, but beta coefficients to vary</p>
+</div></blockquote>
+<p>$$
+\log{P_i} = \alpha_r + \sum_k \mathbf{X}<em>{ki}\beta</em>{k-r} + \epsilon_i
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pysal spatial regimes implementation</span>
+<span class="n">m5</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS_Regimes</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Variable specifying neighborhood membership</span>
+    <span class="n">db</span><span class="p">[</span><span class="s2">&quot;coastal&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+    <span class="c1"># Allow the constant term to vary by group/regime</span>
+    <span class="n">constant_regi</span><span class="o">=</span><span class="s2">&quot;many&quot;</span><span class="p">,</span>
+    <span class="c1"># Allow separate sigma coefficients to be estimated</span>
+    <span class="c1"># by regime (False so a single sigma)</span>
+    <span class="n">regime_err_sep</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variables names</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Results table</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;Coeff.&quot;</span><span class="p">:</span> <span class="n">m5</span><span class="o">.</span><span class="n">betas</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="s2">&quot;Std. Error&quot;</span><span class="p">:</span> <span class="n">m5</span><span class="o">.</span><span class="n">std_err</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="s2">&quot;P-Value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m5</span><span class="o">.</span><span class="n">t_stat</span><span class="p">],},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">m5</span><span class="o">.</span><span class="n">name_x</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">coastal</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="s2">&quot;1_&quot;</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+<span class="n">coastal</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">coastal</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;1_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+<span class="n">coastal</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s2">&quot;Coastal&quot;</span><span class="p">],</span> <span class="n">coastal</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span>
+
+<span class="n">ncoastal</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">res</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="s2">&quot;0_&quot;</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span>
+
+<span class="n">ncoastal</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ncoastal</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;0_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+<span class="n">ncoastal</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s2">&quot;Non-coastal&quot;</span><span class="p">],</span> <span class="n">ncoastal</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span>
+
+<span class="c1"># Concat both models</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">coastal</span><span class="p">,</span> <span class="n">ncoastal</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">Coastal</th>
+      <th colspan="3" halign="left">Non-coastal</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Coeff.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+      <th>Coeff.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CONSTANT</th>
+      <td>4.479904</td>
+      <td>0.025094</td>
+      <td>0.000000e+00</td>
+      <td>4.407242</td>
+      <td>0.021516</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>accommodates</th>
+      <td>0.048464</td>
+      <td>0.007881</td>
+      <td>8.253761e-10</td>
+      <td>0.090186</td>
+      <td>0.006474</td>
+      <td>1.893020e-43</td>
+    </tr>
+    <tr>
+      <th>bathrooms</th>
+      <td>0.247478</td>
+      <td>0.016566</td>
+      <td>1.381278e-49</td>
+      <td>0.143376</td>
+      <td>0.014268</td>
+      <td>1.418804e-23</td>
+    </tr>
+    <tr>
+      <th>bedrooms</th>
+      <td>0.189740</td>
+      <td>0.017923</td>
+      <td>5.783965e-26</td>
+      <td>0.112963</td>
+      <td>0.013827</td>
+      <td>3.731742e-16</td>
+    </tr>
+    <tr>
+      <th>beds</th>
+      <td>-0.050608</td>
+      <td>0.010743</td>
+      <td>2.522348e-06</td>
+      <td>-0.026272</td>
+      <td>0.008838</td>
+      <td>2.964354e-03</td>
+    </tr>
+    <tr>
+      <th>rt_Private_room</th>
+      <td>-0.558628</td>
+      <td>0.028312</td>
+      <td>4.723759e-84</td>
+      <td>-0.529334</td>
+      <td>0.018918</td>
+      <td>3.546091e-162</td>
+    </tr>
+    <tr>
+      <th>rt_Shared_room</th>
+      <td>-1.052854</td>
+      <td>0.084174</td>
+      <td>1.836512e-35</td>
+      <td>-1.224459</td>
+      <td>0.042597</td>
+      <td>1.657163e-170</td>
+    </tr>
+    <tr>
+      <th>pg_Condominium</th>
+      <td>0.204447</td>
+      <td>0.033943</td>
+      <td>1.810152e-09</td>
+      <td>0.105307</td>
+      <td>0.028131</td>
+      <td>1.831822e-04</td>
+    </tr>
+    <tr>
+      <th>pg_House</th>
+      <td>0.075353</td>
+      <td>0.023378</td>
+      <td>1.274269e-03</td>
+      <td>-0.045447</td>
+      <td>0.017957</td>
+      <td>1.140318e-02</td>
+    </tr>
+    <tr>
+      <th>pg_Other</th>
+      <td>0.295485</td>
+      <td>0.038645</td>
+      <td>2.394157e-14</td>
+      <td>0.060753</td>
+      <td>0.027637</td>
+      <td>2.796727e-02</td>
+    </tr>
+    <tr>
+      <th>pg_Townhouse</th>
+      <td>-0.073508</td>
+      <td>0.049367</td>
+      <td>1.365396e-01</td>
+      <td>-0.010397</td>
+      <td>0.045673</td>
+      <td>8.199294e-01</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m5</span><span class="o">.</span><span class="n">chow</span><span class="o">.</span><span class="n">joint</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(328.86902143031756, 7.113548767239792e-64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="c1"># Chow results by variable</span>
+    <span class="n">m5</span><span class="o">.</span><span class="n">chow</span><span class="o">.</span><span class="n">regi</span><span class="p">,</span>
+    <span class="c1"># Name of variables</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">m5</span><span class="o">.</span><span class="n">name_x_r</span><span class="p">,</span>
+    <span class="c1"># Column names</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Statistic&quot;</span><span class="p">,</span> <span class="s2">&quot;P-value&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Statistic</th>
+      <th>P-value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CONSTANT</th>
+      <td>4.832180</td>
+      <td>2.793329e-02</td>
+    </tr>
+    <tr>
+      <th>accommodates</th>
+      <td>16.735685</td>
+      <td>4.296522e-05</td>
+    </tr>
+    <tr>
+      <th>bathrooms</th>
+      <td>22.671471</td>
+      <td>1.922004e-06</td>
+    </tr>
+    <tr>
+      <th>bedrooms</th>
+      <td>11.503786</td>
+      <td>6.945459e-04</td>
+    </tr>
+    <tr>
+      <th>beds</th>
+      <td>3.060313</td>
+      <td>8.022620e-02</td>
+    </tr>
+    <tr>
+      <th>rt_Private_room</th>
+      <td>0.740097</td>
+      <td>3.896298e-01</td>
+    </tr>
+    <tr>
+      <th>rt_Shared_room</th>
+      <td>3.308838</td>
+      <td>6.890820e-02</td>
+    </tr>
+    <tr>
+      <th>pg_Condominium</th>
+      <td>5.057283</td>
+      <td>2.452265e-02</td>
+    </tr>
+    <tr>
+      <th>pg_House</th>
+      <td>16.792503</td>
+      <td>4.169771e-05</td>
+    </tr>
+    <tr>
+      <th>pg_Other</th>
+      <td>24.409876</td>
+      <td>7.786847e-07</td>
+    </tr>
+    <tr>
+      <th>pg_Townhouse</th>
+      <td>0.880564</td>
+      <td>3.480471e-01</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m5</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m5</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lecture16_45_0.png" src="../_images/lecture16_45_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">m5</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span> <span class="c1"># smaller Moran&#39;s I (compared to m2 - .14, but larger than m4 - .4) </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11880651767401344 0.001
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-dependence">
+<h1>Spatial Dependence<a class="headerlink" href="#spatial-dependence" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>We shift our interest from explicitly linked geography, to <strong>spatial configuration</strong>. Think about neighborhood as generalization of surroundings. The look and feel of the neighborhood might depend on how some of them vary in terms of nearby configurations (townhouse next to other townhouses).</p></li>
+<li><p><strong>Spatial dependence</strong> through distance</p>
+<ul>
+<li><p>SLX model</p></li>
+<li><p>Spatial Error</p></li>
+<li><p>Spatial Lag</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="slx-model-exogenous-effects">
+<h1>SLX Model (Exogenous effects)<a class="headerlink" href="#slx-model-exogenous-effects" title="Permalink to this headline">#</a></h1>
+<p>$$
+\log(P_i) = \alpha + \sum^{p}<em>{k=1}X</em>{ij}\beta_j + \sum^{p}<em>{k=1}\left(\sum^{N}</em>{j=1}w_{ij}x_{jk}\right)\gamma_k + \epsilon_i
+$$</p>
+<p>$$
+\log(P_i) = \alpha + \mathbf{X}\beta + \mathbf{WX}\gamma + \epsilon
+$$</p>
+<ul class="simple">
+<li><p>We separate spatial effects into direct ($\beta$) and indirect ($\gamma$).</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="slx-model-example">
+<h1>SLX Model (Example)<a class="headerlink" href="#slx-model-example" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Add spatial lag of type of houses in the neighborhood (surrounding)</p></li>
+<li><p>Association between the price in a given house and a unit change in its average surroundings</p></li>
+<li><p>Spillover effect</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select only columns in `db` containing the keyword `pg_`</span>
+<span class="n">wx</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+        <span class="n">like</span><span class="o">=</span><span class="s2">&quot;pg_&quot;</span>
+        <span class="c1"># Compute the spatial lag of each of those variables</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="c1"># Rename the spatial lag, adding w_ to the original name</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="s2">&quot;w_&quot;</span>
+        <span class="o">+</span> <span class="n">c</span>
+        <span class="c1"># Remove the lag of the binary variable for apartments</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;w_pg_Apartment&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge original variables with the spatial lags in `wx`</span>
+<span class="n">slx_exog</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wx</span><span class="p">)</span>
+<span class="c1"># Fit linear model with `spreg`</span>
+<span class="n">m6</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">slx_exog</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;l_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variables names</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">slx_exog</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Collect names of variables of interest</span>
+<span class="n">vars_of_interest</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;pg_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wx</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+<span class="p">)</span>
+<span class="c1"># Build full table of regression coefficients</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="c1"># Pull out regression coefficients and</span>
+        <span class="c1"># flatten as they are returned as Nx1 array</span>
+        <span class="s2">&quot;Coeff.&quot;</span><span class="p">:</span> <span class="n">m6</span><span class="o">.</span><span class="n">betas</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out and flatten standard errors</span>
+        <span class="s2">&quot;Std. Error&quot;</span><span class="p">:</span> <span class="n">m6</span><span class="o">.</span><span class="n">std_err</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out P-values from t-stat object</span>
+        <span class="s2">&quot;P-Value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m6</span><span class="o">.</span><span class="n">t_stat</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">m6</span><span class="o">.</span><span class="n">name_x</span>
+    <span class="c1"># Subset for variables of itnerest only and round to</span>
+    <span class="c1"># four decimals</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">vars_of_interest</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coeff.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>pg_Condominium</th>
+      <td>0.1084</td>
+      <td>0.0222</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>pg_House</th>
+      <td>0.0314</td>
+      <td>0.0158</td>
+      <td>0.0462</td>
+    </tr>
+    <tr>
+      <th>pg_Other</th>
+      <td>0.0909</td>
+      <td>0.0241</td>
+      <td>0.0002</td>
+    </tr>
+    <tr>
+      <th>pg_Townhouse</th>
+      <td>-0.0320</td>
+      <td>0.0339</td>
+      <td>0.3458</td>
+    </tr>
+    <tr>
+      <th>w_pg_Condominium</th>
+      <td>0.4937</td>
+      <td>0.0616</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>w_pg_House</th>
+      <td>-0.0822</td>
+      <td>0.0301</td>
+      <td>0.0063</td>
+    </tr>
+    <tr>
+      <th>w_pg_Other</th>
+      <td>0.4115</td>
+      <td>0.0506</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>w_pg_Townhouse</th>
+      <td>-0.1654</td>
+      <td>0.1081</td>
+      <td>0.1260</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="interpreting-slx-model">
+<h1>Interpreting SLX model<a class="headerlink" href="#interpreting-slx-model" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>The direct effect of the pg_Condominium variable means that condominiums are typically 11% more expensive than benchmark property type (apartments)</p></li>
+<li><p>Since <em>pg_Condominium</em> is a dummy variable, the spatial lag at site $i$ represents the percentage of properties near $i$ that are condominiums. So a unit change in this variable means that you would increase the condominium percentage by 100%. Thus a .1 increase in <em>w_pg_Condominium</em> (a change of ten percentage points) would result in 5.92% increase in the property house price.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">m6</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span> <span class="c1"># smaller Moran&#39;s I (compared to m2 - .14, but larger than m4 - .4) </span>
+<span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m6</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m6</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12766359936512758 0.001
+</pre></div>
+</div>
+<img alt="../_images/lecture16_54_1.png" src="../_images/lecture16_54_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-error">
+<h1>Spatial Error<a class="headerlink" href="#spatial-error" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Include spatial lag in the error term of the equation. This violates OLS assumption (normal errors).</p>
+</div></blockquote>
+<p>$$
+\log{P_i} = \alpha + \sum_k \beta_k X_{ki} + u_i \
+u_i = \lambda u_{lag-i} + \epsilon_i
+$$</p>
+<p>where $u_{lag-i} = \sum_j w_{i,j} u_j$.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit spatial error model with `spreg`</span>
+<span class="c1"># (GMM estimation allowing for heteroskedasticity)</span>
+<span class="n">m7</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">GM_Error_Het</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Spatial weights matrix</span>
+    <span class="n">w</span><span class="o">=</span><span class="n">w_knn</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variables names</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m7</span><span class="o">.</span><span class="n">summary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIALLY WEIGHTED LEAST SQUARES (HET)
+---------------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :   log_price                Number of Observations:        6110
+Mean dependent var  :      4.9958                Number of Variables   :          11
+S.D. dependent var  :      0.8072                Degrees of Freedom    :        6099
+Pseudo R-squared    :      0.6659
+N. of iterations    :           1                Step1c computed       :          No
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       4.4240379       0.0206722     214.0094550       0.0000000
+        accommodates       0.0703114       0.0062888      11.1804555       0.0000000
+           bathrooms       0.1630068       0.0151892      10.7317816       0.0000000
+            bedrooms       0.1717159       0.0147101      11.6733237       0.0000000
+                beds      -0.0374029       0.0089220      -4.1922292       0.0000276
+     rt_Private_room      -0.4975808       0.0163326     -30.4654936       0.0000000
+      rt_Shared_room      -1.1599727       0.0509584     -22.7631466       0.0000000
+      pg_Condominium       0.1050079       0.0214980       4.8845395       0.0000010
+            pg_House       0.0285718       0.0147514       1.9368866       0.0527592
+            pg_Other       0.0872271       0.0255362       3.4158194       0.0006359
+        pg_Townhouse      -0.0123460       0.0288123      -0.4284958       0.6682902
+              lambda       0.5925833       0.0179391      33.0331388       0.0000000
+              lambda       0.5925833       0.0179391      33.0331388       0.0000000
+------------------------------------------------------------------------------------
+================================ END OF REPORT =====================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">m7</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span> <span class="c1"># smaller Moran&#39;s I (compared to m2 - .14, but larger than m4 - .4) </span>
+<span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m7</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m7</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1864416105991456 0.001
+</pre></div>
+</div>
+<img alt="../_images/lecture16_58_1.png" src="../_images/lecture16_58_1.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="spatial-lag">
+<h1>Spatial Lag<a class="headerlink" href="#spatial-lag" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Spatial lag of the <strong>dependent varialbe</strong></p>
+</div></blockquote>
+<p>$$
+\log{P_i} = \alpha + \rho \log{P_{lag-i}} + \sum_k \beta_k X_{ki} + \epsilon_i
+$$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit spatial lag model with `spreg`</span>
+<span class="c1"># (GMM estimation)</span>
+<span class="n">m8</span> <span class="o">=</span> <span class="n">spreg</span><span class="o">.</span><span class="n">GM_Lag</span><span class="p">(</span>
+    <span class="c1"># Dependent variable</span>
+    <span class="n">db</span><span class="p">[[</span><span class="s2">&quot;log_price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Independent variables</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">variable_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="c1"># Spatial weights matrix</span>
+    <span class="n">w</span><span class="o">=</span><span class="n">w_knn</span><span class="p">,</span>
+    <span class="c1"># Dependent variable name</span>
+    <span class="n">name_y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span>
+    <span class="c1"># Independent variables names</span>
+    <span class="n">name_x</span><span class="o">=</span><span class="n">variable_names</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build full table of regression coefficients</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="c1"># Pull out regression coefficients and</span>
+        <span class="c1"># flatten as they are returned as Nx1 array</span>
+        <span class="s2">&quot;Coeff.&quot;</span><span class="p">:</span> <span class="n">m8</span><span class="o">.</span><span class="n">betas</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out and flatten standard errors</span>
+        <span class="s2">&quot;Std. Error&quot;</span><span class="p">:</span> <span class="n">m8</span><span class="o">.</span><span class="n">std_err</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+        <span class="c1"># Pull out P-values from t-stat object</span>
+        <span class="s2">&quot;P-Value&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m8</span><span class="o">.</span><span class="n">z_stat</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">m8</span><span class="o">.</span><span class="n">name_z</span>
+    <span class="c1"># Round to four decimals</span>
+<span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Coeff.</th>
+      <th>Std. Error</th>
+      <th>P-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CONSTANT</th>
+      <td>2.8453</td>
+      <td>0.0716</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>accommodates</th>
+      <td>0.0699</td>
+      <td>0.0048</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>bathrooms</th>
+      <td>0.1641</td>
+      <td>0.0104</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>bedrooms</th>
+      <td>0.1602</td>
+      <td>0.0105</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>beds</th>
+      <td>-0.0369</td>
+      <td>0.0065</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>rt_Private_room</th>
+      <td>-0.5012</td>
+      <td>0.0151</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>rt_Shared_room</th>
+      <td>-1.1187</td>
+      <td>0.0366</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>pg_Condominium</th>
+      <td>0.1119</td>
+      <td>0.0209</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>pg_House</th>
+      <td>-0.0014</td>
+      <td>0.0137</td>
+      <td>0.9175</td>
+    </tr>
+    <tr>
+      <th>pg_Other</th>
+      <td>0.1192</td>
+      <td>0.0215</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>pg_Townhouse</th>
+      <td>-0.0220</td>
+      <td>0.0323</td>
+      <td>0.4959</td>
+    </tr>
+    <tr>
+      <th>W_log_price</th>
+      <td>0.3213</td>
+      <td>0.0146</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">moran</span> <span class="o">=</span> <span class="n">Moran</span><span class="p">(</span><span class="n">m8</span><span class="o">.</span><span class="n">u</span><span class="p">,</span> <span class="n">w_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moran</span><span class="o">.</span><span class="n">I</span><span class="p">,</span> <span class="n">moran</span><span class="o">.</span><span class="n">p_sim</span><span class="p">)</span> <span class="c1"># smaller Moran&#39;s I (compared to m2 - .14, but larger than m4 - .4) </span>
+<span class="n">lag_residual</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">spatial_lag</span><span class="o">.</span><span class="n">lag_spatial</span><span class="p">(</span><span class="n">w_knn</span><span class="p">,</span> <span class="n">m8</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">m8</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">lag_residual</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orangered&quot;</span><span class="p">),</span>
+    <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residuals ($u$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spatial lag of residuals ($Wu$)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.02906512266191519 0.001
+</pre></div>
+</div>
+<img alt="../_images/lecture16_62_1.png" src="../_images/lecture16_62_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compare models </span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;models&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;spatial fixed effects&#39;</span><span class="p">,</span> <span class="s1">&#39;spatial regimes&#39;</span><span class="p">,</span> <span class="s1">&#39;SLX model&#39;</span><span class="p">,</span> <span class="s1">&#39;Spatial Error&#39;</span><span class="p">,</span> <span class="s1">&#39;Spatial Lag&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;rsq&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">m4</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">m5</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="n">m6</span><span class="o">.</span><span class="n">r2</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.7052</span><span class="p">],</span> 
+    <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>models</th>
+      <th>rsq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>spatial fixed effects</td>
+      <td>0.711801</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>spatial regimes</td>
+      <td>0.685342</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>SLX model</td>
+      <td>0.678604</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spatial Error</td>
+      <td>0.660000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Spatial Lag</td>
+      <td>0.705200</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sources">
+<h1>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://geographicdata.science/book/notebooks/11_regression.html">Geographic Data Science Book - Chapter 11</a></p>
+<p>Anselin, Luc and Sergio Rey. 2014. Modern Spatial Econometrics in Practice: A Guide to GeoDa, GeoDaSpace, and Pysal. GeoDa Press.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="questions">
+<h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "geo_env"
+        },
+        kernelOptions: {
+            kernelName: "geo_env",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'geo_env'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Evgeny Noi, UC Santa Barbara<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

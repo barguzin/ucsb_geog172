@@ -905,6 +905,13 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,12 +931,12 @@ Example not downloaded: Chile Migration
 Example not downloaded: Spirals
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\.DS_Store&#39;,
- &#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.dbf&#39;,
- &#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.prj&#39;,
- &#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shp&#39;,
- &#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shx&#39;,
- &#39;C:\\Users\\barguzin\\AppData\\Local\\pysal\\pysal\\Cincinnati\\__MACOSX\\walnuthills_updated\\._.DS_Store&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\.DS_Store&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.dbf&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.prj&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shp&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\walnuthills_updated\\cincinnati.shx&#39;,
+ &#39;C:\\Users\\noibar\\AppData\\Local\\pysal\\pysal\\Cincinnati\\__MACOSX\\walnuthills_updated\\._.DS_Store&#39;]
 </pre></div>
 </div>
 </div>
@@ -1495,7 +1502,16 @@ Name: k5cls, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lecture14_21_0.png" src="../_images/lecture14_21_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">kneed</span> <span class="kn">import</span> <span class="n">KneeLocator</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">kl</span> <span class="o">=</span> <span class="n">KneeLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="n">sse</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="s2">&quot;convex&quot;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;decreasing&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">f</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;kneed&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -1632,35 +1648,35 @@ $$</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.022123</td>
+      <td>0.068724</td>
       <td>0.042670</td>
       <td>0.087802</td>
       <td>0.113951</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.068724</td>
+      <td>0.018618</td>
       <td>0.027901</td>
       <td>0.092131</td>
       <td>0.292960</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.020728</td>
+      <td>0.043537</td>
       <td>0.019498</td>
       <td>0.320167</td>
       <td>0.398854</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.018618</td>
+      <td>0.020728</td>
       <td>0.060804</td>
       <td>0.430195</td>
       <td>0.157503</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.043537</td>
+      <td>0.022123</td>
       <td>0.020271</td>
       <td>0.193330</td>
       <td>0.430195</td>

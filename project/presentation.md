@@ -12,13 +12,15 @@ The presentations will take place during Week 10. Please sign-up for a presentat
 ## Presentation Structure 
 
 1. Title slide
-2. Research Questions 
+2. General research questions (spatial ranomness versus spatial patterns) 
 3. Data
    1. Non-spatial distribution (structure) of data: histograms, various charts and plots, correlation matrices, groupby tables (barcharts).  
    2. Spatial distribution of data (choropleth maps or graduated symbols/markers maps). 
-4. Research Questions
+4. More detailed research questions (research objectives)
 5. Methods 
-   1. Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran's I). No need to specify formulas. Simply acknowledge the succession. 
+   1. Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran's I). No need to specify formulas. Use the flow diagram to denote methods and order of analysis. Typically, t-tests / ANOVA --> Global/Local Moran's I --> Clustering --> Regression. 
+   2. If you have 3 or more variables in your dataset, consider doing Local and Global Moran's I on dependent variable only. If you have only 2 variables in your data, do Local Moran's I and Global Moran's I for both variables. 
+   3. For regression analysis, you need to have at least three models: kitchen sink (all variables), m2 (an OLS model where insignificant predictors are dropped), and spatial model (either fixed effect, spatial regimes, SLX, spatial error, or spatial lag). If you only have 2 variables, you need to have two models: kitchen sink and spatial model. 
 6. Results
    1. Report p-values and/or statistic values. For regression report coefficients and their corresponding p-values, as well as R-squared. Interpret your coefficients.  
    2. If you are using clustering, please make sure to justify the number of clusters. 
@@ -43,4 +45,4 @@ You may use any software to prepare your presentation. Please submit either pdf 
 
 ## Feedback Report
 
-As part of the final evaluation, each student will submit an evaluation report with feedback for the peers. Please make sure to include presenter's name, title, and suggestions on improvement of the presentation. The feedback report must be submitted right after the presentation session that you signed up for. 
+As part of the final evaluation, each student will submit an evaluation report with feedback for the peers. Please make sure to include presenter's name, title, and suggestions on improvement of the presentation. The feedback report must be submitted right after the presentation session that you signed up for. **Bring the laptops to the session you are presenting in, so that you could take notes and submit the evaluation reports**.  

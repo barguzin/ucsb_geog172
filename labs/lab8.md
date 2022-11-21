@@ -1,7 +1,7 @@
 # Lab 8: Clustering (optional) 
 
 ````{caution}
-This labb will provide you with an opportunity to practice clustering in Python. We will be working with Guerry moral statistics data, that we already came across when studying LISA. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1T-uQvaSodfUHqJUrdK3KnBlX8oxQ9PHk?usp=sharing) and copying it to your Google Drive. 
+This lab will provide you with an opportunity to practice clustering in Python. We will be working with Guerry moral statistics data, that we already came across when studying LISA. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1T-uQvaSodfUHqJUrdK3KnBlX8oxQ9PHk?usp=sharing) and copying it to your Google Drive. 
 ````
 
 ````{important}

@@ -217,7 +217,7 @@ plt.show()
 # * ranges from -1 to +1
 # * +1 (good separation), -1 (mismatched clusters) 
 
-# In[59]:
+# In[13]:
 
 
 from sklearn.metrics import silhouette_score
@@ -231,7 +231,7 @@ for k in range(2, 14):
     silhouette_coefficients.append(score)
 
 
-# In[61]:
+# In[14]:
 
 
 f,ax = plt.subplots(figsize=(16,5))
@@ -242,7 +242,7 @@ ax.set_ylabel("Silhouette Coefficient")
 plt.show()
 
 
-# In[67]:
+# In[15]:
 
 
 kmeans = KMeans(n_clusters=8, init='random', n_init=10, max_iter=300, random_state=32)
@@ -264,7 +264,7 @@ plt.show()
 # IPQ_i= \frac{A_i}{A_c} = \frac{4\pi A_i}{P_i^2}
 # $$
 
-# In[76]:
+# In[16]:
 
 
 crime_vars = ['BURGLARY', 'ASSAULT', 'THEFT']
@@ -283,7 +283,7 @@ cin_df["loc_que"] = loccon.labels_
 cin_df['loc_knn'] = loccon_knn.labels_
 
 
-# In[79]:
+# In[17]:
 
 
 results = []
@@ -306,7 +306,7 @@ pd.concat(results, axis=1)
 # * Silhoette Score - the average standardized distance from each observation to its “next best fit” cluster
 # * Calinski-Harabasz Score - the within-cluster variance divided by the between-cluster variance
 
-# In[81]:
+# In[18]:
 
 
 from sklearn import metrics

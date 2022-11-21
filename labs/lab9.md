@@ -1,4 +1,4 @@
-# Lab 9: Regression 
+# Lab 9: Regression (optional)
 
 ````{caution}
 This labb will provide you with an opportunity to practice regression modeling in Python. We will be working with Guerry moral statistics data, that we already came across when studying LISA. Please start by opening [this Google Colab notebook](https://colab.research.google.com/drive/1INLpY-US5YN5BzM7r9bdtzjDWVAM64V8?usp=sharing) and copying it to your Google Drive. 

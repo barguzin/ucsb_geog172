@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Lab 9 &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
+    <title>Lab 9: Regression (optional) &#8212; GEOG 172 - Intermediate Geographical Data Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Geographical Analysis Project" href="../project.html" />
+    <link rel="prev" title="Lab 8: Clustering (optional)" href="lab8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus.html">
    Syllabus
@@ -139,16 +141,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../labs.html">
    Labs
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="lab1.html">
      Lab 1: Google Colab, Markdown and Python
@@ -186,7 +188,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lab8.html">
-     Lab 8:
+     Lab 8: Clustering (optional)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lab 9: Regression (optional)
     </a>
    </li>
   </ul>
@@ -395,23 +402,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lab 9: Regression (optional)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lab 9</h1>
+                <h1>Lab 9: Regression (optional)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lab 9: Regression (optional)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-instructions">
+   Lab Instructions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -419,8 +473,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lab-9">
-<h1>Lab 9<a class="headerlink" href="#lab-9" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-9-regression-optional">
+<h1>Lab 9: Regression (optional)<a class="headerlink" href="#lab-9-regression-optional" title="Permalink to this headline">#</a></h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This labb will provide you with an opportunity to practice regression modeling in Python. We will be working with Guerry moral statistics data, that we already came across when studying LISA. Please start by opening <a class="reference external" href="https://colab.research.google.com/drive/1INLpY-US5YN5BzM7r9bdtzjDWVAM64V8?usp=sharing">this Google Colab notebook</a> and copying it to your Google Drive.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please submit the <strong>.ipynb</strong> notebook by modifying the code from the Google Colab notebook above.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to submit the lab by <strong>November 28 / 29, 2022</strong>, depending on the scheduled time of your section.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="lab-instructions">
+<h1>Lab Instructions<a class="headerlink" href="#lab-instructions" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Check the normality of your outcome variable <em>MEDV</em> (hint: use a histogram). Create a correlation matrix for all of the variables.</p></li>
+<li><p>Fit the linear regression to the data using the following predictors: <em>CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT</em> to model <em>MEDV</em>. We will refer to this model as <strong>m1</strong>.</p></li>
+<li><p>Report and interpret your R-squared and Adjusted R-squared. Comment on the coefficients and denote which ones are significant and insignificant (given their p-values)</p></li>
+<li><p>Now fit only predictors that only had significant p-values (call this model <strong>m2</strong>).</p></li>
+<li><p>Report and interpret your R-squared and Adjusted R-squared. Comment on the coefficients and denote which ones are significant and insignificant (given their p-values).</p></li>
+<li><p>Compare <strong>m1</strong> to <strong>m2</strong>. Which factors appear to be most significant for <em>MEDV</em>?</p></li>
+<li><p>Calculate and report Global Moran’s I for <strong>m2</strong> residuals.</p></li>
+<li><p>Plot <strong>m2</strong> residuals versus the lag of residuals.</p></li>
+<li><p>Calculate Local Moran’s I and plot it on the map. Is there any spatial structure to <strong>m2</strong> residuals?</p></li>
+<li><p>Fit a fixed effect model <strong>m3</strong>. Report which neighborhood has the highest and lowest coefficient. Interpret. Report and interpret your R-squared and Adjusted R-squared. Comment on the coefficients and denote which ones are significant and insignificant (given their p-values).</p></li>
+<li><p>Run the spatial error model <strong>m4</strong>. Report and interpret pseudo R-squared (how does it compare to <strong>m1, m2, m3</strong>?) Comment on the coefficients and denote which ones are significant and insignificant (given their p-values).</p></li>
+<li><p>Submit to GauchoSpace as ipynb/pdf.</p></li>
+</ol>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,6 +534,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="lab8.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lab 8: Clustering (optional)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../project.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Geographical Analysis Project</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

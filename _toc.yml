@@ -19,6 +19,7 @@ chapters:
     - file: labs/lab6
     - file: labs/lab7
     - file: labs/lab8
+    - file: labs/lab9
 - file: project
   sections:
     - file: project/data_report

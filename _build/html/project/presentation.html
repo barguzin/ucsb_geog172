@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab8.html">
-     Lab 8:
+     Lab 8: Clustering (optional)
     </a>
    </li>
   </ul>
@@ -397,12 +397,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-structure">
+   Presentation Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-format">
+   Presentation Format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slides">
+   Slides
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feedback-report">
+   Feedback Report
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -414,6 +453,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-structure">
+   Presentation Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-format">
+   Presentation Format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slides">
+   Slides
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feedback-report">
+   Feedback Report
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -423,6 +490,59 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="presentation">
 <h1>Presentation<a class="headerlink" href="#presentation" title="Permalink to this headline">#</a></h1>
+<p>Now that you submitted both the <em>Data Report</em> and <em>Interim Report</em>, the next destination is the <em>Presentation</em>. The presentation should aim to tell a story about the dataset that you have been working with this entire quarter. The presentation is 10% of your final course grade, of which 90% comes from the presentation and response to questions and 10% comes from the feedback report (see the corresponding section below).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The presentations will take place during Week 10. Please sign-up for a presentation using <a class="reference external" href="https://docs.google.com/spreadsheets/d/12cKnmYgmRvut2y1P6O0xcW--DAVNaKPCjwbK22BZTXo/edit?usp=sharing">this link</a> on GauchoSpace. <strong>Please make sure to sign-up by 11/27/2022 by 23.59.</strong> There will be a total of four presentation sessions.</p>
+</div>
+<hr class="docutils" />
+<section id="presentation-structure">
+<h2>Presentation Structure<a class="headerlink" href="#presentation-structure" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Title slide</p></li>
+<li><p>Research Questions</p></li>
+<li><p>Data</p>
+<ol class="simple">
+<li><p>Non-spatial distribution (structure) of data: histograms, various charts and plots, correlation matrices, groupby tables (barcharts).</p></li>
+<li><p>Spatial distribution of data (choropleth maps or graduated symbols/markers maps).</p></li>
+</ol>
+</li>
+<li><p>Research Questions</p></li>
+<li><p>Methods</p>
+<ol class="simple">
+<li><p>Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran’s I). No need to specify formulas. Simply acknowledge the succession.</p></li>
+</ol>
+</li>
+<li><p>Results</p>
+<ol class="simple">
+<li><p>Report p-values and/or statistic values. For regression report coefficients and their corresponding p-values, as well as R-squared. Interpret your coefficients.</p></li>
+<li><p>If you are using clustering, please make sure to justify the number of clusters.</p></li>
+<li><p>Make sure to include Global/Local Moran’s I.</p></li>
+</ol>
+</li>
+<li><p>Discussion</p>
+<ol class="simple">
+<li><p>Re-iterate how the conducted analysis helps you understand you data better.</p></li>
+<li><p>Acknowledge any limitations of your study.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="presentation-format">
+<h2>Presentation Format<a class="headerlink" href="#presentation-format" title="Permalink to this headline">#</a></h2>
+<p>Each student will have 8 minutes to present and 2 minutes for questions.</p>
+</section>
+<hr class="docutils" />
+<section id="slides">
+<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">#</a></h2>
+<p>You may use any software to prepare your presentation. Please submit either pdf or pptx to the GauchoSpace by <strong>11/27/2022</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="feedback-report">
+<h2>Feedback Report<a class="headerlink" href="#feedback-report" title="Permalink to this headline">#</a></h2>
+<p>As part of the final evaluation, each student will submit an evaluation report with feedback for the peers. Please make sure to include presenter’s name, title, and suggestions on improvement of the presentation. The feedback report must be submitted right after the presentation session that you signed up for.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

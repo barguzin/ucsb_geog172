@@ -191,6 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
      Lab 8: Clustering (optional)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab9.html">
+     Lab 9: Regression (optional)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -500,17 +505,19 @@ title="Print to PDF"
 <h2>Presentation Structure<a class="headerlink" href="#presentation-structure" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Title slide</p></li>
-<li><p>Research Questions</p></li>
+<li><p>General research questions (spatial ranomness versus spatial patterns)</p></li>
 <li><p>Data</p>
 <ol class="simple">
 <li><p>Non-spatial distribution (structure) of data: histograms, various charts and plots, correlation matrices, groupby tables (barcharts).</p></li>
 <li><p>Spatial distribution of data (choropleth maps or graduated symbols/markers maps).</p></li>
 </ol>
 </li>
-<li><p>Research Questions</p></li>
+<li><p>More detailed research questions (research objectives)</p></li>
 <li><p>Methods</p>
 <ol class="simple">
-<li><p>Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran’s I). No need to specify formulas. Simply acknowledge the succession.</p></li>
+<li><p>Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran’s I). No need to specify formulas. Use the flow diagram to denote methods and order of analysis. Typically, t-tests / ANOVA –&gt; Global/Local Moran’s I –&gt; Clustering –&gt; Regression.</p></li>
+<li><p>If you have 3 or more variables in your dataset, consider doing Local and Global Moran’s I on dependent variable only. If you have only 2 variables in your data, do Local Moran’s I and Global Moran’s I for both variables.</p></li>
+<li><p>For regression analysis, you need to have at least three models: kitchen sink (all variables), m2 (an OLS model where insignificant predictors are dropped), and spatial model (either fixed effect, spatial regimes, SLX, spatial error, or spatial lag). If you only have 2 variables, you need to have two models: kitchen sink and spatial model.</p></li>
 </ol>
 </li>
 <li><p>Results</p>
@@ -541,7 +548,7 @@ title="Print to PDF"
 <hr class="docutils" />
 <section id="feedback-report">
 <h2>Feedback Report<a class="headerlink" href="#feedback-report" title="Permalink to this headline">#</a></h2>
-<p>As part of the final evaluation, each student will submit an evaluation report with feedback for the peers. Please make sure to include presenter’s name, title, and suggestions on improvement of the presentation. The feedback report must be submitted right after the presentation session that you signed up for.</p>
+<p>As part of the final evaluation, each student will submit an evaluation report with feedback for the peers. Please make sure to include presenter’s name, title, and suggestions on improvement of the presentation. The feedback report must be submitted right after the presentation session that you signed up for. <strong>Bring the laptops to the session you are presenting in, so that you could take notes and submit the evaluation reports</strong>.</p>
 </section>
 </section>
 

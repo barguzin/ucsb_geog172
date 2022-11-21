@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../labs/lab8.html">
-     Lab 8:
+     Lab 8: Clustering (optional)
     </a>
    </li>
   </ul>
@@ -856,7 +856,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under regression_db (1).geojson
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under regression_db (2).geojson
 </pre></div>
 </div>
 </div>
@@ -868,13 +868,6 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\noibar\anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
-Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
-  return warn(
 </pre></div>
 </div>
 </div>
@@ -1563,7 +1556,7 @@ Name: accommodates, Length: 6110, dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [14],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">SS_resid</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">SS_tot</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">log_price</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Squared residuals: </span><span class="si">{</span><span class="n">SS_resid</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>

@@ -4,7 +4,7 @@ Now that you submitted both the *Data Report* and *Interim Report*, the next des
 
 
 ````{warning}
-The presentations will take place during Week 10. Please sign-up for a presentation using [this link](https://docs.google.com/spreadsheets/d/12cKnmYgmRvut2y1P6O0xcW--DAVNaKPCjwbK22BZTXo/edit?usp=sharing) on GauchoSpace. **Please make sure to sign-up by 11/27/2022 by 23.59.** There will be a total of four presentation sessions. 
+The presentations will take place during Week 10. Please sign-up for a presentation using [this link](https://docs.google.com/spreadsheets/d/12cKnmYgmRvut2y1P6O0xcW--DAVNaKPCjwbK22BZTXo/edit?usp=sharing) on GauchoSpace (make sure that you are logged with your UCSB credentials). **Please make sure to sign-up by 11/27/2022 by 23.59.** There will be a total of four presentation sessions. 
 ````
 
 ---
@@ -14,8 +14,9 @@ The presentations will take place during Week 10. Please sign-up for a presentat
 1. Title slide
 2. General research questions (spatial ranomness versus spatial patterns) 
 3. Data
-   1. Non-spatial distribution (structure) of data: histograms, various charts and plots, correlation matrices, groupby tables (barcharts).  
-   2. Spatial distribution of data (choropleth maps or graduated symbols/markers maps). 
+   1. Acknowledge source of your data, unit of analysis, and types of variables (numeric, categorical, dummy).
+   2. Non-spatial distribution (structure) of data: histograms, various charts and plots, correlation matrices, groupby tables (barcharts).  
+   3. Spatial distribution of data (choropleth maps or graduated symbols/markers maps). 
 4. More detailed research questions (research objectives)
 5. Methods 
    1. Describe briefly (clustering, t-tests, ANOVA, regression, correlation, Moran's I). No need to specify formulas. Use the flow diagram to denote methods and order of analysis. Typically, t-tests / ANOVA --> Global/Local Moran's I --> Clustering --> Regression. 
@@ -33,7 +34,7 @@ The presentations will take place during Week 10. Please sign-up for a presentat
 
 ## Presentation Format 
 
-Each student will have 8 minutes to present and 2 minutes for questions. 
+Each student will have **8 minutes to present** and 2 minutes for questions. 
 
 ---
 

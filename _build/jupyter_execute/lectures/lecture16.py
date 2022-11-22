@@ -3,7 +3,7 @@
 
 # <h1> <center> GEOG 172: INTERMEDIATE GEOGRAPHICAL ANALYSIS </h1>
 #     <h2> <center> Evgeny Noi </h2>
-#         <h3> <center> Lecture 16: Regression Diagnostics and GWR </h3>
+#         <h3> <center> Lecture 16: Regression Diagnostics and Spatial Regression </h3>
 
 # # Plan for today 
 # 
@@ -67,8 +67,7 @@ ax[1].set_title('log(Price)', fontsize=14)
 
 
 # Fitting linear model
-res = smf.ols(formula= "log_price ~ accommodates + bathrooms + bedrooms + beds + rt_Private_room + rt_Shared_room + \
-              pg_Condominium + pg_House + pg_Other + pg_Townhouse", data=db).fit()
+res = smf.ols(formula= "log_price ~ accommodates + bathrooms + bedrooms + beds + rt_Private_room + rt_Shared_room +               pg_Condominium + pg_House + pg_Other + pg_Townhouse", data=db).fit()
 res.summary()
 
 
@@ -929,7 +928,7 @@ pd.DataFrame(
 # # Interpreting SLX model 
 # 
 # * The direct effect of the pg_Condominium variable means that condominiums are typically 11% more expensive than benchmark property type (apartments) 
-# * Since *pg_Condominium* is a dummy variable, the spatial lag at site $i$ represents the percentage of properties near $i$ that are condominiums. So a unit change in this variable means that you would increase the condominium percentage by 100%. Thus a .1 increase in *w_pg_Condominium* (a change of ten percentage points) would result in 5.92% increase in the property house price.  
+# * Since *pg_Condominium* is a dummy variable, the spatial lag at site $i$ represents the percentage of properties near $i$ that are condominiums. So a unit change in this variable means that you would increase the condominium percentage by 100%. Thus a .1 increase in *w_pg_Condominium* (a change of ten percentage points) would result in 4.93% increase in the property house price.  
 
 # In[40]:
 

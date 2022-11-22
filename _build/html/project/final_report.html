@@ -191,6 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
      Lab 8: Clustering (optional)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab9.html">
+     Lab 9: Regression (optional)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -397,12 +402,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-report-structure">
+   Final Report Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-report-formatting">
+   Final Report Formatting
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -414,6 +448,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-report-structure">
+   Final Report Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-report-formatting">
+   Final Report Formatting
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -423,6 +475,75 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="final-report">
 <h1>Final Report<a class="headerlink" href="#final-report" title="Permalink to this headline">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Please make sure to submit your final report by 12/8/2022 (Thursday) by 23.59.</strong></p>
+</div>
+<p>The final report should be a report similar to the one you would submit to your project manager or a supervisor: concise, easy to follow and navigate. Put simply, this is a clean written version of the presentation. There is no need to include any code in the report!</p>
+<hr class="docutils" />
+<section id="final-report-structure">
+<h2>Final Report Structure<a class="headerlink" href="#final-report-structure" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Executive Summary</p>
+<ol class="simple">
+<li><p>Include 3-5 bullet points to highlight some research outcomes that you uncovered. Example: <em>The spatial distribution of AirBnb listing prices exhibited positive spatial autocorrelation in the city of Denver (as demonstrated by LISA cluster map).</em></p></li>
+</ol>
+</li>
+<li><p>Introduction</p>
+<ol class="simple">
+<li><p>Start with big questions and general narrative of why you are using this specific data for your project. If you deal with AirBnb listings, talk about rental market and tourist industry. Next, connect it to spatial structure and geography.</p></li>
+<li><p>You Intro should conclude with Research Questions.</p></li>
+</ol>
+</li>
+<li><p>Study Area</p>
+<ol class="simple">
+<li><p>Introduce your data (source, variables, unit of analysis). You may include a 2-4 plots that introduce your data. DO NOT INCLUDE 20 plots for each variable that you have. You may use subplots to fit everything into one page, but anything over one page in width/length is strictly discouraged.</p></li>
+<li><p>Introduce the geographical boundaries of your case study. Include a choropleth map(s).</p></li>
+</ol>
+</li>
+<li><p>Methods</p>
+<ol class="simple">
+<li><p>Present your methods as analytical framework. You can use a flowchart from your presentation, but you have to describe in greater detail the sequence of processing and analytical steps that you followed.</p></li>
+<li><p>Make sure to include:</p>
+<ol class="simple">
+<li><p>At least one of: one-sample test, two-samples test, ANOVA</p></li>
+<li><p>Global and Local Moran’s I</p></li>
+<li><p>Clustering</p></li>
+<li><p>Regression</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Results</p>
+<ol class="simple">
+<li><p>Break this section into subsections for each of the main components of your analytical framework from your <em>Methods</em> section: ANOVA analysis of AirBnb price per listing, Clustering, Regression Framework, etc.</p></li>
+<li><p>State null and alternative hypothesis where necessary. Interpret p-values. Accept/Reject Null.</p></li>
+<li><p>Report p-values, coefficients, R-squared, clustering diagnostics.</p></li>
+</ol>
+</li>
+<li><p>Discussion</p>
+<ol class="simple">
+<li><p>Interpret presented results in a meaningful way by relating it back to your Research Questions. How does clustering help us understand our data better?</p></li>
+<li><p>Acknowledge any limitations your data and methods have.</p></li>
+</ol>
+</li>
+<li><p>Appendix</p>
+<ol class="simple">
+<li><p>Include any of the figures that did not go into any of the sections above, but feel could help the reader understand your analysis better.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="final-report-formatting">
+<h2>Final Report Formatting<a class="headerlink" href="#final-report-formatting" title="Permalink to this headline">#</a></h2>
+<p>You may use any software to prepare your final report. As part of your submission please include the following:</p>
+<ul class="simple">
+<li><p>first_lastname_final_report.pdf</p></li>
+<li><p>first_lastname_final_notebook.ipynb</p></li>
+<li><p>first_lastname_final_notebook.pdf</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

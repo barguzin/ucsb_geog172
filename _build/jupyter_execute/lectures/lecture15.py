@@ -223,8 +223,7 @@ mod2.round(2)
 
 
 # calculate 
-Y_pred = mod1.loc[mod1.names=='Intercept','coef'].values + db['accommodates'] \
-    * mod1.loc[mod1.names=='accommodates','coef'].values
+Y_pred = mod1.loc[mod1.names=='Intercept','coef'].values + db['accommodates']     * mod1.loc[mod1.names=='accommodates','coef'].values
 Y_pred
 
 

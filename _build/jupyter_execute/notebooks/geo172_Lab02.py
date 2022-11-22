@@ -25,13 +25,13 @@ import numpy as np
 # In[3]:
 
 
-get_ipython().system(' wget https://frap.fire.ca.gov/media/3ufh3ajg/fire21_1.zip -O fire_perims.zip -nc')
+get_ipython().system(' wget https://frap.fire.ca.gov/media/3ufh3ajg/fire21_1.zip -O fire_perims.zip -nc ')
 
 
 # In[4]:
 
 
-get_ipython().system(' unzip -n fire_perims.zip')
+get_ipython().system(' unzip -n fire_perims.zip ')
 
 
 # In[5]:

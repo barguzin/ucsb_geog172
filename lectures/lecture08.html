@@ -189,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
      Lab 8: Clustering (optional)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab9.html">
+     Lab 9: Regression (optional)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -1376,7 +1381,12 @@ We conclude that there is enough statistical evidence that indicates that the me
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lecture08_32_0.png" src="../_images/lecture08_32_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+<img alt="../_images/lecture08_32_1.png" src="../_images/lecture08_32_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1606,12 +1616,12 @@ $$</p>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="nn">Input In [10],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">females</span> <span class="o">=</span> <span class="n">penguins</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">penguins</span><span class="o">.</span><span class="n">sex</span><span class="o">==</span><span class="s1">&#39;FEMALE&#39;</span><span class="p">,</span> <span class="s1">&#39;flipper_length_mm&#39;</span><span class="p">]</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">females</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">ttest</span><span class="p">(</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pingouin\parametric.py:231,</span> in <span class="ni">ttest</span><span class="nt">(x, y, paired, alternative, correction, r, confidence)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pingouin\parametric.py:231,</span> in <span class="ni">ttest</span><span class="nt">(x, y, paired, alternative, correction, r, confidence)</span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="n">paired</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="c1"># Remove rows with missing values</span>
 <span class="ne">--&gt; </span><span class="mi">231</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">remove_na</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="n">paired</span><span class="p">)</span>
@@ -1619,7 +1629,7 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">if</span> <span class="n">ny</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="c1"># Case one sample T-test</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pingouin\utils.py:236,</span> in <span class="ni">remove_na</span><span class="nt">(x, y, paired, axis)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pingouin\utils.py:236,</span> in <span class="ni">remove_na</span><span class="nt">(x, y, paired, axis)</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">else</span><span class="p">:</span>  <span class="c1"># y is list, np.array, pd.Series</span>
 <span class="g g-Whitespace">    </span><span class="mi">235</span>     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">236</span>     <span class="k">assert</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;y cannot be an empty list or array.&quot;</span>

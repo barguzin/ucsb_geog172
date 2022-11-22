@@ -32,13 +32,13 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# the dataset is large (we need to resample) for computational purposes 
-n=500
-index = np.random.choice(coordinates.shape[0], n, replace=False)  
-print(index.shape)
+from mgwr.gwr import GWR, MGWR
+from mgwr.sel_bw import Sel_BW
 
-g_test = distance_statistics.g_test(
-    coordinates[index], support=40, keep_simulations=True
-)
+#Calibrate GWR model
+gwr_selector = Sel_BW(g_coords, g_y, g_X)
+gwr_bw = gwr_selector.search()
+print(gwr_bw)
+gwr_results = GWR(g_coords, g_y, g_X, gwr_bw).fit() #bw=384
 -------------------
 

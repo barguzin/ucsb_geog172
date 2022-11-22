@@ -189,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
      Lab 8: Clustering (optional)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab9.html">
+     Lab 9: Regression (optional)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -905,6 +910,13 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
+Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
+  return warn(
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -917,9 +929,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not available: Cincinnati
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chicago parcels
+Example not downloaded: Chicago parcels
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Example not downloaded: Chile Migration
@@ -1497,7 +1507,16 @@ Name: k5cls, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lecture14_21_0.png" src="../_images/lecture14_21_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">kneed</span> <span class="kn">import</span> <span class="n">KneeLocator</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">kl</span> <span class="o">=</span> <span class="n">KneeLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="n">sse</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="s2">&quot;convex&quot;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;decreasing&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">f</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;kneed&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -1634,14 +1653,14 @@ $$</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.023762</td>
+      <td>0.068724</td>
       <td>0.042670</td>
       <td>0.087802</td>
       <td>0.113951</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.019437</td>
+      <td>0.018618</td>
       <td>0.027901</td>
       <td>0.092131</td>
       <td>0.292960</td>
@@ -1655,14 +1674,14 @@ $$</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.020346</td>
+      <td>0.020728</td>
       <td>0.060804</td>
       <td>0.430195</td>
       <td>0.157503</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.068724</td>
+      <td>0.022123</td>
       <td>0.020271</td>
       <td>0.193330</td>
       <td>0.430195</td>
@@ -1729,7 +1748,7 @@ $$</p>
   <tbody>
     <tr>
       <th>kmeans</th>
-      <td>290.006390</td>
+      <td>290.037212</td>
     </tr>
     <tr>
       <th>hierar</th>

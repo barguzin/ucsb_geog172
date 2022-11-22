@@ -189,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
      Lab 8: Clustering (optional)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../labs/lab9.html">
+     Lab 9: Regression (optional)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -640,7 +645,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under listings (4).csv
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under listings (5).csv
 </pre></div>
 </div>
 </div>
@@ -652,7 +657,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under neighbourhoods (5).geojson
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved under neighbourhoods (6).geojson
 </pre></div>
 </div>
 </div>
@@ -897,7 +902,7 @@ epsg:4979
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.5787923107567378
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 0.49540627433307727
 </pre></div>
 </div>
 <img alt="../_images/lecture12_11_1.png" src="../_images/lecture12_11_1.png" />
@@ -929,7 +934,7 @@ epsg:4979
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 2.2447396871413495e-60
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P-value: 2.3331843573916947e-54
 </pre></div>
 </div>
 <img alt="../_images/lecture12_14_1.png" src="../_images/lecture12_14_1.png" />
@@ -977,14 +982,14 @@ $$</p>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">g_test</span> <span class="o">=</span> <span class="n">distance_statistics</span><span class="o">.</span><span class="n">g_test</span><span class="p">(</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">coordinates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">support</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">keep_simulations</span><span class="o">=</span><span class="kc">True</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:713,</span> in <span class="ni">g_test</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:713,</span> in <span class="ni">g_test</span><span class="nt">(coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations)</span>
 <span class="g g-Whitespace">    </span><span class="mi">662</span> <span class="k">def</span> <span class="nf">g_test</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">663</span>     <span class="n">coordinates</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">support</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1009,7 +1014,7 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="n">n_simulations</span><span class="o">=</span><span class="n">n_simulations</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:582,</span> in <span class="ni">_ripley_test</span><span class="nt">(calltype, coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations, **kwargs)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:582,</span> in <span class="ni">_ripley_test</span><span class="nt">(calltype, coordinates, support, distances, metric, hull, edge_correction, keep_simulations, n_simulations, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">577</span>         <span class="n">n_distances</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">random_tree</span><span class="p">,</span> <span class="n">random_i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">578</span>         <span class="n">core_kwargs</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">579</span>             <span class="n">n_distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span>
@@ -1019,14 +1024,14 @@ $$</p>
 <span class="g g-Whitespace">    </span><span class="mi">583</span> <span class="n">pvalues</span> <span class="o">+=</span> <span class="n">simulations_i</span> <span class="o">&gt;=</span> <span class="n">observed_statistic</span>
 <span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="k">if</span> <span class="n">keep_simulations</span><span class="p">:</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:278,</span> in <span class="ni">g</span><span class="nt">(coordinates, support, distances, metric, edge_correction)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\distance_statistics.py:278,</span> in <span class="ni">g</span><span class="nt">(coordinates, support, distances, metric, edge_correction)</span>
 <span class="g g-Whitespace">    </span><span class="mi">276</span>         <span class="n">tree</span> <span class="o">=</span> <span class="n">_build_best_tree</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">277</span>     <span class="k">finally</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">278</span>         <span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">_k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="n">counts</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">distances</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="n">support</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="n">fracs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span> <span class="o">/</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="nn">File ~\anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:354,</span> in <span class="ni">k_neighbors</span><span class="nt">(tree, coordinates, k, **kwargs)</span>
+<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\pointpats\geometry.py:354,</span> in <span class="ni">k_neighbors</span><span class="nt">(tree, coordinates, k, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">332</span> <span class="k">def</span> <span class="nf">k_neighbors</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">333</span>     <span class="sd">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd">     Query a kdtree for k neighbors, handling the self-neighbor case</span>

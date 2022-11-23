@@ -32,13 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# the dataset is large (we need to resample) for computational purposes 
-n=500
-index = np.random.choice(coordinates.shape[0], n, replace=False)  
-print(index.shape)
-
-g_test = distance_statistics.g_test(
-    coordinates[index], support=40, keep_simulations=True
-)
+['import contextily', '# Re-weight W to 20 nearest neighbors', '# knn.reweight(k=20, inplace=True)', '# Row standardise weights', 'w_knn.transform = "R"']
+...
+[')', '# Add basemap', 'contextily.add_basemap(ax, crs=db.crs)', '# Remove axes', 'ax.set_axis_off();']
 -------------------
 

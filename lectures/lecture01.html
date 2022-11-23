@@ -1202,12 +1202,12 @@ secondary                   644
 unclassified                249
 cycleway                    150
 track                        84
-[service, footway]           60
-[residential, footway]       60
 motorway_link                44
-[path, footway]              30
-motorway                     27
-living_street                14
+[residential, footway]       31
+[footway, service]           30
+[service, footway]           30
+[footway, path]              30
+[footway, residential]       29
 Name: highway, dtype: int64
 </pre></div>
 </div>
@@ -1317,6 +1317,12 @@ Name: highway, dtype: int64
 
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;centro.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sys:1: ResourceWarning: unclosed socket &lt;zmq.Socket(zmq.PUSH) at 0x23fcc458640&gt;
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
 </pre></div>
 </div>
 </div>

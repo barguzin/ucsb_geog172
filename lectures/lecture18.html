@@ -487,6 +487,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-we-interpret-these-maps">
+   How do we interpret these maps?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions">
    Questions?
   </a>
@@ -557,6 +562,11 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#m-gwr-limitations">
    (M)GWR Limitations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-we-interpret-these-maps">
+   How do we interpret these maps?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -680,12 +690,7 @@ $$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\outdated\utils.py:14: OutdatedPackageWarning: The package outdated is out of date. Your version is 0.2.1, the latest is 0.2.2.
-Set the environment variable OUTDATED_IGNORE=1 to disable these warnings.
-  return warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\Anaconda3\envs\geo_env\lib\site-packages\spaghetti\network.py:39: FutureWarning: The next major release of pysal/spaghetti (2.0.0) will drop support for all ``libpysal.cg`` geometries. This change is a first step in refactoring ``spaghetti`` that is expected to result in dramatically reduced runtimes for network instantiation and operations. Users currently requiring network and point pattern input as ``libpysal.cg`` geometries should prepare for this simply by converting to ``shapely`` geometries.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\barguzin\anaconda3\envs\geo_env\lib\site-packages\spaghetti\network.py:36: FutureWarning: The next major release of pysal/spaghetti (2.0.0) will drop support for all ``libpysal.cg`` geometries. This change is a first step in refactoring ``spaghetti`` that is expected to result in dramatically reduced runtimes for network instantiation and operations. Users currently requiring network and point pattern input as ``libpysal.cg`` geometries should prepare for this simply by converting to ``shapely`` geometries.
   warnings.warn(f&quot;{dep_msg}&quot;, FutureWarning)
 </pre></div>
 </div>
@@ -1186,84 +1191,6 @@ Koenker-Bassett test             10         135.581           0.0000
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [10],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">#Calibrate GWR model</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">gwr_selector</span> <span class="o">=</span> <span class="n">Sel_BW</span><span class="p">(</span><span class="n">g_coords</span><span class="p">,</span> <span class="n">g_y</span><span class="p">,</span> <span class="n">g_X</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">gwr_bw</span> <span class="o">=</span> <span class="n">gwr_selector</span><span class="o">.</span><span class="n">search</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">gwr_bw</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">gwr_results</span> <span class="o">=</span> <span class="n">GWR</span><span class="p">(</span><span class="n">g_coords</span><span class="p">,</span> <span class="n">g_y</span><span class="p">,</span> <span class="n">g_X</span><span class="p">,</span> <span class="n">gwr_bw</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\sel_bw.py:319,</span> in <span class="ni">Sel_BW.search</span><span class="nt">(self, search_method, criterion, bw_min, bw_max, interval, tol, max_iter, init_multi, tol_multi, rss_score, max_iter_multi, multi_bw_min, multi_bw_max, bws_same_times, pool, verbose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bw_init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bw</span><span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span>         <span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1">#scalar, optimal bw from initial gwr model</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">319</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_bw</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>     <span class="bp">self</span><span class="o">.</span><span class="n">sel_hist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bw</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\sel_bw.py:337,</span> in <span class="ni">Sel_BW._bw</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">334</span>     <span class="n">a</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_section</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_glob</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_loc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">335</span>                               <span class="bp">self</span><span class="o">.</span><span class="n">constant</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">336</span>     <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.38197</span>  <span class="c1">#1 - (np.sqrt(5.0)-1.0)/2.0</span>
-<span class="ne">--&gt; </span><span class="mi">337</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bw</span> <span class="o">=</span> <span class="n">golden_section</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">gwr_func</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tol</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span>                              <span class="bp">self</span><span class="o">.</span><span class="n">max_iter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">int_score</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span>                              <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">340</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_method</span> <span class="o">==</span> <span class="s1">&#39;interval&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">341</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bw</span> <span class="o">=</span> <span class="n">equal_interval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bw_min</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bw_max</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span>                              <span class="n">gwr_func</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">int_score</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\search.py:71,</span> in <span class="ni">golden_section</span><span class="nt">(a, c, delta, function, tol, max_iter, int_score, verbose)</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>     <span class="n">score_d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="n">d</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">71</span>     <span class="n">score_d</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="nb">dict</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="o">=</span> <span class="n">score_d</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\sel_bw.py:326,</span> in <span class="ni">Sel_BW._bw.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(bw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">def</span> <span class="nf">_bw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">326</span>     <span class="n">gwr_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">bw</span><span class="p">:</span> <span class="n">getDiag</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">criterion</span><span class="p">](</span><span class="n">GWR</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="bp">self</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_loc</span><span class="p">,</span> <span class="n">bw</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="bp">self</span><span class="o">.</span><span class="n">kernel</span><span class="p">,</span> <span class="n">fixed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fixed</span><span class="p">,</span> <span class="n">constant</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">constant</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">offset</span><span class="p">,</span> <span class="n">spherical</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">spherical</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">331</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_optimized_function</span> <span class="o">=</span> <span class="n">gwr_func</span>
-<span class="g g-Whitespace">    </span><span class="mi">333</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">search_method</span> <span class="o">==</span> <span class="s1">&#39;golden_section&#39;</span><span class="p">:</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\gwr.py:335,</span> in <span class="ni">GWR.fit</span><span class="nt">(self, ini_params, tol, max_iter, solve, lite, pool)</span>
-<span class="g g-Whitespace">    </span><span class="mi">332</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">333</span>     <span class="n">rslt</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_local_fit</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>  <span class="c1">#sequential</span>
-<span class="ne">--&gt; </span><span class="mi">335</span> <span class="n">rslt_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">rslt</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">336</span> <span class="n">influ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rslt_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">337</span> <span class="n">resid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rslt_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\mgwr\gwr.py:251,</span> in <span class="ni">GWR._local_fit</span><span class="nt">(self, i)</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span> <span class="n">wi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_wi</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bw</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1">#local spatial weights</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> <span class="n">Gaussian</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">251</span>     <span class="n">betas</span><span class="p">,</span> <span class="n">inv_xtx_xt</span> <span class="o">=</span> <span class="n">_compute_betas_gwr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="n">wi</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">predy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">betas</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span>     <span class="n">resid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">predy</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\spglm\iwls.py:37,</span> in <span class="ni">_compute_betas_gwr</span><span class="nt">(y, x, wi)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="n">xT</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">wi</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">xtx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xT</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">37</span> <span class="n">xtx_inv_xt</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">xtx</span><span class="p">,</span> <span class="n">xT</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="n">betas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">xtx_inv_xt</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">return</span> <span class="n">betas</span><span class="p">,</span> <span class="n">xtx_inv_xt</span>
-
-<span class="nn">File ~\Anaconda3\envs\geo_env\lib\site-packages\scipy\linalg\_basic.py:221,</span> in <span class="ni">solve</span><span class="nt">(a, b, sym_pos, lower, overwrite_a, overwrite_b, check_finite, assume_a, transposed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="n">lu</span><span class="p">,</span> <span class="n">ipvt</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">getrf</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">overwrite_a</span><span class="o">=</span><span class="n">overwrite_a</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="n">_solve_check</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">221</span> <span class="n">x</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">getrs</span><span class="p">(</span><span class="n">lu</span><span class="p">,</span> <span class="n">ipvt</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>                 <span class="n">trans</span><span class="o">=</span><span class="n">trans</span><span class="p">,</span> <span class="n">overwrite_b</span><span class="o">=</span><span class="n">overwrite_b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span> <span class="n">_solve_check</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="n">rcond</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">gecon</span><span class="p">(</span><span class="n">lu</span><span class="p">,</span> <span class="n">anorm</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1416,21 +1343,26 @@ X10                       0.001      0.042     -0.171     -0.000      0.198
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
-<span class="n">db</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;gwr_accom&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">db</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;gwr_accom&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">db</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;gwr_bathroom&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">db</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;gwr_beddroom&#39;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Coefficients for Accommodation&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Coefficients for Accommodates&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Coefficients for Bathroom&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Coefficients for Bedroom&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">);</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">);</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Coefficients for Accommodation&#39;)
-</pre></div>
-</div>
-<img alt="../_images/lecture18_28_1.png" src="../_images/lecture18_28_1.png" />
+<img alt="../_images/lecture18_28_0.png" src="../_images/lecture18_28_0.png" />
 </div>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-do-we-interpret-these-maps">
+<h1>How do we interpret these maps?<a class="headerlink" href="#how-do-we-interpret-these-maps" title="Permalink to this headline">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="questions">
 <h1>Questions?<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h1>
